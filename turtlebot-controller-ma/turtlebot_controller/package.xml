@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<?xml-model
+  href="http://download.ros.org/schema/package_format3.xsd"
+  schematypens="http://www.w3.org/2001/XMLSchema"?>
+
+<!-- ROS 2 package metadata file. -->
+<package format="3">
+
+  <!-- The ROS 2 package name. -->
+  <name>turtlebot_controller</name>
+
+  <!-- The first version of the project. -->
+  <version>0.0.1</version>
+
+  <!-- A short explanation of the package purpose. -->
+  <description>
+    TurtleBot3 keyboard controller and command monitor using /cmd_vel.
+  </description>
+
+  <!-- Replace MA with your name. -->
+  <maintainer email="muhammad.abdelmoniem4@gmail.com">men3m-4</maintainer>
+
+  <!-- The project license. -->
+  <license>Apache-2.0</license>
+
+  <!-- Tells ROS 2 that this is a Python ament package. -->
+  <buildtool_depend>ament_python</buildtool_depend>
+
+  <!-- Provides Node, publisher, subscriber, and spin functions. -->
+  <depend>rclpy</depend>
+
+  <!-- Provides geometry_msgs/msg/Twist movement messages. -->
+  <depend>geometry_msgs</depend>
+
+  <!-- Dependencies used only by standard ROS 2 testing tools. -->
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+
+  <!-- Declares the Python build type to ROS 2. -->
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+
+</package>

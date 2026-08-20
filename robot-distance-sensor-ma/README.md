@@ -49,4 +49,4 @@ python3 robot.py
 ## Review Notes
 
 Full concept review (variables, loops, OOP basics, error handling) documented on Notion:
-[ROS2 Robotics Masterclass — Python Revision](https://app.notion.com/p/ROS2-Robotics-Masterclass-Python-Revision-3c1631df44df8061a0eeecb21bb9b389?source=copy_li)
+[ROS2 Robotics Masterclass — Python Revision](https://app.notion.com/p/Session-1-Code-Your-Robot-Brain-Python-Mastery-3c2631df44df80058e4ec273b6ae65e2?source=copy_linki)

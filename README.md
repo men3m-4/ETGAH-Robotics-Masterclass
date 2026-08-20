@@ -15,7 +15,7 @@ This repository contains the learning tasks and project structure for the ETGAH 
 | # | Task | Description | Folder |
 |---|------|-------------|--------|
 | 1 | Programming for Robotics | Python basics → OOP → distance sensor mini project | [`robot-distance-sensor-ma/`](./robot-distance-sensor-ma/README.md) |
-| 2 | Linux Essentials for Robotics & ROS 2 Fundamentals | Linux CLI → ROS 2 Nodes & Topics → TurtleBot control project | [`turtlebot-controller-ma/`](./turtlebot-controller-ma/README.md) |
+| 2 | Linux Essentials for Robotics & ROS 2 Fundamentals | Linux → ROS 2 Nodes & Topics → TurtleBot control project | [`turtlebot-controller-ma/`](./turtlebot-controller-ma/README.md) |
 
 ## Environment
 
@@ -27,3 +27,15 @@ Developed and tested using the ETGAH Virtual Workspace.
 2. Open its folder and read the task's README
 3. Implement the required code in the `src/` directory
 4. Run and validate the project using the instructions provided in the task files
+## Learning Documentation
+
+In addition to the practical implementation of the masterclass tasks, I maintain a dedicated **Notion knowledge base** containing concise notes and summaries of the concepts covered throughout the course.
+
+The documentation is used for:
+
+- Reviewing and consolidating key concepts
+- Recording important ROS 2 commands and workflows
+- Summarizing lessons and technical topics
+- Supporting continuous learning and revision
+
+**Learning Notes:** [ROS 2 Robotics Masterclass – Notion](https://app.notion.com/p/ROS2-Robotics-Masterclass-3c2631df44df801e9c71f403775f619f?source=copy_link)
