@@ -314,3 +314,9 @@ The repeated output is normal because the publisher sends the current command 10
 
 Full concept review documented on Notion:
 [ROS2 Robotics Masterclass — Linux & ROS2 Foundations ](https://app.notion.com/p/Session-2-Linux-ROS2-Foundations-3c2631df44df8078b71ac0705a5a0ea2?source=copy_link)
+
+## Simulation Demo
+
+The following video demonstrates the TurtleBot3 simulation in Gazebo and shows the robot responding to keyboard commands
+
+![TurtleBot3 Simulation](media/simulation.gif)
