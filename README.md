@@ -16,6 +16,8 @@ This repository contains the learning tasks and project structure for the ETGAH 
 |---|------|-------------|--------|
 | 1 | Programming for Robotics | Python basics → OOP → distance sensor mini project | [`robot-distance-sensor-ma/`](./robot-distance-sensor-ma/README.md) |
 | 2 | Linux Essentials for Robotics & ROS 2 Fundamentals | Linux → ROS 2 Nodes & Topics → TurtleBot control project | [`turtlebot-controller-ma/`](./turtlebot-controller-ma/README.md) |
+| 3 | ROS 2 Services  | ROS 2 Services → Custom Service Interface → TurtleBot obstacle avoidance with manual override | [`turtlebot_operation_ma/`](./turtlebot_operation_ma/README.md) |
+| 4 | ROS 2 Actions  | ROS 2 Actions → Custom Action Interface → Autonomous TurtleBot package delivery mission | [`turtlebot_delivery_ma/`](./turtlebot_delivery_ma/README.md) |
 
 ## Environment
 
