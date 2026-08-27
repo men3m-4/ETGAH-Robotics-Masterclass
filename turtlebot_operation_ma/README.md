@@ -308,3 +308,8 @@ The robot moves backward and attempts to recover.
 
 ---
 
+## Simulation Demo
+
+The following video demonstrates the TurtleBot3 simulation in Gazebo and shows the robot responding to keyboard commands
+
+![TurtleBot3 Simulation](media/sr.gif)

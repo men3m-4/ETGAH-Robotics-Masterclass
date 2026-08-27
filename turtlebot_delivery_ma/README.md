@@ -115,3 +115,8 @@ Goal finished with status: ABORTED
 ```
 
 
+## Simulation Demo
+
+The following video demonstrates the TurtleBot3 simulation in Gazebo and shows the robot responding to keyboard commands
+
+![TurtleBot3 Simulation](media/ac.gif)
