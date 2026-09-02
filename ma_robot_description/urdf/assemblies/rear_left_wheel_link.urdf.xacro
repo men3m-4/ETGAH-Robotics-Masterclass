@@ -1,29 +1,42 @@
 <?xml version="1.0"?>
-<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="rear_left_wheel_link_macro">
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro"
+       name="rear_left_wheel_link_macro">
 
   <xacro:macro name="rear_left_wheel_link" params="prefix">
 
-    <!-- Links -->
     <link name="${prefix}rear_left_wheel_link">
+
       <inertial>
-        <origin xyz="0.032900 0.063048 -0.075483" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <mass value="0.611603"/>
-        <inertia ixx="5.265770e-04" ixy="-5.777757e-10" ixz="8.274260e-11"
-                 iyy="5.265750e-04" iyz="-6.033033e-11" izz="7.325315e-04"/>
+        <inertia
+          ixx="5.265770e-04"
+          ixy="-5.777757e-10"
+          ixz="8.274260e-11"
+          iyy="5.265750e-04"
+          iyz="-6.033033e-11"
+          izz="7.325315e-04"/>
       </inertial>
+
       <visual>
-        <origin xyz="0.020000 0.045000 -0.070000" rpy="1.570796 0.000000 0.000000"/>
+        <origin
+          xyz="-0.012900 -0.018051 0.005477"
+          rpy="1.570796 0.000000 0.000000"/>
         <geometry>
-          <mesh filename="package://ma_robot_description/meshes/rear_left_wheel_link/rear_left_wheel_link.dae" scale="1 1 1"/>
+          <mesh
+            filename="package://ma_robot_description/meshes/rear_left_wheel_link/rear_left_wheel_link.dae"
+            scale="1 1 1"/>
         </geometry>
         <material name="Steel"/>
       </visual>
+
       <collision>
-        <origin xyz="0.020000 0.045000 -0.070000" rpy="1.570796 0.000000 0.000000"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://ma_robot_description/meshes/rear_left_wheel_link/rear_left_wheel_link_collision.stl" scale="0.01 0.01 0.01"/>
+          <cylinder radius="0.045" length="0.050"/>
         </geometry>
       </collision>
+
     </link>
 
   </xacro:macro>
