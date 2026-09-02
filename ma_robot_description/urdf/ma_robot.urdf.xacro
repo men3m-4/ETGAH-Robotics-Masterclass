@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
+
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="ma_robot">
 
-  <!-- Materials (shared across all assemblies) -->
+  <!-- Materials -->
   <material name="Acetal_Resin_Black">
     <color rgba="0.098 0.098 0.098 1.0"/>
   </material>
@@ -21,6 +22,9 @@
   <xacro:include filename="$(find ma_robot_description)/urdf/assemblies/rear_right_wheel_link.urdf.xacro"/>
   <xacro:include filename="$(find ma_robot_description)/urdf/assemblies/ma_robot.urdf.xacro"/>
 
+  <!-- Gazebo configuration -->
+  <xacro:include filename="$(find ma_robot_description)/urdf/ma_robot.gazebo.xacro"/>
+
   <!-- Instantiate assemblies -->
   <xacro:rear_left_wheel_link prefix=""/>
   <xacro:front_left_wheel_link prefix=""/>
@@ -34,47 +38,61 @@
   <joint name="front_left_wheel_joint" type="continuous">
     <parent link="base_link"/>
     <child link="front_left_wheel_link"/>
+
     <origin
       xyz="0.130000 0.060000 0.020000"
       rpy="-1.570796 0.000000 0.000000"/>
+
     <axis xyz="0.000000 0.000000 1.000000"/>
-    <limit effort="100.0" velocity="1.00"/>
+
+    <limit effort="100.0" velocity="10.0"/>
   </joint>
 
   <!-- Front-right wheel -->
   <joint name="front_right_wheel_joint" type="continuous">
     <parent link="base_link"/>
     <child link="front_right_wheel_link"/>
+
     <origin
       xyz="0.130000 -0.185000 0.020000"
       rpy="1.570796 0.000000 0.000000"/>
-    <axis xyz="0.000000 0.000000 1.000000"/>
-    <limit effort="100.0" velocity="1.00"/>
+
+    <!-- Reversed because the right wheel frame is mirrored -->
+    <axis xyz="0.000000 0.000000 -1.000000"/>
+
+    <limit effort="100.0" velocity="10.0"/>
   </joint>
 
   <!-- Rear-left wheel -->
   <joint name="rear_left_wheel_joint" type="continuous">
     <parent link="base_link"/>
     <child link="rear_left_wheel_link"/>
+
     <origin
       xyz="-0.020000 0.060000 0.020000"
       rpy="-1.570796 0.000000 0.000000"/>
+
     <axis xyz="0.000000 0.000000 1.000000"/>
-    <limit effort="100.0" velocity="1.00"/>
+
+    <limit effort="100.0" velocity="10.0"/>
   </joint>
 
   <!-- Rear-right wheel -->
   <joint name="rear_right_wheel_joint" type="continuous">
     <parent link="base_link"/>
     <child link="rear_right_wheel_link"/>
+
     <origin
       xyz="-0.020000 -0.187000 0.020000"
       rpy="1.570796 0.000000 0.000000"/>
-    <axis xyz="0.000000 0.000000 1.000000"/>
-    <limit effort="100.0" velocity="1.00"/>
+
+    <!-- Reversed because the right wheel frame is mirrored -->
+    <axis xyz="0.000000 0.000000 -1.000000"/>
+
+    <limit effort="100.0" velocity="10.0"/>
   </joint>
 
-  <!-- ROS 2 control: generated generic system -->
+  <!-- ROS 2 control -->
   <ros2_control name="ma_robot_system" type="system">
 
     <hardware>
