@@ -4,8 +4,8 @@
     <contributor>
       <authoring_tool>Fusion URDF/XACRO Exporter</authoring_tool>
     </contributor>
-    <created>2026-09-02T15:14:22Z</created>
-    <modified>2026-09-02T15:14:22Z</modified>
+    <created>2026-09-02T20:07:39Z</created>
+    <modified>2026-09-02T20:07:39Z</modified>
     <unit name="meter" meter="1.0"/>
     <up_axis>Z_UP</up_axis>
   </asset>
@@ -114,7 +114,7 @@
           <lambert>
             <emission><color>0 0 0 1</color></emission>
             <ambient><color>0.0000 0.0000 0.0000 1</color></ambient>
-            <diffuse><color>0.1529 0.1529 0.1529 1</color></diffuse>
+            <diffuse><color>0.0000 0.0000 0.0000 1</color></diffuse>
             <reflective><color>0 0 0 1</color></reflective>
             <transparent opaque="A_ONE"><color>1 1 1 1</color></transparent>
             <transparency><float>1</float></transparency>

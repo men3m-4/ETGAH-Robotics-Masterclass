@@ -5,156 +5,159 @@ metadata:
   design_name: ma_robot
   package_name: ma_robot_description
   exporter_version: '3.1.0'
-  total_mass_kg: 7.1531
+  total_mass_kg: 5.7276
   link_count: 7
   joint_count: 6
   root_link: base_link
 
 assemblies:
+  base_link:
+    links: [zed2_camera_link, rplidar_s2_link]
+    total_mass_kg: 0.3820
   front_left_wheel_link:
-    links: [Part2_1]
-    total_mass_kg: 0.9680
+    links: [front_left_wheel_link]
+    total_mass_kg: 0.6116
   front_right_wheel_link:
-    links: [Part2_1_Mirror]
-    total_mass_kg: 0.9680
+    links: [front_right_wheel_link]
+    total_mass_kg: 0.6116
   ma_robot:
-    links: [zed2_camera_link, rplidar_s2_link, base_link]
-    total_mass_kg: 3.2811
+    links: [base_link]
+    total_mass_kg: 2.8992
   rear_left_wheel_link:
-    links: [Part2_2_Mirror]
-    total_mass_kg: 0.9680
+    links: [rear_left_wheel_link]
+    total_mass_kg: 0.6116
   rear_right_wheel_link:
-    links: [Part2_2]
-    total_mass_kg: 0.9680
+    links: [rear_right_wheel_link]
+    total_mass_kg: 0.6116
 
 links:
-  Part2_1:
-    assembly: front_left_wheel_link
-    mass_kg: 0.967990
-    volume_m3: 0.00012331
-    bbox_size_m: [0.108384, 0.046402, 0.108396]
-    com_local_m: [-0.129964, -0.020034, 0.052271]
-    inertia_at_com:
-      ixx: 4.354820e-04
-      ixy: -1.765367e-07
-      ixz: 9.904484e-07
-      iyy: 4.318266e-04
-      iyz: 1.096024e-06
-      izz: 6.297403e-04
-    material: 'Steel'
-    color_rgba: [0.792, 0.820, 0.933, 1.0]
-    body_count: 1
-    is_empty: false
-    collision_source: primitive
-    collision_shape: box
-    bake_offset_m: [-0.130000, -0.020000, 0.070000]
-    mesh_origin_rpy_rad: [-1.570796, 0.000000, 0.000000]
-    frame_rule: auto
-    frame_rebase_rpy_rad: [1.570796, 0.000000, 0.000000]
-    rigid_group: Rigid Group 1
-    is_merged: true
-    merged_from: [Part1, Part4, Part4, Part4, Part4, Part4, Part2, Part4, Part4, Part4, Part1, Part4]
-  Part2_1_Mirror:
-    assembly: front_right_wheel_link
-    mass_kg: 0.967990
-    volume_m3: 0.00012331
-    bbox_size_m: [0.108384, 0.046402, 0.108396]
-    com_local_m: [-0.129964, -0.019966, -0.185729]
-    inertia_at_com:
-      ixx: 4.354820e-04
-      ixy: 1.765368e-07
-      ixz: 9.904484e-07
-      iyy: 4.318266e-04
-      iyz: -1.096024e-06
-      izz: 6.297403e-04
-    material: 'Steel'
-    color_rgba: [0.792, 0.820, 0.933, 1.0]
-    body_count: 1
-    is_empty: false
-    collision_source: primitive
-    collision_shape: cylinder
-    bake_offset_m: [-0.130000, -0.020000, -0.168000]
-    mesh_origin_rpy_rad: [-1.570796, 0.000000, 0.000000]
-    frame_rule: auto
-    frame_rebase_rpy_rad: [1.570796, 0.000000, 0.000000]
-    rigid_group: Rigid Group 1
-    is_merged: true
-    merged_from: [Part1, Part4, Part4, Part4, Part1, Part4, Part4, Part4, Part4, Part2, Part4, Part4]
-  Part2_2:
-    assembly: rear_right_wheel_link
-    mass_kg: 0.967990
-    volume_m3: 0.00012331
-    bbox_size_m: [0.108384, 0.046402, 0.108396]
-    com_local_m: [0.020036, -0.020034, -0.185729]
-    inertia_at_com:
-      ixx: 4.354820e-04
-      ixy: -1.765367e-07
-      ixz: 9.904484e-07
-      iyy: 4.318266e-04
-      iyz: 1.096024e-06
-      izz: 6.297403e-04
-    material: 'Steel'
-    color_rgba: [0.792, 0.820, 0.933, 1.0]
-    body_count: 1
-    is_empty: false
-    collision_source: primitive
-    collision_shape: box
-    bake_offset_m: [0.020000, -0.020000, -0.168000]
-    mesh_origin_rpy_rad: [-1.570796, 0.000000, 0.000000]
-    frame_rule: auto
-    frame_rebase_rpy_rad: [1.570796, 0.000000, 0.000000]
-    rigid_group: Rigid Group 1
-    is_merged: true
-    merged_from: [Part1, Part4, Part4, Part4, Part4, Part4, Part2, Part4, Part4, Part4, Part1, Part4]
-  Part2_2_Mirror:
-    assembly: rear_left_wheel_link
-    mass_kg: 0.967990
-    volume_m3: 0.00012331
-    bbox_size_m: [0.108384, 0.046402, 0.108396]
-    com_local_m: [0.020036, -0.019966, 0.025271]
-    inertia_at_com:
-      ixx: 4.354820e-04
-      ixy: 1.765368e-07
-      ixz: 9.904484e-07
-      iyy: 4.318266e-04
-      iyz: -1.096024e-06
-      izz: 6.297403e-04
-    material: 'Steel'
-    color_rgba: [0.792, 0.820, 0.933, 1.0]
-    body_count: 1
-    is_empty: false
-    collision_source: primitive
-    collision_shape: cylinder
-    bake_offset_m: [0.020000, -0.020000, 0.043000]
-    mesh_origin_rpy_rad: [-1.570796, 0.000000, 0.000000]
-    frame_rule: auto
-    frame_rebase_rpy_rad: [1.570796, 0.000000, 0.000000]
-    rigid_group: Rigid Group 1
-    is_merged: true
-    merged_from: [Part4, Part4, Part4, Part4, Part1, Part2, Part4, Part4, Part4, Part1, Part4, Part4]
   base_link:
     assembly: ma_robot
-    mass_kg: 2.899152
-    volume_m3: 0.00203449
+    mass_kg: 2.899175
+    volume_m3: 0.00203451
     bbox_size_m: [0.263037, 0.245000, 0.120000]
-    com_local_m: [0.041574, -0.062494, 0.024420]
+    com_local_m: [0.041573, -0.062494, 0.024421]
     inertia_at_com:
-      ixx: 7.973742e-03
-      ixy: 9.036729e-07
-      ixz: 2.781740e-04
-      iyy: 1.379462e-02
-      iyz: -4.481306e-07
-      izz: 2.052761e-02
+      ixx: 7.973873e-03
+      ixy: 9.036956e-07
+      ixz: 2.783768e-04
+      iyy: 1.379507e-02
+      iyz: -4.481468e-07
+      izz: 2.052792e-02
     material: 'Acetal_Resin_Black'
     color_rgba: [0.098, 0.098, 0.098, 1.0]
     body_count: 2
     is_empty: false
     collision_source: primitive
-    collision_shape: cylinder
+    collision_shape: box
     frame_rule: auto
     frame_rebase_rpy_rad: [0.000000, 0.000000, 0.000000]
+  front_left_wheel_link:
+    assembly: front_left_wheel_link
+    mass_kg: 0.611603
+    volume_m3: 0.00007791
+    bbox_size_m: [0.090000, 0.095316, 0.089920]
+    com_local_m: [-0.000000, -0.000000, -0.007006]
+    inertia_at_com:
+      ixx: 5.265770e-04
+      ixy: -5.777757e-10
+      ixz: 8.274260e-11
+      iyy: 5.265750e-04
+      iyz: -6.033033e-11
+      izz: 7.325315e-04
+    material: 'Steel'
+    color_rgba: [0.627, 0.627, 0.627, 1.0]
+    body_count: 1
+    is_empty: false
+    collision_source: primitive
+    collision_shape: box
+    bake_offset_m: [-0.012900, -0.018048, -0.001523]
+    mesh_origin_rpy_rad: [1.570796, 0.000000, 0.000000]
+    frame_rule: auto
+    frame_rebase_rpy_rad: [-1.570796, 0.000000, 0.000000]
+    rigid_group: front_left_wheel_link
+    is_merged: true
+    merged_from: [Rim:1, Tire:1]
+  front_right_wheel_link:
+    assembly: front_right_wheel_link
+    mass_kg: 0.611603
+    volume_m3: 0.00007791
+    bbox_size_m: [0.090000, 0.100819, 0.089920]
+    com_local_m: [0.000000, 0.000000, -0.007006]
+    inertia_at_com:
+      ixx: 5.265770e-04
+      ixy: -5.777757e-10
+      ixz: -8.274263e-11
+      iyy: 5.265750e-04
+      iyz: 6.033033e-11
+      izz: 7.325315e-04
+    material: 'Steel'
+    color_rgba: [0.627, 0.627, 0.627, 1.0]
+    body_count: 1
+    is_empty: false
+    collision_source: primitive
+    collision_shape: box
+    bake_offset_m: [0.012900, 0.018048, -0.001523]
+    mesh_origin_rpy_rad: [1.570796, 0.000000, 3.141593]
+    frame_rule: auto
+    frame_rebase_rpy_rad: [1.570796, 0.000000, -3.141593]
+    rigid_group: front_right_wheel_link
+    is_merged: true
+    merged_from: [Rim, Tire]
+  rear_left_wheel_link:
+    assembly: rear_left_wheel_link
+    mass_kg: 0.611603
+    volume_m3: 0.00007791
+    bbox_size_m: [0.090000, 0.096209, 0.089920]
+    com_local_m: [-0.000000, -0.000000, -0.007006]
+    inertia_at_com:
+      ixx: 5.265770e-04
+      ixy: -5.777757e-10
+      ixz: 8.274260e-11
+      iyy: 5.265750e-04
+      iyz: -6.033033e-11
+      izz: 7.325315e-04
+    material: 'Steel'
+    color_rgba: [0.627, 0.627, 0.627, 1.0]
+    body_count: 1
+    is_empty: false
+    collision_source: primitive
+    collision_shape: box
+    bake_offset_m: [-0.012900, -0.018048, -0.001523]
+    mesh_origin_rpy_rad: [1.570796, 0.000000, 0.000000]
+    frame_rule: auto
+    frame_rebase_rpy_rad: [-1.570796, 0.000000, 0.000000]
+    rigid_group: rear_left_wheel_link
+    is_merged: true
+    merged_from: [Rim, Tire]
+  rear_right_wheel_link:
+    assembly: rear_right_wheel_link
+    mass_kg: 0.611603
+    volume_m3: 0.00007791
+    bbox_size_m: [0.090000, 0.088376, 0.089920]
+    com_local_m: [0.000000, 0.000000, -0.009006]
+    inertia_at_com:
+      ixx: 5.265770e-04
+      ixy: -5.777757e-10
+      ixz: -8.274261e-11
+      iyy: 5.265750e-04
+      iyz: 6.033033e-11
+      izz: 7.325315e-04
+    material: 'Steel'
+    color_rgba: [0.627, 0.627, 0.627, 1.0]
+    body_count: 1
+    is_empty: false
+    collision_source: primitive
+    collision_shape: box
+    bake_offset_m: [0.012900, 0.018048, -0.003523]
+    mesh_origin_rpy_rad: [1.570796, 0.000000, 3.141593]
+    frame_rule: auto
+    frame_rebase_rpy_rad: [1.570796, 0.000000, -3.141593]
+    rigid_group: rear_right_wheel_link
+    is_merged: true
+    merged_from: [Rim, Tire]
   rplidar_s2_link:
-    assembly: ma_robot
+    assembly: base_link
     mass_kg: 0.203764
     volume_m3: 0.00003373
     bbox_size_m: [0.077000, 0.077000, 0.038851]
@@ -173,7 +176,7 @@ links:
     collision_source: primitive
     collision_shape: box
   zed2_camera_link:
-    assembly: ma_robot
+    assembly: base_link
     mass_kg: 0.178229
     volume_m3: 0.00015211
     bbox_size_m: [0.174732, 0.031600, 0.029732]
@@ -193,59 +196,59 @@ links:
     collision_shape: box
 
 joints:
-  Revolute_5:
+  front_left_wheel_joint:
     type: continuous
     parent: base_link
-    child: Part2_1
-    origin_xyz_m: [0.260000, 0.000000, 0.000000]
+    child: front_left_wheel_link
+    origin_xyz_m: [0.130000, 0.060000, 0.020000]
     origin_rpy_rad: [-1.570796, 0.000000, 0.000000]
     axis: [0.0000, 0.0000, 1.0000]
     is_mount: true
     passive: false
-  Revolute_6:
+  front_right_wheel_joint:
     type: continuous
     parent: base_link
-    child: Part2_2
-    origin_xyz_m: [-0.040000, -0.362000, 0.040000]
+    child: front_right_wheel_link
+    origin_xyz_m: [0.130000, -0.185000, 0.020000]
     origin_rpy_rad: [1.570796, 0.000000, 0.000000]
     axis: [0.0000, 0.0000, 1.0000]
     is_mount: true
     passive: false
-  Revolute_8:
+  rear_left_wheel_joint:
     type: continuous
     parent: base_link
-    child: Part2_1_Mirror
-    origin_xyz_m: [0.260000, -0.362000, 0.040000]
-    origin_rpy_rad: [1.570796, 0.000000, 0.000000]
-    axis: [0.0000, 0.0000, 1.0000]
-    is_mount: true
-    passive: false
-  Revolute_9:
-    type: continuous
-    parent: base_link
-    child: Part2_2_Mirror
-    origin_xyz_m: [-0.040000, 0.026000, 0.000000]
+    child: rear_left_wheel_link
+    origin_xyz_m: [-0.020000, 0.060000, 0.020000]
     origin_rpy_rad: [-1.570796, 0.000000, 0.000000]
     axis: [0.0000, 0.0000, 1.0000]
     is_mount: true
     passive: false
-  Rigid_1:
-    type: fixed
+  rear_right_wheel_joint:
+    type: continuous
     parent: base_link
-    child: zed2_camera_link
-    origin_xyz_m: [0.145000, -0.062500, -0.007371]
-    origin_rpy_rad: [0.000000, 0.000000, -1.570796]
+    child: rear_right_wheel_link
+    origin_xyz_m: [-0.020000, -0.187000, 0.020000]
+    origin_rpy_rad: [1.570796, 0.000000, 0.000000]
     axis: [0.0000, 0.0000, 1.0000]
-    is_mount: false
+    is_mount: true
     passive: false
-  Rigid_2:
+  rplidar_s2_joint:
     type: fixed
     parent: base_link
     child: rplidar_s2_link
     origin_xyz_m: [-0.433747, -0.657506, 0.046815]
     origin_rpy_rad: [0.000000, 0.000000, -1.570796]
     axis: [0.0000, 0.0000, 1.0000]
-    is_mount: false
+    is_mount: true
+    passive: false
+  zed2_camera_joint:
+    type: fixed
+    parent: base_link
+    child: zed2_camera_link
+    origin_xyz_m: [0.145000, -0.062500, -0.007371]
+    origin_rpy_rad: [0.000000, 0.000000, -1.570796]
+    axis: [0.0000, 0.0000, 1.0000]
+    is_mount: true
     passive: false
 
 closing_joints: []

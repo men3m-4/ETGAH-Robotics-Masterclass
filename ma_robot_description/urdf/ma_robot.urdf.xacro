@@ -14,16 +14,18 @@
 
   <!-- Assembly includes -->
   <xacro:include filename="$(find ma_robot_description)/urdf/assemblies/front_left_wheel_link.urdf.xacro"/>
-  <xacro:include filename="$(find ma_robot_description)/urdf/assemblies/rear_right_wheel_link.urdf.xacro"/>
   <xacro:include filename="$(find ma_robot_description)/urdf/assemblies/front_right_wheel_link.urdf.xacro"/>
   <xacro:include filename="$(find ma_robot_description)/urdf/assemblies/rear_left_wheel_link.urdf.xacro"/>
+  <xacro:include filename="$(find ma_robot_description)/urdf/assemblies/rear_right_wheel_link.urdf.xacro"/>
+  <xacro:include filename="$(find ma_robot_description)/urdf/assemblies/base_link.urdf.xacro"/>
   <xacro:include filename="$(find ma_robot_description)/urdf/assemblies/ma_robot.urdf.xacro"/>
 
   <!-- Instantiate assemblies -->
   <xacro:front_left_wheel_link prefix=""/>
-  <xacro:rear_right_wheel_link prefix=""/>
   <xacro:front_right_wheel_link prefix=""/>
   <xacro:rear_left_wheel_link prefix=""/>
+  <xacro:rear_right_wheel_link prefix=""/>
+  <xacro:base_link prefix=""/>
   <xacro:ma_robot prefix=""/>
 
   <!-- Mount joints (cross-assembly connections) -->
@@ -32,34 +34,46 @@
   <!-- update the include + macro call above, and adjust -->
   <!-- parent/child link names in the mount joint below. -->
 
-  <joint name="Revolute_5" type="continuous">
+  <joint name="zed2_camera_joint" type="fixed">
     <parent link="base_link"/>
-    <child link="Part2_1"/>
-    <origin xyz="0.260000 0.000000 0.000000" rpy="-1.570796 0.000000 0.000000"/>
+    <child link="zed2_camera_link"/>
+    <origin xyz="0.145000 -0.062500 -0.007371" rpy="0.000000 0.000000 -1.570796"/>
+  </joint>
+
+  <joint name="rplidar_s2_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="rplidar_s2_link"/>
+    <origin xyz="-0.433747 -0.657506 0.046815" rpy="0.000000 0.000000 -1.570796"/>
+  </joint>
+
+  <joint name="front_right_wheel_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="front_right_wheel_link"/>
+    <origin xyz="0.130000 -0.185000 0.020000" rpy="1.570796 0.000000 0.000000"/>
     <axis xyz="0.000000 0.000000 1.000000"/>
     <limit effort="100.0" velocity="1.00"/>
   </joint>
 
-  <joint name="Revolute_6" type="continuous">
+  <joint name="rear_right_wheel_joint" type="continuous">
     <parent link="base_link"/>
-    <child link="Part2_2"/>
-    <origin xyz="-0.040000 -0.362000 0.040000" rpy="1.570796 0.000000 0.000000"/>
+    <child link="rear_right_wheel_link"/>
+    <origin xyz="-0.020000 -0.187000 0.020000" rpy="1.570796 0.000000 0.000000"/>
     <axis xyz="0.000000 0.000000 1.000000"/>
     <limit effort="100.0" velocity="1.00"/>
   </joint>
 
-  <joint name="Revolute_8" type="continuous">
+  <joint name="front_left_wheel_joint" type="continuous">
     <parent link="base_link"/>
-    <child link="Part2_1_Mirror"/>
-    <origin xyz="0.260000 -0.362000 0.040000" rpy="1.570796 0.000000 0.000000"/>
+    <child link="front_left_wheel_link"/>
+    <origin xyz="0.130000 0.060000 0.020000" rpy="-1.570796 0.000000 0.000000"/>
     <axis xyz="0.000000 0.000000 1.000000"/>
     <limit effort="100.0" velocity="1.00"/>
   </joint>
 
-  <joint name="Revolute_9" type="continuous">
+  <joint name="rear_left_wheel_joint" type="continuous">
     <parent link="base_link"/>
-    <child link="Part2_2_Mirror"/>
-    <origin xyz="-0.040000 0.026000 0.000000" rpy="-1.570796 0.000000 0.000000"/>
+    <child link="rear_left_wheel_link"/>
+    <origin xyz="-0.020000 0.060000 0.020000" rpy="-1.570796 0.000000 0.000000"/>
     <axis xyz="0.000000 0.000000 1.000000"/>
     <limit effort="100.0" velocity="1.00"/>
   </joint>
@@ -72,7 +86,7 @@
       <param name="state_topic">sim/ma_robot_system/state</param>
     </hardware>
 
-    <joint name="Revolute_5">
+    <joint name="front_left_wheel_joint">
       <command_interface name="position"/>
       <command_interface name="velocity"/>
       <state_interface name="position">
@@ -81,7 +95,7 @@
       <state_interface name="velocity"/>
       <state_interface name="effort"/>
     </joint>
-    <joint name="Revolute_6">
+    <joint name="front_right_wheel_joint">
       <command_interface name="position"/>
       <command_interface name="velocity"/>
       <state_interface name="position">
@@ -90,7 +104,7 @@
       <state_interface name="velocity"/>
       <state_interface name="effort"/>
     </joint>
-    <joint name="Revolute_8">
+    <joint name="rear_left_wheel_joint">
       <command_interface name="position"/>
       <command_interface name="velocity"/>
       <state_interface name="position">
@@ -99,7 +113,7 @@
       <state_interface name="velocity"/>
       <state_interface name="effort"/>
     </joint>
-    <joint name="Revolute_9">
+    <joint name="rear_right_wheel_joint">
       <command_interface name="position"/>
       <command_interface name="velocity"/>
       <state_interface name="position">

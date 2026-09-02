@@ -12,19 +12,19 @@ Convention: URDF RPY (XYZ extrinsic / ZYX intrinsic).
 | $L_{0}$ | base_link |
 | $L_{1}$ | zed2_camera_link |
 | $L_{2}$ | rplidar_s2_link |
-| $L_{3}$ | Part2_1 |
-| $L_{4}$ | Part2_2 |
-| $L_{5}$ | Part2_1_Mirror |
-| $L_{6}$ | Part2_2_Mirror |
+| $L_{3}$ | front_right_wheel_link |
+| $L_{4}$ | rear_right_wheel_link |
+| $L_{5}$ | front_left_wheel_link |
+| $L_{6}$ | rear_left_wheel_link |
 
 ### Joint Variables
 
 | Variable | Joint | Type | From | To |
 |----------|-------|------|------|----|
-| $q_{1}$ | Revolute_5 | continuous (rad) | $L_{0}$ | $L_{3}$ |
-| $q_{2}$ | Revolute_6 | continuous (rad) | $L_{0}$ | $L_{4}$ |
-| $q_{3}$ | Revolute_8 | continuous (rad) | $L_{0}$ | $L_{5}$ |
-| $q_{4}$ | Revolute_9 | continuous (rad) | $L_{0}$ | $L_{6}$ |
+| $q_{1}$ | front_right_wheel_joint | continuous (rad) | $L_{0}$ | $L_{3}$ |
+| $q_{2}$ | rear_right_wheel_joint | continuous (rad) | $L_{0}$ | $L_{4}$ |
+| $q_{3}$ | front_left_wheel_joint | continuous (rad) | $L_{0}$ | $L_{5}$ |
+| $q_{4}$ | rear_left_wheel_joint | continuous (rad) | $L_{0}$ | $L_{6}$ |
 
 Shorthand: $c_i = \cos(q_i)$, $s_i = \sin(q_i)$
 
@@ -32,23 +32,23 @@ Shorthand: $c_i = \cos(q_i)$, $s_i = \sin(q_i)$
 
 ```
 L0: base_link
-  |-- [fixed] Rigid_1
+  |-- [fixed] zed2_camera_joint
   |   L1: zed2_camera_link
-  |-- [fixed] Rigid_2
+  |-- [fixed] rplidar_s2_joint
   |   L2: rplidar_s2_link
-  |-- [continuous] Revolute_5 (q1)
-  |   L3: Part2_1
-  |-- [continuous] Revolute_6 (q2)
-  |   L4: Part2_2
-  |-- [continuous] Revolute_8 (q3)
-  |   L5: Part2_1_Mirror
-  +-- [continuous] Revolute_9 (q4)
-      L6: Part2_2_Mirror
+  |-- [continuous] front_right_wheel_joint (q1)
+  |   L3: front_right_wheel_link
+  |-- [continuous] rear_right_wheel_joint (q2)
+  |   L4: rear_right_wheel_link
+  |-- [continuous] front_left_wheel_joint (q3)
+  |   L5: front_left_wheel_link
+  +-- [continuous] rear_left_wheel_joint (q4)
+      L6: rear_left_wheel_link
 ```
 
 ## Transforms
 
-## Rigid_1
+## zed2_camera_joint
 
 $L_{0}$ **base_link** -> $L_{1}$ **zed2_camera_link** (fixed)
 
@@ -68,7 +68,7 @@ $$
 
 ---
 
-## Rigid_2
+## rplidar_s2_joint
 
 $L_{0}$ **base_link** -> $L_{2}$ **rplidar_s2_link** (fixed)
 
@@ -88,13 +88,13 @@ $$
 
 ---
 
-## Revolute_5
+## front_right_wheel_joint
 
-$L_{0}$ **base_link** -> $L_{3}$ **Part2_1** (continuous)
+$L_{0}$ **base_link** -> $L_{3}$ **front_right_wheel_link** (continuous)
   Variable: $q_{1}$
 
-- **origin xyz**: (0.26, 0, 0) m
-- **origin rpy**: (-1.570796, 0, 0) rad
+- **origin xyz**: (0.13, -0.185, 0.02) m
+- **origin rpy**: (1.570796, 0, 0) rad
 - **axis**: (0, 0, 1)
 
 ### Local Transform
@@ -103,9 +103,9 @@ $T^{0}_{3}(q_{1}) = T_{fixed} \cdot R_{axis}(q_{1})$ where:
 
 $$
 T_{fixed} = \begin{bmatrix}
-1 & 0 & 0 & 0.26 \\
-0 & 0 & 1 & 0 \\
-0 & -1 & 0 & 0 \\
+1 & 0 & 0 & 0.13 \\
+0 & 0 & -1 & -0.185 \\
+0 & 1 & 0 & 0.02 \\
 0 & 0 & 0 & 1 \\
 \end{bmatrix}
 $$
@@ -121,12 +121,12 @@ $$
 
 ---
 
-## Revolute_6
+## rear_right_wheel_joint
 
-$L_{0}$ **base_link** -> $L_{4}$ **Part2_2** (continuous)
+$L_{0}$ **base_link** -> $L_{4}$ **rear_right_wheel_link** (continuous)
   Variable: $q_{2}$
 
-- **origin xyz**: (-0.04, -0.362, 0.04) m
+- **origin xyz**: (-0.02, -0.187, 0.02) m
 - **origin rpy**: (1.570796, 0, 0) rad
 - **axis**: (0, 0, 1)
 
@@ -136,9 +136,9 @@ $T^{0}_{4}(q_{2}) = T_{fixed} \cdot R_{axis}(q_{2})$ where:
 
 $$
 T_{fixed} = \begin{bmatrix}
-1 & 0 & 0 & -0.04 \\
-0 & 0 & -1 & -0.362 \\
-0 & 1 & 0 & 0.04 \\
+1 & 0 & 0 & -0.02 \\
+0 & 0 & -1 & -0.187 \\
+0 & 1 & 0 & 0.02 \\
 0 & 0 & 0 & 1 \\
 \end{bmatrix}
 $$
@@ -154,13 +154,13 @@ $$
 
 ---
 
-## Revolute_8
+## front_left_wheel_joint
 
-$L_{0}$ **base_link** -> $L_{5}$ **Part2_1_Mirror** (continuous)
+$L_{0}$ **base_link** -> $L_{5}$ **front_left_wheel_link** (continuous)
   Variable: $q_{3}$
 
-- **origin xyz**: (0.26, -0.362, 0.04) m
-- **origin rpy**: (1.570796, 0, 0) rad
+- **origin xyz**: (0.13, 0.06, 0.02) m
+- **origin rpy**: (-1.570796, 0, 0) rad
 - **axis**: (0, 0, 1)
 
 ### Local Transform
@@ -169,9 +169,9 @@ $T^{0}_{5}(q_{3}) = T_{fixed} \cdot R_{axis}(q_{3})$ where:
 
 $$
 T_{fixed} = \begin{bmatrix}
-1 & 0 & 0 & 0.26 \\
-0 & 0 & -1 & -0.362 \\
-0 & 1 & 0 & 0.04 \\
+1 & 0 & 0 & 0.13 \\
+0 & 0 & 1 & 0.06 \\
+0 & -1 & 0 & 0.02 \\
 0 & 0 & 0 & 1 \\
 \end{bmatrix}
 $$
@@ -187,12 +187,12 @@ $$
 
 ---
 
-## Revolute_9
+## rear_left_wheel_joint
 
-$L_{0}$ **base_link** -> $L_{6}$ **Part2_2_Mirror** (continuous)
+$L_{0}$ **base_link** -> $L_{6}$ **rear_left_wheel_link** (continuous)
   Variable: $q_{4}$
 
-- **origin xyz**: (-0.04, 0.026, 0) m
+- **origin xyz**: (-0.02, 0.06, 0.02) m
 - **origin rpy**: (-1.570796, 0, 0) rad
 - **axis**: (0, 0, 1)
 
@@ -202,9 +202,9 @@ $T^{0}_{6}(q_{4}) = T_{fixed} \cdot R_{axis}(q_{4})$ where:
 
 $$
 T_{fixed} = \begin{bmatrix}
-1 & 0 & 0 & -0.04 \\
-0 & 0 & 1 & 0.026 \\
-0 & -1 & 0 & 0 \\
+1 & 0 & 0 & -0.02 \\
+0 & 0 & 1 & 0.06 \\
+0 & -1 & 0 & 0.02 \\
 0 & 0 & 0 & 1 \\
 \end{bmatrix}
 $$

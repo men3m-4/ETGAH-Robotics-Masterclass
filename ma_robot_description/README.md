@@ -6,10 +6,10 @@
 
 | Property | Value |
 |----------|-------|
-| Total mass | 7.153 kg |
+| Total mass | 5.728 kg |
 | Links | 7 |
 | Joints | 6 (4 movable) |
-| Assemblies | 5 |
+| Assemblies | 6 |
 | Root link | `base_link` |
 
 ## Table of Contents
@@ -25,29 +25,29 @@
 
 ```
 base_link
-  └─ Rigid_1 [fixed]
+  └─ zed2_camera_joint [fixed]
     zed2_camera_link
-  └─ Rigid_2 [fixed]
+  └─ rplidar_s2_joint [fixed]
     rplidar_s2_link
-  └─ Revolute_5 [continuous]
-    Part2_1 [BAKE]
-  └─ Revolute_6 [continuous]
-    Part2_2 [BAKE]
-  └─ Revolute_8 [continuous]
-    Part2_1_Mirror [BAKE]
-  └─ Revolute_9 [continuous]
-    Part2_2_Mirror [BAKE]
+  └─ front_right_wheel_joint [continuous]
+    front_right_wheel_link [BAKE]
+  └─ rear_right_wheel_joint [continuous]
+    rear_right_wheel_link [BAKE]
+  └─ front_left_wheel_joint [continuous]
+    front_left_wheel_link [BAKE]
+  └─ rear_left_wheel_joint [continuous]
+    rear_left_wheel_link [BAKE]
 ```
 
 ## Link Properties
 
 | Link | Mass (kg) | Material | Collision | Bodies |
 |------|-----------|----------|-----------|--------|
-| `Part2_1` | 0.9680 | Steel | box | 1 |
-| `Part2_1_Mirror` | 0.9680 | Steel | cylinder | 1 |
-| `Part2_2` | 0.9680 | Steel | box | 1 |
-| `Part2_2_Mirror` | 0.9680 | Steel | cylinder | 1 |
-| `base_link` | 2.8992 | Acetal_Resin_Black | cylinder | 2 |
+| `base_link` | 2.8992 | Acetal_Resin_Black | box | 2 |
+| `front_left_wheel_link` | 0.6116 | Steel | box | 1 |
+| `front_right_wheel_link` | 0.6116 | Steel | box | 1 |
+| `rear_left_wheel_link` | 0.6116 | Steel | box | 1 |
+| `rear_right_wheel_link` | 0.6116 | Steel | box | 1 |
 | `rplidar_s2_link` | 0.2038 | Steel | box | 28 |
 | `zed2_camera_link` | 0.1782 | PA_11_Nylon_HP_11_30_with_EOS_P_396_3D_Printer | box | 1 |
 
@@ -55,39 +55,44 @@ base_link
 
 | Joint | Type | Parent → Child | Axis | Limits |
 |-------|------|---------------|------|--------|
-| `Revolute_5` | continuous | `base_link` → `Part2_1` | (0,0,1) | — |
-| `Revolute_6` | continuous | `base_link` → `Part2_2` | (0,0,1) | — |
-| `Revolute_8` | continuous | `base_link` → `Part2_1_Mirror` | (0,0,1) | — |
-| `Revolute_9` | continuous | `base_link` → `Part2_2_Mirror` | (0,0,1) | — |
-| `Rigid_1` | fixed | `base_link` → `zed2_camera_link` | (0,0,1) | — |
-| `Rigid_2` | fixed | `base_link` → `rplidar_s2_link` | (0,0,1) | — |
+| `front_left_wheel_joint` | continuous | `base_link` → `front_left_wheel_link` | (0,0,1) | — |
+| `front_right_wheel_joint` | continuous | `base_link` → `front_right_wheel_link` | (0,0,1) | — |
+| `rear_left_wheel_joint` | continuous | `base_link` → `rear_left_wheel_link` | (0,0,1) | — |
+| `rear_right_wheel_joint` | continuous | `base_link` → `rear_right_wheel_link` | (0,0,1) | — |
+| `rplidar_s2_joint` | fixed | `base_link` → `rplidar_s2_link` | (0,0,1) | — |
+| `zed2_camera_joint` | fixed | `base_link` → `zed2_camera_link` | (0,0,1) | — |
 
 ## Assembly Breakdown
 
+### base_link
+
+- **Links**: zed2_camera_link, rplidar_s2_link
+- **Total mass**: 0.382 kg
+
 ### front_left_wheel_link
 
-- **Links**: Part2_1
-- **Total mass**: 0.968 kg
+- **Links**: front_left_wheel_link
+- **Total mass**: 0.612 kg
 
 ### front_right_wheel_link
 
-- **Links**: Part2_1_Mirror
-- **Total mass**: 0.968 kg
+- **Links**: front_right_wheel_link
+- **Total mass**: 0.612 kg
 
 ### ma_robot
 
-- **Links**: zed2_camera_link, rplidar_s2_link, base_link
-- **Total mass**: 3.281 kg
+- **Links**: base_link
+- **Total mass**: 2.899 kg
 
 ### rear_left_wheel_link
 
-- **Links**: Part2_2_Mirror
-- **Total mass**: 0.968 kg
+- **Links**: rear_left_wheel_link
+- **Total mass**: 0.612 kg
 
 ### rear_right_wheel_link
 
-- **Links**: Part2_2
-- **Total mass**: 0.968 kg
+- **Links**: rear_right_wheel_link
+- **Total mass**: 0.612 kg
 
 ## Quick Start (ROS 2)
 

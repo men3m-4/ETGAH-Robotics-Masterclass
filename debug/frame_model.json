@@ -34,8 +34,13 @@
   },
   "model": {
     "assemblies": {
-      "front_left_wheel_link": {
-        "children_assemblies": [],
+      "base_link": {
+        "children_assemblies": [
+          "front_left_wheel_link",
+          "front_right_wheel_link",
+          "rear_left_wheel_link",
+          "rear_right_wheel_link"
+        ],
         "depth": 0,
         "global_offset": [
           0.0,
@@ -53,38 +58,72 @@
           0.0,
           1.0
         ],
-        "joints": [],
-        "links": [
-          "Part2_1"
+        "joints": [
+          "zed2_camera_joint",
+          "rplidar_s2_joint",
+          "front_right_wheel_joint",
+          "rear_right_wheel_joint",
+          "front_left_wheel_joint",
+          "rear_left_wheel_joint"
         ],
-        "name": "front_left_wheel_link",
+        "links": [
+          "zed2_camera_link",
+          "rplidar_s2_link"
+        ],
+        "name": "base_link",
         "parent_assembly": null
       },
-      "front_right_wheel_link": {
+      "front_left_wheel_link": {
         "children_assemblies": [],
-        "depth": 0,
+        "depth": 1,
         "global_offset": [
-          1.7763568394002505e-17,
-          -0.3,
-          0.0
+          0.10516894200720316,
+          0.11687951081888912,
+          0.031432372684934505
         ],
         "global_rotation": [
           1.0,
-          1.691768418476429e-16,
-          0.0,
-          1.691768418476429e-16,
-          -1.0,
           0.0,
           0.0,
           0.0,
-          -1.0
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
         ],
         "joints": [],
         "links": [
-          "Part2_1_Mirror"
+          "front_left_wheel_link"
+        ],
+        "name": "front_left_wheel_link",
+        "parent_assembly": "base_link"
+      },
+      "front_right_wheel_link": {
+        "children_assemblies": [],
+        "depth": 1,
+        "global_offset": [
+          0.1621119700986496,
+          -0.24738192154867975,
+          0.03
+        ],
+        "global_rotation": [
+          -0.9999999999999993,
+          -1.3369860774048453e-13,
+          0.0,
+          1.3369860774048453e-13,
+          -0.9999999999999993,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "joints": [],
+        "links": [
+          "front_right_wheel_link"
         ],
         "name": "front_right_wheel_link",
-        "parent_assembly": null
+        "parent_assembly": "base_link"
       },
       "ma_robot": {
         "children_assemblies": [],
@@ -105,17 +144,8 @@
           0.0,
           1.0
         ],
-        "joints": [
-          "Rigid_1",
-          "Rigid_2",
-          "Revolute_5",
-          "Revolute_6",
-          "Revolute_8",
-          "Revolute_9"
-        ],
+        "joints": [],
         "links": [
-          "zed2_camera_link",
-          "rplidar_s2_link",
           "base_link"
         ],
         "name": "ma_robot",
@@ -123,37 +153,11 @@
       },
       "rear_left_wheel_link": {
         "children_assemblies": [],
-        "depth": 0,
+        "depth": 1,
         "global_offset": [
           0.0,
-          0.05,
-          0.0
-        ],
-        "global_rotation": [
-          1.0,
-          0.0,
-          0.0,
-          0.0,
-          -1.0,
-          0.0,
-          0.0,
-          0.0,
-          -1.0
-        ],
-        "joints": [],
-        "links": [
-          "Part2_2_Mirror"
-        ],
-        "name": "rear_left_wheel_link",
-        "parent_assembly": null
-      },
-      "rear_right_wheel_link": {
-        "children_assemblies": [],
-        "depth": 0,
-        "global_offset": [
-          0.0,
-          0.0,
-          0.0
+          0.1177726680317101,
+          0.03389041770466667
         ],
         "global_rotation": [
           1.0,
@@ -168,22 +172,48 @@
         ],
         "joints": [],
         "links": [
-          "Part2_2"
+          "rear_left_wheel_link"
+        ],
+        "name": "rear_left_wheel_link",
+        "parent_assembly": "base_link"
+      },
+      "rear_right_wheel_link": {
+        "children_assemblies": [],
+        "depth": 1,
+        "global_offset": [
+          5.950795411990836e-16,
+          -0.23493958523533848,
+          0.029862903281839815
+        ],
+        "global_rotation": [
+          -0.9999999999999991,
+          -4.524158825347512e-14,
+          0.0,
+          4.524158825347512e-14,
+          -0.9999999999999991,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "joints": [],
+        "links": [
+          "rear_right_wheel_link"
         ],
         "name": "rear_right_wheel_link",
-        "parent_assembly": null
+        "parent_assembly": "base_link"
       }
     },
     "closing_joints": {},
     "errors": [],
     "joints": {
-      "Revolute_5": {
+      "front_left_wheel_joint": {
         "axis": [
-          0.0,
-          -1.0,
-          0.0
+          4.302114220422448e-15,
+          1.0,
+          5.58821519610492e-15
         ],
-        "child_link": "Part2_1",
+        "child_link": "front_left_wheel_link",
         "closing_source": "",
         "fusion_source": "regular",
         "is_closing": false,
@@ -191,98 +221,32 @@
         "is_passive": false,
         "joint_type": "continuous",
         "limits": null,
-        "name": "Revolute_5",
+        "name": "front_left_wheel_joint",
         "origin_global": [
-          0.26,
-          0.0,
-          0.0
+          0.13,
+          0.05999999999999999,
+          0.02
         ],
         "origin_method": "joint_minus_parent",
         "origin_rpy": [
-          3.141592653589793,
-          -2.909329777299994e-34,
-          0.0
-        ],
-        "origin_xyz": [
-          0.26,
-          0.0,
-          0.0
-        ],
-        "parent_link": "base_link"
-      },
-      "Revolute_6": {
-        "axis": [
-          0.0,
-          -1.0,
-          0.0
-        ],
-        "child_link": "Part2_2",
-        "closing_source": "",
-        "fusion_source": "regular",
-        "is_closing": false,
-        "is_mount": true,
-        "is_passive": false,
-        "joint_type": "continuous",
-        "limits": null,
-        "name": "Revolute_6",
-        "origin_global": [
-          -0.040000000000000015,
-          -0.362,
-          0.040000000000000015
-        ],
-        "origin_method": "joint_minus_parent",
-        "origin_rpy": [
-          0.0,
-          2.909329777299994e-34,
-          0.0
-        ],
-        "origin_xyz": [
-          -0.040000000000000015,
-          -0.362,
-          0.040000000000000015
-        ],
-        "parent_link": "base_link"
-      },
-      "Revolute_8": {
-        "axis": [
-          -1.665334536937735e-16,
-          -1.0,
-          2.0816681711721688e-17
-        ],
-        "child_link": "Part2_1_Mirror",
-        "closing_source": "",
-        "fusion_source": "regular",
-        "is_closing": false,
-        "is_mount": true,
-        "is_passive": false,
-        "joint_type": "continuous",
-        "limits": null,
-        "name": "Revolute_8",
-        "origin_global": [
-          0.2599999999999999,
-          -0.36199999999999993,
-          0.03999999999999998
-        ],
-        "origin_method": "joint_minus_parent",
-        "origin_rpy": [
-          -1.3877787807814457e-17,
+          -5.58821519610492e-15,
           -0.0,
-          1.6653345369377348e-16
+          4.302114220422448e-15
         ],
         "origin_xyz": [
-          0.2599999999999999,
-          -0.36199999999999993,
-          0.03999999999999998
+          0.13,
+          0.05999999999999999,
+          0.02
         ],
         "parent_link": "base_link"
       },
-      "Revolute_9": {
+      "front_right_wheel_joint": {
         "axis": [
-          0.0,
-          -1.0,
-          -3.469446951953614e-17
+          -1.2939649352006215e-13,
+          1.0,
+          5.5882151961049906e-15
         ],
-        "child_link": "Part2_2_Mirror",
+        "child_link": "front_right_wheel_link",
         "closing_source": "",
         "fusion_source": "regular",
         "is_closing": false,
@@ -290,59 +254,92 @@
         "is_passive": false,
         "joint_type": "continuous",
         "limits": null,
-        "name": "Revolute_9",
+        "name": "front_right_wheel_joint",
         "origin_global": [
-          -0.039999999999999994,
-          0.026000000000000002,
-          3.469446951953614e-18
+          0.12999999999999995,
+          -0.18499999999999986,
+          0.019999999999999993
         ],
         "origin_method": "joint_minus_parent",
         "origin_rpy": [
-          3.141592653589793,
-          -0.0,
-          0.0
+          -5.588215196104975e-15,
+          -1.2246467991473525e-16,
+          3.141592653589664
         ],
         "origin_xyz": [
-          -0.039999999999999994,
-          0.026000000000000002,
-          3.469446951953614e-18
+          0.12999999999999995,
+          -0.18499999999999986,
+          0.019999999999999993
         ],
         "parent_link": "base_link"
       },
-      "Rigid_1": {
+      "rear_left_wheel_joint": {
         "axis": [
-          0.0,
-          0.0,
-          1.0
+          4.302114220422448e-15,
+          1.0,
+          5.58821519610492e-15
         ],
-        "child_link": "zed2_camera_link",
+        "child_link": "rear_left_wheel_link",
         "closing_source": "",
         "fusion_source": "regular",
         "is_closing": false,
-        "is_mount": false,
+        "is_mount": true,
         "is_passive": false,
-        "joint_type": "fixed",
+        "joint_type": "continuous",
         "limits": null,
-        "name": "Rigid_1",
+        "name": "rear_left_wheel_joint",
         "origin_global": [
-          0.08249999999999995,
-          -0.20750001638168533,
-          0.027629140234828056
+          -0.02,
+          0.05999999999999999,
+          0.02
         ],
-        "origin_method": "child_minus_parent",
+        "origin_method": "joint_minus_parent",
         "origin_rpy": [
-          0.0,
-          -6.123233995736766e-17,
-          -1.5707963267948966
+          -5.58821519610492e-15,
+          -0.0,
+          4.302114220422448e-15
         ],
         "origin_xyz": [
-          0.145,
-          -0.06250001638168534,
-          -0.007370859765171956
+          -0.02,
+          0.05999999999999999,
+          0.02
         ],
         "parent_link": "base_link"
       },
-      "Rigid_2": {
+      "rear_right_wheel_joint": {
+        "axis": [
+          -4.093947403305272e-14,
+          1.0,
+          5.5882151961049464e-15
+        ],
+        "child_link": "rear_right_wheel_link",
+        "closing_source": "",
+        "fusion_source": "regular",
+        "is_closing": false,
+        "is_mount": true,
+        "is_passive": false,
+        "joint_type": "continuous",
+        "limits": null,
+        "name": "rear_right_wheel_joint",
+        "origin_global": [
+          -0.020000000000000098,
+          -0.18700000000000003,
+          0.020000000000000014
+        ],
+        "origin_method": "joint_minus_parent",
+        "origin_rpy": [
+          -5.588215196104942e-15,
+          -1.2246467991473535e-16,
+          3.1415926535897523
+        ],
+        "origin_xyz": [
+          -0.020000000000000098,
+          -0.18700000000000003,
+          0.020000000000000014
+        ],
+        "parent_link": "base_link"
+      },
+      "rplidar_s2_joint": {
         "axis": [
           0.0,
           0.0,
@@ -352,15 +349,15 @@
         "closing_source": "",
         "fusion_source": "regular",
         "is_closing": false,
-        "is_mount": false,
+        "is_mount": true,
         "is_passive": false,
         "joint_type": "fixed",
         "limits": null,
-        "name": "Rigid_2",
+        "name": "rplidar_s2_joint",
         "origin_global": [
-          -0.4962474171585993,
-          -0.7567766683675087,
-          0.09681486996860171
+          0.0992702481088694,
+          -0.062499999999999785,
+          0.05
         ],
         "origin_method": "child_minus_parent",
         "origin_rpy": [
@@ -374,647 +371,44 @@
           0.04681486996860171
         ],
         "parent_link": "base_link"
+      },
+      "zed2_camera_joint": {
+        "axis": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "child_link": "zed2_camera_link",
+        "closing_source": "",
+        "fusion_source": "regular",
+        "is_closing": false,
+        "is_mount": true,
+        "is_passive": false,
+        "joint_type": "fixed",
+        "limits": null,
+        "name": "zed2_camera_joint",
+        "origin_global": [
+          0.145,
+          -0.06250000000000004,
+          0.035
+        ],
+        "origin_method": "child_minus_parent",
+        "origin_rpy": [
+          0.0,
+          -6.123233995736766e-17,
+          -1.5707963267948966
+        ],
+        "origin_xyz": [
+          0.145,
+          -0.06250001638168534,
+          -0.007370859765171956
+        ],
+        "parent_link": "base_link"
       }
     },
     "links": {
-      "Part2_1": {
-        "area_m2": 0.04712783868768979,
-        "assembly": "front_left_wheel_link",
-        "bbox_max": [
-          0.05498305262390335,
-          0.040601368627299836,
-          0.054102553930608685
-        ],
-        "bbox_min": [
-          -0.053401070208326296,
-          -0.005800691717196271,
-          -0.0542930348697636
-        ],
-        "bbox_size": [
-          0.10838412283222965,
-          0.04640206034449611,
-          0.10839558880037228
-        ],
-        "body_count": 1,
-        "clean_name": "Part2_1",
-        "collision": {
-          "mesh_path": "meshes/front_left_wheel_link/Part2_1_collision.stl",
-          "origin_rpy": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "origin_xyz": null,
-          "primitive": {
-            "orientation_matrix": [
-              0.08763084735503984,
-              0.994335287773219,
-              -0.06015122676045487,
-              -0.06176730948148012,
-              0.06569104002350822,
-              0.9959264464507652,
-              0.9942362063771651,
-              -0.08355849896677055,
-              0.06717397694913886
-            ],
-            "origin_rpy": [
-              -0.8936724079968883,
-              -1.4633780877938154,
-              -0.6139789746623934
-            ],
-            "origin_xyz": [
-              -8.254359362728494e-05,
-              0.017767437386629968,
-              0.00040984939972639163
-            ],
-            "shape": "box",
-            "size": [
-              0.07830549749872939,
-              0.07966587939697306,
-              0.047926928205806976
-            ]
-          },
-          "source": "primitive"
-        },
-        "collision_bbox_max": [
-          0.05498305262390335,
-          0.040601368627299836,
-          0.054102553930608685
-        ],
-        "collision_bbox_min": [
-          -0.053401070208326296,
-          -0.005800691717196271,
-          -0.0542930348697636
-        ],
-        "collision_bbox_size": [
-          0.10838412283222965,
-          0.04640206034449611,
-          0.10839558880037228
-        ],
-        "collision_body_count": 12,
-        "collision_body_names": [],
-        "collision_excluded_body_names": [],
-        "collision_override": "",
-        "collision_volume_m3": 0.00012331085732563034,
-        "color_rgb": [
-          0.792156862745098,
-          0.8196078431372549,
-          0.9333333333333333
-        ],
-        "com_link_local": [
-          3.585154729260116e-05,
-          0.01772925234159436,
-          -3.444866868865706e-05
-        ],
-        "frame_rebase_rpy": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "frame_rule": "keep",
-        "global_position": [
-          0.13,
-          0.07,
-          0.02
-        ],
-        "has_collision_exclusions": false,
-        "has_explicit_collision": false,
-        "has_visual_mesh": true,
-        "inertia_at_com": {
-          "ixx": 0.000435482026610894,
-          "ixy": -9.904483870414254e-07,
-          "ixz": -1.7653665846769402e-07,
-          "iyy": 0.0006297403057300135,
-          "iyz": -1.0960235097358283e-06,
-          "izz": 0.00043182661411206763
-        },
-        "inertial_origin_xyz": null,
-        "is_empty": false,
-        "is_frame_only": false,
-        "is_merged": true,
-        "mass_kg": 0.9679902300061979,
-        "material_name": "Steel",
-        "merged_member_paths": [
-          "front_left_wheel_link:1+Part1 (1):2",
-          "front_left_wheel_link:1+Part4 (1):5",
-          "front_left_wheel_link:1+Part4 (1):3",
-          "front_left_wheel_link:1+Part4 (1):2",
-          "front_left_wheel_link:1+Part4 (1):7",
-          "front_left_wheel_link:1+Part4 (1):6",
-          "front_left_wheel_link:1+Part2 (1):1",
-          "front_left_wheel_link:1+Part4 (1):8",
-          "front_left_wheel_link:1+Part4 (1):4",
-          "front_left_wheel_link:1+Part4 (1):9",
-          "front_left_wheel_link:1+Part1 (1):1",
-          "front_left_wheel_link:1+Part4 (1):1"
-        ],
-        "mesh_bake_offset": [
-          -0.13,
-          -0.07,
-          -0.02
-        ],
-        "mesh_collision": "meshes/front_left_wheel_link/Part2_1_collision.stl",
-        "mesh_collision_input": "",
-        "mesh_origin_rpy": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "mesh_visual": "meshes/front_left_wheel_link/Part2_1.dae",
-        "needs_mesh_bake": true,
-        "occurrence_path": "front_left_wheel_link:1+Part2 (1):1",
-        "rigid_group_collision_offset": null,
-        "rigid_group_collision_path": null,
-        "rigid_group_name": "Rigid Group 1",
-        "source_world_rotation": [
-          1.0,
-          0.0,
-          -2.909329777299994e-34,
-          0.0,
-          -1.0,
-          0.0,
-          2.909329777299994e-34,
-          0.0,
-          -1.0
-        ],
-        "urdf_name": "Part2_1",
-        "volume_m3": 0.00012331085732563034,
-        "wants_accurate_collision": false
-      },
-      "Part2_1_Mirror": {
-        "area_m2": 0.047127838687689785,
-        "assembly": "front_right_wheel_link",
-        "bbox_max": [
-          0.0549830526239033,
-          0.040601368627299704,
-          0.054293034869763585
-        ],
-        "bbox_min": [
-          -0.0534010702083263,
-          -0.005800691717196324,
-          -0.054102553930608685
-        ],
-        "bbox_size": [
-          0.1083841228322296,
-          0.04640206034449603,
-          0.10839558880037227
-        ],
-        "body_count": 1,
-        "clean_name": "Part2_1_Mirror",
-        "collision": {
-          "mesh_path": "meshes/front_right_wheel_link/Part2_1_Mirror_collision.stl",
-          "origin_rpy": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "origin_xyz": null,
-          "primitive": {
-            "orientation_matrix": null,
-            "origin_rpy": [
-              1.5707963267948966,
-              0.0,
-              0.0
-            ],
-            "origin_xyz": [
-              0.0007909912077884995,
-              0.01740033845505169,
-              9.524046957744975e-05
-            ],
-            "shape": "cylinder",
-            "size": [
-              0.05419492790815047,
-              0.0,
-              0.04640206034449603
-            ]
-          },
-          "source": "primitive"
-        },
-        "collision_bbox_max": [
-          0.0549830526239033,
-          0.040601368627299704,
-          0.054293034869763585
-        ],
-        "collision_bbox_min": [
-          -0.0534010702083263,
-          -0.005800691717196324,
-          -0.054102553930608685
-        ],
-        "collision_bbox_size": [
-          0.1083841228322296,
-          0.04640206034449603,
-          0.10839558880037227
-        ],
-        "collision_body_count": 12,
-        "collision_body_names": [],
-        "collision_excluded_body_names": [],
-        "collision_override": "",
-        "collision_volume_m3": 0.00012331085321314451,
-        "color_rgb": [
-          0.792156862745098,
-          0.8196078431372549,
-          0.9333333333333333
-        ],
-        "com_link_local": [
-          3.585154878012315e-05,
-          0.017729252340294023,
-          3.4448669132917335e-05
-        ],
-        "frame_rebase_rpy": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "frame_rule": "keep",
-        "global_position": [
-          0.12999999999999995,
-          -0.19399999999999998,
-          0.01999999999999999
-        ],
-        "has_collision_exclusions": false,
-        "has_explicit_collision": false,
-        "has_visual_mesh": true,
-        "inertia_at_com": {
-          "ixx": 0.0004354820017068147,
-          "ixy": -9.904483899238135e-07,
-          "ixz": 1.7653677134913979e-07,
-          "iyy": 0.0006297402716688347,
-          "iyz": 1.0960235085487921e-06,
-          "izz": 0.0004318265889822071
-        },
-        "inertial_origin_xyz": null,
-        "is_empty": false,
-        "is_frame_only": false,
-        "is_merged": true,
-        "mass_kg": 0.9679901977231843,
-        "material_name": "Steel",
-        "merged_member_paths": [
-          "front_right_wheel_link:1+Part1 (1)(Mirror):1",
-          "front_right_wheel_link:1+Part4 (1)(Mirror):3",
-          "front_right_wheel_link:1+Part4 (1)(Mirror):6",
-          "front_right_wheel_link:1+Part4 (1)(Mirror):7",
-          "front_right_wheel_link:1+Part1 (1)(Mirror):2",
-          "front_right_wheel_link:1+Part4 (1)(Mirror):2",
-          "front_right_wheel_link:1+Part4 (1)(Mirror):8",
-          "front_right_wheel_link:1+Part4 (1)(Mirror):1",
-          "front_right_wheel_link:1+Part4 (1)(Mirror):4",
-          "front_right_wheel_link:1+Part2 (1)(Mirror):1",
-          "front_right_wheel_link:1+Part4 (1)(Mirror):5",
-          "front_right_wheel_link:1+Part4 (1)(Mirror):9"
-        ],
-        "mesh_bake_offset": [
-          -0.12999999999999992,
-          0.16799999999999995,
-          -0.01999999999999999
-        ],
-        "mesh_collision": "meshes/front_right_wheel_link/Part2_1_Mirror_collision.stl",
-        "mesh_collision_input": "",
-        "mesh_origin_rpy": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "mesh_visual": "meshes/front_right_wheel_link/Part2_1_Mirror.dae",
-        "needs_mesh_bake": true,
-        "occurrence_path": "front_right_wheel_link:1+Part2 (1)(Mirror):1",
-        "rigid_group_collision_offset": null,
-        "rigid_group_collision_path": null,
-        "rigid_group_name": "Rigid Group 1",
-        "source_world_rotation": [
-          1.0,
-          -1.1102230246251565e-16,
-          -1.3877787807814457e-17,
-          1.6653345369377348e-16,
-          0.9999999999999999,
-          -2.0816681711721685e-17,
-          0.0,
-          -1.3877787807814457e-17,
-          1.0
-        ],
-        "urdf_name": "Part2_1_Mirror",
-        "volume_m3": 0.00012331085321314451,
-        "wants_accurate_collision": false
-      },
-      "Part2_2": {
-        "area_m2": 0.04712783868768979,
-        "assembly": "rear_right_wheel_link",
-        "bbox_max": [
-          0.05498305262390335,
-          0.04060136862729982,
-          0.054102553930608685
-        ],
-        "bbox_min": [
-          -0.05340107020832628,
-          -0.005800691717196299,
-          -0.0542930348697636
-        ],
-        "bbox_size": [
-          0.10838412283222963,
-          0.04640206034449612,
-          0.10839558880037228
-        ],
-        "body_count": 1,
-        "clean_name": "Part2_2",
-        "collision": {
-          "mesh_path": "meshes/rear_right_wheel_link/Part2_2_collision.stl",
-          "origin_rpy": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "origin_xyz": null,
-          "primitive": {
-            "orientation_matrix": [
-              0.06664137967830813,
-              -0.997236796534264,
-              -0.03282831327757562,
-              -0.15796553354192105,
-              0.0219417260080574,
-              -0.987200815879223,
-              0.9851932890186513,
-              0.07097416641191644,
-              -0.15606681573847084
-            ],
-            "origin_rpy": [
-              2.7147808822409454,
-              -1.398497773527342,
-              -1.1715773294946226
-            ],
-            "origin_xyz": [
-              -7.788928823398262e-05,
-              0.015309674113630555,
-              0.0006521191214154749
-            ],
-            "shape": "box",
-            "size": [
-              0.0794337344719806,
-              0.07720154307533017,
-              0.04766565613402654
-            ]
-          },
-          "source": "primitive"
-        },
-        "collision_bbox_max": [
-          0.05498305262390335,
-          0.04060136862729982,
-          0.054102553930608685
-        ],
-        "collision_bbox_min": [
-          -0.05340107020832628,
-          -0.005800691717196299,
-          -0.0542930348697636
-        ],
-        "collision_bbox_size": [
-          0.10838412283222963,
-          0.04640206034449612,
-          0.10839558880037228
-        ],
-        "collision_body_count": 12,
-        "collision_body_names": [],
-        "collision_excluded_body_names": [],
-        "collision_override": "",
-        "collision_volume_m3": 0.00012331085732563034,
-        "color_rgb": [
-          0.792156862745098,
-          0.8196078431372549,
-          0.9333333333333333
-        ],
-        "com_link_local": [
-          3.5851547292606626e-05,
-          0.01772925234159436,
-          -3.444866868865706e-05
-        ],
-        "frame_rebase_rpy": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "frame_rule": "keep",
-        "global_position": [
-          -0.020000000000000007,
-          -0.19399999999999998,
-          0.020000000000000007
-        ],
-        "has_collision_exclusions": false,
-        "has_explicit_collision": false,
-        "has_visual_mesh": true,
-        "inertia_at_com": {
-          "ixx": 0.00043548202661089405,
-          "ixy": -9.90448387041449e-07,
-          "ixz": -1.7653665846770588e-07,
-          "iyy": 0.0006297403057300135,
-          "iyz": -1.0960235097357786e-06,
-          "izz": 0.0004318266141120677
-        },
-        "inertial_origin_xyz": null,
-        "is_empty": false,
-        "is_frame_only": false,
-        "is_merged": true,
-        "mass_kg": 0.9679902300061979,
-        "material_name": "Steel",
-        "merged_member_paths": [
-          "rear_right_wheel_link:1+Part1 (2):2",
-          "rear_right_wheel_link:1+Part4 (2):5",
-          "rear_right_wheel_link:1+Part4 (2):3",
-          "rear_right_wheel_link:1+Part4 (2):2",
-          "rear_right_wheel_link:1+Part4 (2):7",
-          "rear_right_wheel_link:1+Part4 (2):6",
-          "rear_right_wheel_link:1+Part2 (2):1",
-          "rear_right_wheel_link:1+Part4 (2):8",
-          "rear_right_wheel_link:1+Part4 (2):4",
-          "rear_right_wheel_link:1+Part4 (2):9",
-          "rear_right_wheel_link:1+Part1 (2):1",
-          "rear_right_wheel_link:1+Part4 (2):1"
-        ],
-        "mesh_bake_offset": [
-          0.020000000000000007,
-          0.168,
-          -0.020000000000000007
-        ],
-        "mesh_collision": "meshes/rear_right_wheel_link/Part2_2_collision.stl",
-        "mesh_collision_input": "",
-        "mesh_origin_rpy": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "mesh_visual": "meshes/rear_right_wheel_link/Part2_2.dae",
-        "needs_mesh_bake": true,
-        "occurrence_path": "rear_right_wheel_link:1+Part2 (2):1",
-        "rigid_group_collision_offset": null,
-        "rigid_group_collision_path": null,
-        "rigid_group_name": "Rigid Group 1",
-        "source_world_rotation": [
-          1.0,
-          0.0,
-          -2.909329777299994e-34,
-          0.0,
-          1.0,
-          0.0,
-          -2.909329777299994e-34,
-          0.0,
-          1.0
-        ],
-        "urdf_name": "Part2_2",
-        "volume_m3": 0.00012331085732563034,
-        "wants_accurate_collision": false
-      },
-      "Part2_2_Mirror": {
-        "area_m2": 0.04712783868768978,
-        "assembly": "rear_left_wheel_link",
-        "bbox_max": [
-          0.05498305262390335,
-          0.04060136862729981,
-          0.05429303486976355
-        ],
-        "bbox_min": [
-          -0.05340107020832629,
-          -0.005800691717196285,
-          -0.05410255393060869
-        ],
-        "bbox_size": [
-          0.10838412283222965,
-          0.04640206034449609,
-          0.10839558880037224
-        ],
-        "body_count": 1,
-        "clean_name": "Part2_2_Mirror",
-        "collision": {
-          "mesh_path": "meshes/rear_left_wheel_link/Part2_2_Mirror_collision.stl",
-          "origin_rpy": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "origin_xyz": null,
-          "primitive": {
-            "orientation_matrix": null,
-            "origin_rpy": [
-              1.5707963267948966,
-              0.0,
-              0.0
-            ],
-            "origin_xyz": [
-              0.0007909912077885307,
-              0.01740033845505176,
-              9.524046957742893e-05
-            ],
-            "shape": "cylinder",
-            "size": [
-              0.054194927908150475,
-              0.0,
-              0.04640206034449609
-            ]
-          },
-          "source": "primitive"
-        },
-        "collision_bbox_max": [
-          0.05498305262390335,
-          0.04060136862729981,
-          0.05429303486976355
-        ],
-        "collision_bbox_min": [
-          -0.05340107020832629,
-          -0.005800691717196285,
-          -0.05410255393060869
-        ],
-        "collision_bbox_size": [
-          0.10838412283222965,
-          0.04640206034449609,
-          0.10839558880037224
-        ],
-        "collision_body_count": 12,
-        "collision_body_names": [],
-        "collision_excluded_body_names": [],
-        "collision_override": "",
-        "collision_volume_m3": 0.00012331085321314454,
-        "color_rgb": [
-          0.792156862745098,
-          0.8196078431372549,
-          0.9333333333333333
-        ],
-        "com_link_local": [
-          3.585154878012864e-05,
-          0.017729252340294058,
-          3.444866913291778e-05
-        ],
-        "frame_rebase_rpy": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "frame_rule": "keep",
-        "global_position": [
-          -0.019999999999999997,
-          0.06900000000000002,
-          0.02
-        ],
-        "has_collision_exclusions": false,
-        "has_explicit_collision": false,
-        "has_visual_mesh": true,
-        "inertia_at_com": {
-          "ixx": 0.0004354820017068148,
-          "ixy": -9.904483899240354e-07,
-          "ixz": 1.7653677134907202e-07,
-          "iyy": 0.0006297402716688345,
-          "iyz": 1.0960235085486295e-06,
-          "izz": 0.0004318265889822066
-        },
-        "inertial_origin_xyz": null,
-        "is_empty": false,
-        "is_frame_only": false,
-        "is_merged": true,
-        "mass_kg": 0.9679901977231843,
-        "material_name": "Steel",
-        "merged_member_paths": [
-          "rear_left_wheel_link:1+Part4 (2)(Mirror):7",
-          "rear_left_wheel_link:1+Part4 (2)(Mirror):9",
-          "rear_left_wheel_link:1+Part4 (2)(Mirror):8",
-          "rear_left_wheel_link:1+Part4 (2)(Mirror):4",
-          "rear_left_wheel_link:1+Part1 (2)(Mirror):2",
-          "rear_left_wheel_link:1+Part2 (2)(Mirror):1",
-          "rear_left_wheel_link:1+Part4 (2)(Mirror):1",
-          "rear_left_wheel_link:1+Part4 (2)(Mirror):5",
-          "rear_left_wheel_link:1+Part4 (2)(Mirror):2",
-          "rear_left_wheel_link:1+Part1 (2)(Mirror):1",
-          "rear_left_wheel_link:1+Part4 (2)(Mirror):6",
-          "rear_left_wheel_link:1+Part4 (2)(Mirror):3"
-        ],
-        "mesh_bake_offset": [
-          0.019999999999999997,
-          -0.04300000000000002,
-          -0.019999999999999997
-        ],
-        "mesh_collision": "meshes/rear_left_wheel_link/Part2_2_Mirror_collision.stl",
-        "mesh_collision_input": "",
-        "mesh_origin_rpy": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "mesh_visual": "meshes/rear_left_wheel_link/Part2_2_Mirror.dae",
-        "needs_mesh_bake": true,
-        "occurrence_path": "rear_left_wheel_link:1+Part2 (2)(Mirror):1",
-        "rigid_group_collision_offset": null,
-        "rigid_group_collision_path": null,
-        "rigid_group_name": "Rigid Group 1",
-        "source_world_rotation": [
-          1.0,
-          0.0,
-          -3.469446951953614e-17,
-          0.0,
-          -1.0,
-          -3.469446951953614e-17,
-          0.0,
-          1.3877787807814457e-17,
-          -0.9999999999999999
-        ],
-        "urdf_name": "Part2_2_Mirror",
-        "volume_m3": 0.00012331085321314454,
-        "wants_accurate_collision": false
-      },
       "base_link": {
-        "area_m2": 0.13498979111244577,
+        "area_m2": 0.1353141915709882,
         "assembly": "ma_robot",
         "bbox_max": [
           0.175,
@@ -1032,7 +426,7 @@
           0.12
         ],
         "body_count": 2,
-        "clean_name": "ma_robot",
+        "clean_name": "base_link",
         "collision": {
           "mesh_path": "meshes/ma_robot/base_link_collision.stl",
           "origin_rpy": [
@@ -1042,22 +436,32 @@
           ],
           "origin_xyz": null,
           "primitive": {
-            "orientation_matrix": null,
+            "orientation_matrix": [
+              -0.3421526799823285,
+              -0.7044985430862954,
+              -0.6217823947091116,
+              -0.8983989513462197,
+              0.43916846112041324,
+              -0.003222883358246865,
+              0.27533773406658796,
+              0.5575059331939124,
+              -0.7831834182697319
+            ],
             "origin_rpy": [
-              0.0,
-              0.0,
-              0.0
+              2.522960561660192,
+              -0.27894099790419474,
+              -1.9346833851399412
             ],
             "origin_xyz": [
-              0.04348151708697818,
-              -0.0625,
-              0.06
+              0.15967198368650992,
+              -0.06276062098097011,
+              0.03501842050087231
             ],
-            "shape": "cylinder",
+            "shape": "box",
             "size": [
-              0.1270092414565109,
-              0.0,
-              0.12
+              0.1680676376268671,
+              0.10677769978164364,
+              0.04204528283942156
             ]
           },
           "source": "primitive"
@@ -1081,16 +485,16 @@
         "collision_body_names": [],
         "collision_excluded_body_names": [],
         "collision_override": "",
-        "collision_volume_m3": 0.0020344924290092033,
+        "collision_volume_m3": 0.002034508584410525,
         "color_rgb": [
           0.09803921568627451,
           0.09803921568627451,
           0.09803921568627451
         ],
         "com_link_local": [
-          0.04157433879680483,
-          -0.06249449552465444,
-          0.02441991588454264
+          0.0415734088522767,
+          -0.06249449545794576,
+          0.02442051332069203
         ],
         "frame_rebase_rpy": [
           0.0,
@@ -1105,20 +509,20 @@
         ],
         "has_collision_exclusions": false,
         "has_explicit_collision": false,
-        "has_visual_mesh": false,
+        "has_visual_mesh": true,
         "inertia_at_com": {
-          "ixx": 0.00797374242785508,
-          "ixy": 9.036729302453958e-07,
-          "ixz": 0.0002781739858285729,
-          "iyy": 0.013794620736912523,
-          "iyz": -4.4813058975093356e-07,
-          "izz": 0.020527607353354738
+          "ixx": 0.007973872823379753,
+          "ixy": 9.036955794065882e-07,
+          "ixz": 0.00027837682940472404,
+          "iyy": 0.013795068069415689,
+          "iyz": -4.4814675491649386e-07,
+          "izz": 0.02052792429037257
         },
         "inertial_origin_xyz": null,
         "is_empty": false,
         "is_frame_only": false,
         "is_merged": false,
-        "mass_kg": 2.8991517113381144,
+        "mass_kg": 2.899174732784998,
         "material_name": "Acetal_Resin_Black",
         "merged_member_paths": [],
         "mesh_bake_offset": [
@@ -1133,30 +537,646 @@
           0.0,
           0.0
         ],
-        "mesh_visual": "",
+        "mesh_visual": "meshes/ma_robot/base_link.dae",
         "needs_mesh_bake": false,
-        "occurrence_path": "__design_root__",
+        "occurrence_path": "base_link:1",
         "rigid_group_collision_offset": null,
         "rigid_group_collision_path": null,
         "rigid_group_name": null,
         "source_world_rotation": [
-          1,
-          0,
-          0,
-          0,
-          1,
-          0,
-          0,
-          0,
-          1
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
         ],
         "urdf_name": "base_link",
-        "volume_m3": 0.0020344924290092033,
+        "volume_m3": 0.002034508584410525,
+        "wants_accurate_collision": false
+      },
+      "front_left_wheel_link": {
+        "area_m2": 0.059882165207017224,
+        "assembly": "front_left_wheel_link",
+        "bbox_max": [
+          0.0579002248455548,
+          0.06483961034470859,
+          0.026908518730831995
+        ],
+        "bbox_min": [
+          -0.032099775154445204,
+          -0.030476610279207398,
+          -0.06301184350894559
+        ],
+        "bbox_size": [
+          0.09,
+          0.09531622062391598,
+          0.08992036223977759
+        ],
+        "body_count": 1,
+        "clean_name": "Tire",
+        "collision": {
+          "mesh_path": "meshes/front_left_wheel_link/front_left_wheel_link_collision.stl",
+          "origin_rpy": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "origin_xyz": null,
+          "primitive": {
+            "orientation_matrix": [
+              0.6953908225852284,
+              -0.718625393284489,
+              -0.0030245645889719684,
+              0.000356556342374554,
+              0.004553803796744669,
+              -0.9999895678148625,
+              0.7186316697250505,
+              0.6953824897117371,
+              0.0034229038098770046
+            ],
+            "origin_rpy": [
+              1.5658740340768582,
+              -0.8018325991613581,
+              0.0005127423307115534
+            ],
+            "origin_xyz": [
+              0.12102074322288224,
+              0.11138419582754304,
+              0.010528105321272527
+            ],
+            "shape": "box",
+            "size": [
+              0.08151629137838476,
+              0.07328998718190005,
+              0.04229006331040819
+            ]
+          },
+          "source": "primitive"
+        },
+        "collision_bbox_max": [
+          0.0579002248455548,
+          0.019523389720792584,
+          0.026908518730831995
+        ],
+        "collision_bbox_min": [
+          -0.032099775154445204,
+          -0.030476610279207398,
+          -0.06301184350894559
+        ],
+        "collision_bbox_size": [
+          0.09,
+          0.04999999999999998,
+          0.08992036223977759
+        ],
+        "collision_body_count": 1,
+        "collision_body_names": [],
+        "collision_excluded_body_names": [],
+        "collision_override": "",
+        "collision_volume_m3": 7.791120399351931e-05,
+        "color_rgb": [
+          0.6274509803921569,
+          0.6274509803921569,
+          0.6274509803921569
+        ],
+        "com_link_local": [
+          0.012900198626299016,
+          -0.005482503846648539,
+          -0.01804794888566849
+        ],
+        "frame_rebase_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "frame_rule": "keep",
+        "global_position": [
+          0.11709977515444503,
+          0.05847661027920763,
+          0.03804799544770637
+        ],
+        "has_collision_exclusions": false,
+        "has_explicit_collision": false,
+        "has_visual_mesh": true,
+        "inertia_at_com": {
+          "ixx": 0.0005265770190525671,
+          "ixy": 8.274259954228671e-11,
+          "ixz": 5.777756580192372e-10,
+          "iyy": 0.0007325315178485372,
+          "iyz": 6.033033142206984e-11,
+          "izz": 0.0005265749896183347
+        },
+        "inertial_origin_xyz": null,
+        "is_empty": false,
+        "is_frame_only": false,
+        "is_merged": true,
+        "mass_kg": 0.6116029513491266,
+        "material_name": "Steel",
+        "merged_member_paths": [
+          "base_link:1+front_left_wheel_link:1+Rim:1",
+          "base_link:1+front_left_wheel_link:1+Tire:1"
+        ],
+        "mesh_bake_offset": [
+          -0.012900224845554982,
+          -0.0015233897207924086,
+          0.018047995447706366
+        ],
+        "mesh_collision": "meshes/front_left_wheel_link/front_left_wheel_link_collision.stl",
+        "mesh_collision_input": "",
+        "mesh_origin_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mesh_visual": "meshes/front_left_wheel_link/front_left_wheel_link.dae",
+        "needs_mesh_bake": true,
+        "occurrence_path": "base_link:1+front_left_wheel_link:1+Tire:1",
+        "rigid_group_collision_offset": null,
+        "rigid_group_collision_path": null,
+        "rigid_group_name": "front_left_wheel_link",
+        "source_world_rotation": [
+          1.0,
+          -4.302114220422448e-15,
+          -2.406025760924086e-29,
+          4.302114220422448e-15,
+          1.0,
+          5.58821519610492e-15,
+          0.0,
+          -5.58821519610492e-15,
+          1.0
+        ],
+        "urdf_name": "front_left_wheel_link",
+        "volume_m3": 7.791120399351931e-05,
+        "wants_accurate_collision": false
+      },
+      "front_right_wheel_link": {
+        "area_m2": 0.059882165207017224,
+        "assembly": "front_right_wheel_link",
+        "bbox_max": [
+          0.057900224845554724,
+          0.0703420210744951,
+          0.026908518730832005
+        ],
+        "bbox_min": [
+          -0.03209977515444516,
+          -0.03047661027920729,
+          -0.06301184350894559
+        ],
+        "bbox_size": [
+          0.08999999999999989,
+          0.10081863135370239,
+          0.08992036223977759
+        ],
+        "body_count": 1,
+        "clean_name": "Tire_1",
+        "collision": {
+          "mesh_path": "meshes/front_right_wheel_link/front_right_wheel_link_collision.stl",
+          "origin_rpy": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "origin_xyz": null,
+          "primitive": {
+            "orientation_matrix": [
+              -0.6953908225852283,
+              -0.7186253932844892,
+              -0.0030245645889719736,
+              -0.00035655634237454745,
+              0.004553803796744669,
+              -0.9999895678148625,
+              0.7186316697250507,
+              -0.695382489711737,
+              -0.0034229038098769994
+            ],
+            "origin_rpy": [
+              -1.575718619512935,
+              -0.8018325991613582,
+              -3.1410799112590815
+            ],
+            "origin_xyz": [
+              0.10783667677711778,
+              -0.11407598582754307,
+              0.00909572532127251
+            ],
+            "shape": "box",
+            "size": [
+              0.08151629137838474,
+              0.07328998718190008,
+              0.0422900633104082
+            ]
+          },
+          "source": "primitive"
+        },
+        "collision_bbox_max": [
+          0.057900224845554724,
+          0.019523389720792636,
+          0.026908518730832005
+        ],
+        "collision_bbox_min": [
+          -0.03209977515444516,
+          -0.03047661027920729,
+          -0.06301184350894559
+        ],
+        "collision_bbox_size": [
+          0.08999999999999989,
+          0.049999999999999926,
+          0.08992036223977759
+        ],
+        "collision_body_count": 1,
+        "collision_body_names": [],
+        "collision_excluded_body_names": [],
+        "collision_override": "",
+        "collision_volume_m3": 7.791120399351928e-05,
+        "color_rgb": [
+          0.6274509803921569,
+          0.6274509803921569,
+          0.6274509803921569
+        ],
+        "com_link_local": [
+          0.012900198626299047,
+          -0.005482503846648476,
+          -0.0180479488856685
+        ],
+        "frame_rebase_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "frame_rule": "keep",
+        "global_position": [
+          0.14290022484555517,
+          -0.18347661027920917,
+          0.038047995447706366
+        ],
+        "has_collision_exclusions": false,
+        "has_explicit_collision": false,
+        "has_visual_mesh": true,
+        "inertia_at_com": {
+          "ixx": 0.0005265770190525655,
+          "ixy": 8.274259942031373e-11,
+          "ixz": 5.777756577210809e-10,
+          "iyy": 0.000732531517848534,
+          "iyz": 6.033033144239855e-11,
+          "izz": 0.0005265749896183336
+        },
+        "inertial_origin_xyz": null,
+        "is_empty": false,
+        "is_frame_only": false,
+        "is_merged": true,
+        "mass_kg": 0.6116029513491263,
+        "material_name": "Steel",
+        "merged_member_paths": [
+          "base_link:1+front_right_wheel_link:1+Rim (1):1",
+          "base_link:1+front_right_wheel_link:1+Tire (1):1"
+        ],
+        "mesh_bake_offset": [
+          -0.012900224845555017,
+          -0.00152338972079246,
+          0.018047995447706366
+        ],
+        "mesh_collision": "meshes/front_right_wheel_link/front_right_wheel_link_collision.stl",
+        "mesh_collision_input": "",
+        "mesh_origin_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mesh_visual": "meshes/front_right_wheel_link/front_right_wheel_link.dae",
+        "needs_mesh_bake": true,
+        "occurrence_path": "base_link:1+front_right_wheel_link:1+Tire (1):1",
+        "rigid_group_collision_offset": null,
+        "rigid_group_collision_path": null,
+        "rigid_group_name": "front_right_wheel_link",
+        "source_world_rotation": [
+          -0.9999999999999993,
+          -1.293964935200621e-13,
+          1.2246467991401157e-16,
+          1.2939649352006207e-13,
+          -0.9999999999999993,
+          -5.588215196104987e-15,
+          1.2246467991473525e-16,
+          -5.588215196104975e-15,
+          1.0
+        ],
+        "urdf_name": "front_right_wheel_link",
+        "volume_m3": 7.791120399351928e-05,
+        "wants_accurate_collision": false
+      },
+      "rear_left_wheel_link": {
+        "area_m2": 0.059882165207017224,
+        "assembly": "rear_left_wheel_link",
+        "bbox_max": [
+          0.0579002248455548,
+          0.06573276755752935,
+          0.026908518730832002
+        ],
+        "bbox_min": [
+          -0.03209977515444521,
+          -0.030476610279207398,
+          -0.06301184350894559
+        ],
+        "bbox_size": [
+          0.09000000000000001,
+          0.09620937783673675,
+          0.08992036223977759
+        ],
+        "body_count": 1,
+        "clean_name": "Tire_2",
+        "collision": {
+          "mesh_path": "meshes/rear_left_wheel_link/rear_left_wheel_link_collision.stl",
+          "origin_rpy": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "origin_xyz": null,
+          "primitive": {
+            "orientation_matrix": [
+              0.6953908225852277,
+              -0.7186253932844898,
+              -0.003024564588971983,
+              0.0003565563423745386,
+              0.004553803796744669,
+              -0.9999895678148625,
+              0.7186316697250513,
+              0.6953824897117363,
+              0.0034229038098769903
+            ],
+            "origin_rpy": [
+              1.5658740340768582,
+              -0.8018325991613592,
+              0.0005127423307115318
+            ],
+            "origin_xyz": [
+              0.015851793222882243,
+              0.11227735582754304,
+              0.012986145321272515
+            ],
+            "shape": "box",
+            "size": [
+              0.08151629137838476,
+              0.07328998718190008,
+              0.0422900633104082
+            ]
+          },
+          "source": "primitive"
+        },
+        "collision_bbox_max": [
+          0.0579002248455548,
+          0.019523389720792584,
+          0.026908518730832002
+        ],
+        "collision_bbox_min": [
+          -0.03209977515444521,
+          -0.030476610279207398,
+          -0.06301184350894559
+        ],
+        "collision_bbox_size": [
+          0.09000000000000001,
+          0.04999999999999998,
+          0.08992036223977759
+        ],
+        "collision_body_count": 1,
+        "collision_body_names": [],
+        "collision_excluded_body_names": [],
+        "collision_override": "",
+        "collision_volume_m3": 7.791120399351931e-05,
+        "color_rgb": [
+          0.6274509803921569,
+          0.6274509803921569,
+          0.6274509803921569
+        ],
+        "com_link_local": [
+          0.012900198626299025,
+          -0.005482503846648539,
+          -0.018047948885668484
+        ],
+        "frame_rebase_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "frame_rule": "keep",
+        "global_position": [
+          -0.032900224845554986,
+          0.05847661027920763,
+          0.038047995447706394
+        ],
+        "has_collision_exclusions": false,
+        "has_explicit_collision": false,
+        "has_visual_mesh": true,
+        "inertia_at_com": {
+          "ixx": 0.0005265770190525668,
+          "ixy": 8.274259924413111e-11,
+          "ixz": 5.777756580192372e-10,
+          "iyy": 0.0007325315178485375,
+          "iyz": 6.033033140851731e-11,
+          "izz": 0.0005265749896183348
+        },
+        "inertial_origin_xyz": null,
+        "is_empty": false,
+        "is_frame_only": false,
+        "is_merged": true,
+        "mass_kg": 0.6116029513491266,
+        "material_name": "Steel",
+        "merged_member_paths": [
+          "base_link:1+rear_left_wheel_link:1+Rim (2):1",
+          "base_link:1+rear_left_wheel_link:1+Tire (2):1"
+        ],
+        "mesh_bake_offset": [
+          -0.012900224845554992,
+          -0.0015233897207924086,
+          0.018047995447706387
+        ],
+        "mesh_collision": "meshes/rear_left_wheel_link/rear_left_wheel_link_collision.stl",
+        "mesh_collision_input": "",
+        "mesh_origin_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mesh_visual": "meshes/rear_left_wheel_link/rear_left_wheel_link.dae",
+        "needs_mesh_bake": true,
+        "occurrence_path": "base_link:1+rear_left_wheel_link:1+Tire (2):1",
+        "rigid_group_collision_offset": null,
+        "rigid_group_collision_path": null,
+        "rigid_group_name": "rear_left_wheel_link",
+        "source_world_rotation": [
+          1.0,
+          -4.302114220422448e-15,
+          -2.406025760924086e-29,
+          4.302114220422448e-15,
+          1.0,
+          5.58821519610492e-15,
+          0.0,
+          -5.58821519610492e-15,
+          1.0
+        ],
+        "urdf_name": "rear_left_wheel_link",
+        "volume_m3": 7.791120399351931e-05,
+        "wants_accurate_collision": false
+      },
+      "rear_right_wheel_link": {
+        "area_m2": 0.059882165207017224,
+        "assembly": "rear_right_wheel_link",
+        "bbox_max": [
+          0.0579002248455547,
+          0.057899684761157005,
+          0.026908518730832002
+        ],
+        "bbox_min": [
+          -0.03209977515444515,
+          -0.03047661027920734,
+          -0.06301184350894559
+        ],
+        "bbox_size": [
+          0.08999999999999986,
+          0.08837629504036434,
+          0.08992036223977759
+        ],
+        "body_count": 1,
+        "clean_name": "Tire_3",
+        "collision": {
+          "mesh_path": "meshes/rear_right_wheel_link/rear_right_wheel_link_collision.stl",
+          "origin_rpy": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "origin_xyz": null,
+          "primitive": {
+            "orientation_matrix": [
+              -0.6953908225852282,
+              -0.7186253932844893,
+              -0.003024564588971986,
+              -0.00035655634237453037,
+              0.004553803796744669,
+              -0.9999895678148625,
+              0.7186316697250508,
+              -0.6953824897117369,
+              -0.003422903809876987
+            ],
+            "origin_rpy": [
+              -1.575718619512935,
+              -0.8018325991613584,
+              -3.141079911259082
+            ],
+            "origin_xyz": [
+              -0.030051353222882243,
+              -0.12651832582754308,
+              0.00895863532127251
+            ],
+            "shape": "box",
+            "size": [
+              0.08151629137838474,
+              0.07328998718190008,
+              0.04229006331040826
+            ]
+          },
+          "source": "primitive"
+        },
+        "collision_bbox_max": [
+          0.0579002248455547,
+          0.019523389720792556,
+          0.026908518730832002
+        ],
+        "collision_bbox_min": [
+          -0.03209977515444515,
+          -0.03047661027920734,
+          -0.06301184350894559
+        ],
+        "collision_bbox_size": [
+          0.08999999999999986,
+          0.04999999999999989,
+          0.08992036223977759
+        ],
+        "collision_body_count": 1,
+        "collision_body_names": [],
+        "collision_excluded_body_names": [],
+        "collision_override": "",
+        "collision_volume_m3": 7.791120399351931e-05,
+        "color_rgb": [
+          0.6274509803921569,
+          0.6274509803921569,
+          0.6274509803921569
+        ],
+        "com_link_local": [
+          0.012900198626299002,
+          -0.005482503846648533,
+          -0.018047948885668484
+        ],
+        "frame_rebase_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "frame_rule": "keep",
+        "global_position": [
+          -0.007099775154444964,
+          -0.18347661027920817,
+          0.0380479954477064
+        ],
+        "has_collision_exclusions": false,
+        "has_explicit_collision": false,
+        "has_visual_mesh": true,
+        "inertia_at_com": {
+          "ixx": 0.0005265770190525648,
+          "ixy": 8.274259924413083e-11,
+          "ixz": 5.777756580192361e-10,
+          "iyy": 0.0007325315178485349,
+          "iyz": 6.033033140851721e-11,
+          "izz": 0.0005265749896183348
+        },
+        "inertial_origin_xyz": null,
+        "is_empty": false,
+        "is_frame_only": false,
+        "is_merged": true,
+        "mass_kg": 0.6116029513491266,
+        "material_name": "Steel",
+        "merged_member_paths": [
+          "base_link:1+rear_right_wheel_link:1+Rim (3):1",
+          "base_link:1+rear_right_wheel_link:1+Tire (3):1"
+        ],
+        "mesh_bake_offset": [
+          -0.012900224845554977,
+          -0.0035233897207924848,
+          0.01804799544770637
+        ],
+        "mesh_collision": "meshes/rear_right_wheel_link/rear_right_wheel_link_collision.stl",
+        "mesh_collision_input": "",
+        "mesh_origin_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mesh_visual": "meshes/rear_right_wheel_link/rear_right_wheel_link.dae",
+        "needs_mesh_bake": true,
+        "occurrence_path": "base_link:1+rear_right_wheel_link:1+Tire (3):1",
+        "rigid_group_collision_offset": null,
+        "rigid_group_collision_path": null,
+        "rigid_group_name": "rear_right_wheel_link",
+        "source_world_rotation": [
+          -0.9999999999999991,
+          -4.0939474033052685e-14,
+          1.2246467991450574e-16,
+          4.093947403305268e-14,
+          -0.9999999999999991,
+          -5.588215196104942e-15,
+          1.2246467991473535e-16,
+          -5.588215196104942e-15,
+          1.0
+        ],
+        "urdf_name": "rear_right_wheel_link",
+        "volume_m3": 7.791120399351931e-05,
         "wants_accurate_collision": false
       },
       "rplidar_s2_link": {
         "area_m2": 0.0442253778046288,
-        "assembly": "ma_robot",
+        "assembly": "base_link",
         "bbox_max": [
           -0.5565064202586362,
           0.5715176652674689,
@@ -1175,7 +1195,7 @@
         "body_count": 28,
         "clean_name": "rplidar_s2_link",
         "collision": {
-          "mesh_path": "meshes/ma_robot/rplidar_s2_link_collision.stl",
+          "mesh_path": "meshes/base_link/rplidar_s2_link_collision.stl",
           "origin_rpy": [
             0.0,
             0.0,
@@ -1277,16 +1297,16 @@
           0.0,
           0.0
         ],
-        "mesh_collision": "meshes/ma_robot/rplidar_s2_link_collision.stl",
+        "mesh_collision": "meshes/base_link/rplidar_s2_link_collision.stl",
         "mesh_collision_input": "",
         "mesh_origin_rpy": [
           0.0,
           0.0,
           0.0
         ],
-        "mesh_visual": "meshes/ma_robot/rplidar_s2_link.dae",
+        "mesh_visual": "meshes/base_link/rplidar_s2_link.dae",
         "needs_mesh_bake": false,
-        "occurrence_path": "rplidar_s2_link:1",
+        "occurrence_path": "base_link:1+rplidar_s2_link:1",
         "rigid_group_collision_offset": null,
         "rigid_group_collision_path": null,
         "rigid_group_name": null,
@@ -1307,7 +1327,7 @@
       },
       "zed2_camera_link": {
         "area_m2": 0.022004743874632946,
-        "assembly": "ma_robot",
+        "assembly": "base_link",
         "bbox_max": [
           0.08736623301299228,
           0.0316,
@@ -1326,7 +1346,7 @@
         "body_count": 1,
         "clean_name": "zed2_camera_link",
         "collision": {
-          "mesh_path": "meshes/ma_robot/zed2_camera_link_collision.stl",
+          "mesh_path": "meshes/base_link/zed2_camera_link_collision.stl",
           "origin_rpy": [
             0.0,
             0.0,
@@ -1418,16 +1438,16 @@
           0.0,
           0.0
         ],
-        "mesh_collision": "meshes/ma_robot/zed2_camera_link_collision.stl",
+        "mesh_collision": "meshes/base_link/zed2_camera_link_collision.stl",
         "mesh_collision_input": "",
         "mesh_origin_rpy": [
           0.0,
           0.0,
           0.0
         ],
-        "mesh_visual": "meshes/ma_robot/zed2_camera_link.dae",
+        "mesh_visual": "meshes/base_link/zed2_camera_link.dae",
         "needs_mesh_bake": false,
-        "occurrence_path": "zed2_camera_link:1",
+        "occurrence_path": "base_link:1+zed2_camera_link:1",
         "rigid_group_collision_offset": null,
         "rigid_group_collision_path": null,
         "rigid_group_name": null,
@@ -1449,9 +1469,6 @@
     },
     "name": "ma_robot",
     "root_link": "base_link",
-    "warnings": [
-      "Root link renamed: 'ma_robot' \u2192 'base_link' (REP 120 convention). Consider renaming the component to 'base_link' in Fusion.",
-      "Link 'base_link': visual mesh export failed \u2014 exception: property '_get_isVisible' of 'Occurrence' object has no setter"
-    ]
+    "warnings": []
   }
 }

@@ -1,202 +1,145 @@
 # Extraction Report: ma_robot
 
-**Exported:** 2026-09-02T22:20:11.504871
+**Exported:** 2026-09-03T00:07:07.041547
 **Exporter:** v3.1.0
 
 ## Summary
 
 | Metric | Value |
 |--------|-------|
-| Occurrences | 55 |
-| Subassemblies | 4 |
-| Leaf components | 51 |
+| Occurrences | 15 |
+| Subassemblies | 5 |
+| Leaf components | 10 |
 | Joints (total) | 6 |
 | As-built joints | 0 |
 | Regular joints | 6 |
-| Max nesting depth | 1 |
+| Max nesting depth | 2 |
 
 ## Assembly Hierarchy
 
 ```
 [ma_robot]  (design root)
-  ├── ma_robot  (2899.2g)
-  ├── rplidar_s2_link  (203.8g)
-  ├── zed2_camera_link  (178.2g)
-  [front_left_wheel_link]  (depth=0, children=12)
-    ├── Part1_1  (80.6g, Steel)
-    ├── Part1_1  (80.6g, Steel)
-    ├── Part2_1  (398.7g, Steel)
-    ├── Part4_1  (45.3g, Steel)
-    ├── Part4_1  (45.3g, Steel)
-    ├── Part4_1  (45.3g, Steel)
-    ├── Part4_1  (45.3g, Steel)
-    ├── Part4_1  (45.3g, Steel)
-    ├── Part4_1  (45.3g, Steel)
-    ├── Part4_1  (45.3g, Steel)
-    ├── Part4_1  (45.3g, Steel)
-    ├── Part4_1  (45.3g, Steel)
-  [front_right_wheel_link]  (depth=0, children=12)
-    ├── Part1_1_Mirror  (80.6g, Steel)
-    ├── Part1_1_Mirror  (80.6g, Steel)
-    ├── Part2_1_Mirror  (398.7g, Steel)
-    ├── Part4_1_Mirror  (45.3g, Steel)
-    ├── Part4_1_Mirror  (45.3g, Steel)
-    ├── Part4_1_Mirror  (45.3g, Steel)
-    ├── Part4_1_Mirror  (45.3g, Steel)
-    ├── Part4_1_Mirror  (45.3g, Steel)
-    ├── Part4_1_Mirror  (45.3g, Steel)
-    ├── Part4_1_Mirror  (45.3g, Steel)
-    ├── Part4_1_Mirror  (45.3g, Steel)
-    ├── Part4_1_Mirror  (45.3g, Steel)
-  [rear_left_wheel_link]  (depth=0, children=12)
-    ├── Part1_2_Mirror  (80.6g, Steel)
-    ├── Part1_2_Mirror  (80.6g, Steel)
-    ├── Part2_2_Mirror  (398.7g, Steel)
-    ├── Part4_2_Mirror  (45.3g, Steel)
-    ├── Part4_2_Mirror  (45.3g, Steel)
-    ├── Part4_2_Mirror  (45.3g, Steel)
-    ├── Part4_2_Mirror  (45.3g, Steel)
-    ├── Part4_2_Mirror  (45.3g, Steel)
-    ├── Part4_2_Mirror  (45.3g, Steel)
-    ├── Part4_2_Mirror  (45.3g, Steel)
-    ├── Part4_2_Mirror  (45.3g, Steel)
-    ├── Part4_2_Mirror  (45.3g, Steel)
-  [rear_right_wheel_link]  (depth=0, children=12)
-    ├── Part1_2  (80.6g, Steel)
-    ├── Part1_2  (80.6g, Steel)
-    ├── Part2_2  (398.7g, Steel)
-    ├── Part4_2  (45.3g, Steel)
-    ├── Part4_2  (45.3g, Steel)
-    ├── Part4_2  (45.3g, Steel)
-    ├── Part4_2  (45.3g, Steel)
-    ├── Part4_2  (45.3g, Steel)
-    ├── Part4_2  (45.3g, Steel)
-    ├── Part4_2  (45.3g, Steel)
-    ├── Part4_2  (45.3g, Steel)
-    ├── Part4_2  (45.3g, Steel)
+  [base_link]  (depth=0, children=6)
+    ├── rplidar_s2_link  (203.8g, Steel)
+    ├── zed2_camera_link  (178.2g, PA_11_Nylon_HP_11_30_with_EOS_P_396_3D_Printer)
+    [front_left_wheel_link]  (depth=1, children=2)
+      ├── Rim  (0.0g, )
+      ├── Tire  (611.6g, Steel)
+    [front_right_wheel_link]  (depth=1, children=2)
+      ├── Rim_1  (0.0g, )
+      ├── Tire_1  (611.6g, Steel)
+    [rear_left_wheel_link]  (depth=1, children=2)
+      ├── Rim_2  (0.0g, )
+      ├── Tire_2  (611.6g, Steel)
+    [rear_right_wheel_link]  (depth=1, children=2)
+      ├── Rim_3  (0.0g, )
+      ├── Tire_3  (611.6g, Steel)
 ```
 
 ## Occurrences
 
 ### Depth 0
 
-#### 🔧 COMPONENT: `ma_robot`
+#### 📦 SUBASSEMBLY: `base_link`
 
 | Property | Value |
 |----------|-------|
-| Full path | `__design_root__` |
-| Component name | ma_robot |
+| Full path | `base_link:1` |
+| Component name | base_link |
 | Depth | 0 |
-| Path segments | ma_robot |
+| Path segments | base_link |
+| Child occurrences | 6 |
 | **Transforms** | |
 | Global position (m) | (0.000000, 0.000000, 0.000000) |
 | Global position (mm) | (0.00, 0.00, 0.00) |
 | Local transform (m) | (0.000000, 0.000000, 0.000000) |
 | Assembly context depth | 0 |
 | transform2 (m) | (0.000000, 0.000000, 0.000000) |
-| **Physical** | |
-| Mass | 2.899152 kg (2899.152 g) |
-| Volume | 2.034492e-03 m³ |
-| Density | 1425.0 kg/m³ |
-| Surface area | 1.349898e-01 m² |
-| Body count | 2 |
-| CoM (component-local, m) | (0.041574, -0.062494, 0.024420) |
-| CoM (global, m) | (0.041574, -0.062494, 0.024420) |
-| CoM (global, mm) | (41.57, -62.49, 24.42) |
-| **Inertia at origin (kg·m²)** | |
-| Ixx, Iyy, Izz | 2.102542e-02, 2.053445e-02, 3.686139e-02 |
-| Ixy, Ixz, Iyz | 7.533385e-03, -2.665166e-03, 4.423977e-03 |
-| **Inertia at CoM (kg·m²)** | |
-| Ixx, Iyy, Izz | 7.973742e-03, 1.379462e-02, 2.052761e-02 |
-| Ixy, Ixz, Iyz | 9.036729e-07, 2.781740e-04, -4.481306e-07 |
-| Bounding box (m) | 0.2630 × 0.2450 × 0.1200 |
-| Bounding box (mm) | 263.04 × 245.00 × 120.00 |
-| **Material & Appearance** | |
-| Material | Acetal_Resin_Black |
-| Appearance | Plastic_Glossy_Black |
-| Color (RGB 0-1) | (0.098, 0.098, 0.098) |
-| Color (RGB 0-255) | (25, 25, 25) |
-| **Per-body breakdown** | |
-| Body 0: Body1 | mass=2899.091g, material=Acetal_Resin_Black, inertia_src=api |
-| Body 1: Body2 | mass=0.060g, material=Acetal_Resin_Black, inertia_src=api |
+
+### Depth 1
 
 #### 📦 SUBASSEMBLY: `front_left_wheel_link`
 
 | Property | Value |
 |----------|-------|
-| Full path | `front_left_wheel_link:1` |
+| Full path | `base_link:1+front_left_wheel_link:1` |
 | Component name | front_left_wheel_link |
-| Depth | 0 |
-| Path segments | front_left_wheel_link |
-| Child occurrences | 12 |
+| Depth | 1 |
+| Path segments | base_link → front_left_wheel_link |
+| Parent path | `base_link:1` |
+| Child occurrences | 2 |
 | **Transforms** | |
-| Global position (m) | (0.000000, 0.000000, 0.000000) |
-| Global position (mm) | (0.00, 0.00, 0.00) |
-| Local transform (m) | (0.000000, 0.000000, 0.000000) |
-| Assembly context depth | 0 |
-| transform2 (m) | (0.000000, 0.000000, 0.000000) |
+| Global position (m) | (0.105169, 0.116880, 0.031432) |
+| Global position (mm) | (105.17, 116.88, 31.43) |
+| Local transform (m) | (0.105169, 0.116880, 0.031432) |
+| Assembly context depth | 1 |
+| transform2 (m) | (0.105169, 0.116880, 0.031432) |
 
 #### 📦 SUBASSEMBLY: `front_right_wheel_link`
 
 | Property | Value |
 |----------|-------|
-| Full path | `front_right_wheel_link:1` |
+| Full path | `base_link:1+front_right_wheel_link:1` |
 | Component name | front_right_wheel_link |
-| Depth | 0 |
-| Path segments | front_right_wheel_link |
-| Child occurrences | 12 |
+| Depth | 1 |
+| Path segments | base_link → front_right_wheel_link |
+| Parent path | `base_link:1` |
+| Child occurrences | 2 |
 | **Transforms** | |
-| Global position (m) | (0.000000, -0.300000, 0.000000) |
-| Global position (mm) | (0.00, -300.00, 0.00) |
-| Local transform (m) | (0.000000, -0.300000, 0.000000) |
-| Assembly context depth | 0 |
-| transform2 (m) | (0.000000, -0.300000, 0.000000) |
+| Global position (m) | (0.162112, -0.247382, 0.030000) |
+| Global position (mm) | (162.11, -247.38, 30.00) |
+| Local transform (m) | (0.162112, -0.247382, 0.030000) |
+| Assembly context depth | 1 |
+| transform2 (m) | (0.162112, -0.247382, 0.030000) |
 
 #### 📦 SUBASSEMBLY: `rear_left_wheel_link`
 
 | Property | Value |
 |----------|-------|
-| Full path | `rear_left_wheel_link:1` |
+| Full path | `base_link:1+rear_left_wheel_link:1` |
 | Component name | rear_left_wheel_link |
-| Depth | 0 |
-| Path segments | rear_left_wheel_link |
-| Child occurrences | 12 |
+| Depth | 1 |
+| Path segments | base_link → rear_left_wheel_link |
+| Parent path | `base_link:1` |
+| Child occurrences | 2 |
 | **Transforms** | |
-| Global position (m) | (0.000000, 0.050000, 0.000000) |
-| Global position (mm) | (0.00, 50.00, 0.00) |
-| Local transform (m) | (0.000000, 0.050000, 0.000000) |
-| Assembly context depth | 0 |
-| transform2 (m) | (0.000000, 0.050000, 0.000000) |
+| Global position (m) | (0.000000, 0.117773, 0.033890) |
+| Global position (mm) | (0.00, 117.77, 33.89) |
+| Local transform (m) | (0.000000, 0.117773, 0.033890) |
+| Assembly context depth | 1 |
+| transform2 (m) | (0.000000, 0.117773, 0.033890) |
 
 #### 📦 SUBASSEMBLY: `rear_right_wheel_link`
 
 | Property | Value |
 |----------|-------|
-| Full path | `rear_right_wheel_link:1` |
+| Full path | `base_link:1+rear_right_wheel_link:1` |
 | Component name | rear_right_wheel_link |
-| Depth | 0 |
-| Path segments | rear_right_wheel_link |
-| Child occurrences | 12 |
+| Depth | 1 |
+| Path segments | base_link → rear_right_wheel_link |
+| Parent path | `base_link:1` |
+| Child occurrences | 2 |
 | **Transforms** | |
-| Global position (m) | (0.000000, 0.000000, 0.000000) |
-| Global position (mm) | (0.00, 0.00, 0.00) |
-| Local transform (m) | (0.000000, 0.000000, 0.000000) |
-| Assembly context depth | 0 |
-| transform2 (m) | (0.000000, 0.000000, 0.000000) |
+| Global position (m) | (0.000000, -0.234940, 0.029863) |
+| Global position (mm) | (0.00, -234.94, 29.86) |
+| Local transform (m) | (0.000000, -0.234940, 0.029863) |
+| Assembly context depth | 1 |
+| transform2 (m) | (0.000000, -0.234940, 0.029863) |
 
 #### 🔧 COMPONENT: `rplidar_s2_link`
 
 | Property | Value |
 |----------|-------|
-| Full path | `rplidar_s2_link:1` |
+| Full path | `base_link:1+rplidar_s2_link:1` |
 | Component name | rplidar_s2_link |
-| Depth | 0 |
-| Path segments | rplidar_s2_link |
+| Depth | 1 |
+| Path segments | base_link → rplidar_s2_link |
+| Parent path | `base_link:1` |
 | **Transforms** | |
 | Global position (m) | (-0.433747, -0.657506, 0.046815) |
 | Global position (mm) | (-433.75, -657.51, 46.81) |
 | Local transform (m) | (-0.433747, -0.657506, 0.046815) |
-| Assembly context depth | 0 |
+| Assembly context depth | 1 |
 | transform2 (m) | (-0.433747, -0.657506, 0.046815) |
 | **Physical** | |
 | Mass | 0.203764 kg (203.764 g) |
@@ -254,15 +197,16 @@
 
 | Property | Value |
 |----------|-------|
-| Full path | `zed2_camera_link:1` |
+| Full path | `base_link:1+zed2_camera_link:1` |
 | Component name | zed2_camera_link |
-| Depth | 0 |
-| Path segments | zed2_camera_link |
+| Depth | 1 |
+| Path segments | base_link → zed2_camera_link |
+| Parent path | `base_link:1` |
 | **Transforms** | |
 | Global position (m) | (0.145000, -0.062500, -0.007371) |
 | Global position (mm) | (145.00, -62.50, -7.37) |
 | Local transform (m) | (0.145000, -0.062500, -0.007371) |
-| Assembly context depth | 0 |
+| Assembly context depth | 1 |
 | transform2 (m) | (0.145000, -0.062500, -0.007371) |
 | **Physical** | |
 | Mass | 0.178229 kg (178.229 g) |
@@ -287,1953 +231,437 @@
 | Color (RGB 0-1) | (0.247, 0.247, 0.247) |
 | Color (RGB 0-255) | (63, 63, 63) |
 
-### Depth 1
+### Depth 2
 
-#### 🔧 COMPONENT: `Part1_1`
-
-| Property | Value |
-|----------|-------|
-| Full path | `front_left_wheel_link:1+Part1 (1):1` |
-| Component name | Part1 (1) |
-| Depth | 1 |
-| Path segments | front_left_wheel_link → Part1_1 |
-| Parent path | `front_left_wheel_link:1` |
-| **Transforms** | |
-| Global position (m) | (0.130000, 0.073000, 0.020000) |
-| Global position (mm) | (130.00, 73.00, 20.00) |
-| Local transform (m) | (0.130000, 0.073000, 0.020000) |
-| Assembly context depth | 1 |
-| transform2 (m) | (0.130000, 0.073000, 0.020000) |
-| **Physical** | |
-| Mass | 0.080563 kg (80.563 g) |
-| Volume | 1.026286e-05 m³ |
-| Density | 7850.0 kg/m³ |
-| Surface area | 9.378219e-03 m² |
-| Body count | 1 |
-| CoM (component-local, m) | (-0.000000, -0.000000, 0.002406) |
-| CoM (global, m) | (0.130000, 0.073000, 0.022406) |
-| CoM (global, mm) | (130.00, 73.00, 22.41) |
-| **Inertia at origin (kg·m²)** | |
-| Ixx, Iyy, Izz | 3.067888e-05, 3.067884e-05, 5.976875e-05 |
-| Ixy, Ixz, Iyz | -3.627335e-11, 2.154204e-12, 4.197040e-12 |
-| **Inertia at CoM (kg·m²)** | |
-| Ixx, Iyy, Izz | 3.021264e-05, 3.021260e-05, 5.976875e-05 |
-| Ixy, Ixz, Iyz | -3.627332e-11, -6.187036e-13, -1.046723e-12 |
-| Bounding box (m) | 0.0766 × 0.0768 × 0.0107 |
-| Bounding box (mm) | 76.62 × 76.81 × 10.69 |
-| **Material & Appearance** | |
-| Material | Steel |
-| Appearance | Opaque_202_209_238 |
-| Color (RGB 0-1) | (0.792, 0.820, 0.933) |
-| Color (RGB 0-255) | (202, 209, 238) |
-
-#### 🔧 COMPONENT: `Part1_1`
+#### 🔧 COMPONENT: `Rim`
 
 | Property | Value |
 |----------|-------|
-| Full path | `front_left_wheel_link:1+Part1 (1):2` |
-| Component name | Part1 (1) |
-| Depth | 1 |
-| Path segments | front_left_wheel_link → Part1_1 |
-| Parent path | `front_left_wheel_link:1` |
+| Full path | `base_link:1+front_left_wheel_link:1+Rim:1` |
+| Component name | Rim |
+| Depth | 2 |
+| Path segments | base_link → front_left_wheel_link → Rim |
+| Parent path | `base_link:1+front_left_wheel_link:1` |
 | **Transforms** | |
-| Global position (m) | (0.130000, 0.031464, 0.020000) |
-| Global position (mm) | (130.00, 31.46, 20.00) |
-| Local transform (m) | (0.130000, 0.031464, 0.020000) |
-| Assembly context depth | 1 |
-| transform2 (m) | (0.130000, 0.031464, 0.020000) |
+| Global position (m) | (0.104444, 0.123316, 0.043512) |
+| Global position (mm) | (104.44, 123.32, 43.51) |
+| Local transform (m) | (-0.000725, 0.006437, 0.012079) |
+| Assembly context depth | 2 |
+| transform2 (m) | (0.104444, 0.123316, 0.043512) |
 | **Physical** | |
-| Mass | 0.080563 kg (80.563 g) |
-| Volume | 1.026286e-05 m³ |
-| Density | 7850.0 kg/m³ |
-| Surface area | 9.378219e-03 m² |
-| Body count | 1 |
-| CoM (component-local, m) | (-0.000000, -0.000000, 0.002406) |
-| CoM (global, m) | (0.130000, 0.031463, 0.022406) |
-| CoM (global, mm) | (130.00, 31.46, 22.41) |
+| Mass | 0.000000 kg (0.000 g) |
+| Volume | 0.000000e+00 m³ |
+| Density | 0.0 kg/m³ |
+| Surface area | 0.000000e+00 m² |
+| Body count | 0 |
+| CoM (component-local, m) | (0.000000, 0.000000, 0.000000) |
+| CoM (global, m) | (0.000000, 0.000000, 0.000000) |
+| CoM (global, mm) | (0.00, 0.00, 0.00) |
 | **Inertia at origin (kg·m²)** | |
-| Ixx, Iyy, Izz | 3.067888e-05, 3.067884e-05, 5.976875e-05 |
-| Ixy, Ixz, Iyz | -3.627335e-11, 2.154204e-12, 4.197040e-12 |
+| Ixx, Iyy, Izz | 0.000000e+00, 0.000000e+00, 0.000000e+00 |
+| Ixy, Ixz, Iyz | 0.000000e+00, 0.000000e+00, 0.000000e+00 |
 | **Inertia at CoM (kg·m²)** | |
-| Ixx, Iyy, Izz | 3.021264e-05, 3.021260e-05, 5.976875e-05 |
-| Ixy, Ixz, Iyz | -3.627332e-11, -6.187036e-13, -1.046723e-12 |
-| Bounding box (m) | 0.0766 × 0.0768 × 0.0107 |
-| Bounding box (mm) | 76.62 × 76.81 × 10.69 |
+| Ixx, Iyy, Izz | 0.000000e+00, 0.000000e+00, 0.000000e+00 |
+| Ixy, Ixz, Iyz | 0.000000e+00, 0.000000e+00, 0.000000e+00 |
+| Bounding box (m) | 0.0000 × 0.0000 × 0.0000 |
+| Bounding box (mm) | 0.00 × 0.00 × 0.00 |
 | **Material & Appearance** | |
-| Material | Steel |
-| Appearance | Opaque_202_209_238 |
-| Color (RGB 0-1) | (0.792, 0.820, 0.933) |
-| Color (RGB 0-255) | (202, 209, 238) |
+| Material |  |
+| Appearance |  |
 
-#### 🔧 COMPONENT: `Part2_1`
+#### 🔧 COMPONENT: `Tire`
 
 | Property | Value |
 |----------|-------|
-| Full path | `front_left_wheel_link:1+Part2 (1):1` |
-| Component name | Part2 (1) |
-| Depth | 1 |
-| Path segments | front_left_wheel_link → Part2_1 |
-| Parent path | `front_left_wheel_link:1` |
+| Full path | `base_link:1+front_left_wheel_link:1+Tire:1` |
+| Component name | Tire |
+| Depth | 2 |
+| Path segments | base_link → front_left_wheel_link → Tire |
+| Parent path | `base_link:1+front_left_wheel_link:1` |
 | **Transforms** | |
-| Global position (m) | (0.130000, 0.070000, 0.020000) |
-| Global position (mm) | (130.00, 70.00, 20.00) |
-| Local transform (m) | (0.130000, 0.070000, 0.020000) |
-| Assembly context depth | 1 |
-| transform2 (m) | (0.130000, 0.070000, 0.020000) |
+| Global position (m) | (0.117100, 0.058477, 0.038048) |
+| Global position (mm) | (117.10, 58.48, 38.05) |
+| Local transform (m) | (0.011931, -0.058403, 0.006616) |
+| Assembly context depth | 2 |
+| transform2 (m) | (0.117100, 0.058477, 0.038048) |
 | **Physical** | |
-| Mass | 0.398719 kg (398.719 g) |
-| Volume | 5.079219e-05 m³ |
+| Mass | 0.611603 kg (611.603 g) |
+| Volume | 7.791120e-05 m³ |
 | Density | 7850.0 kg/m³ |
-| Surface area | 1.159048e-02 m² |
+| Surface area | 5.988217e-02 m² |
 | Body count | 1 |
-| CoM (component-local, m) | (-0.000000, 0.017773, 0.000000) |
-| CoM (global, m) | (0.130000, 0.087773, 0.020000) |
-| CoM (global, mm) | (130.00, 87.77, 20.00) |
+| CoM (component-local, m) | (0.012900, -0.005483, -0.018048) |
+| CoM (global, m) | (0.130000, 0.052994, 0.020000) |
+| CoM (global, mm) | (130.00, 52.99, 20.00) |
 | **Inertia at origin (kg·m²)** | |
-| Ixx, Iyy, Izz | 2.179435e-04, 9.886321e-05, 2.179435e-04 |
-| Ixy, Ixz, Iyz | 1.360974e-18, -8.924417e-20, -1.786630e-14 |
+| Ixx, Iyy, Izz | 7.441770e-04, 1.033528e-03, 6.467384e-04 |
+| Ixy, Ixz, Iyz | 4.325594e-05, 1.423953e-04, -6.051680e-05 |
 | **Inertia at CoM (kg·m²)** | |
-| Ixx, Iyy, Izz | 9.199087e-05, 9.886321e-05, 9.199086e-05 |
-| Ixy, Ixz, Iyz | 3.255486e-20, -8.924417e-20, -2.209770e-16 |
-| Bounding box (m) | 0.0440 × 0.0360 × 0.0440 |
-| Bounding box (mm) | 44.00 × 36.00 × 44.00 |
+| Ixx, Iyy, Izz | 5.265770e-04, 7.325315e-04, 5.265750e-04 |
+| Ixy, Ixz, Iyz | 8.274260e-11, 5.777757e-10, 6.033033e-11 |
+| Bounding box (m) | 0.0900 × 0.0500 × 0.0899 |
+| Bounding box (mm) | 90.00 × 50.00 × 89.92 |
 | **Material & Appearance** | |
 | Material | Steel |
-| Appearance | Opaque_202_209_238 |
-| Color (RGB 0-1) | (0.792, 0.820, 0.933) |
-| Color (RGB 0-255) | (202, 209, 238) |
+| Appearance | Opaque_160_160_160 |
+| Color (RGB 0-1) | (0.627, 0.627, 0.627) |
+| Color (RGB 0-255) | (160, 160, 160) |
 
-#### 🔧 COMPONENT: `Part4_1`
+#### 🔧 COMPONENT: `Rim_1`
 
 | Property | Value |
 |----------|-------|
-| Full path | `front_left_wheel_link:1+Part4 (1):1` |
-| Component name | Part4 (1) |
-| Depth | 1 |
-| Path segments | front_left_wheel_link → Part4_1 |
-| Parent path | `front_left_wheel_link:1` |
+| Full path | `base_link:1+front_right_wheel_link:1+Rim (1):1` |
+| Component name | Rim (1) |
+| Depth | 2 |
+| Path segments | base_link → front_right_wheel_link → Rim_1 |
+| Parent path | `base_link:1+front_right_wheel_link:1` |
 | **Transforms** | |
-| Global position (m) | (0.113860, 0.037417, 0.050030) |
-| Global position (mm) | (113.86, 37.42, 50.03) |
-| Local transform (m) | (0.113860, 0.037417, 0.050030) |
-| Assembly context depth | 1 |
-| transform2 (m) | (0.113860, 0.037417, 0.050030) |
+| Global position (m) | (0.162837, -0.253819, 0.042079) |
+| Global position (mm) | (162.84, -253.82, 42.08) |
+| Local transform (m) | (-0.000725, 0.006437, 0.012079) |
+| Assembly context depth | 2 |
+| transform2 (m) | (0.162837, -0.253819, 0.042079) |
 | **Physical** | |
-| Mass | 0.045349 kg (45.349 g) |
-| Volume | 5.776995e-06 m³ |
-| Density | 7850.0 kg/m³ |
-| Surface area | 1.864547e-03 m² |
-| Body count | 1 |
-| CoM (component-local, m) | (0.021000, 0.000000, 0.000000) |
-| CoM (global, m) | (0.134860, 0.037417, 0.050030) |
-| CoM (global, mm) | (134.86, 37.42, 50.03) |
+| Mass | 0.000000 kg (0.000 g) |
+| Volume | 0.000000e+00 m³ |
+| Density | 0.0 kg/m³ |
+| Surface area | 0.000000e+00 m² |
+| Body count | 0 |
+| CoM (component-local, m) | (0.000000, 0.000000, 0.000000) |
+| CoM (global, m) | (0.000000, 0.000000, 0.000000) |
+| CoM (global, mm) | (0.00, 0.00, 0.00) |
 | **Inertia at origin (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 2.470789e-05, 2.470789e-05 |
-| Ixy, Ixz, Iyz | -1.729106e-19, -1.032722e-17, 1.603606e-20 |
+| Ixx, Iyy, Izz | 0.000000e+00, 0.000000e+00, 0.000000e+00 |
+| Ixy, Ixz, Iyz | 0.000000e+00, 0.000000e+00, 0.000000e+00 |
 | **Inertia at CoM (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 4.708795e-06, 4.708795e-06 |
-| Ixy, Ixz, Iyz | -1.377707e-19, -1.381193e-19, 1.603606e-20 |
-| Bounding box (m) | 0.0420 × 0.0160 × 0.0160 |
-| Bounding box (mm) | 42.00 × 16.02 × 16.02 |
+| Ixx, Iyy, Izz | 0.000000e+00, 0.000000e+00, 0.000000e+00 |
+| Ixy, Ixz, Iyz | 0.000000e+00, 0.000000e+00, 0.000000e+00 |
+| Bounding box (m) | 0.0000 × 0.0000 × 0.0000 |
+| Bounding box (mm) | 0.00 × 0.00 × 0.00 |
 | **Material & Appearance** | |
-| Material | Steel |
-| Appearance | Opaque_64_64_64 |
-| Color (RGB 0-1) | (0.251, 0.251, 0.251) |
-| Color (RGB 0-255) | (64, 64, 64) |
+| Material |  |
+| Appearance |  |
 
-#### 🔧 COMPONENT: `Part4_1`
+#### 🔧 COMPONENT: `Tire_1`
 
 | Property | Value |
 |----------|-------|
-| Full path | `front_left_wheel_link:1+Part4 (1):2` |
-| Component name | Part4 (1) |
-| Depth | 1 |
-| Path segments | front_left_wheel_link → Part4_1 |
-| Parent path | `front_left_wheel_link:1` |
+| Full path | `base_link:1+front_right_wheel_link:1+Tire (1):1` |
+| Component name | Tire (1) |
+| Depth | 2 |
+| Path segments | base_link → front_right_wheel_link → Tire_1 |
+| Parent path | `base_link:1+front_right_wheel_link:1` |
 | **Transforms** | |
-| Global position (m) | (0.097624, 0.037417, 0.009320) |
-| Global position (mm) | (97.62, 37.42, 9.32) |
-| Local transform (m) | (0.097624, 0.037417, 0.009320) |
-| Assembly context depth | 1 |
-| transform2 (m) | (0.097624, 0.037417, 0.009320) |
+| Global position (m) | (0.142900, -0.183477, 0.038048) |
+| Global position (mm) | (142.90, -183.48, 38.05) |
+| Local transform (m) | (0.019212, -0.063905, 0.008048) |
+| Assembly context depth | 2 |
+| transform2 (m) | (0.142900, -0.183477, 0.038048) |
 | **Physical** | |
-| Mass | 0.045349 kg (45.349 g) |
-| Volume | 5.776995e-06 m³ |
+| Mass | 0.611603 kg (611.603 g) |
+| Volume | 7.791120e-05 m³ |
 | Density | 7850.0 kg/m³ |
-| Surface area | 1.864547e-03 m² |
+| Surface area | 5.988217e-02 m² |
 | Body count | 1 |
-| CoM (component-local, m) | (0.021000, 0.000000, 0.000000) |
-| CoM (global, m) | (0.118624, 0.037417, 0.009320) |
-| CoM (global, mm) | (118.62, 37.42, 9.32) |
+| CoM (component-local, m) | (0.012900, -0.005483, -0.018048) |
+| CoM (global, m) | (0.155800, -0.188959, 0.020000) |
+| CoM (global, mm) | (155.80, -188.96, 20.00) |
 | **Inertia at origin (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 2.470789e-05, 2.470789e-05 |
-| Ixy, Ixz, Iyz | -1.729106e-19, -1.032722e-17, 1.603606e-20 |
+| Ixx, Iyy, Izz | 7.441770e-04, 1.033528e-03, 6.467384e-04 |
+| Ixy, Ixz, Iyz | 4.325594e-05, 1.423953e-04, -6.051680e-05 |
 | **Inertia at CoM (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 4.708795e-06, 4.708795e-06 |
-| Ixy, Ixz, Iyz | -1.377707e-19, -1.381193e-19, 1.603606e-20 |
-| Bounding box (m) | 0.0420 × 0.0160 × 0.0160 |
-| Bounding box (mm) | 42.00 × 16.02 × 16.02 |
+| Ixx, Iyy, Izz | 5.265770e-04, 7.325315e-04, 5.265750e-04 |
+| Ixy, Ixz, Iyz | 8.274260e-11, 5.777757e-10, 6.033033e-11 |
+| Bounding box (m) | 0.0900 × 0.0500 × 0.0899 |
+| Bounding box (mm) | 90.00 × 50.00 × 89.92 |
 | **Material & Appearance** | |
 | Material | Steel |
-| Appearance | Opaque_64_64_64 |
-| Color (RGB 0-1) | (0.251, 0.251, 0.251) |
-| Color (RGB 0-255) | (64, 64, 64) |
+| Appearance | Opaque_160_160_160 |
+| Color (RGB 0-1) | (0.627, 0.627, 0.627) |
+| Color (RGB 0-255) | (160, 160, 160) |
 
-#### 🔧 COMPONENT: `Part4_1`
+#### 🔧 COMPONENT: `Rim_2`
 
 | Property | Value |
 |----------|-------|
-| Full path | `front_left_wheel_link:1+Part4 (1):3` |
-| Component name | Part4 (1) |
-| Depth | 1 |
-| Path segments | front_left_wheel_link → Part4_1 |
-| Parent path | `front_left_wheel_link:1` |
+| Full path | `base_link:1+rear_left_wheel_link:1+Rim (2):1` |
+| Component name | Rim (2) |
+| Depth | 2 |
+| Path segments | base_link → rear_left_wheel_link → Rim_2 |
+| Parent path | `base_link:1+rear_left_wheel_link:1` |
 | **Transforms** | |
-| Global position (m) | (0.099065, 0.038409, 0.033299) |
-| Global position (mm) | (99.06, 38.41, 33.30) |
-| Local transform (m) | (0.099065, 0.038409, 0.033299) |
-| Assembly context depth | 1 |
-| transform2 (m) | (0.099065, 0.038409, 0.033299) |
+| Global position (m) | (-0.000725, 0.124209, 0.045970) |
+| Global position (mm) | (-0.72, 124.21, 45.97) |
+| Local transform (m) | (-0.000725, 0.006437, 0.012079) |
+| Assembly context depth | 2 |
+| transform2 (m) | (-0.000725, 0.124209, 0.045970) |
 | **Physical** | |
-| Mass | 0.045349 kg (45.349 g) |
-| Volume | 5.776995e-06 m³ |
-| Density | 7850.0 kg/m³ |
-| Surface area | 1.864547e-03 m² |
-| Body count | 1 |
-| CoM (component-local, m) | (0.021000, 0.000000, 0.000000) |
-| CoM (global, m) | (0.120065, 0.038409, 0.033299) |
-| CoM (global, mm) | (120.06, 38.41, 33.30) |
+| Mass | 0.000000 kg (0.000 g) |
+| Volume | 0.000000e+00 m³ |
+| Density | 0.0 kg/m³ |
+| Surface area | 0.000000e+00 m² |
+| Body count | 0 |
+| CoM (component-local, m) | (0.000000, 0.000000, 0.000000) |
+| CoM (global, m) | (0.000000, 0.000000, 0.000000) |
+| CoM (global, mm) | (0.00, 0.00, 0.00) |
 | **Inertia at origin (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 2.470789e-05, 2.470789e-05 |
-| Ixy, Ixz, Iyz | -1.729106e-19, -1.032722e-17, 1.603606e-20 |
+| Ixx, Iyy, Izz | 0.000000e+00, 0.000000e+00, 0.000000e+00 |
+| Ixy, Ixz, Iyz | 0.000000e+00, 0.000000e+00, 0.000000e+00 |
 | **Inertia at CoM (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 4.708795e-06, 4.708795e-06 |
-| Ixy, Ixz, Iyz | -1.377707e-19, -1.381193e-19, 1.603606e-20 |
-| Bounding box (m) | 0.0420 × 0.0160 × 0.0160 |
-| Bounding box (mm) | 42.00 × 16.02 × 16.02 |
+| Ixx, Iyy, Izz | 0.000000e+00, 0.000000e+00, 0.000000e+00 |
+| Ixy, Ixz, Iyz | 0.000000e+00, 0.000000e+00, 0.000000e+00 |
+| Bounding box (m) | 0.0000 × 0.0000 × 0.0000 |
+| Bounding box (mm) | 0.00 × 0.00 × 0.00 |
 | **Material & Appearance** | |
-| Material | Steel |
-| Appearance | Opaque_64_64_64 |
-| Color (RGB 0-1) | (0.251, 0.251, 0.251) |
-| Color (RGB 0-255) | (64, 64, 64) |
+| Material |  |
+| Appearance |  |
 
-#### 🔧 COMPONENT: `Part4_1`
+#### 🔧 COMPONENT: `Tire_2`
 
 | Property | Value |
 |----------|-------|
-| Full path | `front_left_wheel_link:1+Part4 (1):4` |
-| Component name | Part4 (1) |
-| Depth | 1 |
-| Path segments | front_left_wheel_link → Part4_1 |
-| Parent path | `front_left_wheel_link:1` |
+| Full path | `base_link:1+rear_left_wheel_link:1+Tire (2):1` |
+| Component name | Tire (2) |
+| Depth | 2 |
+| Path segments | base_link → rear_left_wheel_link → Tire_2 |
+| Parent path | `base_link:1+rear_left_wheel_link:1` |
 | **Transforms** | |
-| Global position (m) | (0.135098, 0.037205, -0.013803) |
-| Global position (mm) | (135.10, 37.20, -13.80) |
-| Local transform (m) | (0.135098, 0.037205, -0.013803) |
-| Assembly context depth | 1 |
-| transform2 (m) | (0.135098, 0.037205, -0.013803) |
+| Global position (m) | (-0.032900, 0.058477, 0.038048) |
+| Global position (mm) | (-32.90, 58.48, 38.05) |
+| Local transform (m) | (-0.032900, -0.059296, 0.004158) |
+| Assembly context depth | 2 |
+| transform2 (m) | (-0.032900, 0.058477, 0.038048) |
 | **Physical** | |
-| Mass | 0.045349 kg (45.349 g) |
-| Volume | 5.776995e-06 m³ |
+| Mass | 0.611603 kg (611.603 g) |
+| Volume | 7.791120e-05 m³ |
 | Density | 7850.0 kg/m³ |
-| Surface area | 1.864547e-03 m² |
+| Surface area | 5.988217e-02 m² |
 | Body count | 1 |
-| CoM (component-local, m) | (0.021000, 0.000000, 0.000000) |
-| CoM (global, m) | (0.156098, 0.037205, -0.013803) |
-| CoM (global, mm) | (156.10, 37.20, -13.80) |
+| CoM (component-local, m) | (0.012900, -0.005483, -0.018048) |
+| CoM (global, m) | (-0.020000, 0.052994, 0.020000) |
+| CoM (global, mm) | (-20.00, 52.99, 20.00) |
 | **Inertia at origin (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 2.470789e-05, 2.470789e-05 |
-| Ixy, Ixz, Iyz | -1.729106e-19, -1.032722e-17, 1.603606e-20 |
+| Ixx, Iyy, Izz | 7.441770e-04, 1.033528e-03, 6.467384e-04 |
+| Ixy, Ixz, Iyz | 4.325594e-05, 1.423953e-04, -6.051680e-05 |
 | **Inertia at CoM (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 4.708795e-06, 4.708795e-06 |
-| Ixy, Ixz, Iyz | -1.377707e-19, -1.381193e-19, 1.603606e-20 |
-| Bounding box (m) | 0.0420 × 0.0160 × 0.0160 |
-| Bounding box (mm) | 42.00 × 16.02 × 16.02 |
+| Ixx, Iyy, Izz | 5.265770e-04, 7.325315e-04, 5.265750e-04 |
+| Ixy, Ixz, Iyz | 8.274260e-11, 5.777757e-10, 6.033033e-11 |
+| Bounding box (m) | 0.0900 × 0.0500 × 0.0899 |
+| Bounding box (mm) | 90.00 × 50.00 × 89.92 |
 | **Material & Appearance** | |
 | Material | Steel |
-| Appearance | Opaque_64_64_64 |
-| Color (RGB 0-1) | (0.251, 0.251, 0.251) |
-| Color (RGB 0-255) | (64, 64, 64) |
+| Appearance | Opaque_160_160_160 |
+| Color (RGB 0-1) | (0.627, 0.627, 0.627) |
+| Color (RGB 0-255) | (160, 160, 160) |
 
-#### 🔧 COMPONENT: `Part4_1`
+#### 🔧 COMPONENT: `Rim_3`
 
 | Property | Value |
 |----------|-------|
-| Full path | `front_left_wheel_link:1+Part4 (1):5` |
-| Component name | Part4 (1) |
-| Depth | 1 |
-| Path segments | front_left_wheel_link → Part4_1 |
-| Parent path | `front_left_wheel_link:1` |
+| Full path | `base_link:1+rear_right_wheel_link:1+Rim (3):1` |
+| Component name | Rim (3) |
+| Depth | 2 |
+| Path segments | base_link → rear_right_wheel_link → Rim_3 |
+| Parent path | `base_link:1+rear_right_wheel_link:1` |
 | **Transforms** | |
-| Global position (m) | (0.155437, 0.037417, -0.002698) |
-| Global position (mm) | (155.44, 37.42, -2.70) |
-| Local transform (m) | (0.155437, 0.037417, -0.002698) |
-| Assembly context depth | 1 |
-| transform2 (m) | (0.155437, 0.037417, -0.002698) |
+| Global position (m) | (0.000725, -0.241376, 0.041942) |
+| Global position (mm) | (0.72, -241.38, 41.94) |
+| Local transform (m) | (-0.000725, 0.006437, 0.012079) |
+| Assembly context depth | 2 |
+| transform2 (m) | (0.000725, -0.241376, 0.041942) |
 | **Physical** | |
-| Mass | 0.045349 kg (45.349 g) |
-| Volume | 5.776995e-06 m³ |
-| Density | 7850.0 kg/m³ |
-| Surface area | 1.864547e-03 m² |
-| Body count | 1 |
-| CoM (component-local, m) | (0.021000, 0.000000, 0.000000) |
-| CoM (global, m) | (0.176437, 0.037417, -0.002698) |
-| CoM (global, mm) | (176.44, 37.42, -2.70) |
+| Mass | 0.000000 kg (0.000 g) |
+| Volume | 0.000000e+00 m³ |
+| Density | 0.0 kg/m³ |
+| Surface area | 0.000000e+00 m² |
+| Body count | 0 |
+| CoM (component-local, m) | (0.000000, 0.000000, 0.000000) |
+| CoM (global, m) | (0.000000, 0.000000, 0.000000) |
+| CoM (global, mm) | (0.00, 0.00, 0.00) |
 | **Inertia at origin (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 2.470789e-05, 2.470789e-05 |
-| Ixy, Ixz, Iyz | -1.729106e-19, -1.032722e-17, 1.603606e-20 |
+| Ixx, Iyy, Izz | 0.000000e+00, 0.000000e+00, 0.000000e+00 |
+| Ixy, Ixz, Iyz | 0.000000e+00, 0.000000e+00, 0.000000e+00 |
 | **Inertia at CoM (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 4.708795e-06, 4.708795e-06 |
-| Ixy, Ixz, Iyz | -1.377707e-19, -1.381193e-19, 1.603606e-20 |
-| Bounding box (m) | 0.0420 × 0.0160 × 0.0160 |
-| Bounding box (mm) | 42.00 × 16.02 × 16.02 |
+| Ixx, Iyy, Izz | 0.000000e+00, 0.000000e+00, 0.000000e+00 |
+| Ixy, Ixz, Iyz | 0.000000e+00, 0.000000e+00, 0.000000e+00 |
+| Bounding box (m) | 0.0000 × 0.0000 × 0.0000 |
+| Bounding box (mm) | 0.00 × 0.00 × 0.00 |
 | **Material & Appearance** | |
-| Material | Steel |
-| Appearance | Opaque_64_64_64 |
-| Color (RGB 0-1) | (0.251, 0.251, 0.251) |
-| Color (RGB 0-255) | (64, 64, 64) |
+| Material |  |
+| Appearance |  |
 
-#### 🔧 COMPONENT: `Part4_1`
+#### 🔧 COMPONENT: `Tire_3`
 
 | Property | Value |
 |----------|-------|
-| Full path | `front_left_wheel_link:1+Part4 (1):6` |
-| Component name | Part4 (1) |
-| Depth | 1 |
-| Path segments | front_left_wheel_link → Part4_1 |
-| Parent path | `front_left_wheel_link:1` |
+| Full path | `base_link:1+rear_right_wheel_link:1+Tire (3):1` |
+| Component name | Tire (3) |
+| Depth | 2 |
+| Path segments | base_link → rear_right_wheel_link → Tire_3 |
+| Parent path | `base_link:1+rear_right_wheel_link:1` |
 | **Transforms** | |
-| Global position (m) | (0.112064, 0.037417, -0.008992) |
-| Global position (mm) | (112.06, 37.42, -8.99) |
-| Local transform (m) | (0.112064, 0.037417, -0.008992) |
-| Assembly context depth | 1 |
-| transform2 (m) | (0.112064, 0.037417, -0.008992) |
+| Global position (m) | (-0.007100, -0.183477, 0.038048) |
+| Global position (mm) | (-7.10, -183.48, 38.05) |
+| Local transform (m) | (0.007100, -0.051463, 0.008185) |
+| Assembly context depth | 2 |
+| transform2 (m) | (-0.007100, -0.183477, 0.038048) |
 | **Physical** | |
-| Mass | 0.045349 kg (45.349 g) |
-| Volume | 5.776995e-06 m³ |
+| Mass | 0.611603 kg (611.603 g) |
+| Volume | 7.791120e-05 m³ |
 | Density | 7850.0 kg/m³ |
-| Surface area | 1.864547e-03 m² |
+| Surface area | 5.988217e-02 m² |
 | Body count | 1 |
-| CoM (component-local, m) | (0.021000, 0.000000, 0.000000) |
-| CoM (global, m) | (0.133064, 0.037417, -0.008992) |
-| CoM (global, mm) | (133.06, 37.42, -8.99) |
+| CoM (component-local, m) | (0.012900, -0.005483, -0.018048) |
+| CoM (global, m) | (0.005800, -0.188959, 0.020000) |
+| CoM (global, mm) | (5.80, -188.96, 20.00) |
 | **Inertia at origin (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 2.470789e-05, 2.470789e-05 |
-| Ixy, Ixz, Iyz | -1.729106e-19, -1.032722e-17, 1.603606e-20 |
+| Ixx, Iyy, Izz | 7.441770e-04, 1.033528e-03, 6.467384e-04 |
+| Ixy, Ixz, Iyz | 4.325594e-05, 1.423953e-04, -6.051680e-05 |
 | **Inertia at CoM (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 4.708795e-06, 4.708795e-06 |
-| Ixy, Ixz, Iyz | -1.377707e-19, -1.381193e-19, 1.603606e-20 |
-| Bounding box (m) | 0.0420 × 0.0160 × 0.0160 |
-| Bounding box (mm) | 42.00 × 16.02 × 16.02 |
+| Ixx, Iyy, Izz | 5.265770e-04, 7.325315e-04, 5.265750e-04 |
+| Ixy, Ixz, Iyz | 8.274260e-11, 5.777757e-10, 6.033033e-11 |
+| Bounding box (m) | 0.0900 × 0.0500 × 0.0899 |
+| Bounding box (mm) | 90.00 × 50.00 × 89.92 |
 | **Material & Appearance** | |
 | Material | Steel |
-| Appearance | Opaque_64_64_64 |
-| Color (RGB 0-1) | (0.251, 0.251, 0.251) |
-| Color (RGB 0-255) | (64, 64, 64) |
-
-#### 🔧 COMPONENT: `Part4_1`
-
-| Property | Value |
-|----------|-------|
-| Full path | `front_left_wheel_link:1+Part4 (1):7` |
-| Component name | Part4 (1) |
-| Depth | 1 |
-| Path segments | front_left_wheel_link → Part4_1 |
-| Parent path | `front_left_wheel_link:1` |
-| **Transforms** | |
-| Global position (m) | (0.164076, 0.037417, 0.018963) |
-| Global position (mm) | (164.08, 37.42, 18.96) |
-| Local transform (m) | (0.164076, 0.037417, 0.018963) |
-| Assembly context depth | 1 |
-| transform2 (m) | (0.164076, 0.037417, 0.018963) |
-| **Physical** | |
-| Mass | 0.045349 kg (45.349 g) |
-| Volume | 5.776995e-06 m³ |
-| Density | 7850.0 kg/m³ |
-| Surface area | 1.864547e-03 m² |
-| Body count | 1 |
-| CoM (component-local, m) | (0.021000, 0.000000, 0.000000) |
-| CoM (global, m) | (0.185076, 0.037417, 0.018963) |
-| CoM (global, mm) | (185.08, 37.42, 18.96) |
-| **Inertia at origin (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 2.470789e-05, 2.470789e-05 |
-| Ixy, Ixz, Iyz | -1.729106e-19, -1.032722e-17, 1.603606e-20 |
-| **Inertia at CoM (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 4.708795e-06, 4.708795e-06 |
-| Ixy, Ixz, Iyz | -1.377707e-19, -1.381193e-19, 1.603606e-20 |
-| Bounding box (m) | 0.0420 × 0.0160 × 0.0160 |
-| Bounding box (mm) | 42.00 × 16.02 × 16.02 |
-| **Material & Appearance** | |
-| Material | Steel |
-| Appearance | Opaque_64_64_64 |
-| Color (RGB 0-1) | (0.251, 0.251, 0.251) |
-| Color (RGB 0-255) | (64, 64, 64) |
-
-#### 🔧 COMPONENT: `Part4_1`
-
-| Property | Value |
-|----------|-------|
-| Full path | `front_left_wheel_link:1+Part4 (1):8` |
-| Component name | Part4 (1) |
-| Depth | 1 |
-| Path segments | front_left_wheel_link → Part4_1 |
-| Parent path | `front_left_wheel_link:1` |
-| **Transforms** | |
-| Global position (m) | (0.156771, 0.037417, 0.041109) |
-| Global position (mm) | (156.77, 37.42, 41.11) |
-| Local transform (m) | (0.156771, 0.037417, 0.041109) |
-| Assembly context depth | 1 |
-| transform2 (m) | (0.156771, 0.037417, 0.041109) |
-| **Physical** | |
-| Mass | 0.045349 kg (45.349 g) |
-| Volume | 5.776995e-06 m³ |
-| Density | 7850.0 kg/m³ |
-| Surface area | 1.864547e-03 m² |
-| Body count | 1 |
-| CoM (component-local, m) | (0.021000, 0.000000, 0.000000) |
-| CoM (global, m) | (0.177771, 0.037417, 0.041109) |
-| CoM (global, mm) | (177.77, 37.42, 41.11) |
-| **Inertia at origin (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 2.470789e-05, 2.470789e-05 |
-| Ixy, Ixz, Iyz | -1.729106e-19, -1.032722e-17, 1.603606e-20 |
-| **Inertia at CoM (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 4.708795e-06, 4.708795e-06 |
-| Ixy, Ixz, Iyz | -1.377707e-19, -1.381193e-19, 1.603606e-20 |
-| Bounding box (m) | 0.0420 × 0.0160 × 0.0160 |
-| Bounding box (mm) | 42.00 × 16.02 × 16.02 |
-| **Material & Appearance** | |
-| Material | Steel |
-| Appearance | Opaque_64_64_64 |
-| Color (RGB 0-1) | (0.251, 0.251, 0.251) |
-| Color (RGB 0-255) | (64, 64, 64) |
-
-#### 🔧 COMPONENT: `Part4_1`
-
-| Property | Value |
-|----------|-------|
-| Full path | `front_left_wheel_link:1+Part4 (1):9` |
-| Component name | Part4 (1) |
-| Depth | 1 |
-| Path segments | front_left_wheel_link → Part4_1 |
-| Parent path | `front_left_wheel_link:1` |
-| **Transforms** | |
-| Global position (m) | (0.136770, 0.037205, 0.053508) |
-| Global position (mm) | (136.77, 37.20, 53.51) |
-| Local transform (m) | (0.136770, 0.037205, 0.053508) |
-| Assembly context depth | 1 |
-| transform2 (m) | (0.136770, 0.037205, 0.053508) |
-| **Physical** | |
-| Mass | 0.045349 kg (45.349 g) |
-| Volume | 5.776995e-06 m³ |
-| Density | 7850.0 kg/m³ |
-| Surface area | 1.864547e-03 m² |
-| Body count | 1 |
-| CoM (component-local, m) | (0.021000, 0.000000, 0.000000) |
-| CoM (global, m) | (0.157770, 0.037205, 0.053508) |
-| CoM (global, mm) | (157.77, 37.20, 53.51) |
-| **Inertia at origin (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 2.470789e-05, 2.470789e-05 |
-| Ixy, Ixz, Iyz | -1.729106e-19, -1.032722e-17, 1.603606e-20 |
-| **Inertia at CoM (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 4.708795e-06, 4.708795e-06 |
-| Ixy, Ixz, Iyz | -1.377707e-19, -1.381193e-19, 1.603606e-20 |
-| Bounding box (m) | 0.0420 × 0.0160 × 0.0160 |
-| Bounding box (mm) | 42.00 × 16.02 × 16.02 |
-| **Material & Appearance** | |
-| Material | Steel |
-| Appearance | Opaque_64_64_64 |
-| Color (RGB 0-1) | (0.251, 0.251, 0.251) |
-| Color (RGB 0-255) | (64, 64, 64) |
-
-#### 🔧 COMPONENT: `Part1_1_Mirror`
-
-| Property | Value |
-|----------|-------|
-| Full path | `front_right_wheel_link:1+Part1 (1)(Mirror):1` |
-| Component name | Part1 (1)(Mirror) |
-| Depth | 1 |
-| Path segments | front_right_wheel_link → Part1_1_Mirror |
-| Parent path | `front_right_wheel_link:1` |
-| **Transforms** | |
-| Global position (m) | (0.130000, -0.197000, 0.020000) |
-| Global position (mm) | (130.00, -197.00, 20.00) |
-| Local transform (m) | (0.130000, -0.103000, -0.020000) |
-| Assembly context depth | 1 |
-| transform2 (m) | (0.130000, -0.197000, 0.020000) |
-| **Physical** | |
-| Mass | 0.080563 kg (80.563 g) |
-| Volume | 1.026285e-05 m³ |
-| Density | 7850.0 kg/m³ |
-| Surface area | 9.378219e-03 m² |
-| Body count | 1 |
-| CoM (component-local, m) | (-0.000000, -0.000000, -0.002406) |
-| CoM (global, m) | (0.130000, -0.197000, 0.017594) |
-| CoM (global, mm) | (130.00, -197.00, 17.59) |
-| **Inertia at origin (kg·m²)** | |
-| Ixx, Iyy, Izz | 3.067887e-05, 3.067883e-05, 5.976873e-05 |
-| Ixy, Ixz, Iyz | -3.614473e-11, -2.154027e-12, -4.199075e-12 |
-| **Inertia at CoM (kg·m²)** | |
-| Ixx, Iyy, Izz | 3.021263e-05, 3.021259e-05, 5.976873e-05 |
-| Ixy, Ixz, Iyz | -3.614470e-11, 6.188001e-13, 1.045603e-12 |
-| Bounding box (m) | 0.0766 × 0.0768 × 0.0107 |
-| Bounding box (mm) | 76.62 × 76.81 × 10.69 |
-| **Material & Appearance** | |
-| Material | Steel |
-| Appearance | Opaque_202_209_238 |
-| Color (RGB 0-1) | (0.792, 0.820, 0.933) |
-| Color (RGB 0-255) | (202, 209, 238) |
-
-#### 🔧 COMPONENT: `Part1_1_Mirror`
-
-| Property | Value |
-|----------|-------|
-| Full path | `front_right_wheel_link:1+Part1 (1)(Mirror):2` |
-| Component name | Part1 (1)(Mirror) |
-| Depth | 1 |
-| Path segments | front_right_wheel_link → Part1_1_Mirror |
-| Parent path | `front_right_wheel_link:1` |
-| **Transforms** | |
-| Global position (m) | (0.130000, -0.155464, 0.020000) |
-| Global position (mm) | (130.00, -155.46, 20.00) |
-| Local transform (m) | (0.130000, -0.144536, -0.020000) |
-| Assembly context depth | 1 |
-| transform2 (m) | (0.130000, -0.155464, 0.020000) |
-| **Physical** | |
-| Mass | 0.080563 kg (80.563 g) |
-| Volume | 1.026285e-05 m³ |
-| Density | 7850.0 kg/m³ |
-| Surface area | 9.378219e-03 m² |
-| Body count | 1 |
-| CoM (component-local, m) | (-0.000000, -0.000000, -0.002406) |
-| CoM (global, m) | (0.130000, -0.155464, 0.017594) |
-| CoM (global, mm) | (130.00, -155.46, 17.59) |
-| **Inertia at origin (kg·m²)** | |
-| Ixx, Iyy, Izz | 3.067887e-05, 3.067883e-05, 5.976873e-05 |
-| Ixy, Ixz, Iyz | -3.614473e-11, -2.154027e-12, -4.199075e-12 |
-| **Inertia at CoM (kg·m²)** | |
-| Ixx, Iyy, Izz | 3.021263e-05, 3.021259e-05, 5.976873e-05 |
-| Ixy, Ixz, Iyz | -3.614470e-11, 6.188001e-13, 1.045603e-12 |
-| Bounding box (m) | 0.0766 × 0.0768 × 0.0107 |
-| Bounding box (mm) | 76.62 × 76.81 × 10.69 |
-| **Material & Appearance** | |
-| Material | Steel |
-| Appearance | Opaque_202_209_238 |
-| Color (RGB 0-1) | (0.792, 0.820, 0.933) |
-| Color (RGB 0-255) | (202, 209, 238) |
-
-#### 🔧 COMPONENT: `Part2_1_Mirror`
-
-| Property | Value |
-|----------|-------|
-| Full path | `front_right_wheel_link:1+Part2 (1)(Mirror):1` |
-| Component name | Part2 (1)(Mirror) |
-| Depth | 1 |
-| Path segments | front_right_wheel_link → Part2_1_Mirror |
-| Parent path | `front_right_wheel_link:1` |
-| **Transforms** | |
-| Global position (m) | (0.130000, -0.194000, 0.020000) |
-| Global position (mm) | (130.00, -194.00, 20.00) |
-| Local transform (m) | (0.130000, -0.106000, -0.020000) |
-| Assembly context depth | 1 |
-| transform2 (m) | (0.130000, -0.194000, 0.020000) |
-| **Physical** | |
-| Mass | 0.398719 kg (398.719 g) |
-| Volume | 5.079219e-05 m³ |
-| Density | 7850.0 kg/m³ |
-| Surface area | 1.159048e-02 m² |
-| Body count | 1 |
-| CoM (component-local, m) | (-0.000000, 0.017773, -0.000000) |
-| CoM (global, m) | (0.130000, -0.176227, 0.020000) |
-| CoM (global, mm) | (130.00, -176.23, 20.00) |
-| **Inertia at origin (kg·m²)** | |
-| Ixx, Iyy, Izz | 2.179435e-04, 9.886321e-05, 2.179435e-04 |
-| Ixy, Ixz, Iyz | 1.360974e-18, 3.346656e-19, 1.786619e-14 |
-| **Inertia at CoM (kg·m²)** | |
-| Ixx, Iyy, Izz | 9.199087e-05, 9.886321e-05, 9.199086e-05 |
-| Ixy, Ixz, Iyz | 5.238201e-20, 3.346656e-19, 2.208457e-16 |
-| Bounding box (m) | 0.0440 × 0.0360 × 0.0440 |
-| Bounding box (mm) | 44.00 × 36.00 × 44.00 |
-| **Material & Appearance** | |
-| Material | Steel |
-| Appearance | Opaque_202_209_238 |
-| Color (RGB 0-1) | (0.792, 0.820, 0.933) |
-| Color (RGB 0-255) | (202, 209, 238) |
-
-#### 🔧 COMPONENT: `Part4_1_Mirror`
-
-| Property | Value |
-|----------|-------|
-| Full path | `front_right_wheel_link:1+Part4 (1)(Mirror):1` |
-| Component name | Part4 (1)(Mirror) |
-| Depth | 1 |
-| Path segments | front_right_wheel_link → Part4_1_Mirror |
-| Parent path | `front_right_wheel_link:1` |
-| **Transforms** | |
-| Global position (m) | (0.113860, -0.161417, 0.050030) |
-| Global position (mm) | (113.86, -161.42, 50.03) |
-| Local transform (m) | (0.113860, -0.138583, -0.050030) |
-| Assembly context depth | 1 |
-| transform2 (m) | (0.113860, -0.161417, 0.050030) |
-| **Physical** | |
-| Mass | 0.045349 kg (45.349 g) |
-| Volume | 5.776995e-06 m³ |
-| Density | 7850.0 kg/m³ |
-| Surface area | 1.864547e-03 m² |
-| Body count | 1 |
-| CoM (component-local, m) | (0.021000, 0.000000, -0.000000) |
-| CoM (global, m) | (0.134860, -0.161417, 0.050030) |
-| CoM (global, mm) | (134.86, -161.42, 50.03) |
-| **Inertia at origin (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 2.470789e-05, 2.470789e-05 |
-| Ixy, Ixz, Iyz | -1.729106e-19, 9.981402e-18, 1.568745e-20 |
-| **Inertia at CoM (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 4.708795e-06, 4.708795e-06 |
-| Ixy, Ixz, Iyz | -1.377707e-19, -1.374221e-19, 1.568745e-20 |
-| Bounding box (m) | 0.0420 × 0.0160 × 0.0160 |
-| Bounding box (mm) | 42.00 × 16.02 × 16.02 |
-| **Material & Appearance** | |
-| Material | Steel |
-| Appearance | Opaque_64_64_64 |
-| Color (RGB 0-1) | (0.251, 0.251, 0.251) |
-| Color (RGB 0-255) | (64, 64, 64) |
-
-#### 🔧 COMPONENT: `Part4_1_Mirror`
-
-| Property | Value |
-|----------|-------|
-| Full path | `front_right_wheel_link:1+Part4 (1)(Mirror):2` |
-| Component name | Part4 (1)(Mirror) |
-| Depth | 1 |
-| Path segments | front_right_wheel_link → Part4_1_Mirror |
-| Parent path | `front_right_wheel_link:1` |
-| **Transforms** | |
-| Global position (m) | (0.097624, -0.161417, 0.009320) |
-| Global position (mm) | (97.62, -161.42, 9.32) |
-| Local transform (m) | (0.097624, -0.138583, -0.009320) |
-| Assembly context depth | 1 |
-| transform2 (m) | (0.097624, -0.161417, 0.009320) |
-| **Physical** | |
-| Mass | 0.045349 kg (45.349 g) |
-| Volume | 5.776995e-06 m³ |
-| Density | 7850.0 kg/m³ |
-| Surface area | 1.864547e-03 m² |
-| Body count | 1 |
-| CoM (component-local, m) | (0.021000, 0.000000, -0.000000) |
-| CoM (global, m) | (0.118624, -0.161417, 0.009320) |
-| CoM (global, mm) | (118.62, -161.42, 9.32) |
-| **Inertia at origin (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 2.470789e-05, 2.470789e-05 |
-| Ixy, Ixz, Iyz | -1.729106e-19, 9.981402e-18, 1.568745e-20 |
-| **Inertia at CoM (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 4.708795e-06, 4.708795e-06 |
-| Ixy, Ixz, Iyz | -1.377707e-19, -1.374221e-19, 1.568745e-20 |
-| Bounding box (m) | 0.0420 × 0.0160 × 0.0160 |
-| Bounding box (mm) | 42.00 × 16.02 × 16.02 |
-| **Material & Appearance** | |
-| Material | Steel |
-| Appearance | Opaque_64_64_64 |
-| Color (RGB 0-1) | (0.251, 0.251, 0.251) |
-| Color (RGB 0-255) | (64, 64, 64) |
-
-#### 🔧 COMPONENT: `Part4_1_Mirror`
-
-| Property | Value |
-|----------|-------|
-| Full path | `front_right_wheel_link:1+Part4 (1)(Mirror):3` |
-| Component name | Part4 (1)(Mirror) |
-| Depth | 1 |
-| Path segments | front_right_wheel_link → Part4_1_Mirror |
-| Parent path | `front_right_wheel_link:1` |
-| **Transforms** | |
-| Global position (m) | (0.099065, -0.162409, 0.033299) |
-| Global position (mm) | (99.06, -162.41, 33.30) |
-| Local transform (m) | (0.099065, -0.137591, -0.033299) |
-| Assembly context depth | 1 |
-| transform2 (m) | (0.099065, -0.162409, 0.033299) |
-| **Physical** | |
-| Mass | 0.045349 kg (45.349 g) |
-| Volume | 5.776995e-06 m³ |
-| Density | 7850.0 kg/m³ |
-| Surface area | 1.864547e-03 m² |
-| Body count | 1 |
-| CoM (component-local, m) | (0.021000, 0.000000, -0.000000) |
-| CoM (global, m) | (0.120065, -0.162409, 0.033299) |
-| CoM (global, mm) | (120.06, -162.41, 33.30) |
-| **Inertia at origin (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 2.470789e-05, 2.470789e-05 |
-| Ixy, Ixz, Iyz | -1.729106e-19, 9.981402e-18, 1.568745e-20 |
-| **Inertia at CoM (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 4.708795e-06, 4.708795e-06 |
-| Ixy, Ixz, Iyz | -1.377707e-19, -1.374221e-19, 1.568745e-20 |
-| Bounding box (m) | 0.0420 × 0.0160 × 0.0160 |
-| Bounding box (mm) | 42.00 × 16.02 × 16.02 |
-| **Material & Appearance** | |
-| Material | Steel |
-| Appearance | Opaque_64_64_64 |
-| Color (RGB 0-1) | (0.251, 0.251, 0.251) |
-| Color (RGB 0-255) | (64, 64, 64) |
-
-#### 🔧 COMPONENT: `Part4_1_Mirror`
-
-| Property | Value |
-|----------|-------|
-| Full path | `front_right_wheel_link:1+Part4 (1)(Mirror):4` |
-| Component name | Part4 (1)(Mirror) |
-| Depth | 1 |
-| Path segments | front_right_wheel_link → Part4_1_Mirror |
-| Parent path | `front_right_wheel_link:1` |
-| **Transforms** | |
-| Global position (m) | (0.135098, -0.161205, -0.013803) |
-| Global position (mm) | (135.10, -161.20, -13.80) |
-| Local transform (m) | (0.135098, -0.138795, 0.013803) |
-| Assembly context depth | 1 |
-| transform2 (m) | (0.135098, -0.161205, -0.013803) |
-| **Physical** | |
-| Mass | 0.045349 kg (45.349 g) |
-| Volume | 5.776995e-06 m³ |
-| Density | 7850.0 kg/m³ |
-| Surface area | 1.864547e-03 m² |
-| Body count | 1 |
-| CoM (component-local, m) | (0.021000, 0.000000, -0.000000) |
-| CoM (global, m) | (0.156098, -0.161205, -0.013803) |
-| CoM (global, mm) | (156.10, -161.20, -13.80) |
-| **Inertia at origin (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 2.470789e-05, 2.470789e-05 |
-| Ixy, Ixz, Iyz | -1.729106e-19, 9.981402e-18, 1.568745e-20 |
-| **Inertia at CoM (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 4.708795e-06, 4.708795e-06 |
-| Ixy, Ixz, Iyz | -1.377707e-19, -1.374221e-19, 1.568745e-20 |
-| Bounding box (m) | 0.0420 × 0.0160 × 0.0160 |
-| Bounding box (mm) | 42.00 × 16.02 × 16.02 |
-| **Material & Appearance** | |
-| Material | Steel |
-| Appearance | Opaque_64_64_64 |
-| Color (RGB 0-1) | (0.251, 0.251, 0.251) |
-| Color (RGB 0-255) | (64, 64, 64) |
-
-#### 🔧 COMPONENT: `Part4_1_Mirror`
-
-| Property | Value |
-|----------|-------|
-| Full path | `front_right_wheel_link:1+Part4 (1)(Mirror):5` |
-| Component name | Part4 (1)(Mirror) |
-| Depth | 1 |
-| Path segments | front_right_wheel_link → Part4_1_Mirror |
-| Parent path | `front_right_wheel_link:1` |
-| **Transforms** | |
-| Global position (m) | (0.155437, -0.161417, -0.002698) |
-| Global position (mm) | (155.44, -161.42, -2.70) |
-| Local transform (m) | (0.155437, -0.138583, 0.002698) |
-| Assembly context depth | 1 |
-| transform2 (m) | (0.155437, -0.161417, -0.002698) |
-| **Physical** | |
-| Mass | 0.045349 kg (45.349 g) |
-| Volume | 5.776995e-06 m³ |
-| Density | 7850.0 kg/m³ |
-| Surface area | 1.864547e-03 m² |
-| Body count | 1 |
-| CoM (component-local, m) | (0.021000, 0.000000, -0.000000) |
-| CoM (global, m) | (0.176437, -0.161417, -0.002698) |
-| CoM (global, mm) | (176.44, -161.42, -2.70) |
-| **Inertia at origin (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 2.470789e-05, 2.470789e-05 |
-| Ixy, Ixz, Iyz | -1.729106e-19, 9.981402e-18, 1.568745e-20 |
-| **Inertia at CoM (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 4.708795e-06, 4.708795e-06 |
-| Ixy, Ixz, Iyz | -1.377707e-19, -1.374221e-19, 1.568745e-20 |
-| Bounding box (m) | 0.0420 × 0.0160 × 0.0160 |
-| Bounding box (mm) | 42.00 × 16.02 × 16.02 |
-| **Material & Appearance** | |
-| Material | Steel |
-| Appearance | Opaque_64_64_64 |
-| Color (RGB 0-1) | (0.251, 0.251, 0.251) |
-| Color (RGB 0-255) | (64, 64, 64) |
-
-#### 🔧 COMPONENT: `Part4_1_Mirror`
-
-| Property | Value |
-|----------|-------|
-| Full path | `front_right_wheel_link:1+Part4 (1)(Mirror):6` |
-| Component name | Part4 (1)(Mirror) |
-| Depth | 1 |
-| Path segments | front_right_wheel_link → Part4_1_Mirror |
-| Parent path | `front_right_wheel_link:1` |
-| **Transforms** | |
-| Global position (m) | (0.112064, -0.161417, -0.008992) |
-| Global position (mm) | (112.06, -161.42, -8.99) |
-| Local transform (m) | (0.112064, -0.138583, 0.008992) |
-| Assembly context depth | 1 |
-| transform2 (m) | (0.112064, -0.161417, -0.008992) |
-| **Physical** | |
-| Mass | 0.045349 kg (45.349 g) |
-| Volume | 5.776995e-06 m³ |
-| Density | 7850.0 kg/m³ |
-| Surface area | 1.864547e-03 m² |
-| Body count | 1 |
-| CoM (component-local, m) | (0.021000, 0.000000, -0.000000) |
-| CoM (global, m) | (0.133064, -0.161417, -0.008992) |
-| CoM (global, mm) | (133.06, -161.42, -8.99) |
-| **Inertia at origin (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 2.470789e-05, 2.470789e-05 |
-| Ixy, Ixz, Iyz | -1.729106e-19, 9.981402e-18, 1.568745e-20 |
-| **Inertia at CoM (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 4.708795e-06, 4.708795e-06 |
-| Ixy, Ixz, Iyz | -1.377707e-19, -1.374221e-19, 1.568745e-20 |
-| Bounding box (m) | 0.0420 × 0.0160 × 0.0160 |
-| Bounding box (mm) | 42.00 × 16.02 × 16.02 |
-| **Material & Appearance** | |
-| Material | Steel |
-| Appearance | Opaque_64_64_64 |
-| Color (RGB 0-1) | (0.251, 0.251, 0.251) |
-| Color (RGB 0-255) | (64, 64, 64) |
-
-#### 🔧 COMPONENT: `Part4_1_Mirror`
-
-| Property | Value |
-|----------|-------|
-| Full path | `front_right_wheel_link:1+Part4 (1)(Mirror):7` |
-| Component name | Part4 (1)(Mirror) |
-| Depth | 1 |
-| Path segments | front_right_wheel_link → Part4_1_Mirror |
-| Parent path | `front_right_wheel_link:1` |
-| **Transforms** | |
-| Global position (m) | (0.164076, -0.161417, 0.018963) |
-| Global position (mm) | (164.08, -161.42, 18.96) |
-| Local transform (m) | (0.164076, -0.138583, -0.018963) |
-| Assembly context depth | 1 |
-| transform2 (m) | (0.164076, -0.161417, 0.018963) |
-| **Physical** | |
-| Mass | 0.045349 kg (45.349 g) |
-| Volume | 5.776995e-06 m³ |
-| Density | 7850.0 kg/m³ |
-| Surface area | 1.864547e-03 m² |
-| Body count | 1 |
-| CoM (component-local, m) | (0.021000, 0.000000, -0.000000) |
-| CoM (global, m) | (0.185076, -0.161417, 0.018963) |
-| CoM (global, mm) | (185.08, -161.42, 18.96) |
-| **Inertia at origin (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 2.470789e-05, 2.470789e-05 |
-| Ixy, Ixz, Iyz | -1.729106e-19, 9.981402e-18, 1.568745e-20 |
-| **Inertia at CoM (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 4.708795e-06, 4.708795e-06 |
-| Ixy, Ixz, Iyz | -1.377707e-19, -1.374221e-19, 1.568745e-20 |
-| Bounding box (m) | 0.0420 × 0.0160 × 0.0160 |
-| Bounding box (mm) | 42.00 × 16.02 × 16.02 |
-| **Material & Appearance** | |
-| Material | Steel |
-| Appearance | Opaque_64_64_64 |
-| Color (RGB 0-1) | (0.251, 0.251, 0.251) |
-| Color (RGB 0-255) | (64, 64, 64) |
-
-#### 🔧 COMPONENT: `Part4_1_Mirror`
-
-| Property | Value |
-|----------|-------|
-| Full path | `front_right_wheel_link:1+Part4 (1)(Mirror):8` |
-| Component name | Part4 (1)(Mirror) |
-| Depth | 1 |
-| Path segments | front_right_wheel_link → Part4_1_Mirror |
-| Parent path | `front_right_wheel_link:1` |
-| **Transforms** | |
-| Global position (m) | (0.156771, -0.161417, 0.041109) |
-| Global position (mm) | (156.77, -161.42, 41.11) |
-| Local transform (m) | (0.156771, -0.138583, -0.041109) |
-| Assembly context depth | 1 |
-| transform2 (m) | (0.156771, -0.161417, 0.041109) |
-| **Physical** | |
-| Mass | 0.045349 kg (45.349 g) |
-| Volume | 5.776995e-06 m³ |
-| Density | 7850.0 kg/m³ |
-| Surface area | 1.864547e-03 m² |
-| Body count | 1 |
-| CoM (component-local, m) | (0.021000, 0.000000, -0.000000) |
-| CoM (global, m) | (0.177771, -0.161417, 0.041109) |
-| CoM (global, mm) | (177.77, -161.42, 41.11) |
-| **Inertia at origin (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 2.470789e-05, 2.470789e-05 |
-| Ixy, Ixz, Iyz | -1.729106e-19, 9.981402e-18, 1.568745e-20 |
-| **Inertia at CoM (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 4.708795e-06, 4.708795e-06 |
-| Ixy, Ixz, Iyz | -1.377707e-19, -1.374221e-19, 1.568745e-20 |
-| Bounding box (m) | 0.0420 × 0.0160 × 0.0160 |
-| Bounding box (mm) | 42.00 × 16.02 × 16.02 |
-| **Material & Appearance** | |
-| Material | Steel |
-| Appearance | Opaque_64_64_64 |
-| Color (RGB 0-1) | (0.251, 0.251, 0.251) |
-| Color (RGB 0-255) | (64, 64, 64) |
-
-#### 🔧 COMPONENT: `Part4_1_Mirror`
-
-| Property | Value |
-|----------|-------|
-| Full path | `front_right_wheel_link:1+Part4 (1)(Mirror):9` |
-| Component name | Part4 (1)(Mirror) |
-| Depth | 1 |
-| Path segments | front_right_wheel_link → Part4_1_Mirror |
-| Parent path | `front_right_wheel_link:1` |
-| **Transforms** | |
-| Global position (m) | (0.136770, -0.161205, 0.053508) |
-| Global position (mm) | (136.77, -161.20, 53.51) |
-| Local transform (m) | (0.136770, -0.138795, -0.053508) |
-| Assembly context depth | 1 |
-| transform2 (m) | (0.136770, -0.161205, 0.053508) |
-| **Physical** | |
-| Mass | 0.045349 kg (45.349 g) |
-| Volume | 5.776995e-06 m³ |
-| Density | 7850.0 kg/m³ |
-| Surface area | 1.864547e-03 m² |
-| Body count | 1 |
-| CoM (component-local, m) | (0.021000, 0.000000, -0.000000) |
-| CoM (global, m) | (0.157770, -0.161205, 0.053508) |
-| CoM (global, mm) | (157.77, -161.20, 53.51) |
-| **Inertia at origin (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 2.470789e-05, 2.470789e-05 |
-| Ixy, Ixz, Iyz | -1.729106e-19, 9.981402e-18, 1.568745e-20 |
-| **Inertia at CoM (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 4.708795e-06, 4.708795e-06 |
-| Ixy, Ixz, Iyz | -1.377707e-19, -1.374221e-19, 1.568745e-20 |
-| Bounding box (m) | 0.0420 × 0.0160 × 0.0160 |
-| Bounding box (mm) | 42.00 × 16.02 × 16.02 |
-| **Material & Appearance** | |
-| Material | Steel |
-| Appearance | Opaque_64_64_64 |
-| Color (RGB 0-1) | (0.251, 0.251, 0.251) |
-| Color (RGB 0-255) | (64, 64, 64) |
-
-#### 🔧 COMPONENT: `Part1_2_Mirror`
-
-| Property | Value |
-|----------|-------|
-| Full path | `rear_left_wheel_link:1+Part1 (2)(Mirror):1` |
-| Component name | Part1 (2)(Mirror) |
-| Depth | 1 |
-| Path segments | rear_left_wheel_link → Part1_2_Mirror |
-| Parent path | `rear_left_wheel_link:1` |
-| **Transforms** | |
-| Global position (m) | (-0.020000, 0.072000, 0.020000) |
-| Global position (mm) | (-20.00, 72.00, 20.00) |
-| Local transform (m) | (-0.020000, -0.022000, -0.020000) |
-| Assembly context depth | 1 |
-| transform2 (m) | (-0.020000, 0.072000, 0.020000) |
-| **Physical** | |
-| Mass | 0.080563 kg (80.563 g) |
-| Volume | 1.026285e-05 m³ |
-| Density | 7850.0 kg/m³ |
-| Surface area | 9.378219e-03 m² |
-| Body count | 1 |
-| CoM (component-local, m) | (-0.000000, -0.000000, -0.002406) |
-| CoM (global, m) | (-0.020000, 0.072000, 0.017594) |
-| CoM (global, mm) | (-20.00, 72.00, 17.59) |
-| **Inertia at origin (kg·m²)** | |
-| Ixx, Iyy, Izz | 3.067887e-05, 3.067883e-05, 5.976873e-05 |
-| Ixy, Ixz, Iyz | -3.614473e-11, -2.154027e-12, -4.199075e-12 |
-| **Inertia at CoM (kg·m²)** | |
-| Ixx, Iyy, Izz | 3.021263e-05, 3.021259e-05, 5.976873e-05 |
-| Ixy, Ixz, Iyz | -3.614470e-11, 6.188001e-13, 1.045603e-12 |
-| Bounding box (m) | 0.0766 × 0.0768 × 0.0107 |
-| Bounding box (mm) | 76.62 × 76.81 × 10.69 |
-| **Material & Appearance** | |
-| Material | Steel |
-| Appearance | Opaque_202_209_238 |
-| Color (RGB 0-1) | (0.792, 0.820, 0.933) |
-| Color (RGB 0-255) | (202, 209, 238) |
-
-#### 🔧 COMPONENT: `Part1_2_Mirror`
-
-| Property | Value |
-|----------|-------|
-| Full path | `rear_left_wheel_link:1+Part1 (2)(Mirror):2` |
-| Component name | Part1 (2)(Mirror) |
-| Depth | 1 |
-| Path segments | rear_left_wheel_link → Part1_2_Mirror |
-| Parent path | `rear_left_wheel_link:1` |
-| **Transforms** | |
-| Global position (m) | (-0.020000, 0.030464, 0.020000) |
-| Global position (mm) | (-20.00, 30.46, 20.00) |
-| Local transform (m) | (-0.020000, 0.019536, -0.020000) |
-| Assembly context depth | 1 |
-| transform2 (m) | (-0.020000, 0.030464, 0.020000) |
-| **Physical** | |
-| Mass | 0.080563 kg (80.563 g) |
-| Volume | 1.026285e-05 m³ |
-| Density | 7850.0 kg/m³ |
-| Surface area | 9.378219e-03 m² |
-| Body count | 1 |
-| CoM (component-local, m) | (-0.000000, -0.000000, -0.002406) |
-| CoM (global, m) | (-0.020000, 0.030463, 0.017594) |
-| CoM (global, mm) | (-20.00, 30.46, 17.59) |
-| **Inertia at origin (kg·m²)** | |
-| Ixx, Iyy, Izz | 3.067887e-05, 3.067883e-05, 5.976873e-05 |
-| Ixy, Ixz, Iyz | -3.614473e-11, -2.154027e-12, -4.199075e-12 |
-| **Inertia at CoM (kg·m²)** | |
-| Ixx, Iyy, Izz | 3.021263e-05, 3.021259e-05, 5.976873e-05 |
-| Ixy, Ixz, Iyz | -3.614470e-11, 6.188001e-13, 1.045603e-12 |
-| Bounding box (m) | 0.0766 × 0.0768 × 0.0107 |
-| Bounding box (mm) | 76.62 × 76.81 × 10.69 |
-| **Material & Appearance** | |
-| Material | Steel |
-| Appearance | Opaque_202_209_238 |
-| Color (RGB 0-1) | (0.792, 0.820, 0.933) |
-| Color (RGB 0-255) | (202, 209, 238) |
-
-#### 🔧 COMPONENT: `Part2_2_Mirror`
-
-| Property | Value |
-|----------|-------|
-| Full path | `rear_left_wheel_link:1+Part2 (2)(Mirror):1` |
-| Component name | Part2 (2)(Mirror) |
-| Depth | 1 |
-| Path segments | rear_left_wheel_link → Part2_2_Mirror |
-| Parent path | `rear_left_wheel_link:1` |
-| **Transforms** | |
-| Global position (m) | (-0.020000, 0.069000, 0.020000) |
-| Global position (mm) | (-20.00, 69.00, 20.00) |
-| Local transform (m) | (-0.020000, -0.019000, -0.020000) |
-| Assembly context depth | 1 |
-| transform2 (m) | (-0.020000, 0.069000, 0.020000) |
-| **Physical** | |
-| Mass | 0.398719 kg (398.719 g) |
-| Volume | 5.079219e-05 m³ |
-| Density | 7850.0 kg/m³ |
-| Surface area | 1.159048e-02 m² |
-| Body count | 1 |
-| CoM (component-local, m) | (-0.000000, 0.017773, -0.000000) |
-| CoM (global, m) | (-0.020000, 0.086773, 0.020000) |
-| CoM (global, mm) | (-20.00, 86.77, 20.00) |
-| **Inertia at origin (kg·m²)** | |
-| Ixx, Iyy, Izz | 2.179435e-04, 9.886321e-05, 2.179435e-04 |
-| Ixy, Ixz, Iyz | 1.360974e-18, 3.346656e-19, 1.786619e-14 |
-| **Inertia at CoM (kg·m²)** | |
-| Ixx, Iyy, Izz | 9.199087e-05, 9.886321e-05, 9.199086e-05 |
-| Ixy, Ixz, Iyz | 5.238201e-20, 3.346656e-19, 2.208457e-16 |
-| Bounding box (m) | 0.0440 × 0.0360 × 0.0440 |
-| Bounding box (mm) | 44.00 × 36.00 × 44.00 |
-| **Material & Appearance** | |
-| Material | Steel |
-| Appearance | Opaque_202_209_238 |
-| Color (RGB 0-1) | (0.792, 0.820, 0.933) |
-| Color (RGB 0-255) | (202, 209, 238) |
-
-#### 🔧 COMPONENT: `Part4_2_Mirror`
-
-| Property | Value |
-|----------|-------|
-| Full path | `rear_left_wheel_link:1+Part4 (2)(Mirror):1` |
-| Component name | Part4 (2)(Mirror) |
-| Depth | 1 |
-| Path segments | rear_left_wheel_link → Part4_2_Mirror |
-| Parent path | `rear_left_wheel_link:1` |
-| **Transforms** | |
-| Global position (m) | (-0.036140, 0.036417, -0.010030) |
-| Global position (mm) | (-36.14, 36.42, -10.03) |
-| Local transform (m) | (-0.036140, 0.013583, 0.010030) |
-| Assembly context depth | 1 |
-| transform2 (m) | (-0.036140, 0.036417, -0.010030) |
-| **Physical** | |
-| Mass | 0.045349 kg (45.349 g) |
-| Volume | 5.776995e-06 m³ |
-| Density | 7850.0 kg/m³ |
-| Surface area | 1.864547e-03 m² |
-| Body count | 1 |
-| CoM (component-local, m) | (0.021000, 0.000000, -0.000000) |
-| CoM (global, m) | (-0.015140, 0.036417, -0.010030) |
-| CoM (global, mm) | (-15.14, 36.42, -10.03) |
-| **Inertia at origin (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 2.470789e-05, 2.470789e-05 |
-| Ixy, Ixz, Iyz | -1.729106e-19, 9.981402e-18, 1.568745e-20 |
-| **Inertia at CoM (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 4.708795e-06, 4.708795e-06 |
-| Ixy, Ixz, Iyz | -1.377707e-19, -1.374221e-19, 1.568745e-20 |
-| Bounding box (m) | 0.0420 × 0.0160 × 0.0160 |
-| Bounding box (mm) | 42.00 × 16.02 × 16.02 |
-| **Material & Appearance** | |
-| Material | Steel |
-| Appearance | Opaque_64_64_64 |
-| Color (RGB 0-1) | (0.251, 0.251, 0.251) |
-| Color (RGB 0-255) | (64, 64, 64) |
-
-#### 🔧 COMPONENT: `Part4_2_Mirror`
-
-| Property | Value |
-|----------|-------|
-| Full path | `rear_left_wheel_link:1+Part4 (2)(Mirror):2` |
-| Component name | Part4 (2)(Mirror) |
-| Depth | 1 |
-| Path segments | rear_left_wheel_link → Part4_2_Mirror |
-| Parent path | `rear_left_wheel_link:1` |
-| **Transforms** | |
-| Global position (m) | (-0.052376, 0.036417, 0.030680) |
-| Global position (mm) | (-52.38, 36.42, 30.68) |
-| Local transform (m) | (-0.052376, 0.013583, -0.030680) |
-| Assembly context depth | 1 |
-| transform2 (m) | (-0.052376, 0.036417, 0.030680) |
-| **Physical** | |
-| Mass | 0.045349 kg (45.349 g) |
-| Volume | 5.776995e-06 m³ |
-| Density | 7850.0 kg/m³ |
-| Surface area | 1.864547e-03 m² |
-| Body count | 1 |
-| CoM (component-local, m) | (0.021000, 0.000000, -0.000000) |
-| CoM (global, m) | (-0.031376, 0.036417, 0.030680) |
-| CoM (global, mm) | (-31.38, 36.42, 30.68) |
-| **Inertia at origin (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 2.470789e-05, 2.470789e-05 |
-| Ixy, Ixz, Iyz | -1.729106e-19, 9.981402e-18, 1.568745e-20 |
-| **Inertia at CoM (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 4.708795e-06, 4.708795e-06 |
-| Ixy, Ixz, Iyz | -1.377707e-19, -1.374221e-19, 1.568745e-20 |
-| Bounding box (m) | 0.0420 × 0.0160 × 0.0160 |
-| Bounding box (mm) | 42.00 × 16.02 × 16.02 |
-| **Material & Appearance** | |
-| Material | Steel |
-| Appearance | Opaque_64_64_64 |
-| Color (RGB 0-1) | (0.251, 0.251, 0.251) |
-| Color (RGB 0-255) | (64, 64, 64) |
-
-#### 🔧 COMPONENT: `Part4_2_Mirror`
-
-| Property | Value |
-|----------|-------|
-| Full path | `rear_left_wheel_link:1+Part4 (2)(Mirror):3` |
-| Component name | Part4 (2)(Mirror) |
-| Depth | 1 |
-| Path segments | rear_left_wheel_link → Part4_2_Mirror |
-| Parent path | `rear_left_wheel_link:1` |
-| **Transforms** | |
-| Global position (m) | (-0.050935, 0.037409, 0.006701) |
-| Global position (mm) | (-50.94, 37.41, 6.70) |
-| Local transform (m) | (-0.050935, 0.012591, -0.006701) |
-| Assembly context depth | 1 |
-| transform2 (m) | (-0.050935, 0.037409, 0.006701) |
-| **Physical** | |
-| Mass | 0.045349 kg (45.349 g) |
-| Volume | 5.776995e-06 m³ |
-| Density | 7850.0 kg/m³ |
-| Surface area | 1.864547e-03 m² |
-| Body count | 1 |
-| CoM (component-local, m) | (0.021000, 0.000000, -0.000000) |
-| CoM (global, m) | (-0.029935, 0.037409, 0.006701) |
-| CoM (global, mm) | (-29.94, 37.41, 6.70) |
-| **Inertia at origin (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 2.470789e-05, 2.470789e-05 |
-| Ixy, Ixz, Iyz | -1.729106e-19, 9.981402e-18, 1.568745e-20 |
-| **Inertia at CoM (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 4.708795e-06, 4.708795e-06 |
-| Ixy, Ixz, Iyz | -1.377707e-19, -1.374221e-19, 1.568745e-20 |
-| Bounding box (m) | 0.0420 × 0.0160 × 0.0160 |
-| Bounding box (mm) | 42.00 × 16.02 × 16.02 |
-| **Material & Appearance** | |
-| Material | Steel |
-| Appearance | Opaque_64_64_64 |
-| Color (RGB 0-1) | (0.251, 0.251, 0.251) |
-| Color (RGB 0-255) | (64, 64, 64) |
-
-#### 🔧 COMPONENT: `Part4_2_Mirror`
-
-| Property | Value |
-|----------|-------|
-| Full path | `rear_left_wheel_link:1+Part4 (2)(Mirror):4` |
-| Component name | Part4 (2)(Mirror) |
-| Depth | 1 |
-| Path segments | rear_left_wheel_link → Part4_2_Mirror |
-| Parent path | `rear_left_wheel_link:1` |
-| **Transforms** | |
-| Global position (m) | (-0.014902, 0.036205, 0.053803) |
-| Global position (mm) | (-14.90, 36.20, 53.80) |
-| Local transform (m) | (-0.014902, 0.013795, -0.053803) |
-| Assembly context depth | 1 |
-| transform2 (m) | (-0.014902, 0.036205, 0.053803) |
-| **Physical** | |
-| Mass | 0.045349 kg (45.349 g) |
-| Volume | 5.776995e-06 m³ |
-| Density | 7850.0 kg/m³ |
-| Surface area | 1.864547e-03 m² |
-| Body count | 1 |
-| CoM (component-local, m) | (0.021000, 0.000000, -0.000000) |
-| CoM (global, m) | (0.006098, 0.036205, 0.053803) |
-| CoM (global, mm) | (6.10, 36.20, 53.80) |
-| **Inertia at origin (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 2.470789e-05, 2.470789e-05 |
-| Ixy, Ixz, Iyz | -1.729106e-19, 9.981402e-18, 1.568745e-20 |
-| **Inertia at CoM (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 4.708795e-06, 4.708795e-06 |
-| Ixy, Ixz, Iyz | -1.377707e-19, -1.374221e-19, 1.568745e-20 |
-| Bounding box (m) | 0.0420 × 0.0160 × 0.0160 |
-| Bounding box (mm) | 42.00 × 16.02 × 16.02 |
-| **Material & Appearance** | |
-| Material | Steel |
-| Appearance | Opaque_64_64_64 |
-| Color (RGB 0-1) | (0.251, 0.251, 0.251) |
-| Color (RGB 0-255) | (64, 64, 64) |
-
-#### 🔧 COMPONENT: `Part4_2_Mirror`
-
-| Property | Value |
-|----------|-------|
-| Full path | `rear_left_wheel_link:1+Part4 (2)(Mirror):5` |
-| Component name | Part4 (2)(Mirror) |
-| Depth | 1 |
-| Path segments | rear_left_wheel_link → Part4_2_Mirror |
-| Parent path | `rear_left_wheel_link:1` |
-| **Transforms** | |
-| Global position (m) | (0.005437, 0.036417, 0.042698) |
-| Global position (mm) | (5.44, 36.42, 42.70) |
-| Local transform (m) | (0.005437, 0.013583, -0.042698) |
-| Assembly context depth | 1 |
-| transform2 (m) | (0.005437, 0.036417, 0.042698) |
-| **Physical** | |
-| Mass | 0.045349 kg (45.349 g) |
-| Volume | 5.776995e-06 m³ |
-| Density | 7850.0 kg/m³ |
-| Surface area | 1.864547e-03 m² |
-| Body count | 1 |
-| CoM (component-local, m) | (0.021000, 0.000000, -0.000000) |
-| CoM (global, m) | (0.026437, 0.036417, 0.042698) |
-| CoM (global, mm) | (26.44, 36.42, 42.70) |
-| **Inertia at origin (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 2.470789e-05, 2.470789e-05 |
-| Ixy, Ixz, Iyz | -1.729106e-19, 9.981402e-18, 1.568745e-20 |
-| **Inertia at CoM (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 4.708795e-06, 4.708795e-06 |
-| Ixy, Ixz, Iyz | -1.377707e-19, -1.374221e-19, 1.568745e-20 |
-| Bounding box (m) | 0.0420 × 0.0160 × 0.0160 |
-| Bounding box (mm) | 42.00 × 16.02 × 16.02 |
-| **Material & Appearance** | |
-| Material | Steel |
-| Appearance | Opaque_64_64_64 |
-| Color (RGB 0-1) | (0.251, 0.251, 0.251) |
-| Color (RGB 0-255) | (64, 64, 64) |
-
-#### 🔧 COMPONENT: `Part4_2_Mirror`
-
-| Property | Value |
-|----------|-------|
-| Full path | `rear_left_wheel_link:1+Part4 (2)(Mirror):6` |
-| Component name | Part4 (2)(Mirror) |
-| Depth | 1 |
-| Path segments | rear_left_wheel_link → Part4_2_Mirror |
-| Parent path | `rear_left_wheel_link:1` |
-| **Transforms** | |
-| Global position (m) | (-0.037936, 0.036417, 0.048992) |
-| Global position (mm) | (-37.94, 36.42, 48.99) |
-| Local transform (m) | (-0.037936, 0.013583, -0.048992) |
-| Assembly context depth | 1 |
-| transform2 (m) | (-0.037936, 0.036417, 0.048992) |
-| **Physical** | |
-| Mass | 0.045349 kg (45.349 g) |
-| Volume | 5.776995e-06 m³ |
-| Density | 7850.0 kg/m³ |
-| Surface area | 1.864547e-03 m² |
-| Body count | 1 |
-| CoM (component-local, m) | (0.021000, 0.000000, -0.000000) |
-| CoM (global, m) | (-0.016936, 0.036417, 0.048992) |
-| CoM (global, mm) | (-16.94, 36.42, 48.99) |
-| **Inertia at origin (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 2.470789e-05, 2.470789e-05 |
-| Ixy, Ixz, Iyz | -1.729106e-19, 9.981402e-18, 1.568745e-20 |
-| **Inertia at CoM (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 4.708795e-06, 4.708795e-06 |
-| Ixy, Ixz, Iyz | -1.377707e-19, -1.374221e-19, 1.568745e-20 |
-| Bounding box (m) | 0.0420 × 0.0160 × 0.0160 |
-| Bounding box (mm) | 42.00 × 16.02 × 16.02 |
-| **Material & Appearance** | |
-| Material | Steel |
-| Appearance | Opaque_64_64_64 |
-| Color (RGB 0-1) | (0.251, 0.251, 0.251) |
-| Color (RGB 0-255) | (64, 64, 64) |
-
-#### 🔧 COMPONENT: `Part4_2_Mirror`
-
-| Property | Value |
-|----------|-------|
-| Full path | `rear_left_wheel_link:1+Part4 (2)(Mirror):7` |
-| Component name | Part4 (2)(Mirror) |
-| Depth | 1 |
-| Path segments | rear_left_wheel_link → Part4_2_Mirror |
-| Parent path | `rear_left_wheel_link:1` |
-| **Transforms** | |
-| Global position (m) | (0.014076, 0.036417, 0.021037) |
-| Global position (mm) | (14.08, 36.42, 21.04) |
-| Local transform (m) | (0.014076, 0.013583, -0.021037) |
-| Assembly context depth | 1 |
-| transform2 (m) | (0.014076, 0.036417, 0.021037) |
-| **Physical** | |
-| Mass | 0.045349 kg (45.349 g) |
-| Volume | 5.776995e-06 m³ |
-| Density | 7850.0 kg/m³ |
-| Surface area | 1.864547e-03 m² |
-| Body count | 1 |
-| CoM (component-local, m) | (0.021000, 0.000000, -0.000000) |
-| CoM (global, m) | (0.035076, 0.036417, 0.021037) |
-| CoM (global, mm) | (35.08, 36.42, 21.04) |
-| **Inertia at origin (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 2.470789e-05, 2.470789e-05 |
-| Ixy, Ixz, Iyz | -1.729106e-19, 9.981402e-18, 1.568745e-20 |
-| **Inertia at CoM (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 4.708795e-06, 4.708795e-06 |
-| Ixy, Ixz, Iyz | -1.377707e-19, -1.374221e-19, 1.568745e-20 |
-| Bounding box (m) | 0.0420 × 0.0160 × 0.0160 |
-| Bounding box (mm) | 42.00 × 16.02 × 16.02 |
-| **Material & Appearance** | |
-| Material | Steel |
-| Appearance | Opaque_64_64_64 |
-| Color (RGB 0-1) | (0.251, 0.251, 0.251) |
-| Color (RGB 0-255) | (64, 64, 64) |
-
-#### 🔧 COMPONENT: `Part4_2_Mirror`
-
-| Property | Value |
-|----------|-------|
-| Full path | `rear_left_wheel_link:1+Part4 (2)(Mirror):8` |
-| Component name | Part4 (2)(Mirror) |
-| Depth | 1 |
-| Path segments | rear_left_wheel_link → Part4_2_Mirror |
-| Parent path | `rear_left_wheel_link:1` |
-| **Transforms** | |
-| Global position (m) | (0.006771, 0.036417, -0.001109) |
-| Global position (mm) | (6.77, 36.42, -1.11) |
-| Local transform (m) | (0.006771, 0.013583, 0.001109) |
-| Assembly context depth | 1 |
-| transform2 (m) | (0.006771, 0.036417, -0.001109) |
-| **Physical** | |
-| Mass | 0.045349 kg (45.349 g) |
-| Volume | 5.776995e-06 m³ |
-| Density | 7850.0 kg/m³ |
-| Surface area | 1.864547e-03 m² |
-| Body count | 1 |
-| CoM (component-local, m) | (0.021000, 0.000000, -0.000000) |
-| CoM (global, m) | (0.027771, 0.036417, -0.001109) |
-| CoM (global, mm) | (27.77, 36.42, -1.11) |
-| **Inertia at origin (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 2.470789e-05, 2.470789e-05 |
-| Ixy, Ixz, Iyz | -1.729106e-19, 9.981402e-18, 1.568745e-20 |
-| **Inertia at CoM (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 4.708795e-06, 4.708795e-06 |
-| Ixy, Ixz, Iyz | -1.377707e-19, -1.374221e-19, 1.568745e-20 |
-| Bounding box (m) | 0.0420 × 0.0160 × 0.0160 |
-| Bounding box (mm) | 42.00 × 16.02 × 16.02 |
-| **Material & Appearance** | |
-| Material | Steel |
-| Appearance | Opaque_64_64_64 |
-| Color (RGB 0-1) | (0.251, 0.251, 0.251) |
-| Color (RGB 0-255) | (64, 64, 64) |
-
-#### 🔧 COMPONENT: `Part4_2_Mirror`
-
-| Property | Value |
-|----------|-------|
-| Full path | `rear_left_wheel_link:1+Part4 (2)(Mirror):9` |
-| Component name | Part4 (2)(Mirror) |
-| Depth | 1 |
-| Path segments | rear_left_wheel_link → Part4_2_Mirror |
-| Parent path | `rear_left_wheel_link:1` |
-| **Transforms** | |
-| Global position (m) | (-0.013230, 0.036205, -0.013508) |
-| Global position (mm) | (-13.23, 36.20, -13.51) |
-| Local transform (m) | (-0.013230, 0.013795, 0.013508) |
-| Assembly context depth | 1 |
-| transform2 (m) | (-0.013230, 0.036205, -0.013508) |
-| **Physical** | |
-| Mass | 0.045349 kg (45.349 g) |
-| Volume | 5.776995e-06 m³ |
-| Density | 7850.0 kg/m³ |
-| Surface area | 1.864547e-03 m² |
-| Body count | 1 |
-| CoM (component-local, m) | (0.021000, 0.000000, -0.000000) |
-| CoM (global, m) | (0.007770, 0.036205, -0.013508) |
-| CoM (global, mm) | (7.77, 36.20, -13.51) |
-| **Inertia at origin (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 2.470789e-05, 2.470789e-05 |
-| Ixy, Ixz, Iyz | -1.729106e-19, 9.981402e-18, 1.568745e-20 |
-| **Inertia at CoM (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 4.708795e-06, 4.708795e-06 |
-| Ixy, Ixz, Iyz | -1.377707e-19, -1.374221e-19, 1.568745e-20 |
-| Bounding box (m) | 0.0420 × 0.0160 × 0.0160 |
-| Bounding box (mm) | 42.00 × 16.02 × 16.02 |
-| **Material & Appearance** | |
-| Material | Steel |
-| Appearance | Opaque_64_64_64 |
-| Color (RGB 0-1) | (0.251, 0.251, 0.251) |
-| Color (RGB 0-255) | (64, 64, 64) |
-
-#### 🔧 COMPONENT: `Part1_2`
-
-| Property | Value |
-|----------|-------|
-| Full path | `rear_right_wheel_link:1+Part1 (2):1` |
-| Component name | Part1 (2) |
-| Depth | 1 |
-| Path segments | rear_right_wheel_link → Part1_2 |
-| Parent path | `rear_right_wheel_link:1` |
-| **Transforms** | |
-| Global position (m) | (-0.020000, -0.197000, 0.020000) |
-| Global position (mm) | (-20.00, -197.00, 20.00) |
-| Local transform (m) | (-0.020000, -0.197000, 0.020000) |
-| Assembly context depth | 1 |
-| transform2 (m) | (-0.020000, -0.197000, 0.020000) |
-| **Physical** | |
-| Mass | 0.080563 kg (80.563 g) |
-| Volume | 1.026286e-05 m³ |
-| Density | 7850.0 kg/m³ |
-| Surface area | 9.378219e-03 m² |
-| Body count | 1 |
-| CoM (component-local, m) | (-0.000000, -0.000000, 0.002406) |
-| CoM (global, m) | (-0.020000, -0.197000, 0.022406) |
-| CoM (global, mm) | (-20.00, -197.00, 22.41) |
-| **Inertia at origin (kg·m²)** | |
-| Ixx, Iyy, Izz | 3.067888e-05, 3.067884e-05, 5.976875e-05 |
-| Ixy, Ixz, Iyz | -3.627335e-11, 2.154204e-12, 4.197040e-12 |
-| **Inertia at CoM (kg·m²)** | |
-| Ixx, Iyy, Izz | 3.021264e-05, 3.021260e-05, 5.976875e-05 |
-| Ixy, Ixz, Iyz | -3.627332e-11, -6.187036e-13, -1.046723e-12 |
-| Bounding box (m) | 0.0766 × 0.0768 × 0.0107 |
-| Bounding box (mm) | 76.62 × 76.81 × 10.69 |
-| **Material & Appearance** | |
-| Material | Steel |
-| Appearance | Opaque_202_209_238 |
-| Color (RGB 0-1) | (0.792, 0.820, 0.933) |
-| Color (RGB 0-255) | (202, 209, 238) |
-
-#### 🔧 COMPONENT: `Part1_2`
-
-| Property | Value |
-|----------|-------|
-| Full path | `rear_right_wheel_link:1+Part1 (2):2` |
-| Component name | Part1 (2) |
-| Depth | 1 |
-| Path segments | rear_right_wheel_link → Part1_2 |
-| Parent path | `rear_right_wheel_link:1` |
-| **Transforms** | |
-| Global position (m) | (-0.020000, -0.155464, 0.020000) |
-| Global position (mm) | (-20.00, -155.46, 20.00) |
-| Local transform (m) | (-0.020000, -0.155464, 0.020000) |
-| Assembly context depth | 1 |
-| transform2 (m) | (-0.020000, -0.155464, 0.020000) |
-| **Physical** | |
-| Mass | 0.080563 kg (80.563 g) |
-| Volume | 1.026286e-05 m³ |
-| Density | 7850.0 kg/m³ |
-| Surface area | 9.378219e-03 m² |
-| Body count | 1 |
-| CoM (component-local, m) | (-0.000000, -0.000000, 0.002406) |
-| CoM (global, m) | (-0.020000, -0.155464, 0.022406) |
-| CoM (global, mm) | (-20.00, -155.46, 22.41) |
-| **Inertia at origin (kg·m²)** | |
-| Ixx, Iyy, Izz | 3.067888e-05, 3.067884e-05, 5.976875e-05 |
-| Ixy, Ixz, Iyz | -3.627335e-11, 2.154204e-12, 4.197040e-12 |
-| **Inertia at CoM (kg·m²)** | |
-| Ixx, Iyy, Izz | 3.021264e-05, 3.021260e-05, 5.976875e-05 |
-| Ixy, Ixz, Iyz | -3.627332e-11, -6.187036e-13, -1.046723e-12 |
-| Bounding box (m) | 0.0766 × 0.0768 × 0.0107 |
-| Bounding box (mm) | 76.62 × 76.81 × 10.69 |
-| **Material & Appearance** | |
-| Material | Steel |
-| Appearance | Opaque_202_209_238 |
-| Color (RGB 0-1) | (0.792, 0.820, 0.933) |
-| Color (RGB 0-255) | (202, 209, 238) |
-
-#### 🔧 COMPONENT: `Part2_2`
-
-| Property | Value |
-|----------|-------|
-| Full path | `rear_right_wheel_link:1+Part2 (2):1` |
-| Component name | Part2 (2) |
-| Depth | 1 |
-| Path segments | rear_right_wheel_link → Part2_2 |
-| Parent path | `rear_right_wheel_link:1` |
-| **Transforms** | |
-| Global position (m) | (-0.020000, -0.194000, 0.020000) |
-| Global position (mm) | (-20.00, -194.00, 20.00) |
-| Local transform (m) | (-0.020000, -0.194000, 0.020000) |
-| Assembly context depth | 1 |
-| transform2 (m) | (-0.020000, -0.194000, 0.020000) |
-| **Physical** | |
-| Mass | 0.398719 kg (398.719 g) |
-| Volume | 5.079219e-05 m³ |
-| Density | 7850.0 kg/m³ |
-| Surface area | 1.159048e-02 m² |
-| Body count | 1 |
-| CoM (component-local, m) | (-0.000000, 0.017773, 0.000000) |
-| CoM (global, m) | (-0.020000, -0.176227, 0.020000) |
-| CoM (global, mm) | (-20.00, -176.23, 20.00) |
-| **Inertia at origin (kg·m²)** | |
-| Ixx, Iyy, Izz | 2.179435e-04, 9.886321e-05, 2.179435e-04 |
-| Ixy, Ixz, Iyz | 1.360974e-18, -8.924417e-20, -1.786630e-14 |
-| **Inertia at CoM (kg·m²)** | |
-| Ixx, Iyy, Izz | 9.199087e-05, 9.886321e-05, 9.199086e-05 |
-| Ixy, Ixz, Iyz | 3.255486e-20, -8.924417e-20, -2.209770e-16 |
-| Bounding box (m) | 0.0440 × 0.0360 × 0.0440 |
-| Bounding box (mm) | 44.00 × 36.00 × 44.00 |
-| **Material & Appearance** | |
-| Material | Steel |
-| Appearance | Opaque_202_209_238 |
-| Color (RGB 0-1) | (0.792, 0.820, 0.933) |
-| Color (RGB 0-255) | (202, 209, 238) |
-
-#### 🔧 COMPONENT: `Part4_2`
-
-| Property | Value |
-|----------|-------|
-| Full path | `rear_right_wheel_link:1+Part4 (2):1` |
-| Component name | Part4 (2) |
-| Depth | 1 |
-| Path segments | rear_right_wheel_link → Part4_2 |
-| Parent path | `rear_right_wheel_link:1` |
-| **Transforms** | |
-| Global position (m) | (-0.036140, -0.161417, -0.010030) |
-| Global position (mm) | (-36.14, -161.42, -10.03) |
-| Local transform (m) | (-0.036140, -0.161417, -0.010030) |
-| Assembly context depth | 1 |
-| transform2 (m) | (-0.036140, -0.161417, -0.010030) |
-| **Physical** | |
-| Mass | 0.045349 kg (45.349 g) |
-| Volume | 5.776995e-06 m³ |
-| Density | 7850.0 kg/m³ |
-| Surface area | 1.864547e-03 m² |
-| Body count | 1 |
-| CoM (component-local, m) | (0.021000, 0.000000, 0.000000) |
-| CoM (global, m) | (-0.015140, -0.161417, -0.010030) |
-| CoM (global, mm) | (-15.14, -161.42, -10.03) |
-| **Inertia at origin (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 2.470789e-05, 2.470789e-05 |
-| Ixy, Ixz, Iyz | -1.729106e-19, -1.032722e-17, 1.603606e-20 |
-| **Inertia at CoM (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 4.708795e-06, 4.708795e-06 |
-| Ixy, Ixz, Iyz | -1.377707e-19, -1.381193e-19, 1.603606e-20 |
-| Bounding box (m) | 0.0420 × 0.0160 × 0.0160 |
-| Bounding box (mm) | 42.00 × 16.02 × 16.02 |
-| **Material & Appearance** | |
-| Material | Steel |
-| Appearance | Opaque_64_64_64 |
-| Color (RGB 0-1) | (0.251, 0.251, 0.251) |
-| Color (RGB 0-255) | (64, 64, 64) |
-
-#### 🔧 COMPONENT: `Part4_2`
-
-| Property | Value |
-|----------|-------|
-| Full path | `rear_right_wheel_link:1+Part4 (2):2` |
-| Component name | Part4 (2) |
-| Depth | 1 |
-| Path segments | rear_right_wheel_link → Part4_2 |
-| Parent path | `rear_right_wheel_link:1` |
-| **Transforms** | |
-| Global position (m) | (-0.052376, -0.161417, 0.030680) |
-| Global position (mm) | (-52.38, -161.42, 30.68) |
-| Local transform (m) | (-0.052376, -0.161417, 0.030680) |
-| Assembly context depth | 1 |
-| transform2 (m) | (-0.052376, -0.161417, 0.030680) |
-| **Physical** | |
-| Mass | 0.045349 kg (45.349 g) |
-| Volume | 5.776995e-06 m³ |
-| Density | 7850.0 kg/m³ |
-| Surface area | 1.864547e-03 m² |
-| Body count | 1 |
-| CoM (component-local, m) | (0.021000, 0.000000, 0.000000) |
-| CoM (global, m) | (-0.031376, -0.161417, 0.030680) |
-| CoM (global, mm) | (-31.38, -161.42, 30.68) |
-| **Inertia at origin (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 2.470789e-05, 2.470789e-05 |
-| Ixy, Ixz, Iyz | -1.729106e-19, -1.032722e-17, 1.603606e-20 |
-| **Inertia at CoM (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 4.708795e-06, 4.708795e-06 |
-| Ixy, Ixz, Iyz | -1.377707e-19, -1.381193e-19, 1.603606e-20 |
-| Bounding box (m) | 0.0420 × 0.0160 × 0.0160 |
-| Bounding box (mm) | 42.00 × 16.02 × 16.02 |
-| **Material & Appearance** | |
-| Material | Steel |
-| Appearance | Opaque_64_64_64 |
-| Color (RGB 0-1) | (0.251, 0.251, 0.251) |
-| Color (RGB 0-255) | (64, 64, 64) |
-
-#### 🔧 COMPONENT: `Part4_2`
-
-| Property | Value |
-|----------|-------|
-| Full path | `rear_right_wheel_link:1+Part4 (2):3` |
-| Component name | Part4 (2) |
-| Depth | 1 |
-| Path segments | rear_right_wheel_link → Part4_2 |
-| Parent path | `rear_right_wheel_link:1` |
-| **Transforms** | |
-| Global position (m) | (-0.050935, -0.162409, 0.006701) |
-| Global position (mm) | (-50.94, -162.41, 6.70) |
-| Local transform (m) | (-0.050935, -0.162409, 0.006701) |
-| Assembly context depth | 1 |
-| transform2 (m) | (-0.050935, -0.162409, 0.006701) |
-| **Physical** | |
-| Mass | 0.045349 kg (45.349 g) |
-| Volume | 5.776995e-06 m³ |
-| Density | 7850.0 kg/m³ |
-| Surface area | 1.864547e-03 m² |
-| Body count | 1 |
-| CoM (component-local, m) | (0.021000, 0.000000, 0.000000) |
-| CoM (global, m) | (-0.029935, -0.162409, 0.006701) |
-| CoM (global, mm) | (-29.94, -162.41, 6.70) |
-| **Inertia at origin (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 2.470789e-05, 2.470789e-05 |
-| Ixy, Ixz, Iyz | -1.729106e-19, -1.032722e-17, 1.603606e-20 |
-| **Inertia at CoM (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 4.708795e-06, 4.708795e-06 |
-| Ixy, Ixz, Iyz | -1.377707e-19, -1.381193e-19, 1.603606e-20 |
-| Bounding box (m) | 0.0420 × 0.0160 × 0.0160 |
-| Bounding box (mm) | 42.00 × 16.02 × 16.02 |
-| **Material & Appearance** | |
-| Material | Steel |
-| Appearance | Opaque_64_64_64 |
-| Color (RGB 0-1) | (0.251, 0.251, 0.251) |
-| Color (RGB 0-255) | (64, 64, 64) |
-
-#### 🔧 COMPONENT: `Part4_2`
-
-| Property | Value |
-|----------|-------|
-| Full path | `rear_right_wheel_link:1+Part4 (2):4` |
-| Component name | Part4 (2) |
-| Depth | 1 |
-| Path segments | rear_right_wheel_link → Part4_2 |
-| Parent path | `rear_right_wheel_link:1` |
-| **Transforms** | |
-| Global position (m) | (-0.014902, -0.161205, 0.053803) |
-| Global position (mm) | (-14.90, -161.20, 53.80) |
-| Local transform (m) | (-0.014902, -0.161205, 0.053803) |
-| Assembly context depth | 1 |
-| transform2 (m) | (-0.014902, -0.161205, 0.053803) |
-| **Physical** | |
-| Mass | 0.045349 kg (45.349 g) |
-| Volume | 5.776995e-06 m³ |
-| Density | 7850.0 kg/m³ |
-| Surface area | 1.864547e-03 m² |
-| Body count | 1 |
-| CoM (component-local, m) | (0.021000, 0.000000, 0.000000) |
-| CoM (global, m) | (0.006098, -0.161205, 0.053803) |
-| CoM (global, mm) | (6.10, -161.20, 53.80) |
-| **Inertia at origin (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 2.470789e-05, 2.470789e-05 |
-| Ixy, Ixz, Iyz | -1.729106e-19, -1.032722e-17, 1.603606e-20 |
-| **Inertia at CoM (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 4.708795e-06, 4.708795e-06 |
-| Ixy, Ixz, Iyz | -1.377707e-19, -1.381193e-19, 1.603606e-20 |
-| Bounding box (m) | 0.0420 × 0.0160 × 0.0160 |
-| Bounding box (mm) | 42.00 × 16.02 × 16.02 |
-| **Material & Appearance** | |
-| Material | Steel |
-| Appearance | Opaque_64_64_64 |
-| Color (RGB 0-1) | (0.251, 0.251, 0.251) |
-| Color (RGB 0-255) | (64, 64, 64) |
-
-#### 🔧 COMPONENT: `Part4_2`
-
-| Property | Value |
-|----------|-------|
-| Full path | `rear_right_wheel_link:1+Part4 (2):5` |
-| Component name | Part4 (2) |
-| Depth | 1 |
-| Path segments | rear_right_wheel_link → Part4_2 |
-| Parent path | `rear_right_wheel_link:1` |
-| **Transforms** | |
-| Global position (m) | (0.005437, -0.161417, 0.042698) |
-| Global position (mm) | (5.44, -161.42, 42.70) |
-| Local transform (m) | (0.005437, -0.161417, 0.042698) |
-| Assembly context depth | 1 |
-| transform2 (m) | (0.005437, -0.161417, 0.042698) |
-| **Physical** | |
-| Mass | 0.045349 kg (45.349 g) |
-| Volume | 5.776995e-06 m³ |
-| Density | 7850.0 kg/m³ |
-| Surface area | 1.864547e-03 m² |
-| Body count | 1 |
-| CoM (component-local, m) | (0.021000, 0.000000, 0.000000) |
-| CoM (global, m) | (0.026437, -0.161417, 0.042698) |
-| CoM (global, mm) | (26.44, -161.42, 42.70) |
-| **Inertia at origin (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 2.470789e-05, 2.470789e-05 |
-| Ixy, Ixz, Iyz | -1.729106e-19, -1.032722e-17, 1.603606e-20 |
-| **Inertia at CoM (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 4.708795e-06, 4.708795e-06 |
-| Ixy, Ixz, Iyz | -1.377707e-19, -1.381193e-19, 1.603606e-20 |
-| Bounding box (m) | 0.0420 × 0.0160 × 0.0160 |
-| Bounding box (mm) | 42.00 × 16.02 × 16.02 |
-| **Material & Appearance** | |
-| Material | Steel |
-| Appearance | Opaque_64_64_64 |
-| Color (RGB 0-1) | (0.251, 0.251, 0.251) |
-| Color (RGB 0-255) | (64, 64, 64) |
-
-#### 🔧 COMPONENT: `Part4_2`
-
-| Property | Value |
-|----------|-------|
-| Full path | `rear_right_wheel_link:1+Part4 (2):6` |
-| Component name | Part4 (2) |
-| Depth | 1 |
-| Path segments | rear_right_wheel_link → Part4_2 |
-| Parent path | `rear_right_wheel_link:1` |
-| **Transforms** | |
-| Global position (m) | (-0.037936, -0.161417, 0.048992) |
-| Global position (mm) | (-37.94, -161.42, 48.99) |
-| Local transform (m) | (-0.037936, -0.161417, 0.048992) |
-| Assembly context depth | 1 |
-| transform2 (m) | (-0.037936, -0.161417, 0.048992) |
-| **Physical** | |
-| Mass | 0.045349 kg (45.349 g) |
-| Volume | 5.776995e-06 m³ |
-| Density | 7850.0 kg/m³ |
-| Surface area | 1.864547e-03 m² |
-| Body count | 1 |
-| CoM (component-local, m) | (0.021000, 0.000000, 0.000000) |
-| CoM (global, m) | (-0.016936, -0.161417, 0.048992) |
-| CoM (global, mm) | (-16.94, -161.42, 48.99) |
-| **Inertia at origin (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 2.470789e-05, 2.470789e-05 |
-| Ixy, Ixz, Iyz | -1.729106e-19, -1.032722e-17, 1.603606e-20 |
-| **Inertia at CoM (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 4.708795e-06, 4.708795e-06 |
-| Ixy, Ixz, Iyz | -1.377707e-19, -1.381193e-19, 1.603606e-20 |
-| Bounding box (m) | 0.0420 × 0.0160 × 0.0160 |
-| Bounding box (mm) | 42.00 × 16.02 × 16.02 |
-| **Material & Appearance** | |
-| Material | Steel |
-| Appearance | Opaque_64_64_64 |
-| Color (RGB 0-1) | (0.251, 0.251, 0.251) |
-| Color (RGB 0-255) | (64, 64, 64) |
-
-#### 🔧 COMPONENT: `Part4_2`
-
-| Property | Value |
-|----------|-------|
-| Full path | `rear_right_wheel_link:1+Part4 (2):7` |
-| Component name | Part4 (2) |
-| Depth | 1 |
-| Path segments | rear_right_wheel_link → Part4_2 |
-| Parent path | `rear_right_wheel_link:1` |
-| **Transforms** | |
-| Global position (m) | (0.014076, -0.161417, 0.021037) |
-| Global position (mm) | (14.08, -161.42, 21.04) |
-| Local transform (m) | (0.014076, -0.161417, 0.021037) |
-| Assembly context depth | 1 |
-| transform2 (m) | (0.014076, -0.161417, 0.021037) |
-| **Physical** | |
-| Mass | 0.045349 kg (45.349 g) |
-| Volume | 5.776995e-06 m³ |
-| Density | 7850.0 kg/m³ |
-| Surface area | 1.864547e-03 m² |
-| Body count | 1 |
-| CoM (component-local, m) | (0.021000, 0.000000, 0.000000) |
-| CoM (global, m) | (0.035076, -0.161417, 0.021037) |
-| CoM (global, mm) | (35.08, -161.42, 21.04) |
-| **Inertia at origin (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 2.470789e-05, 2.470789e-05 |
-| Ixy, Ixz, Iyz | -1.729106e-19, -1.032722e-17, 1.603606e-20 |
-| **Inertia at CoM (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 4.708795e-06, 4.708795e-06 |
-| Ixy, Ixz, Iyz | -1.377707e-19, -1.381193e-19, 1.603606e-20 |
-| Bounding box (m) | 0.0420 × 0.0160 × 0.0160 |
-| Bounding box (mm) | 42.00 × 16.02 × 16.02 |
-| **Material & Appearance** | |
-| Material | Steel |
-| Appearance | Opaque_64_64_64 |
-| Color (RGB 0-1) | (0.251, 0.251, 0.251) |
-| Color (RGB 0-255) | (64, 64, 64) |
-
-#### 🔧 COMPONENT: `Part4_2`
-
-| Property | Value |
-|----------|-------|
-| Full path | `rear_right_wheel_link:1+Part4 (2):8` |
-| Component name | Part4 (2) |
-| Depth | 1 |
-| Path segments | rear_right_wheel_link → Part4_2 |
-| Parent path | `rear_right_wheel_link:1` |
-| **Transforms** | |
-| Global position (m) | (0.006771, -0.161417, -0.001109) |
-| Global position (mm) | (6.77, -161.42, -1.11) |
-| Local transform (m) | (0.006771, -0.161417, -0.001109) |
-| Assembly context depth | 1 |
-| transform2 (m) | (0.006771, -0.161417, -0.001109) |
-| **Physical** | |
-| Mass | 0.045349 kg (45.349 g) |
-| Volume | 5.776995e-06 m³ |
-| Density | 7850.0 kg/m³ |
-| Surface area | 1.864547e-03 m² |
-| Body count | 1 |
-| CoM (component-local, m) | (0.021000, 0.000000, 0.000000) |
-| CoM (global, m) | (0.027771, -0.161417, -0.001109) |
-| CoM (global, mm) | (27.77, -161.42, -1.11) |
-| **Inertia at origin (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 2.470789e-05, 2.470789e-05 |
-| Ixy, Ixz, Iyz | -1.729106e-19, -1.032722e-17, 1.603606e-20 |
-| **Inertia at CoM (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 4.708795e-06, 4.708795e-06 |
-| Ixy, Ixz, Iyz | -1.377707e-19, -1.381193e-19, 1.603606e-20 |
-| Bounding box (m) | 0.0420 × 0.0160 × 0.0160 |
-| Bounding box (mm) | 42.00 × 16.02 × 16.02 |
-| **Material & Appearance** | |
-| Material | Steel |
-| Appearance | Opaque_64_64_64 |
-| Color (RGB 0-1) | (0.251, 0.251, 0.251) |
-| Color (RGB 0-255) | (64, 64, 64) |
-
-#### 🔧 COMPONENT: `Part4_2`
-
-| Property | Value |
-|----------|-------|
-| Full path | `rear_right_wheel_link:1+Part4 (2):9` |
-| Component name | Part4 (2) |
-| Depth | 1 |
-| Path segments | rear_right_wheel_link → Part4_2 |
-| Parent path | `rear_right_wheel_link:1` |
-| **Transforms** | |
-| Global position (m) | (-0.013230, -0.161205, -0.013508) |
-| Global position (mm) | (-13.23, -161.20, -13.51) |
-| Local transform (m) | (-0.013230, -0.161205, -0.013508) |
-| Assembly context depth | 1 |
-| transform2 (m) | (-0.013230, -0.161205, -0.013508) |
-| **Physical** | |
-| Mass | 0.045349 kg (45.349 g) |
-| Volume | 5.776995e-06 m³ |
-| Density | 7850.0 kg/m³ |
-| Surface area | 1.864547e-03 m² |
-| Body count | 1 |
-| CoM (component-local, m) | (0.021000, 0.000000, 0.000000) |
-| CoM (global, m) | (0.007770, -0.161205, -0.013508) |
-| CoM (global, mm) | (7.77, -161.20, -13.51) |
-| **Inertia at origin (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 2.470789e-05, 2.470789e-05 |
-| Ixy, Ixz, Iyz | -1.729106e-19, -1.032722e-17, 1.603606e-20 |
-| **Inertia at CoM (kg·m²)** | |
-| Ixx, Iyy, Izz | 1.178635e-06, 4.708795e-06, 4.708795e-06 |
-| Ixy, Ixz, Iyz | -1.377707e-19, -1.381193e-19, 1.603606e-20 |
-| Bounding box (m) | 0.0420 × 0.0160 × 0.0160 |
-| Bounding box (mm) | 42.00 × 16.02 × 16.02 |
-| **Material & Appearance** | |
-| Material | Steel |
-| Appearance | Opaque_64_64_64 |
-| Color (RGB 0-1) | (0.251, 0.251, 0.251) |
-| Color (RGB 0-255) | (64, 64, 64) |
+| Appearance | Opaque_160_160_160 |
+| Color (RGB 0-1) | (0.627, 0.627, 0.627) |
+| Color (RGB 0-255) | (160, 160, 160) |
 
 ## Joints
 
-#### 🔧 Joint: `Revolute_5` (regular)
+#### 🔧 Joint: `front_left_wheel_joint` (regular)
 
 | Property | Value |
 |----------|-------|
-| Defining component | ma_robot (ma_robot) |
+| Defining component | base_link (base_link) |
 | Suppressed | False |
 | Motion type | revolute (enum=1) |
 | Axis | (0.0000, 1.0000, 0.0000) |
 | **Connections** | |
-| Parent (occ2) | `ma_robot` |
-| Parent path | `__design_root__` |
-| Child (occ1) | `Part2_1` |
-| Child path | `front_left_wheel_link:1+Part2 (1):1` |
+| Parent (occ2) | `base_link` |
+| Parent path | `base_link:1` |
+| Child (occ1) | `Tire` |
+| Child path | `base_link:1+front_left_wheel_link:1+Tire:1` |
 | **Geometry (all sources, raw cm)** | |
-| geometryOrOriginOne | (13.0000, 7.0000, 2.0000) |
+| geometryOrOriginOne | (13.0000, 6.0000, 2.0000) |
 | geometryOrOriginTwo | (13.0000, 6.0000, 2.0000) |
-| occ1.transform | (13.0000, 7.0000, 2.0000) ctx_depth=1 |
-| occ1.global (assembled) | (13.0000, 7.0000, 2.0000) |
-| **Picked origin (m)** | (0.130000, 0.070000, 0.020000) via `geometryOrOriginOne` |
+| occ1.transform | (1.1931, -5.8403, 0.6616) ctx_depth=2 |
+| occ1.global (assembled) | (11.7100, 5.8477, 3.8048) |
+| occ2.transform | (0.0000, 0.0000, 0.0000) ctx_depth=0 |
+| occ2.global (assembled) | (0.0000, 0.0000, 0.0000) |
+| **Picked origin (m)** | (0.130000, 0.060000, 0.020000) via `geometryOrOriginOne_world` |
 
-#### 🔧 Joint: `Revolute_6` (regular)
+#### 🔧 Joint: `front_right_wheel_joint` (regular)
 
 | Property | Value |
 |----------|-------|
-| Defining component | ma_robot (ma_robot) |
+| Defining component | base_link (base_link) |
 | Suppressed | False |
 | Motion type | revolute (enum=1) |
 | Axis | (0.0000, -1.0000, 0.0000) |
 | **Connections** | |
-| Parent (occ2) | `ma_robot` |
-| Parent path | `__design_root__` |
-| Child (occ1) | `Part2_2` |
-| Child path | `rear_right_wheel_link:1+Part2 (2):1` |
+| Parent (occ2) | `base_link` |
+| Parent path | `base_link:1` |
+| Child (occ1) | `Tire_1` |
+| Child path | `base_link:1+front_right_wheel_link:1+Tire (1):1` |
 | **Geometry (all sources, raw cm)** | |
-| geometryOrOriginOne | (-2.0000, -16.8000, 2.0000) |
-| geometryOrOriginTwo | (-2.0000, -18.5000, 2.0000) |
-| occ1.transform | (-2.0000, -19.4000, 2.0000) ctx_depth=1 |
-| occ1.global (assembled) | (-2.0000, -19.4000, 2.0000) |
-| **Picked origin (m)** | (-0.020000, -0.168000, 0.020000) via `geometryOrOriginOne` |
-
-#### 🔧 Joint: `Revolute_8` (regular)
-
-| Property | Value |
-|----------|-------|
-| Defining component | ma_robot (ma_robot) |
-| Suppressed | False |
-| Motion type | revolute (enum=1) |
-| Axis | (0.0000, -1.0000, 0.0000) |
-| **Connections** | |
-| Parent (occ2) | `ma_robot` |
-| Parent path | `__design_root__` |
-| Child (occ1) | `Part2_1_Mirror` |
-| Child path | `front_right_wheel_link:1+Part2 (1)(Mirror):1` |
-| **Geometry (all sources, raw cm)** | |
-| geometryOrOriginOne | (13.0000, -16.8000, 2.0000) |
+| geometryOrOriginOne | (13.0000, -18.5000, 2.0000) |
 | geometryOrOriginTwo | (13.0000, -18.5000, 2.0000) |
-| occ1.transform | (13.0000, -10.6000, -2.0000) ctx_depth=1 |
-| occ1.global (assembled) | (13.0000, -19.4000, 2.0000) |
-| **Picked origin (m)** | (0.130000, -0.168000, 0.020000) via `geometryOrOriginOne` |
+| occ1.transform | (1.9212, -6.3905, 0.8048) ctx_depth=2 |
+| occ1.global (assembled) | (14.2900, -18.3477, 3.8048) |
+| occ2.transform | (0.0000, 0.0000, 0.0000) ctx_depth=0 |
+| occ2.global (assembled) | (0.0000, 0.0000, 0.0000) |
+| **Picked origin (m)** | (0.130000, -0.185000, 0.020000) via `geometryOrOriginOne_world` |
 
-#### 🔧 Joint: `Revolute_9` (regular)
+#### 🔧 Joint: `rear_left_wheel_joint` (regular)
 
 | Property | Value |
 |----------|-------|
-| Defining component | ma_robot (ma_robot) |
+| Defining component | base_link (base_link) |
 | Suppressed | False |
 | Motion type | revolute (enum=1) |
 | Axis | (0.0000, 1.0000, 0.0000) |
 | **Connections** | |
-| Parent (occ2) | `ma_robot` |
-| Parent path | `__design_root__` |
-| Child (occ1) | `Part2_2_Mirror` |
-| Child path | `rear_left_wheel_link:1+Part2 (2)(Mirror):1` |
+| Parent (occ2) | `base_link` |
+| Parent path | `base_link:1` |
+| Child (occ1) | `Tire_2` |
+| Child path | `base_link:1+rear_left_wheel_link:1+Tire (2):1` |
 | **Geometry (all sources, raw cm)** | |
-| geometryOrOriginOne | (-2.0000, 4.3000, 2.0000) |
+| geometryOrOriginOne | (-2.0000, 6.0000, 2.0000) |
 | geometryOrOriginTwo | (-2.0000, 6.0000, 2.0000) |
-| occ1.transform | (-2.0000, -1.9000, -2.0000) ctx_depth=1 |
-| occ1.global (assembled) | (-2.0000, 6.9000, 2.0000) |
-| **Picked origin (m)** | (-0.020000, 0.043000, 0.020000) via `geometryOrOriginOne` |
+| occ1.transform | (-3.2900, -5.9296, 0.4158) ctx_depth=2 |
+| occ1.global (assembled) | (-3.2900, 5.8477, 3.8048) |
+| occ2.transform | (0.0000, 0.0000, 0.0000) ctx_depth=0 |
+| occ2.global (assembled) | (0.0000, 0.0000, 0.0000) |
+| **Picked origin (m)** | (-0.020000, 0.060000, 0.020000) via `geometryOrOriginOne_world` |
 
-#### 🔧 Joint: `Rigid_1` (regular)
+#### 🔧 Joint: `rear_right_wheel_joint` (regular)
 
 | Property | Value |
 |----------|-------|
-| Defining component | ma_robot (ma_robot) |
+| Defining component | base_link (base_link) |
 | Suppressed | False |
-| Motion type | rigid (enum=0) |
-| Axis | (0.0000, 0.0000, 1.0000) |
+| Motion type | revolute (enum=1) |
+| Axis | (0.0000, -1.0000, 0.0000) |
 | **Connections** | |
-| Parent (occ2) | `ma_robot` |
-| Parent path | `__design_root__` |
-| Child (occ1) | `zed2_camera_link` |
-| Child path | `zed2_camera_link:1` |
+| Parent (occ2) | `base_link` |
+| Parent path | `base_link:1` |
+| Child (occ1) | `Tire_3` |
+| Child path | `base_link:1+rear_right_wheel_link:1+Tire (3):1` |
 | **Geometry (all sources, raw cm)** | |
-| geometryOrOriginOne | (14.5000, -6.2500, 3.5000) |
-| geometryOrOriginTwo | (14.5000, -6.2500, 3.5000) |
-| occ1.transform | (14.5000, -6.2500, -0.7371) ctx_depth=0 |
-| occ1.global (assembled) | (14.5000, -6.2500, -0.7371) |
-| **Picked origin (m)** | (0.145000, -0.062500, 0.035000) via `geometryOrOriginOne` |
+| geometryOrOriginOne | (-2.0000, -18.7000, 2.0000) |
+| geometryOrOriginTwo | (-2.0000, -18.5000, 2.0000) |
+| occ1.transform | (0.7100, -5.1463, 0.8185) ctx_depth=2 |
+| occ1.global (assembled) | (-0.7100, -18.3477, 3.8048) |
+| occ2.transform | (0.0000, 0.0000, 0.0000) ctx_depth=0 |
+| occ2.global (assembled) | (0.0000, 0.0000, 0.0000) |
+| **Picked origin (m)** | (-0.020000, -0.187000, 0.020000) via `geometryOrOriginOne_world` |
 
-#### 🔧 Joint: `Rigid_2` (regular)
+#### 🔧 Joint: `rplidar_s2_joint` (regular)
 
 | Property | Value |
 |----------|-------|
-| Defining component | ma_robot (ma_robot) |
+| Defining component | base_link (base_link) |
 | Suppressed | False |
 | Motion type | rigid (enum=0) |
 | Axis | (0.0000, 0.0000, 1.0000) |
 | **Connections** | |
-| Parent (occ2) | `ma_robot` |
-| Parent path | `__design_root__` |
+| Parent (occ2) | `base_link` |
+| Parent path | `base_link:1` |
 | Child (occ1) | `rplidar_s2_link` |
-| Child path | `rplidar_s2_link:1` |
+| Child path | `base_link:1+rplidar_s2_link:1` |
 | **Geometry (all sources, raw cm)** | |
 | geometryOrOriginOne | (9.9270, -6.2500, 5.0000) |
 | geometryOrOriginTwo | (4.9270, -6.2500, 5.0000) |
-| occ1.transform | (-43.3747, -65.7506, 4.6815) ctx_depth=0 |
+| occ1.transform | (-43.3747, -65.7506, 4.6815) ctx_depth=1 |
 | occ1.global (assembled) | (-43.3747, -65.7506, 4.6815) |
-| **Picked origin (m)** | (0.099270, -0.062500, 0.050000) via `geometryOrOriginOne` |
+| occ2.transform | (0.0000, 0.0000, 0.0000) ctx_depth=0 |
+| occ2.global (assembled) | (0.0000, 0.0000, 0.0000) |
+| **Picked origin (m)** | (0.099270, -0.062500, 0.050000) via `geometryOrOriginOne_world` |
+
+#### 🔧 Joint: `zed2_camera_joint` (regular)
+
+| Property | Value |
+|----------|-------|
+| Defining component | base_link (base_link) |
+| Suppressed | False |
+| Motion type | rigid (enum=0) |
+| Axis | (0.0000, 0.0000, 1.0000) |
+| **Connections** | |
+| Parent (occ2) | `base_link` |
+| Parent path | `base_link:1` |
+| Child (occ1) | `zed2_camera_link` |
+| Child path | `base_link:1+zed2_camera_link:1` |
+| **Geometry (all sources, raw cm)** | |
+| geometryOrOriginOne | (14.5000, -6.2500, 3.5000) |
+| geometryOrOriginTwo | (14.5000, -6.2500, 3.5000) |
+| occ1.transform | (14.5000, -6.2500, -0.7371) ctx_depth=1 |
+| occ1.global (assembled) | (14.5000, -6.2500, -0.7371) |
+| occ2.transform | (0.0000, 0.0000, 0.0000) ctx_depth=0 |
+| occ2.global (assembled) | (0.0000, 0.0000, 0.0000) |
+| **Picked origin (m)** | (0.145000, -0.062500, 0.035000) via `geometryOrOriginOne_world` |
 
 ## Quick Comparison Table
 
@@ -2241,55 +669,14 @@ Compare these values with Fusion 360 Properties panel (right-click → Propertie
 
 | Component | Mass (g) | World X,Y,Z (mm) | CoM X,Y,Z (mm) | Material |
 |-----------|----------|-------------------|-----------------|----------|
-| ma_robot | 2899.152 | (0.00, 0.00, 0.00) | (41.57, -62.49, 24.42) | Acetal_Resin_Black |
-| Part1_1 | 80.563 | (130.00, 73.00, 20.00) | (130.00, 73.00, 22.41) | Steel |
-| Part1_1 | 80.563 | (130.00, 31.46, 20.00) | (130.00, 31.46, 22.41) | Steel |
-| Part2_1 | 398.719 | (130.00, 70.00, 20.00) | (130.00, 87.77, 20.00) | Steel |
-| Part4_1 | 45.349 | (113.86, 37.42, 50.03) | (134.86, 37.42, 50.03) | Steel |
-| Part4_1 | 45.349 | (97.62, 37.42, 9.32) | (118.62, 37.42, 9.32) | Steel |
-| Part4_1 | 45.349 | (99.06, 38.41, 33.30) | (120.06, 38.41, 33.30) | Steel |
-| Part4_1 | 45.349 | (135.10, 37.20, -13.80) | (156.10, 37.20, -13.80) | Steel |
-| Part4_1 | 45.349 | (155.44, 37.42, -2.70) | (176.44, 37.42, -2.70) | Steel |
-| Part4_1 | 45.349 | (112.06, 37.42, -8.99) | (133.06, 37.42, -8.99) | Steel |
-| Part4_1 | 45.349 | (164.08, 37.42, 18.96) | (185.08, 37.42, 18.96) | Steel |
-| Part4_1 | 45.349 | (156.77, 37.42, 41.11) | (177.77, 37.42, 41.11) | Steel |
-| Part4_1 | 45.349 | (136.77, 37.20, 53.51) | (157.77, 37.20, 53.51) | Steel |
-| Part1_1_Mirror | 80.563 | (130.00, -197.00, 20.00) | (130.00, -197.00, 17.59) | Steel |
-| Part1_1_Mirror | 80.563 | (130.00, -155.46, 20.00) | (130.00, -155.46, 17.59) | Steel |
-| Part2_1_Mirror | 398.719 | (130.00, -194.00, 20.00) | (130.00, -176.23, 20.00) | Steel |
-| Part4_1_Mirror | 45.349 | (113.86, -161.42, 50.03) | (134.86, -161.42, 50.03) | Steel |
-| Part4_1_Mirror | 45.349 | (97.62, -161.42, 9.32) | (118.62, -161.42, 9.32) | Steel |
-| Part4_1_Mirror | 45.349 | (99.06, -162.41, 33.30) | (120.06, -162.41, 33.30) | Steel |
-| Part4_1_Mirror | 45.349 | (135.10, -161.20, -13.80) | (156.10, -161.20, -13.80) | Steel |
-| Part4_1_Mirror | 45.349 | (155.44, -161.42, -2.70) | (176.44, -161.42, -2.70) | Steel |
-| Part4_1_Mirror | 45.349 | (112.06, -161.42, -8.99) | (133.06, -161.42, -8.99) | Steel |
-| Part4_1_Mirror | 45.349 | (164.08, -161.42, 18.96) | (185.08, -161.42, 18.96) | Steel |
-| Part4_1_Mirror | 45.349 | (156.77, -161.42, 41.11) | (177.77, -161.42, 41.11) | Steel |
-| Part4_1_Mirror | 45.349 | (136.77, -161.20, 53.51) | (157.77, -161.20, 53.51) | Steel |
-| Part1_2_Mirror | 80.563 | (-20.00, 72.00, 20.00) | (-20.00, 72.00, 17.59) | Steel |
-| Part1_2_Mirror | 80.563 | (-20.00, 30.46, 20.00) | (-20.00, 30.46, 17.59) | Steel |
-| Part2_2_Mirror | 398.719 | (-20.00, 69.00, 20.00) | (-20.00, 86.77, 20.00) | Steel |
-| Part4_2_Mirror | 45.349 | (-36.14, 36.42, -10.03) | (-15.14, 36.42, -10.03) | Steel |
-| Part4_2_Mirror | 45.349 | (-52.38, 36.42, 30.68) | (-31.38, 36.42, 30.68) | Steel |
-| Part4_2_Mirror | 45.349 | (-50.94, 37.41, 6.70) | (-29.94, 37.41, 6.70) | Steel |
-| Part4_2_Mirror | 45.349 | (-14.90, 36.20, 53.80) | (6.10, 36.20, 53.80) | Steel |
-| Part4_2_Mirror | 45.349 | (5.44, 36.42, 42.70) | (26.44, 36.42, 42.70) | Steel |
-| Part4_2_Mirror | 45.349 | (-37.94, 36.42, 48.99) | (-16.94, 36.42, 48.99) | Steel |
-| Part4_2_Mirror | 45.349 | (14.08, 36.42, 21.04) | (35.08, 36.42, 21.04) | Steel |
-| Part4_2_Mirror | 45.349 | (6.77, 36.42, -1.11) | (27.77, 36.42, -1.11) | Steel |
-| Part4_2_Mirror | 45.349 | (-13.23, 36.20, -13.51) | (7.77, 36.20, -13.51) | Steel |
-| Part1_2 | 80.563 | (-20.00, -197.00, 20.00) | (-20.00, -197.00, 22.41) | Steel |
-| Part1_2 | 80.563 | (-20.00, -155.46, 20.00) | (-20.00, -155.46, 22.41) | Steel |
-| Part2_2 | 398.719 | (-20.00, -194.00, 20.00) | (-20.00, -176.23, 20.00) | Steel |
-| Part4_2 | 45.349 | (-36.14, -161.42, -10.03) | (-15.14, -161.42, -10.03) | Steel |
-| Part4_2 | 45.349 | (-52.38, -161.42, 30.68) | (-31.38, -161.42, 30.68) | Steel |
-| Part4_2 | 45.349 | (-50.94, -162.41, 6.70) | (-29.94, -162.41, 6.70) | Steel |
-| Part4_2 | 45.349 | (-14.90, -161.20, 53.80) | (6.10, -161.20, 53.80) | Steel |
-| Part4_2 | 45.349 | (5.44, -161.42, 42.70) | (26.44, -161.42, 42.70) | Steel |
-| Part4_2 | 45.349 | (-37.94, -161.42, 48.99) | (-16.94, -161.42, 48.99) | Steel |
-| Part4_2 | 45.349 | (14.08, -161.42, 21.04) | (35.08, -161.42, 21.04) | Steel |
-| Part4_2 | 45.349 | (6.77, -161.42, -1.11) | (27.77, -161.42, -1.11) | Steel |
-| Part4_2 | 45.349 | (-13.23, -161.20, -13.51) | (7.77, -161.20, -13.51) | Steel |
+| Rim | 0.000 | (104.44, 123.32, 43.51) | (0.00, 0.00, 0.00) |  |
+| Tire | 611.603 | (117.10, 58.48, 38.05) | (130.00, 52.99, 20.00) | Steel |
+| Rim_1 | 0.000 | (162.84, -253.82, 42.08) | (0.00, 0.00, 0.00) |  |
+| Tire_1 | 611.603 | (142.90, -183.48, 38.05) | (155.80, -188.96, 20.00) | Steel |
+| Rim_2 | 0.000 | (-0.72, 124.21, 45.97) | (0.00, 0.00, 0.00) |  |
+| Tire_2 | 611.603 | (-32.90, 58.48, 38.05) | (-20.00, 52.99, 20.00) | Steel |
+| Rim_3 | 0.000 | (0.72, -241.38, 41.94) | (0.00, 0.00, 0.00) |  |
+| Tire_3 | 611.603 | (-7.10, -183.48, 38.05) | (5.80, -188.96, 20.00) | Steel |
 | rplidar_s2_link | 203.764 | (-433.75, -657.51, 46.81) | (-1028.76, -124.56, 59.70) | Steel |
 | zed2_camera_link | 178.229 | (145.00, -62.50, -7.37) | (145.00, -46.99, 35.02) | PA_11_Nylon_HP_11_30_with_EOS_P_396_3D_Printer |
 
@@ -2299,9 +686,9 @@ All origins shown in multiple coordinate systems for debugging.
 
 | Joint | Source | Origin (cm, raw) | Origin (m, picked) | Motion | Axis |
 |-------|--------|------------------|-------------------|--------|------|
-| Revolute_5 | geometryOrOriginOne | goo1(13.00, 7.00, 2.00) | (0.1300, 0.0700, 0.0200) | revolute | (0.0, 1.0, 0.0) |
-| Revolute_6 | geometryOrOriginOne | goo1(-2.00, -16.80, 2.00) | (-0.0200, -0.1680, 0.0200) | revolute | (0.0, -1.0, 0.0) |
-| Revolute_8 | geometryOrOriginOne | goo1(13.00, -16.80, 2.00) | (0.1300, -0.1680, 0.0200) | revolute | (0.0, -1.0, 0.0) |
-| Revolute_9 | geometryOrOriginOne | goo1(-2.00, 4.30, 2.00) | (-0.0200, 0.0430, 0.0200) | revolute | (0.0, 1.0, 0.0) |
-| Rigid_1 | geometryOrOriginOne | goo1(14.50, -6.25, 3.50) | (0.1450, -0.0625, 0.0350) | rigid | (0.0, 0.0, 1.0) |
-| Rigid_2 | geometryOrOriginOne | goo1(9.93, -6.25, 5.00) | (0.0993, -0.0625, 0.0500) | rigid | (0.0, 0.0, 1.0) |
+| front_left_wheel_joint | geometryOrOriginOne_world | goo1(13.00, 6.00, 2.00) | (0.1300, 0.0600, 0.0200) | revolute | (0.0, 1.0, 0.0) |
+| front_right_wheel_joint | geometryOrOriginOne_world | goo1(13.00, -18.50, 2.00) | (0.1300, -0.1850, 0.0200) | revolute | (0.0, -1.0, 0.0) |
+| rear_left_wheel_joint | geometryOrOriginOne_world | goo1(-2.00, 6.00, 2.00) | (-0.0200, 0.0600, 0.0200) | revolute | (0.0, 1.0, 0.0) |
+| rear_right_wheel_joint | geometryOrOriginOne_world | goo1(-2.00, -18.70, 2.00) | (-0.0200, -0.1870, 0.0200) | revolute | (0.0, -1.0, 0.0) |
+| rplidar_s2_joint | geometryOrOriginOne_world | goo1(9.93, -6.25, 5.00) | (0.0993, -0.0625, 0.0500) | rigid | (0.0, 0.0, 1.0) |
+| zed2_camera_joint | geometryOrOriginOne_world | goo1(14.50, -6.25, 3.50) | (0.1450, -0.0625, 0.0350) | rigid | (0.0, 0.0, 1.0) |

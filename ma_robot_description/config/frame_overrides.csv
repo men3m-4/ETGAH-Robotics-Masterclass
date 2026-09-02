@@ -1,8 +1,8 @@
 link,parent_joint,joint_type,rule,original_roll_deg,original_pitch_deg,original_yaw_deg,post_roll_deg,post_pitch_deg,post_yaw_deg,role
-Part2_1,Revolute_5,continuous,auto,180.000000,0.000000,0.000000,-90.000000,0.000000,0.000000,revolute_axis_z
-Part2_1_Mirror,Revolute_8,continuous,auto,0.000000,0.000000,0.000000,90.000000,0.000000,0.000000,revolute_axis_z
-Part2_2,Revolute_6,continuous,auto,0.000000,0.000000,0.000000,90.000000,0.000000,0.000000,revolute_axis_z
-Part2_2_Mirror,Revolute_9,continuous,auto,180.000000,0.000000,0.000000,-90.000000,0.000000,0.000000,revolute_axis_z
 base_link,,root,auto,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,root_x_forward_z_up
-rplidar_s2_link,Rigid_2,fixed,keep,0.000000,0.000000,-90.000000,0.000000,0.000000,-90.000000,unchanged
-zed2_camera_link,Rigid_1,fixed,keep,0.000000,0.000000,-90.000000,0.000000,0.000000,-90.000000,unchanged
+front_left_wheel_link,front_left_wheel_joint,continuous,auto,0.000000,0.000000,0.000000,-90.000000,0.000000,0.000000,revolute_axis_z
+front_right_wheel_link,front_right_wheel_joint,continuous,auto,0.000000,0.000000,180.000000,90.000000,0.000000,0.000000,revolute_axis_z
+rear_left_wheel_link,rear_left_wheel_joint,continuous,auto,0.000000,0.000000,0.000000,-90.000000,0.000000,0.000000,revolute_axis_z
+rear_right_wheel_link,rear_right_wheel_joint,continuous,auto,0.000000,0.000000,180.000000,90.000000,0.000000,0.000000,revolute_axis_z
+rplidar_s2_link,rplidar_s2_joint,fixed,keep,0.000000,0.000000,-90.000000,0.000000,0.000000,-90.000000,unchanged
+zed2_camera_link,zed2_camera_joint,fixed,keep,0.000000,0.000000,-90.000000,0.000000,0.000000,-90.000000,unchanged

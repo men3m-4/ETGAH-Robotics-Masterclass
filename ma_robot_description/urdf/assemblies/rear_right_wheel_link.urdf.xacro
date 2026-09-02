@@ -4,24 +4,24 @@
   <xacro:macro name="rear_right_wheel_link" params="prefix">
 
     <!-- Links -->
-    <link name="${prefix}Part2_2">
+    <link name="${prefix}rear_right_wheel_link">
       <inertial>
-        <origin xyz="0.020036 -0.020034 -0.185729" rpy="0 0 0"/>
-        <mass value="0.967990"/>
-        <inertia ixx="4.354820e-04" ixy="-1.765367e-07" ixz="9.904484e-07"
-                 iyy="4.318266e-04" iyz="1.096024e-06" izz="6.297403e-04"/>
+        <origin xyz="0.000000 0.000000 -0.009006" rpy="0 0 0"/>
+        <mass value="0.611603"/>
+        <inertia ixx="5.265770e-04" ixy="-5.777757e-10" ixz="-8.274261e-11"
+                 iyy="5.265750e-04" iyz="6.033033e-11" izz="7.325315e-04"/>
       </inertial>
       <visual>
-        <origin xyz="0.020000 -0.020000 -0.168000" rpy="-1.570796 0.000000 0.000000"/>
+        <origin xyz="0.012900 0.018048 -0.003523" rpy="1.570796 0.000000 3.141593"/>
         <geometry>
-          <mesh filename="package://ma_robot_description/meshes/rear_right_wheel_link/Part2_2.dae" scale="1 1 1"/>
+          <mesh filename="package://ma_robot_description/meshes/rear_right_wheel_link/rear_right_wheel_link.dae" scale="1 1 1"/>
         </geometry>
         <material name="Steel"/>
       </visual>
       <collision>
-        <origin xyz="0.020000 -0.020000 -0.168000" rpy="-1.570796 0.000000 0.000000"/>
+        <origin xyz="0.012900 0.018048 -0.003523" rpy="1.570796 0.000000 3.141593"/>
         <geometry>
-          <mesh filename="package://ma_robot_description/meshes/rear_right_wheel_link/Part2_2_collision.stl" scale="0.01 0.01 0.01"/>
+          <mesh filename="package://ma_robot_description/meshes/rear_right_wheel_link/rear_right_wheel_link_collision.stl" scale="0.01 0.01 0.01"/>
         </geometry>
       </collision>
     </link>
