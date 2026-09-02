@@ -2,20 +2,19 @@
   "design_name": "ma_robot",
   "design_name_clean": "ma_robot",
   "root_component_name": "ma_robot",
-  "export_timestamp": "2026-09-03T00:07:07.041547",
+  "export_timestamp": "2026-09-03T01:26:45.501702",
   "exporter_version": "3.1.0",
   "document_length_unit": "mm",
   "occurrences": {
-    "base_link:1+zed2_camera_link:1": {
-      "full_path": "base_link:1+zed2_camera_link:1",
-      "component_name": "zed2_camera_link",
-      "clean_name": "zed2_camera_link",
+    "base_link:1": {
+      "full_path": "base_link:1",
+      "component_name": "base_link",
+      "clean_name": "base_link",
       "path_segments": [
-        "base_link",
-        "zed2_camera_link"
+        "base_link"
       ],
-      "parent_path": "base_link:1",
-      "depth": 1,
+      "parent_path": null,
+      "depth": 0,
       "is_subassembly": false,
       "child_count": 0,
       "is_frame_only": false,
@@ -23,50 +22,50 @@
       "collision_override": "",
       "local_transform": {
         "translation": [
-          0.145,
-          -0.06250001638168534,
-          -0.007370859765171956
+          0.0,
+          0.0,
+          0.024999999999999994
         ],
         "rotation": [
+          1.0,
+          2.7755575615628914e-16,
           0.0,
+          -2.7755575615628914e-16,
           1.0,
           0.0,
-          -1.0,
           0.0,
-          6.123233995736766e-17,
-          6.123233995736766e-17,
           0.0,
           1.0
         ]
       },
       "transform2": {
         "translation": [
-          0.145,
-          -0.06250001638168534,
-          -0.007370859765171956
+          0.0,
+          0.0,
+          0.024999999999999994
         ],
         "rotation": [
+          1.0,
+          2.7755575615628914e-16,
           0.0,
+          -2.7755575615628914e-16,
           1.0,
           0.0,
-          -1.0,
           0.0,
-          6.123233995736766e-17,
-          6.123233995736766e-17,
           0.0,
           1.0
         ]
       },
       "global_position": [
-        0.145,
-        -0.06250001638168534,
-        -0.007370859765171956
+        0.0,
+        0.0,
+        0.024999999999999994
       ],
       "global_transform": {
         "translation": [
-          0.145,
-          -0.06250001638168534,
-          -0.007370859765171956
+          0.0,
+          0.0,
+          0.024999999999999994
         ],
         "rotation": [
           1,
@@ -80,7 +79,221 @@
           1
         ]
       },
-      "assembly_context_depth": 1,
+      "assembly_context_depth": 0,
+      "mass_kg": 2.8991721021127193,
+      "volume_m3": 0.002034508584410525,
+      "density_kg_m3": 1424.998706974107,
+      "area_m2": 0.1353141915709882,
+      "body_count": 2,
+      "bodies": [
+        {
+          "name": "Body1",
+          "exclude_from_collision": false,
+          "mass_kg": 2.8990914281628353,
+          "volume_m3": 0.0020344501250265513,
+          "density_kg_m3": 1.4249999999999998,
+          "area_m2": 0.13413532714079385,
+          "com_component_local": [
+            0.04157677398778748,
+            -0.06249449552699688,
+            0.02441810829493298
+          ],
+          "inertia_at_origin": {
+            "ixx": 0.02102443257808245,
+            "ixy": 0.007533669508618294,
+            "ixz": -0.002665673219690633,
+            "iyy": 0.02053335071956596,
+            "iyz": 0.004423557734660762,
+            "izz": 0.03686080965125795
+          },
+          "bbox_min": [
+            -0.075,
+            -0.185,
+            0.0
+          ],
+          "bbox_max": [
+            0.175,
+            0.06,
+            0.12
+          ],
+          "material_name": "Acetal_Resin_Black",
+          "inertia_source": "api"
+        },
+        {
+          "name": "Body2",
+          "exclude_from_collision": false,
+          "mass_kg": 8.06739498838726e-05,
+          "volume_m3": 5.845938397382073e-08,
+          "density_kg_m3": 1.38,
+          "area_m2": 0.001178864430194345,
+          "com_component_local": [
+            -0.07553696582604362,
+            -0.06249209240387647,
+            0.10811802471387061
+          ],
+          "inertia_at_origin": {
+            "ixx": 1.2617677129136503e-06,
+            "ixy": -3.808183993879994e-07,
+            "ixz": 6.58856689426106e-07,
+            "iyy": 1.4112286363798319e-06,
+            "iyz": 5.450752842171034e-07,
+            "izz": 7.795668172262729e-07
+          },
+          "bbox_min": [
+            -0.08803696582604363,
+            -0.06254209240387647,
+            0.09642614791910621
+          ],
+          "bbox_max": [
+            -0.06303696582604364,
+            -0.06244209240387647,
+            0.11980990150863499
+          ],
+          "material_name": "Laminate_Blue_Matte",
+          "inertia_source": "api"
+        }
+      ],
+      "collision_excluded_body_names": [],
+      "collision_body_count": 2,
+      "com_component_local": [
+        0.041573515116756825,
+        -0.06249449546012627,
+        0.02442043737462354
+      ],
+      "com_global": [
+        0.041573515116756825,
+        -0.06249449546012627,
+        0.04942043737462354
+      ],
+      "inertia_at_origin": {
+        "ixx": 0.021025694345795362,
+        "ixy": 0.007533288690218906,
+        "ixz": -0.0026650143630012066,
+        "iyy": 0.02053476194820234,
+        "iyz": 0.004424102809944979,
+        "izz": 0.036861589218075176
+      },
+      "inertia_at_com": {
+        "ixx": 0.007973854274911296,
+        "ixy": 9.036948390751809e-07,
+        "ixz": 0.00027835104393435575,
+        "iyy": 0.013795013304653502,
+        "iyz": -4.481462258102212e-07,
+        "izz": 0.020527888074074418
+      },
+      "bbox_size": [
+        0.26303696582604363,
+        0.245,
+        0.12
+      ],
+      "bbox_min": [
+        -0.08803696582604363,
+        -0.185,
+        0.0
+      ],
+      "bbox_max": [
+        0.175,
+        0.06,
+        0.12
+      ],
+      "collision_bbox_size": [
+        0.26303696582604363,
+        0.245,
+        0.12
+      ],
+      "collision_bbox_min": [
+        -0.08803696582604363,
+        -0.185,
+        0.0
+      ],
+      "collision_bbox_max": [
+        0.175,
+        0.06,
+        0.12
+      ],
+      "collision_volume_m3": 0.002034508584410525,
+      "material_name": "Acetal_Resin_Black",
+      "appearance_name": "Plastic_Glossy_Black",
+      "appearance_color_rgb": [
+        0.09803921568627451,
+        0.09803921568627451,
+        0.09803921568627451
+      ]
+    },
+    "zed2_camera_link:1": {
+      "full_path": "zed2_camera_link:1",
+      "component_name": "zed2_camera_link",
+      "clean_name": "zed2_camera_link",
+      "path_segments": [
+        "zed2_camera_link"
+      ],
+      "parent_path": null,
+      "depth": 0,
+      "is_subassembly": false,
+      "child_count": 0,
+      "is_frame_only": false,
+      "is_collision_geometry": false,
+      "collision_override": "",
+      "local_transform": {
+        "translation": [
+          0.14500000000000005,
+          -0.06250001638168534,
+          0.017629140234828054
+        ],
+        "rotation": [
+          -3.0365250244801515e-15,
+          0.9999999999999993,
+          6.66133169979518e-16,
+          -0.9999999999999981,
+          -3.0393981602372333e-15,
+          6.123233995736739e-17,
+          5.987708739827967e-17,
+          1.6544593889779403e-31,
+          0.9999999999999998
+        ]
+      },
+      "transform2": {
+        "translation": [
+          0.14500000000000005,
+          -0.06250001638168534,
+          0.017629140234828054
+        ],
+        "rotation": [
+          -3.0365250244801515e-15,
+          0.9999999999999993,
+          6.66133169979518e-16,
+          -0.9999999999999981,
+          -3.0393981602372333e-15,
+          6.123233995736739e-17,
+          5.987708739827967e-17,
+          1.6544593889779403e-31,
+          0.9999999999999998
+        ]
+      },
+      "global_position": [
+        0.14500000000000005,
+        -0.06250001638168534,
+        0.017629140234828054
+      ],
+      "global_transform": {
+        "translation": [
+          0.14500000000000005,
+          -0.06250001638168534,
+          0.017629140234828054
+        ],
+        "rotation": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "assembly_context_depth": 0,
       "mass_kg": 0.1782291312226933,
       "volume_m3": 0.0001521050831855714,
       "density_kg_m3": 1171.75,
@@ -129,9 +342,9 @@
         0.04238906687771485
       ],
       "com_global": [
-        0.1450002198473589,
+        0.14500021984735895,
         -0.046994645279951314,
-        0.035018207112542894
+        0.0600182071125429
       ],
       "inertia_at_origin": {
         "ixx": 0.0003897244750707786,
@@ -188,15 +401,15 @@
         0.24705882352941178
       ]
     },
-    "base_link:1+rplidar_s2_link:1": {
-      "full_path": "base_link:1+rplidar_s2_link:1",
-      "component_name": "rplidar_s2_link",
-      "clean_name": "rplidar_s2_link",
+    "rear_left_wheel_link:1+Rim:1": {
+      "full_path": "rear_left_wheel_link:1+Rim:1",
+      "component_name": "Rim",
+      "clean_name": "Rim",
       "path_segments": [
-        "base_link",
-        "rplidar_s2_link"
+        "rear_left_wheel_link",
+        "Rim"
       ],
-      "parent_path": "base_link:1",
+      "parent_path": "rear_left_wheel_link:1",
       "depth": 1,
       "is_subassembly": false,
       "child_count": 0,
@@ -205,50 +418,50 @@
       "collision_override": "",
       "local_transform": {
         "translation": [
-          -0.43374741715859955,
-          -0.6575064202586393,
-          0.04681486996860171
+          -0.0007247307936170651,
+          0.00643670980502706,
+          0.012079401494858701
         ],
         "rotation": [
-          6.123233995736757e-17,
           1.0,
-          0.0,
-          -1.0,
-          6.123233995736757e-17,
-          0.0,
-          0.0,
-          0.0,
+          -2.49800180540659e-15,
+          2.137256413550157e-15,
+          2.49800180540659e-15,
+          1.0,
+          1.9500379777335057e-17,
+          -2.137256413550157e-15,
+          -1.9500379777329716e-17,
           1.0
         ]
       },
       "transform2": {
         "translation": [
-          -0.43374741715859955,
-          -0.6575064202586393,
-          0.04681486996860171
+          -0.0007247307936170651,
+          0.00643670980502706,
+          0.012079401494858701
         ],
         "rotation": [
-          6.123233995736757e-17,
           1.0,
-          0.0,
-          -1.0,
-          6.123233995736757e-17,
-          0.0,
-          0.0,
-          0.0,
+          -2.49800180540659e-15,
+          2.137256413550157e-15,
+          2.49800180540659e-15,
+          1.0,
+          1.9500379777335057e-17,
+          -2.137256413550157e-15,
+          -1.9500379777329716e-17,
           1.0
         ]
       },
       "global_position": [
-        -0.43374741715859955,
-        -0.6575064202586393,
-        0.04681486996860171
+        -0.0007247307936170651,
+        0.00643670980502706,
+        0.012079401494858701
       ],
       "global_transform": {
         "translation": [
-          -0.43374741715859955,
-          -0.6575064202586393,
-          0.04681486996860171
+          -0.0007247307936170651,
+          0.00643670980502706,
+          0.012079401494858701
         ],
         "rotation": [
           1,
@@ -263,6 +476,1881 @@
         ]
       },
       "assembly_context_depth": 1,
+      "mass_kg": 0.0,
+      "volume_m3": 0.0,
+      "density_kg_m3": 0.0,
+      "area_m2": 0.0,
+      "body_count": 0,
+      "bodies": [],
+      "collision_excluded_body_names": [],
+      "collision_body_count": 0,
+      "com_component_local": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "com_global": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "inertia_at_origin": {
+        "ixx": 0.0,
+        "ixy": 0.0,
+        "ixz": 0.0,
+        "iyy": 0.0,
+        "iyz": 0.0,
+        "izz": 0.0
+      },
+      "inertia_at_com": {
+        "ixx": 0.0,
+        "ixy": 0.0,
+        "ixz": 0.0,
+        "iyy": 0.0,
+        "iyz": 0.0,
+        "izz": 0.0
+      },
+      "bbox_size": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "bbox_min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "bbox_max": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "collision_bbox_size": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "collision_bbox_min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "collision_bbox_max": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "collision_volume_m3": 0.0,
+      "material_name": "",
+      "appearance_name": "",
+      "appearance_color_rgb": null
+    },
+    "rear_left_wheel_link:1+Tire:1": {
+      "full_path": "rear_left_wheel_link:1+Tire:1",
+      "component_name": "Tire",
+      "clean_name": "Tire",
+      "path_segments": [
+        "rear_left_wheel_link",
+        "Tire"
+      ],
+      "parent_path": "rear_left_wheel_link:1",
+      "depth": 1,
+      "is_subassembly": false,
+      "child_count": 0,
+      "is_frame_only": false,
+      "is_collision_geometry": false,
+      "collision_override": "",
+      "local_transform": {
+        "translation": [
+          -0.032900224845554986,
+          0.06247661027920761,
+          0.06304799544770637
+        ],
+        "rotation": [
+          1.0,
+          -4.302114220422448e-15,
+          -2.406025760924086e-29,
+          4.302114220422448e-15,
+          1.0,
+          5.58821519610492e-15,
+          0.0,
+          -5.58821519610492e-15,
+          1.0
+        ]
+      },
+      "transform2": {
+        "translation": [
+          -0.032900224845554986,
+          0.06247661027920761,
+          0.06304799544770637
+        ],
+        "rotation": [
+          1.0,
+          -4.302114220422448e-15,
+          -2.406025760924086e-29,
+          4.302114220422448e-15,
+          1.0,
+          5.58821519610492e-15,
+          0.0,
+          -5.58821519610492e-15,
+          1.0
+        ]
+      },
+      "global_position": [
+        -0.032900224845554986,
+        0.06247661027920761,
+        0.06304799544770637
+      ],
+      "global_transform": {
+        "translation": [
+          -0.032900224845554986,
+          0.06247661027920761,
+          0.06304799544770637
+        ],
+        "rotation": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "assembly_context_depth": 1,
+      "mass_kg": 0.6116029513491266,
+      "volume_m3": 7.791120399351931e-05,
+      "density_kg_m3": 7850.0,
+      "area_m2": 0.059882165207017224,
+      "body_count": 1,
+      "bodies": [
+        {
+          "name": "Body1",
+          "exclude_from_collision": false,
+          "mass_kg": 0.6116029513491266,
+          "volume_m3": 7.791120399351931e-05,
+          "density_kg_m3": 7.85,
+          "area_m2": 0.059882165207017224,
+          "com_component_local": [
+            0.01290019862629902,
+            -0.0054825038466485366,
+            -0.01804794888566849
+          ],
+          "inertia_at_origin": {
+            "ixx": 0.0007441769747130409,
+            "ixy": 4.325593914030002e-05,
+            "ixz": 0.00014239527682338393,
+            "iyy": 0.001033527986052176,
+            "iyz": -6.051679742408979e-05,
+            "izz": 0.0006467384397816693
+          },
+          "bbox_min": [
+            -0.032099775154445204,
+            -0.030476610279207398,
+            -0.06301184350894559
+          ],
+          "bbox_max": [
+            0.0579002248455548,
+            0.019523389720792584,
+            0.026908518730832
+          ],
+          "material_name": "Steel",
+          "inertia_source": "api"
+        }
+      ],
+      "collision_excluded_body_names": [],
+      "collision_body_count": 1,
+      "com_component_local": [
+        0.01290019862629902,
+        -0.0054825038466485366,
+        -0.01804794888566849
+      ],
+      "com_global": [
+        -0.020000026219255965,
+        0.056994106432559075,
+        0.045000046562037876
+      ],
+      "inertia_at_origin": {
+        "ixx": 0.0007441769747130409,
+        "ixy": 4.325593914030002e-05,
+        "ixz": 0.00014239527682338393,
+        "iyy": 0.001033527986052176,
+        "iyz": -6.051679742408979e-05,
+        "izz": 0.0006467384397816693
+      },
+      "inertia_at_com": {
+        "ixx": 0.0005265770190525669,
+        "ixy": 8.274259935932759e-11,
+        "ixz": 5.777756580463422e-10,
+        "iyy": 0.0007325315178485376,
+        "iyz": 6.033033143562237e-11,
+        "izz": 0.0005265749896183349
+      },
+      "bbox_size": [
+        0.09,
+        0.04999999999999998,
+        0.08992036223977759
+      ],
+      "bbox_min": [
+        -0.032099775154445204,
+        -0.030476610279207398,
+        -0.06301184350894559
+      ],
+      "bbox_max": [
+        0.0579002248455548,
+        0.019523389720792584,
+        0.026908518730832
+      ],
+      "collision_bbox_size": [
+        0.09,
+        0.04999999999999998,
+        0.08992036223977759
+      ],
+      "collision_bbox_min": [
+        -0.032099775154445204,
+        -0.030476610279207398,
+        -0.06301184350894559
+      ],
+      "collision_bbox_max": [
+        0.0579002248455548,
+        0.019523389720792584,
+        0.026908518730832
+      ],
+      "collision_volume_m3": 7.791120399351931e-05,
+      "material_name": "Steel",
+      "appearance_name": "Opaque_160_160_160",
+      "appearance_color_rgb": [
+        0.6274509803921569,
+        0.6274509803921569,
+        0.6274509803921569
+      ]
+    },
+    "rear_left_wheel_link:1": {
+      "full_path": "rear_left_wheel_link:1",
+      "component_name": "rear_left_wheel_link",
+      "clean_name": "rear_left_wheel_link",
+      "path_segments": [
+        "rear_left_wheel_link"
+      ],
+      "parent_path": null,
+      "depth": 0,
+      "is_subassembly": true,
+      "child_count": 2,
+      "is_frame_only": false,
+      "is_collision_geometry": false,
+      "collision_override": "",
+      "local_transform": {
+        "translation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "transform2": {
+        "translation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "global_position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "global_transform": {
+        "translation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "assembly_context_depth": 0,
+      "mass_kg": 0.0,
+      "volume_m3": 0.0,
+      "density_kg_m3": 0.0,
+      "area_m2": 0.0,
+      "body_count": 0,
+      "bodies": [],
+      "collision_excluded_body_names": [],
+      "collision_body_count": 0,
+      "com_component_local": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "com_global": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "inertia_at_origin": {
+        "ixx": 0.0,
+        "ixy": 0.0,
+        "ixz": 0.0,
+        "iyy": 0.0,
+        "iyz": 0.0,
+        "izz": 0.0
+      },
+      "inertia_at_com": {
+        "ixx": 0.0,
+        "ixy": 0.0,
+        "ixz": 0.0,
+        "iyy": 0.0,
+        "iyz": 0.0,
+        "izz": 0.0
+      },
+      "bbox_size": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "bbox_min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "bbox_max": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "collision_bbox_size": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "collision_bbox_min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "collision_bbox_max": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "collision_volume_m3": 0.0,
+      "material_name": "",
+      "appearance_name": "",
+      "appearance_color_rgb": null
+    },
+    "front_left_wheel_link:1+Rim (1):1": {
+      "full_path": "front_left_wheel_link:1+Rim (1):1",
+      "component_name": "Rim (1)",
+      "clean_name": "Rim_1",
+      "path_segments": [
+        "front_left_wheel_link",
+        "Rim_1"
+      ],
+      "parent_path": "front_left_wheel_link:1",
+      "depth": 1,
+      "is_subassembly": false,
+      "child_count": 0,
+      "is_frame_only": false,
+      "is_collision_geometry": false,
+      "collision_override": "",
+      "local_transform": {
+        "translation": [
+          -0.0007247307936170699,
+          0.006436709805027068,
+          0.012079401494858697
+        ],
+        "rotation": [
+          1.0,
+          -2.49800180540659e-15,
+          2.137256413550157e-15,
+          2.49800180540659e-15,
+          1.0,
+          1.9500379777335057e-17,
+          -2.137256413550157e-15,
+          -1.9500379777329716e-17,
+          1.0
+        ]
+      },
+      "transform2": {
+        "translation": [
+          0.11927526920638293,
+          0.14975459163788682,
+          0.06452628607211564
+        ],
+        "rotation": [
+          1.0,
+          -2.49800180540659e-15,
+          2.137256413550157e-15,
+          2.49800180540659e-15,
+          1.0,
+          1.9500379777335057e-17,
+          -2.137256413550157e-15,
+          -1.9500379777329716e-17,
+          1.0
+        ]
+      },
+      "global_position": [
+        0.11927526920638293,
+        0.14975459163788682,
+        0.06452628607211564
+      ],
+      "global_transform": {
+        "translation": [
+          0.11927526920638293,
+          0.14975459163788682,
+          0.06452628607211564
+        ],
+        "rotation": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "assembly_context_depth": 1,
+      "mass_kg": 0.0,
+      "volume_m3": 0.0,
+      "density_kg_m3": 0.0,
+      "area_m2": 0.0,
+      "body_count": 0,
+      "bodies": [],
+      "collision_excluded_body_names": [],
+      "collision_body_count": 0,
+      "com_component_local": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "com_global": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "inertia_at_origin": {
+        "ixx": 0.0,
+        "ixy": 0.0,
+        "ixz": 0.0,
+        "iyy": 0.0,
+        "iyz": 0.0,
+        "izz": 0.0
+      },
+      "inertia_at_com": {
+        "ixx": 0.0,
+        "ixy": 0.0,
+        "ixz": 0.0,
+        "iyy": 0.0,
+        "iyz": 0.0,
+        "izz": 0.0
+      },
+      "bbox_size": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "bbox_min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "bbox_max": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "collision_bbox_size": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "collision_bbox_min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "collision_bbox_max": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "collision_volume_m3": 0.0,
+      "material_name": "",
+      "appearance_name": "",
+      "appearance_color_rgb": null
+    },
+    "front_left_wheel_link:1+Tire (1):1": {
+      "full_path": "front_left_wheel_link:1+Tire (1):1",
+      "component_name": "Tire (1)",
+      "clean_name": "Tire_1",
+      "path_segments": [
+        "front_left_wheel_link",
+        "Tire_1"
+      ],
+      "parent_path": "front_left_wheel_link:1",
+      "depth": 1,
+      "is_subassembly": false,
+      "child_count": 0,
+      "is_frame_only": false,
+      "is_collision_geometry": false,
+      "collision_override": "",
+      "local_transform": {
+        "translation": [
+          0.022900224845555036,
+          -0.08184127155365212,
+          -0.025494880024963303
+        ],
+        "rotation": [
+          -1.0,
+          4.857225732735025e-15,
+          1.2246467991476256e-16,
+          4.857225732735026e-15,
+          1.0,
+          5.58821519610492e-15,
+          -1.2246467991473544e-16,
+          5.588215196104921e-15,
+          -1.0
+        ]
+      },
+      "transform2": {
+        "translation": [
+          0.14290022484555504,
+          0.061476610279207616,
+          0.026952004552293633
+        ],
+        "rotation": [
+          -1.0,
+          4.857225732735025e-15,
+          1.2246467991476256e-16,
+          4.857225732735026e-15,
+          1.0,
+          5.58821519610492e-15,
+          -1.2246467991473544e-16,
+          5.588215196104921e-15,
+          -1.0
+        ]
+      },
+      "global_position": [
+        0.14290022484555504,
+        0.061476610279207616,
+        0.026952004552293633
+      ],
+      "global_transform": {
+        "translation": [
+          0.14290022484555504,
+          0.061476610279207616,
+          0.026952004552293633
+        ],
+        "rotation": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "assembly_context_depth": 1,
+      "mass_kg": 0.6116029513491266,
+      "volume_m3": 7.791120399351931e-05,
+      "density_kg_m3": 7850.0,
+      "area_m2": 0.059882165207017224,
+      "body_count": 1,
+      "bodies": [
+        {
+          "name": "Body1",
+          "exclude_from_collision": false,
+          "mass_kg": 0.6116029513491266,
+          "volume_m3": 7.791120399351931e-05,
+          "density_kg_m3": 7.85,
+          "area_m2": 0.059882165207017224,
+          "com_component_local": [
+            0.01290019862629902,
+            -0.005482503846648537,
+            -0.01804794888566849
+          ],
+          "inertia_at_origin": {
+            "ixx": 0.0007441769747130411,
+            "ixy": 4.325593914030021e-05,
+            "ixz": 0.0001423952768233839,
+            "iyy": 0.0010335279860521755,
+            "iyz": -6.051679742408981e-05,
+            "izz": 0.0006467384397816691
+          },
+          "bbox_min": [
+            -0.032099775154445204,
+            -0.030476610279207398,
+            -0.06301184350894559
+          ],
+          "bbox_max": [
+            0.0579002248455548,
+            0.019523389720792584,
+            0.026908518730832
+          ],
+          "material_name": "Steel",
+          "inertia_source": "api"
+        }
+      ],
+      "collision_excluded_body_names": [],
+      "collision_body_count": 1,
+      "com_component_local": [
+        0.01290019862629902,
+        -0.005482503846648537,
+        -0.01804794888566849
+      ],
+      "com_global": [
+        0.15580042347185405,
+        0.05599410643255908,
+        0.008904055666625142
+      ],
+      "inertia_at_origin": {
+        "ixx": 0.0007441769747130411,
+        "ixy": 4.325593914030021e-05,
+        "ixz": 0.0001423952768233839,
+        "iyy": 0.0010335279860521755,
+        "iyz": -6.051679742408981e-05,
+        "izz": 0.0006467384397816691
+      },
+      "inertia_at_com": {
+        "ixx": 0.0005265770190525671,
+        "ixy": 8.274259954228671e-11,
+        "ixz": 5.777756580192372e-10,
+        "iyy": 0.0007325315178485372,
+        "iyz": 6.033033142206984e-11,
+        "izz": 0.0005265749896183347
+      },
+      "bbox_size": [
+        0.09,
+        0.04999999999999998,
+        0.08992036223977759
+      ],
+      "bbox_min": [
+        -0.032099775154445204,
+        -0.030476610279207398,
+        -0.06301184350894559
+      ],
+      "bbox_max": [
+        0.0579002248455548,
+        0.019523389720792584,
+        0.026908518730832
+      ],
+      "collision_bbox_size": [
+        0.09,
+        0.04999999999999998,
+        0.08992036223977759
+      ],
+      "collision_bbox_min": [
+        -0.032099775154445204,
+        -0.030476610279207398,
+        -0.06301184350894559
+      ],
+      "collision_bbox_max": [
+        0.0579002248455548,
+        0.019523389720792584,
+        0.026908518730832
+      ],
+      "collision_volume_m3": 7.791120399351931e-05,
+      "material_name": "Steel",
+      "appearance_name": "Opaque_160_160_160",
+      "appearance_color_rgb": [
+        0.6274509803921569,
+        0.6274509803921569,
+        0.6274509803921569
+      ]
+    },
+    "front_left_wheel_link:1": {
+      "full_path": "front_left_wheel_link:1",
+      "component_name": "front_left_wheel_link",
+      "clean_name": "front_left_wheel_link",
+      "path_segments": [
+        "front_left_wheel_link"
+      ],
+      "parent_path": null,
+      "depth": 0,
+      "is_subassembly": true,
+      "child_count": 2,
+      "is_frame_only": false,
+      "is_collision_geometry": false,
+      "collision_override": "",
+      "local_transform": {
+        "translation": [
+          0.12,
+          0.14331788183285973,
+          0.052446884577256936
+        ],
+        "rotation": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "transform2": {
+        "translation": [
+          0.12,
+          0.14331788183285973,
+          0.052446884577256936
+        ],
+        "rotation": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "global_position": [
+        0.12,
+        0.14331788183285973,
+        0.052446884577256936
+      ],
+      "global_transform": {
+        "translation": [
+          0.12,
+          0.14331788183285973,
+          0.052446884577256936
+        ],
+        "rotation": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "assembly_context_depth": 0,
+      "mass_kg": 0.0,
+      "volume_m3": 0.0,
+      "density_kg_m3": 0.0,
+      "area_m2": 0.0,
+      "body_count": 0,
+      "bodies": [],
+      "collision_excluded_body_names": [],
+      "collision_body_count": 0,
+      "com_component_local": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "com_global": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "inertia_at_origin": {
+        "ixx": 0.0,
+        "ixy": 0.0,
+        "ixz": 0.0,
+        "iyy": 0.0,
+        "iyz": 0.0,
+        "izz": 0.0
+      },
+      "inertia_at_com": {
+        "ixx": 0.0,
+        "ixy": 0.0,
+        "ixz": 0.0,
+        "iyy": 0.0,
+        "iyz": 0.0,
+        "izz": 0.0
+      },
+      "bbox_size": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "bbox_min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "bbox_max": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "collision_bbox_size": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "collision_bbox_min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "collision_bbox_max": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "collision_volume_m3": 0.0,
+      "material_name": "",
+      "appearance_name": "",
+      "appearance_color_rgb": null
+    },
+    "front_right_wheel_link:1+Rim (2):1": {
+      "full_path": "front_right_wheel_link:1+Rim (2):1",
+      "component_name": "Rim (2)",
+      "clean_name": "Rim_2",
+      "path_segments": [
+        "front_right_wheel_link",
+        "Rim_2"
+      ],
+      "parent_path": "front_right_wheel_link:1",
+      "depth": 1,
+      "is_subassembly": false,
+      "child_count": 0,
+      "is_frame_only": false,
+      "is_collision_geometry": false,
+      "collision_override": "",
+      "local_transform": {
+        "translation": [
+          -0.0007247307936170699,
+          0.00643670980502705,
+          0.012079401494858701
+        ],
+        "rotation": [
+          1.0,
+          -2.4980018054065896e-15,
+          2.137256413550157e-15,
+          2.4980018054065896e-15,
+          1.0,
+          1.9500379777335057e-17,
+          -2.137256413550157e-15,
+          -1.9500379777329716e-17,
+          1.0
+        ]
+      },
+      "transform2": {
+        "translation": [
+          0.09382845408360753,
+          -0.25135336554608667,
+          0.012079401494858701
+        ],
+        "rotation": [
+          -1.0000000000000007,
+          7.922829059481272e-14,
+          -2.137256413550157e-15,
+          -7.922829059481272e-14,
+          -1.0000000000000007,
+          -1.9500379777499063e-17,
+          -2.137256413550157e-15,
+          -1.9500379777329716e-17,
+          1.0
+        ]
+      },
+      "global_position": [
+        0.09382845408360753,
+        -0.25135336554608667,
+        0.012079401494858701
+      ],
+      "global_transform": {
+        "translation": [
+          0.09382845408360753,
+          -0.25135336554608667,
+          0.012079401494858701
+        ],
+        "rotation": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "assembly_context_depth": 1,
+      "mass_kg": 0.0,
+      "volume_m3": 0.0,
+      "density_kg_m3": 0.0,
+      "area_m2": 0.0,
+      "body_count": 0,
+      "bodies": [],
+      "collision_excluded_body_names": [],
+      "collision_body_count": 0,
+      "com_component_local": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "com_global": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "inertia_at_origin": {
+        "ixx": 0.0,
+        "ixy": 0.0,
+        "ixz": 0.0,
+        "iyy": 0.0,
+        "iyz": 0.0,
+        "izz": 0.0
+      },
+      "inertia_at_com": {
+        "ixx": 0.0,
+        "ixy": 0.0,
+        "ixz": 0.0,
+        "iyy": 0.0,
+        "iyz": 0.0,
+        "izz": 0.0
+      },
+      "bbox_size": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "bbox_min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "bbox_max": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "collision_bbox_size": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "collision_bbox_min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "collision_bbox_max": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "collision_volume_m3": 0.0,
+      "material_name": "",
+      "appearance_name": "",
+      "appearance_color_rgb": null
+    },
+    "front_right_wheel_link:1+Tire (2):1": {
+      "full_path": "front_right_wheel_link:1+Tire (2):1",
+      "component_name": "Tire (2)",
+      "clean_name": "Tire_2",
+      "path_segments": [
+        "front_right_wheel_link",
+        "Tire_2"
+      ],
+      "parent_path": "front_right_wheel_link:1",
+      "depth": 1,
+      "is_subassembly": false,
+      "child_count": 0,
+      "is_frame_only": false,
+      "is_collision_geometry": false,
+      "collision_override": "",
+      "local_transform": {
+        "translation": [
+          -0.04979650155556964,
+          -0.05744004546184911,
+          0.06304799544770638
+        ],
+        "rotation": [
+          1.0,
+          -4.302114220422444e-15,
+          -1.2246467991476017e-16,
+          4.302114220422456e-15,
+          1.0,
+          5.5882151961048904e-15,
+          1.2246467991473544e-16,
+          -5.5882151961048904e-15,
+          1.0
+        ]
+      },
+      "transform2": {
+        "translation": [
+          0.1429002248455552,
+          -0.1874766102792067,
+          0.06304799544770638
+        ],
+        "rotation": [
+          -1.0000000000000007,
+          8.103240300982858e-14,
+          1.2246467991518904e-16,
+          -8.103240300982859e-14,
+          -1.0000000000000007,
+          -5.588215196104885e-15,
+          1.2246467991473544e-16,
+          -5.5882151961048904e-15,
+          1.0
+        ]
+      },
+      "global_position": [
+        0.1429002248455552,
+        -0.1874766102792067,
+        0.06304799544770638
+      ],
+      "global_transform": {
+        "translation": [
+          0.1429002248455552,
+          -0.1874766102792067,
+          0.06304799544770638
+        ],
+        "rotation": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "assembly_context_depth": 1,
+      "mass_kg": 0.6116029513491265,
+      "volume_m3": 7.79112039935193e-05,
+      "density_kg_m3": 7850.0,
+      "area_m2": 0.059882165207017224,
+      "body_count": 1,
+      "bodies": [
+        {
+          "name": "Body1",
+          "exclude_from_collision": false,
+          "mass_kg": 0.6116029513491265,
+          "volume_m3": 7.79112039935193e-05,
+          "density_kg_m3": 7.85,
+          "area_m2": 0.059882165207017224,
+          "com_component_local": [
+            0.012900198626299016,
+            -0.0054825038466485895,
+            -0.018047948885668484
+          ],
+          "inertia_at_origin": {
+            "ixx": 0.0007441769747130411,
+            "ixy": 4.3255939140300295e-05,
+            "ixz": 0.00014239527682338368,
+            "iyy": 0.0010335279860521746,
+            "iyz": -6.051679742409038e-05,
+            "izz": 0.0006467384397816688
+          },
+          "bbox_min": [
+            -0.032099775154445204,
+            -0.030476610279207467,
+            -0.06301184350894559
+          ],
+          "bbox_max": [
+            0.0579002248455548,
+            0.019523389720792515,
+            0.026908518730832
+          ],
+          "material_name": "Steel",
+          "inertia_source": "api"
+        }
+      ],
+      "collision_excluded_body_names": [],
+      "collision_body_count": 1,
+      "com_component_local": [
+        0.012900198626299016,
+        -0.0054825038466485895,
+        -0.018047948885668484
+      ],
+      "com_global": [
+        0.15580042347185422,
+        -0.19295911412585529,
+        0.0450000465620379
+      ],
+      "inertia_at_origin": {
+        "ixx": 0.0007441769747130411,
+        "ixy": 4.3255939140300295e-05,
+        "ixz": 0.00014239527682338368,
+        "iyy": 0.0010335279860521746,
+        "iyz": -6.051679742409038e-05,
+        "izz": 0.0006467384397816688
+      },
+      "inertia_at_com": {
+        "ixx": 0.0005265770190525669,
+        "ixy": 8.274259923735485e-11,
+        "ixz": 5.77775657910817e-10,
+        "iyy": 0.0007325315178485366,
+        "iyz": 6.033033139496479e-11,
+        "izz": 0.0005265749896183341
+      },
+      "bbox_size": [
+        0.09,
+        0.04999999999999998,
+        0.08992036223977759
+      ],
+      "bbox_min": [
+        -0.032099775154445204,
+        -0.030476610279207467,
+        -0.06301184350894559
+      ],
+      "bbox_max": [
+        0.0579002248455548,
+        0.019523389720792515,
+        0.026908518730832
+      ],
+      "collision_bbox_size": [
+        0.09,
+        0.04999999999999998,
+        0.08992036223977759
+      ],
+      "collision_bbox_min": [
+        -0.032099775154445204,
+        -0.030476610279207467,
+        -0.06301184350894559
+      ],
+      "collision_bbox_max": [
+        0.0579002248455548,
+        0.019523389720792515,
+        0.026908518730832
+      ],
+      "collision_volume_m3": 7.79112039935193e-05,
+      "material_name": "Steel",
+      "appearance_name": "Opaque_160_160_160",
+      "appearance_color_rgb": [
+        0.6274509803921569,
+        0.6274509803921569,
+        0.6274509803921569
+      ]
+    },
+    "front_right_wheel_link:1": {
+      "full_path": "front_right_wheel_link:1",
+      "component_name": "front_right_wheel_link",
+      "clean_name": "front_right_wheel_link",
+      "path_segments": [
+        "front_right_wheel_link"
+      ],
+      "parent_path": null,
+      "depth": 0,
+      "is_subassembly": true,
+      "child_count": 2,
+      "is_frame_only": false,
+      "is_collision_geometry": false,
+      "collision_override": "",
+      "local_transform": {
+        "translation": [
+          0.09310372328998996,
+          -0.24491665574105967,
+          0.0
+        ],
+        "rotation": [
+          -1.0000000000000007,
+          7.673028878940613e-14,
+          0.0,
+          -7.673028878940613e-14,
+          -1.0000000000000007,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "transform2": {
+        "translation": [
+          0.09310372328998996,
+          -0.24491665574105967,
+          0.0
+        ],
+        "rotation": [
+          -1.0000000000000007,
+          7.673028878940613e-14,
+          0.0,
+          -7.673028878940613e-14,
+          -1.0000000000000007,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "global_position": [
+        0.09310372328998996,
+        -0.24491665574105967,
+        0.0
+      ],
+      "global_transform": {
+        "translation": [
+          0.09310372328998996,
+          -0.24491665574105967,
+          0.0
+        ],
+        "rotation": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "assembly_context_depth": 0,
+      "mass_kg": 0.0,
+      "volume_m3": 0.0,
+      "density_kg_m3": 0.0,
+      "area_m2": 0.0,
+      "body_count": 0,
+      "bodies": [],
+      "collision_excluded_body_names": [],
+      "collision_body_count": 0,
+      "com_component_local": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "com_global": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "inertia_at_origin": {
+        "ixx": 0.0,
+        "ixy": 0.0,
+        "ixz": 0.0,
+        "iyy": 0.0,
+        "iyz": 0.0,
+        "izz": 0.0
+      },
+      "inertia_at_com": {
+        "ixx": 0.0,
+        "ixy": 0.0,
+        "ixz": 0.0,
+        "iyy": 0.0,
+        "iyz": 0.0,
+        "izz": 0.0
+      },
+      "bbox_size": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "bbox_min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "bbox_max": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "collision_bbox_size": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "collision_bbox_min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "collision_bbox_max": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "collision_volume_m3": 0.0,
+      "material_name": "",
+      "appearance_name": "",
+      "appearance_color_rgb": null
+    },
+    "rear_right_wheel_link:1+Rim (3):1": {
+      "full_path": "rear_right_wheel_link:1+Rim (3):1",
+      "component_name": "Rim (3)",
+      "clean_name": "Rim_3",
+      "path_segments": [
+        "rear_right_wheel_link",
+        "Rim_3"
+      ],
+      "parent_path": "rear_right_wheel_link:1",
+      "depth": 1,
+      "is_subassembly": false,
+      "child_count": 0,
+      "is_frame_only": false,
+      "is_collision_geometry": false,
+      "collision_override": "",
+      "local_transform": {
+        "translation": [
+          -0.0007247307936170655,
+          0.00643670980502705,
+          0.012079401494858701
+        ],
+        "rotation": [
+          1.0,
+          -2.49800180540659e-15,
+          2.137256413550157e-15,
+          2.49800180540659e-15,
+          1.0,
+          1.9500379777335057e-17,
+          -2.137256413550157e-15,
+          -1.9500379777329716e-17,
+          1.0
+        ]
+      },
+      "transform2": {
+        "translation": [
+          -0.016002996257233608,
+          -0.24085628019671837,
+          0.012079401494858701
+        ],
+        "rotation": [
+          1.0,
+          -2.49800180540659e-15,
+          2.137256413550157e-15,
+          2.49800180540659e-15,
+          1.0,
+          1.9500379777335057e-17,
+          -2.137256413550157e-15,
+          -1.9500379777329716e-17,
+          1.0
+        ]
+      },
+      "global_position": [
+        -0.016002996257233608,
+        -0.24085628019671837,
+        0.012079401494858701
+      ],
+      "global_transform": {
+        "translation": [
+          -0.016002996257233608,
+          -0.24085628019671837,
+          0.012079401494858701
+        ],
+        "rotation": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "assembly_context_depth": 1,
+      "mass_kg": 0.0,
+      "volume_m3": 0.0,
+      "density_kg_m3": 0.0,
+      "area_m2": 0.0,
+      "body_count": 0,
+      "bodies": [],
+      "collision_excluded_body_names": [],
+      "collision_body_count": 0,
+      "com_component_local": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "com_global": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "inertia_at_origin": {
+        "ixx": 0.0,
+        "ixy": 0.0,
+        "ixz": 0.0,
+        "iyy": 0.0,
+        "iyz": 0.0,
+        "izz": 0.0
+      },
+      "inertia_at_com": {
+        "ixx": 0.0,
+        "ixy": 0.0,
+        "ixz": 0.0,
+        "iyy": 0.0,
+        "iyz": 0.0,
+        "izz": 0.0
+      },
+      "bbox_size": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "bbox_min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "bbox_max": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "collision_bbox_size": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "collision_bbox_min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "collision_bbox_max": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "collision_volume_m3": 0.0,
+      "material_name": "",
+      "appearance_name": "",
+      "appearance_color_rgb": null
+    },
+    "rear_right_wheel_link:1+Tire (3):1": {
+      "full_path": "rear_right_wheel_link:1+Tire (3):1",
+      "component_name": "Tire (3)",
+      "clean_name": "Tire_3",
+      "path_segments": [
+        "rear_right_wheel_link",
+        "Tire_3"
+      ],
+      "parent_path": "rear_right_wheel_link:1",
+      "depth": 1,
+      "is_subassembly": false,
+      "child_count": 0,
+      "is_frame_only": false,
+      "is_collision_geometry": false,
+      "collision_override": "",
+      "local_transform": {
+        "translation": [
+          -0.017621959381938505,
+          0.06181637972253782,
+          0.02695200455229362
+        ],
+        "rotation": [
+          1.0,
+          -4.857225732735026e-15,
+          -2.721570123012491e-29,
+          -4.857225732735026e-15,
+          -1.0,
+          -5.58821519610492e-15,
+          0.0,
+          5.58821519610492e-15,
+          -1.0
+        ]
+      },
+      "transform2": {
+        "translation": [
+          -0.03290022484555505,
+          -0.18547661027920762,
+          0.02695200455229362
+        ],
+        "rotation": [
+          1.0,
+          -4.857225732735026e-15,
+          -2.721570123012491e-29,
+          -4.857225732735026e-15,
+          -1.0,
+          -5.58821519610492e-15,
+          0.0,
+          5.58821519610492e-15,
+          -1.0
+        ]
+      },
+      "global_position": [
+        -0.03290022484555505,
+        -0.18547661027920762,
+        0.02695200455229362
+      ],
+      "global_transform": {
+        "translation": [
+          -0.03290022484555505,
+          -0.18547661027920762,
+          0.02695200455229362
+        ],
+        "rotation": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "assembly_context_depth": 1,
+      "mass_kg": 0.6116029513491266,
+      "volume_m3": 7.791120399351931e-05,
+      "density_kg_m3": 7850.0,
+      "area_m2": 0.059882165207017224,
+      "body_count": 1,
+      "bodies": [
+        {
+          "name": "Body1",
+          "exclude_from_collision": false,
+          "mass_kg": 0.6116029513491266,
+          "volume_m3": 7.791120399351931e-05,
+          "density_kg_m3": 7.85,
+          "area_m2": 0.059882165207017224,
+          "com_component_local": [
+            0.012900198626299026,
+            -0.0054825038466485366,
+            -0.018047948885668488
+          ],
+          "inertia_at_origin": {
+            "ixx": 0.000744176974713041,
+            "ixy": 4.3255939140300003e-05,
+            "ixz": 0.00014239527682338393,
+            "iyy": 0.0010335279860521755,
+            "iyz": -6.0516797424089794e-05,
+            "izz": 0.0006467384397816691
+          },
+          "bbox_min": [
+            -0.032099775154445204,
+            -0.030476610279207398,
+            -0.06301184350894559
+          ],
+          "bbox_max": [
+            0.0579002248455548,
+            0.019523389720792584,
+            0.026908518730832
+          ],
+          "material_name": "Steel",
+          "inertia_source": "api"
+        }
+      ],
+      "collision_excluded_body_names": [],
+      "collision_body_count": 1,
+      "com_component_local": [
+        0.012900198626299025,
+        -0.0054825038466485366,
+        -0.018047948885668488
+      ],
+      "com_global": [
+        -0.020000026219256024,
+        -0.19095911412585614,
+        0.008904055666625131
+      ],
+      "inertia_at_origin": {
+        "ixx": 0.000744176974713041,
+        "ixy": 4.3255939140300003e-05,
+        "ixz": 0.00014239527682338393,
+        "iyy": 0.0010335279860521755,
+        "iyz": -6.0516797424089794e-05,
+        "izz": 0.0006467384397816691
+      },
+      "inertia_at_com": {
+        "ixx": 0.000526577019052567,
+        "ixy": 8.274259932544627e-11,
+        "ixz": 5.777756579921321e-10,
+        "iyy": 0.0007325315178485372,
+        "iyz": 6.033033141529358e-11,
+        "izz": 0.0005265749896183346
+      },
+      "bbox_size": [
+        0.09,
+        0.04999999999999998,
+        0.08992036223977759
+      ],
+      "bbox_min": [
+        -0.032099775154445204,
+        -0.030476610279207398,
+        -0.06301184350894559
+      ],
+      "bbox_max": [
+        0.0579002248455548,
+        0.019523389720792584,
+        0.026908518730832
+      ],
+      "collision_bbox_size": [
+        0.09,
+        0.04999999999999998,
+        0.08992036223977759
+      ],
+      "collision_bbox_min": [
+        -0.032099775154445204,
+        -0.030476610279207398,
+        -0.06301184350894559
+      ],
+      "collision_bbox_max": [
+        0.0579002248455548,
+        0.019523389720792584,
+        0.026908518730832
+      ],
+      "collision_volume_m3": 7.791120399351931e-05,
+      "material_name": "Steel",
+      "appearance_name": "Opaque_160_160_160",
+      "appearance_color_rgb": [
+        0.6274509803921569,
+        0.6274509803921569,
+        0.6274509803921569
+      ]
+    },
+    "rear_right_wheel_link:1": {
+      "full_path": "rear_right_wheel_link:1",
+      "component_name": "rear_right_wheel_link",
+      "clean_name": "rear_right_wheel_link",
+      "path_segments": [
+        "rear_right_wheel_link"
+      ],
+      "parent_path": null,
+      "depth": 0,
+      "is_subassembly": true,
+      "child_count": 2,
+      "is_frame_only": false,
+      "is_collision_geometry": false,
+      "collision_override": "",
+      "local_transform": {
+        "translation": [
+          -0.015278265463616542,
+          -0.24729299000174543,
+          0.0
+        ],
+        "rotation": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "transform2": {
+        "translation": [
+          -0.015278265463616542,
+          -0.24729299000174543,
+          0.0
+        ],
+        "rotation": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "global_position": [
+        -0.015278265463616542,
+        -0.24729299000174543,
+        0.0
+      ],
+      "global_transform": {
+        "translation": [
+          -0.015278265463616542,
+          -0.24729299000174543,
+          0.0
+        ],
+        "rotation": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "assembly_context_depth": 0,
+      "mass_kg": 0.0,
+      "volume_m3": 0.0,
+      "density_kg_m3": 0.0,
+      "area_m2": 0.0,
+      "body_count": 0,
+      "bodies": [],
+      "collision_excluded_body_names": [],
+      "collision_body_count": 0,
+      "com_component_local": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "com_global": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "inertia_at_origin": {
+        "ixx": 0.0,
+        "ixy": 0.0,
+        "ixz": 0.0,
+        "iyy": 0.0,
+        "iyz": 0.0,
+        "izz": 0.0
+      },
+      "inertia_at_com": {
+        "ixx": 0.0,
+        "ixy": 0.0,
+        "ixz": 0.0,
+        "iyy": 0.0,
+        "iyz": 0.0,
+        "izz": 0.0
+      },
+      "bbox_size": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "bbox_min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "bbox_max": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "collision_bbox_size": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "collision_bbox_min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "collision_bbox_max": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "collision_volume_m3": 0.0,
+      "material_name": "",
+      "appearance_name": "",
+      "appearance_color_rgb": null
+    },
+    "rplidar_s2_link:1": {
+      "full_path": "rplidar_s2_link:1",
+      "component_name": "rplidar_s2_link",
+      "clean_name": "rplidar_s2_link",
+      "path_segments": [
+        "rplidar_s2_link"
+      ],
+      "parent_path": null,
+      "depth": 0,
+      "is_subassembly": false,
+      "child_count": 0,
+      "is_frame_only": false,
+      "is_collision_geometry": false,
+      "collision_override": "",
+      "local_transform": {
+        "translation": [
+          -0.4337474171586189,
+          -0.6575064202586534,
+          0.07181486996860169
+        ],
+        "rotation": [
+          -3.338825672957165e-15,
+          1.0000000000000355,
+          -1.0825354361207561e-16,
+          -1.0000000000000229,
+          -2.1632341619892984e-16,
+          1.496126318159581e-31,
+          8.587823261852532e-18,
+          -1.0408340855861026e-17,
+          1.0000000000000258
+        ]
+      },
+      "transform2": {
+        "translation": [
+          -0.4337474171586189,
+          -0.6575064202586534,
+          0.07181486996860169
+        ],
+        "rotation": [
+          -3.338825672957165e-15,
+          1.0000000000000355,
+          -1.0825354361207561e-16,
+          -1.0000000000000229,
+          -2.1632341619892984e-16,
+          1.496126318159581e-31,
+          8.587823261852532e-18,
+          -1.0408340855861026e-17,
+          1.0000000000000258
+        ]
+      },
+      "global_position": [
+        -0.4337474171586189,
+        -0.6575064202586534,
+        0.07181486996860169
+      ],
+      "global_transform": {
+        "translation": [
+          -0.4337474171586189,
+          -0.6575064202586534,
+          0.07181486996860169
+        ],
+        "rotation": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "assembly_context_depth": 0,
       "mass_kg": 0.2037636445093537,
       "volume_m3": 3.373166439380738e-05,
       "density_kg_m3": 6040.7231060546665,
@@ -1202,9 +3290,9 @@
         0.01288024739220116
       ],
       "com_global": [
-        -1.0287602082014766,
-        -0.12456471395080904,
-        0.059695117360802866
+        -1.028760208201496,
+        -0.12456471395082314,
+        0.08469511736080285
       ],
       "inertia_at_origin": {
         "ixx": 0.05804326106732588,
@@ -1260,2166 +3348,64 @@
         1.0,
         1.0
       ]
-    },
-    "base_link:1+front_left_wheel_link:1+Rim:1": {
-      "full_path": "base_link:1+front_left_wheel_link:1+Rim:1",
-      "component_name": "Rim",
-      "clean_name": "Rim",
-      "path_segments": [
-        "base_link",
-        "front_left_wheel_link",
-        "Rim"
-      ],
-      "parent_path": "base_link:1+front_left_wheel_link:1",
-      "depth": 2,
-      "is_subassembly": false,
-      "child_count": 0,
-      "is_frame_only": false,
-      "is_collision_geometry": false,
-      "collision_override": "",
-      "local_transform": {
-        "translation": [
-          -0.0007247307936170699,
-          0.006436709805027068,
-          0.012079401494858701
-        ],
-        "rotation": [
-          1.0,
-          -2.49800180540659e-15,
-          2.137256413550157e-15,
-          2.49800180540659e-15,
-          1.0,
-          1.9500379777335057e-17,
-          -2.137256413550157e-15,
-          -1.9500379777329716e-17,
-          1.0
-        ]
-      },
-      "transform2": {
-        "translation": [
-          0.10444421121358609,
-          0.12331622062391619,
-          0.043511774179793204
-        ],
-        "rotation": [
-          1.0,
-          -2.49800180540659e-15,
-          2.137256413550157e-15,
-          2.49800180540659e-15,
-          1.0,
-          1.9500379777335057e-17,
-          -2.137256413550157e-15,
-          -1.9500379777329716e-17,
-          1.0
-        ]
-      },
-      "global_position": [
-        0.10444421121358609,
-        0.12331622062391619,
-        0.043511774179793204
-      ],
-      "global_transform": {
-        "translation": [
-          0.10444421121358609,
-          0.12331622062391619,
-          0.043511774179793204
-        ],
-        "rotation": [
-          1,
-          0,
-          0,
-          0,
-          1,
-          0,
-          0,
-          0,
-          1
-        ]
-      },
-      "assembly_context_depth": 2,
-      "mass_kg": 0.0,
-      "volume_m3": 0.0,
-      "density_kg_m3": 0.0,
-      "area_m2": 0.0,
-      "body_count": 0,
-      "bodies": [],
-      "collision_excluded_body_names": [],
-      "collision_body_count": 0,
-      "com_component_local": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "com_global": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "inertia_at_origin": {
-        "ixx": 0.0,
-        "ixy": 0.0,
-        "ixz": 0.0,
-        "iyy": 0.0,
-        "iyz": 0.0,
-        "izz": 0.0
-      },
-      "inertia_at_com": {
-        "ixx": 0.0,
-        "ixy": 0.0,
-        "ixz": 0.0,
-        "iyy": 0.0,
-        "iyz": 0.0,
-        "izz": 0.0
-      },
-      "bbox_size": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "bbox_min": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "bbox_max": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "collision_bbox_size": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "collision_bbox_min": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "collision_bbox_max": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "collision_volume_m3": 0.0,
-      "material_name": "",
-      "appearance_name": "",
-      "appearance_color_rgb": null
-    },
-    "base_link:1+front_left_wheel_link:1+Tire:1": {
-      "full_path": "base_link:1+front_left_wheel_link:1+Tire:1",
-      "component_name": "Tire",
-      "clean_name": "Tire",
-      "path_segments": [
-        "base_link",
-        "front_left_wheel_link",
-        "Tire"
-      ],
-      "parent_path": "base_link:1+front_left_wheel_link:1",
-      "depth": 2,
-      "is_subassembly": false,
-      "child_count": 0,
-      "is_frame_only": false,
-      "is_collision_geometry": false,
-      "collision_override": "",
-      "local_transform": {
-        "translation": [
-          0.011930833147241877,
-          -0.05840290053968149,
-          0.006615622762771873
-        ],
-        "rotation": [
-          1.0,
-          -4.302114220422448e-15,
-          -2.406025760924086e-29,
-          4.302114220422448e-15,
-          1.0,
-          5.58821519610492e-15,
-          0.0,
-          -5.58821519610492e-15,
-          1.0
-        ]
-      },
-      "transform2": {
-        "translation": [
-          0.11709977515444503,
-          0.05847661027920763,
-          0.03804799544770637
-        ],
-        "rotation": [
-          1.0,
-          -4.302114220422448e-15,
-          -2.406025760924086e-29,
-          4.302114220422448e-15,
-          1.0,
-          5.58821519610492e-15,
-          0.0,
-          -5.58821519610492e-15,
-          1.0
-        ]
-      },
-      "global_position": [
-        0.11709977515444503,
-        0.05847661027920763,
-        0.03804799544770637
-      ],
-      "global_transform": {
-        "translation": [
-          0.11709977515444503,
-          0.05847661027920763,
-          0.03804799544770637
-        ],
-        "rotation": [
-          1,
-          0,
-          0,
-          0,
-          1,
-          0,
-          0,
-          0,
-          1
-        ]
-      },
-      "assembly_context_depth": 2,
-      "mass_kg": 0.6116029513491266,
-      "volume_m3": 7.791120399351931e-05,
-      "density_kg_m3": 7850.0,
-      "area_m2": 0.059882165207017224,
-      "body_count": 1,
-      "bodies": [
-        {
-          "name": "Body1",
-          "exclude_from_collision": false,
-          "mass_kg": 0.6116029513491266,
-          "volume_m3": 7.791120399351931e-05,
-          "density_kg_m3": 7.85,
-          "area_m2": 0.059882165207017224,
-          "com_component_local": [
-            0.01290019862629902,
-            -0.005482503846648537,
-            -0.01804794888566849
-          ],
-          "inertia_at_origin": {
-            "ixx": 0.0007441769747130411,
-            "ixy": 4.325593914030021e-05,
-            "ixz": 0.0001423952768233839,
-            "iyy": 0.0010335279860521755,
-            "iyz": -6.051679742408981e-05,
-            "izz": 0.0006467384397816691
-          },
-          "bbox_min": [
-            -0.032099775154445204,
-            -0.030476610279207398,
-            -0.06301184350894559
-          ],
-          "bbox_max": [
-            0.0579002248455548,
-            0.019523389720792584,
-            0.026908518730832
-          ],
-          "material_name": "Steel",
-          "inertia_source": "api"
-        }
-      ],
-      "collision_excluded_body_names": [],
-      "collision_body_count": 1,
-      "com_component_local": [
-        0.01290019862629902,
-        -0.005482503846648537,
-        -0.01804794888566849
-      ],
-      "com_global": [
-        0.12999997378074404,
-        0.05299410643255909,
-        0.020000046562037882
-      ],
-      "inertia_at_origin": {
-        "ixx": 0.0007441769747130411,
-        "ixy": 4.325593914030021e-05,
-        "ixz": 0.0001423952768233839,
-        "iyy": 0.0010335279860521755,
-        "iyz": -6.051679742408981e-05,
-        "izz": 0.0006467384397816691
-      },
-      "inertia_at_com": {
-        "ixx": 0.0005265770190525671,
-        "ixy": 8.274259954228671e-11,
-        "ixz": 5.777756580192372e-10,
-        "iyy": 0.0007325315178485372,
-        "iyz": 6.033033142206984e-11,
-        "izz": 0.0005265749896183347
-      },
-      "bbox_size": [
-        0.09,
-        0.04999999999999998,
-        0.08992036223977759
-      ],
-      "bbox_min": [
-        -0.032099775154445204,
-        -0.030476610279207398,
-        -0.06301184350894559
-      ],
-      "bbox_max": [
-        0.0579002248455548,
-        0.019523389720792584,
-        0.026908518730832
-      ],
-      "collision_bbox_size": [
-        0.09,
-        0.04999999999999998,
-        0.08992036223977759
-      ],
-      "collision_bbox_min": [
-        -0.032099775154445204,
-        -0.030476610279207398,
-        -0.06301184350894559
-      ],
-      "collision_bbox_max": [
-        0.0579002248455548,
-        0.019523389720792584,
-        0.026908518730832
-      ],
-      "collision_volume_m3": 7.791120399351931e-05,
-      "material_name": "Steel",
-      "appearance_name": "Opaque_160_160_160",
-      "appearance_color_rgb": [
-        0.6274509803921569,
-        0.6274509803921569,
-        0.6274509803921569
-      ]
-    },
-    "base_link:1+front_left_wheel_link:1": {
-      "full_path": "base_link:1+front_left_wheel_link:1",
-      "component_name": "front_left_wheel_link",
-      "clean_name": "front_left_wheel_link",
-      "path_segments": [
-        "base_link",
-        "front_left_wheel_link"
-      ],
-      "parent_path": "base_link:1",
-      "depth": 1,
-      "is_subassembly": true,
-      "child_count": 2,
-      "is_frame_only": false,
-      "is_collision_geometry": false,
-      "collision_override": "",
-      "local_transform": {
-        "translation": [
-          0.10516894200720316,
-          0.11687951081888912,
-          0.031432372684934505
-        ],
-        "rotation": [
-          1.0,
-          0.0,
-          0.0,
-          0.0,
-          1.0,
-          0.0,
-          0.0,
-          0.0,
-          1.0
-        ]
-      },
-      "transform2": {
-        "translation": [
-          0.10516894200720316,
-          0.11687951081888912,
-          0.031432372684934505
-        ],
-        "rotation": [
-          1.0,
-          0.0,
-          0.0,
-          0.0,
-          1.0,
-          0.0,
-          0.0,
-          0.0,
-          1.0
-        ]
-      },
-      "global_position": [
-        0.10516894200720316,
-        0.11687951081888912,
-        0.031432372684934505
-      ],
-      "global_transform": {
-        "translation": [
-          0.10516894200720316,
-          0.11687951081888912,
-          0.031432372684934505
-        ],
-        "rotation": [
-          1,
-          0,
-          0,
-          0,
-          1,
-          0,
-          0,
-          0,
-          1
-        ]
-      },
-      "assembly_context_depth": 1,
-      "mass_kg": 0.0,
-      "volume_m3": 0.0,
-      "density_kg_m3": 0.0,
-      "area_m2": 0.0,
-      "body_count": 0,
-      "bodies": [],
-      "collision_excluded_body_names": [],
-      "collision_body_count": 0,
-      "com_component_local": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "com_global": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "inertia_at_origin": {
-        "ixx": 0.0,
-        "ixy": 0.0,
-        "ixz": 0.0,
-        "iyy": 0.0,
-        "iyz": 0.0,
-        "izz": 0.0
-      },
-      "inertia_at_com": {
-        "ixx": 0.0,
-        "ixy": 0.0,
-        "ixz": 0.0,
-        "iyy": 0.0,
-        "iyz": 0.0,
-        "izz": 0.0
-      },
-      "bbox_size": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "bbox_min": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "bbox_max": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "collision_bbox_size": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "collision_bbox_min": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "collision_bbox_max": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "collision_volume_m3": 0.0,
-      "material_name": "",
-      "appearance_name": "",
-      "appearance_color_rgb": null
-    },
-    "base_link:1+front_right_wheel_link:1+Rim (1):1": {
-      "full_path": "base_link:1+front_right_wheel_link:1+Rim (1):1",
-      "component_name": "Rim (1)",
-      "clean_name": "Rim_1",
-      "path_segments": [
-        "base_link",
-        "front_right_wheel_link",
-        "Rim_1"
-      ],
-      "parent_path": "base_link:1+front_right_wheel_link:1",
-      "depth": 2,
-      "is_subassembly": false,
-      "child_count": 0,
-      "is_frame_only": false,
-      "is_collision_geometry": false,
-      "collision_override": "",
-      "local_transform": {
-        "translation": [
-          -0.0007247307936170699,
-          0.0064367098050270855,
-          0.012079401494858697
-        ],
-        "rotation": [
-          1.0,
-          -2.498001805406577e-15,
-          2.137256413550157e-15,
-          2.498001805406577e-15,
-          1.0,
-          1.9500379777335057e-17,
-          -2.137256413550157e-15,
-          -1.9500379777329716e-17,
-          1.0
-        ]
-      },
-      "transform2": {
-        "translation": [
-          0.16283670089226582,
-          -0.2538186313537069,
-          0.0420794014948587
-        ],
-        "rotation": [
-          -0.9999999999999993,
-          -1.3120060593507795e-13,
-          -2.1372564135501583e-15,
-          1.3120060593507795e-13,
-          -0.9999999999999993,
-          -1.9500379777049295e-17,
-          -2.137256413550157e-15,
-          -1.9500379777329716e-17,
-          1.0
-        ]
-      },
-      "global_position": [
-        0.16283670089226582,
-        -0.2538186313537069,
-        0.0420794014948587
-      ],
-      "global_transform": {
-        "translation": [
-          0.16283670089226582,
-          -0.2538186313537069,
-          0.0420794014948587
-        ],
-        "rotation": [
-          1,
-          0,
-          0,
-          0,
-          1,
-          0,
-          0,
-          0,
-          1
-        ]
-      },
-      "assembly_context_depth": 2,
-      "mass_kg": 0.0,
-      "volume_m3": 0.0,
-      "density_kg_m3": 0.0,
-      "area_m2": 0.0,
-      "body_count": 0,
-      "bodies": [],
-      "collision_excluded_body_names": [],
-      "collision_body_count": 0,
-      "com_component_local": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "com_global": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "inertia_at_origin": {
-        "ixx": 0.0,
-        "ixy": 0.0,
-        "ixz": 0.0,
-        "iyy": 0.0,
-        "iyz": 0.0,
-        "izz": 0.0
-      },
-      "inertia_at_com": {
-        "ixx": 0.0,
-        "ixy": 0.0,
-        "ixz": 0.0,
-        "iyy": 0.0,
-        "iyz": 0.0,
-        "izz": 0.0
-      },
-      "bbox_size": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "bbox_min": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "bbox_max": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "collision_bbox_size": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "collision_bbox_min": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "collision_bbox_max": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "collision_volume_m3": 0.0,
-      "material_name": "",
-      "appearance_name": "",
-      "appearance_color_rgb": null
-    },
-    "base_link:1+front_right_wheel_link:1+Tire (1):1": {
-      "full_path": "base_link:1+front_right_wheel_link:1+Tire (1):1",
-      "component_name": "Tire (1)",
-      "clean_name": "Tire_1",
-      "path_segments": [
-        "base_link",
-        "front_right_wheel_link",
-        "Tire_1"
-      ],
-      "parent_path": "base_link:1+front_right_wheel_link:1",
-      "depth": 2,
-      "is_subassembly": false,
-      "child_count": 0,
-      "is_frame_only": false,
-      "is_collision_geometry": false,
-      "collision_override": "",
-      "local_transform": {
-        "translation": [
-          0.019211745253103006,
-          -0.06390531126946804,
-          0.008047995447706367
-        ],
-        "rotation": [
-          1.0,
-          -4.302114220422431e-15,
-          -1.2246467991475876e-16,
-          4.302114220422456e-15,
-          1.0,
-          5.588215196104974e-15,
-          1.2246467991473525e-16,
-          -5.588215196104975e-15,
-          1.0
-        ]
-      },
-      "transform2": {
-        "translation": [
-          0.14290022484555517,
-          -0.18347661027920917,
-          0.038047995447706366
-        ],
-        "rotation": [
-          -0.9999999999999993,
-          -1.293964935200621e-13,
-          1.2246467991401157e-16,
-          1.2939649352006207e-13,
-          -0.9999999999999993,
-          -5.588215196104987e-15,
-          1.2246467991473525e-16,
-          -5.588215196104975e-15,
-          1.0
-        ]
-      },
-      "global_position": [
-        0.14290022484555517,
-        -0.18347661027920917,
-        0.038047995447706366
-      ],
-      "global_transform": {
-        "translation": [
-          0.14290022484555517,
-          -0.18347661027920917,
-          0.038047995447706366
-        ],
-        "rotation": [
-          1,
-          0,
-          0,
-          0,
-          1,
-          0,
-          0,
-          0,
-          1
-        ]
-      },
-      "assembly_context_depth": 2,
-      "mass_kg": 0.6116029513491263,
-      "volume_m3": 7.791120399351928e-05,
-      "density_kg_m3": 7850.0,
-      "area_m2": 0.059882165207017224,
-      "body_count": 1,
-      "bodies": [
-        {
-          "name": "Body1",
-          "exclude_from_collision": false,
-          "mass_kg": 0.6116029513491263,
-          "volume_m3": 7.791120399351928e-05,
-          "density_kg_m3": 7.85,
-          "area_m2": 0.059882165207017224,
-          "com_component_local": [
-            0.01290019862629906,
-            -0.005482503846648492,
-            -0.0180479488856685
-          ],
-          "inertia_at_origin": {
-            "ixx": 0.0007441769747130407,
-            "ixy": 4.325593914029985e-05,
-            "ixz": 0.00014239527682338406,
-            "iyy": 0.001033527986052175,
-            "iyz": -6.0516797424089307e-05,
-            "izz": 0.0006467384397816682
-          },
-          "bbox_min": [
-            -0.032099775154445204,
-            -0.030476610279207325,
-            -0.06301184350894559
-          ],
-          "bbox_max": [
-            0.0579002248455548,
-            0.019523389720792657,
-            0.026908518730832
-          ],
-          "material_name": "Steel",
-          "inertia_source": "api"
-        }
-      ],
-      "collision_excluded_body_names": [],
-      "collision_body_count": 1,
-      "com_component_local": [
-        0.012900198626299058,
-        -0.005482503846648492,
-        -0.0180479488856685
-      ],
-      "com_global": [
-        0.15580042347185424,
-        -0.18895911412585767,
-        0.020000046562037865
-      ],
-      "inertia_at_origin": {
-        "ixx": 0.0007441769747130407,
-        "ixy": 4.325593914029985e-05,
-        "ixz": 0.00014239527682338406,
-        "iyy": 0.001033527986052175,
-        "iyz": -6.0516797424089307e-05,
-        "izz": 0.0006467384397816682
-      },
-      "inertia_at_com": {
-        "ixx": 0.0005265770190525668,
-        "ixy": 8.274259942031396e-11,
-        "ixz": 5.777756577210816e-10,
-        "iyy": 0.000732531517848536,
-        "iyz": 6.033033144239863e-11,
-        "izz": 0.0005265749896183336
-      },
-      "bbox_size": [
-        0.09,
-        0.04999999999999998,
-        0.08992036223977759
-      ],
-      "bbox_min": [
-        -0.032099775154445204,
-        -0.030476610279207325,
-        -0.06301184350894559
-      ],
-      "bbox_max": [
-        0.0579002248455548,
-        0.019523389720792657,
-        0.026908518730832
-      ],
-      "collision_bbox_size": [
-        0.09,
-        0.04999999999999998,
-        0.08992036223977759
-      ],
-      "collision_bbox_min": [
-        -0.032099775154445204,
-        -0.030476610279207325,
-        -0.06301184350894559
-      ],
-      "collision_bbox_max": [
-        0.0579002248455548,
-        0.019523389720792657,
-        0.026908518730832
-      ],
-      "collision_volume_m3": 7.791120399351928e-05,
-      "material_name": "Steel",
-      "appearance_name": "Opaque_160_160_160",
-      "appearance_color_rgb": [
-        0.6274509803921569,
-        0.6274509803921569,
-        0.6274509803921569
-      ]
-    },
-    "base_link:1+front_right_wheel_link:1": {
-      "full_path": "base_link:1+front_right_wheel_link:1",
-      "component_name": "front_right_wheel_link",
-      "clean_name": "front_right_wheel_link",
-      "path_segments": [
-        "base_link",
-        "front_right_wheel_link"
-      ],
-      "parent_path": "base_link:1",
-      "depth": 1,
-      "is_subassembly": true,
-      "child_count": 2,
-      "is_frame_only": false,
-      "is_collision_geometry": false,
-      "collision_override": "",
-      "local_transform": {
-        "translation": [
-          0.1621119700986496,
-          -0.24738192154867975,
-          0.03
-        ],
-        "rotation": [
-          -0.9999999999999993,
-          -1.3369860774048453e-13,
-          0.0,
-          1.3369860774048453e-13,
-          -0.9999999999999993,
-          0.0,
-          0.0,
-          0.0,
-          1.0
-        ]
-      },
-      "transform2": {
-        "translation": [
-          0.1621119700986496,
-          -0.24738192154867975,
-          0.03
-        ],
-        "rotation": [
-          -0.9999999999999993,
-          -1.3369860774048453e-13,
-          0.0,
-          1.3369860774048453e-13,
-          -0.9999999999999993,
-          0.0,
-          0.0,
-          0.0,
-          1.0
-        ]
-      },
-      "global_position": [
-        0.1621119700986496,
-        -0.24738192154867975,
-        0.03
-      ],
-      "global_transform": {
-        "translation": [
-          0.1621119700986496,
-          -0.24738192154867975,
-          0.03
-        ],
-        "rotation": [
-          1,
-          0,
-          0,
-          0,
-          1,
-          0,
-          0,
-          0,
-          1
-        ]
-      },
-      "assembly_context_depth": 1,
-      "mass_kg": 0.0,
-      "volume_m3": 0.0,
-      "density_kg_m3": 0.0,
-      "area_m2": 0.0,
-      "body_count": 0,
-      "bodies": [],
-      "collision_excluded_body_names": [],
-      "collision_body_count": 0,
-      "com_component_local": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "com_global": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "inertia_at_origin": {
-        "ixx": 0.0,
-        "ixy": 0.0,
-        "ixz": 0.0,
-        "iyy": 0.0,
-        "iyz": 0.0,
-        "izz": 0.0
-      },
-      "inertia_at_com": {
-        "ixx": 0.0,
-        "ixy": 0.0,
-        "ixz": 0.0,
-        "iyy": 0.0,
-        "iyz": 0.0,
-        "izz": 0.0
-      },
-      "bbox_size": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "bbox_min": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "bbox_max": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "collision_bbox_size": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "collision_bbox_min": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "collision_bbox_max": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "collision_volume_m3": 0.0,
-      "material_name": "",
-      "appearance_name": "",
-      "appearance_color_rgb": null
-    },
-    "base_link:1+rear_left_wheel_link:1+Rim (2):1": {
-      "full_path": "base_link:1+rear_left_wheel_link:1+Rim (2):1",
-      "component_name": "Rim (2)",
-      "clean_name": "Rim_2",
-      "path_segments": [
-        "base_link",
-        "rear_left_wheel_link",
-        "Rim_2"
-      ],
-      "parent_path": "base_link:1+rear_left_wheel_link:1",
-      "depth": 2,
-      "is_subassembly": false,
-      "child_count": 0,
-      "is_frame_only": false,
-      "is_collision_geometry": false,
-      "collision_override": "",
-      "local_transform": {
-        "translation": [
-          -0.0007247307936170651,
-          0.006436709805027068,
-          0.012079401494858697
-        ],
-        "rotation": [
-          1.0,
-          -2.49800180540659e-15,
-          2.137256413550157e-15,
-          2.49800180540659e-15,
-          1.0,
-          1.9500379777335057e-17,
-          -2.137256413550157e-15,
-          -1.9500379777329716e-17,
-          1.0
-        ]
-      },
-      "transform2": {
-        "translation": [
-          -0.0007247307936170651,
-          0.12420937783673716,
-          0.04596981919952537
-        ],
-        "rotation": [
-          1.0,
-          -2.49800180540659e-15,
-          2.137256413550157e-15,
-          2.49800180540659e-15,
-          1.0,
-          1.9500379777335057e-17,
-          -2.137256413550157e-15,
-          -1.9500379777329716e-17,
-          1.0
-        ]
-      },
-      "global_position": [
-        -0.0007247307936170651,
-        0.12420937783673716,
-        0.04596981919952537
-      ],
-      "global_transform": {
-        "translation": [
-          -0.0007247307936170651,
-          0.12420937783673716,
-          0.04596981919952537
-        ],
-        "rotation": [
-          1,
-          0,
-          0,
-          0,
-          1,
-          0,
-          0,
-          0,
-          1
-        ]
-      },
-      "assembly_context_depth": 2,
-      "mass_kg": 0.0,
-      "volume_m3": 0.0,
-      "density_kg_m3": 0.0,
-      "area_m2": 0.0,
-      "body_count": 0,
-      "bodies": [],
-      "collision_excluded_body_names": [],
-      "collision_body_count": 0,
-      "com_component_local": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "com_global": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "inertia_at_origin": {
-        "ixx": 0.0,
-        "ixy": 0.0,
-        "ixz": 0.0,
-        "iyy": 0.0,
-        "iyz": 0.0,
-        "izz": 0.0
-      },
-      "inertia_at_com": {
-        "ixx": 0.0,
-        "ixy": 0.0,
-        "ixz": 0.0,
-        "iyy": 0.0,
-        "iyz": 0.0,
-        "izz": 0.0
-      },
-      "bbox_size": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "bbox_min": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "bbox_max": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "collision_bbox_size": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "collision_bbox_min": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "collision_bbox_max": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "collision_volume_m3": 0.0,
-      "material_name": "",
-      "appearance_name": "",
-      "appearance_color_rgb": null
-    },
-    "base_link:1+rear_left_wheel_link:1+Tire (2):1": {
-      "full_path": "base_link:1+rear_left_wheel_link:1+Tire (2):1",
-      "component_name": "Tire (2)",
-      "clean_name": "Tire_2",
-      "path_segments": [
-        "base_link",
-        "rear_left_wheel_link",
-        "Tire_2"
-      ],
-      "parent_path": "base_link:1+rear_left_wheel_link:1",
-      "depth": 2,
-      "is_subassembly": false,
-      "child_count": 0,
-      "is_frame_only": false,
-      "is_collision_geometry": false,
-      "collision_override": "",
-      "local_transform": {
-        "translation": [
-          -0.032900224845554986,
-          -0.05929605775250247,
-          0.004157577743039722
-        ],
-        "rotation": [
-          1.0,
-          -4.302114220422448e-15,
-          -2.406025760924086e-29,
-          4.302114220422448e-15,
-          1.0,
-          5.58821519610492e-15,
-          0.0,
-          -5.58821519610492e-15,
-          1.0
-        ]
-      },
-      "transform2": {
-        "translation": [
-          -0.032900224845554986,
-          0.05847661027920763,
-          0.038047995447706394
-        ],
-        "rotation": [
-          1.0,
-          -4.302114220422448e-15,
-          -2.406025760924086e-29,
-          4.302114220422448e-15,
-          1.0,
-          5.58821519610492e-15,
-          0.0,
-          -5.58821519610492e-15,
-          1.0
-        ]
-      },
-      "global_position": [
-        -0.032900224845554986,
-        0.05847661027920763,
-        0.038047995447706394
-      ],
-      "global_transform": {
-        "translation": [
-          -0.032900224845554986,
-          0.05847661027920763,
-          0.038047995447706394
-        ],
-        "rotation": [
-          1,
-          0,
-          0,
-          0,
-          1,
-          0,
-          0,
-          0,
-          1
-        ]
-      },
-      "assembly_context_depth": 2,
-      "mass_kg": 0.6116029513491266,
-      "volume_m3": 7.791120399351931e-05,
-      "density_kg_m3": 7850.0,
-      "area_m2": 0.059882165207017224,
-      "body_count": 1,
-      "bodies": [
-        {
-          "name": "Body1",
-          "exclude_from_collision": false,
-          "mass_kg": 0.6116029513491266,
-          "volume_m3": 7.791120399351931e-05,
-          "density_kg_m3": 7.85,
-          "area_m2": 0.059882165207017224,
-          "com_component_local": [
-            0.012900198626299026,
-            -0.005482503846648536,
-            -0.018047948885668484
-          ],
-          "inertia_at_origin": {
-            "ixx": 0.0007441769747130407,
-            "ixy": 4.3255939140299915e-05,
-            "ixz": 0.00014239527682338393,
-            "iyy": 0.0010335279860521757,
-            "iyz": -6.051679742408979e-05,
-            "izz": 0.0006467384397816693
-          },
-          "bbox_min": [
-            -0.032099775154445204,
-            -0.030476610279207398,
-            -0.06301184350894559
-          ],
-          "bbox_max": [
-            0.0579002248455548,
-            0.019523389720792584,
-            0.026908518730832
-          ],
-          "material_name": "Steel",
-          "inertia_source": "api"
-        }
-      ],
-      "collision_excluded_body_names": [],
-      "collision_body_count": 1,
-      "com_component_local": [
-        0.012900198626299025,
-        -0.005482503846648536,
-        -0.018047948885668484
-      ],
-      "com_global": [
-        -0.02000002621925596,
-        0.05299410643255909,
-        0.02000004656203791
-      ],
-      "inertia_at_origin": {
-        "ixx": 0.0007441769747130407,
-        "ixy": 4.3255939140299915e-05,
-        "ixz": 0.00014239527682338393,
-        "iyy": 0.0010335279860521757,
-        "iyz": -6.051679742408979e-05,
-        "izz": 0.0006467384397816693
-      },
-      "inertia_at_com": {
-        "ixx": 0.0005265770190525668,
-        "ixy": 8.274259924413111e-11,
-        "ixz": 5.777756580192372e-10,
-        "iyy": 0.0007325315178485375,
-        "iyz": 6.033033140851731e-11,
-        "izz": 0.0005265749896183348
-      },
-      "bbox_size": [
-        0.09,
-        0.04999999999999998,
-        0.08992036223977759
-      ],
-      "bbox_min": [
-        -0.032099775154445204,
-        -0.030476610279207398,
-        -0.06301184350894559
-      ],
-      "bbox_max": [
-        0.0579002248455548,
-        0.019523389720792584,
-        0.026908518730832
-      ],
-      "collision_bbox_size": [
-        0.09,
-        0.04999999999999998,
-        0.08992036223977759
-      ],
-      "collision_bbox_min": [
-        -0.032099775154445204,
-        -0.030476610279207398,
-        -0.06301184350894559
-      ],
-      "collision_bbox_max": [
-        0.0579002248455548,
-        0.019523389720792584,
-        0.026908518730832
-      ],
-      "collision_volume_m3": 7.791120399351931e-05,
-      "material_name": "Steel",
-      "appearance_name": "Opaque_160_160_160",
-      "appearance_color_rgb": [
-        0.6274509803921569,
-        0.6274509803921569,
-        0.6274509803921569
-      ]
-    },
-    "base_link:1+rear_left_wheel_link:1": {
-      "full_path": "base_link:1+rear_left_wheel_link:1",
-      "component_name": "rear_left_wheel_link",
-      "clean_name": "rear_left_wheel_link",
-      "path_segments": [
-        "base_link",
-        "rear_left_wheel_link"
-      ],
-      "parent_path": "base_link:1",
-      "depth": 1,
-      "is_subassembly": true,
-      "child_count": 2,
-      "is_frame_only": false,
-      "is_collision_geometry": false,
-      "collision_override": "",
-      "local_transform": {
-        "translation": [
-          0.0,
-          0.1177726680317101,
-          0.03389041770466667
-        ],
-        "rotation": [
-          1.0,
-          0.0,
-          0.0,
-          0.0,
-          1.0,
-          0.0,
-          0.0,
-          0.0,
-          1.0
-        ]
-      },
-      "transform2": {
-        "translation": [
-          0.0,
-          0.1177726680317101,
-          0.03389041770466667
-        ],
-        "rotation": [
-          1.0,
-          0.0,
-          0.0,
-          0.0,
-          1.0,
-          0.0,
-          0.0,
-          0.0,
-          1.0
-        ]
-      },
-      "global_position": [
-        0.0,
-        0.1177726680317101,
-        0.03389041770466667
-      ],
-      "global_transform": {
-        "translation": [
-          0.0,
-          0.1177726680317101,
-          0.03389041770466667
-        ],
-        "rotation": [
-          1,
-          0,
-          0,
-          0,
-          1,
-          0,
-          0,
-          0,
-          1
-        ]
-      },
-      "assembly_context_depth": 1,
-      "mass_kg": 0.0,
-      "volume_m3": 0.0,
-      "density_kg_m3": 0.0,
-      "area_m2": 0.0,
-      "body_count": 0,
-      "bodies": [],
-      "collision_excluded_body_names": [],
-      "collision_body_count": 0,
-      "com_component_local": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "com_global": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "inertia_at_origin": {
-        "ixx": 0.0,
-        "ixy": 0.0,
-        "ixz": 0.0,
-        "iyy": 0.0,
-        "iyz": 0.0,
-        "izz": 0.0
-      },
-      "inertia_at_com": {
-        "ixx": 0.0,
-        "ixy": 0.0,
-        "ixz": 0.0,
-        "iyy": 0.0,
-        "iyz": 0.0,
-        "izz": 0.0
-      },
-      "bbox_size": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "bbox_min": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "bbox_max": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "collision_bbox_size": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "collision_bbox_min": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "collision_bbox_max": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "collision_volume_m3": 0.0,
-      "material_name": "",
-      "appearance_name": "",
-      "appearance_color_rgb": null
-    },
-    "base_link:1+rear_right_wheel_link:1+Rim (3):1": {
-      "full_path": "base_link:1+rear_right_wheel_link:1+Rim (3):1",
-      "component_name": "Rim (3)",
-      "clean_name": "Rim_3",
-      "path_segments": [
-        "base_link",
-        "rear_right_wheel_link",
-        "Rim_3"
-      ],
-      "parent_path": "base_link:1+rear_right_wheel_link:1",
-      "depth": 2,
-      "is_subassembly": false,
-      "child_count": 0,
-      "is_frame_only": false,
-      "is_collision_geometry": false,
-      "collision_override": "",
-      "local_transform": {
-        "translation": [
-          -0.0007247307936170652,
-          0.00643670980502705,
-          0.012079401494858697
-        ],
-        "rotation": [
-          1.0,
-          -2.498001805406596e-15,
-          2.137256413550157e-15,
-          2.498001805406596e-15,
-          1.0,
-          1.9500379777335057e-17,
-          -2.137256413550157e-15,
-          -1.9500379777329716e-17,
-          1.0
-        ]
-      },
-      "transform2": {
-        "translation": [
-          0.0007247307936173683,
-          -0.24137629504036556,
-          0.04194230477669851
-        ],
-        "rotation": [
-          -0.9999999999999991,
-          -4.274358644806853e-14,
-          -2.137256413550156e-15,
-          4.274358644806853e-14,
-          -0.9999999999999991,
-          -1.9500379777238344e-17,
-          -2.137256413550157e-15,
-          -1.9500379777329716e-17,
-          1.0
-        ]
-      },
-      "global_position": [
-        0.0007247307936173683,
-        -0.24137629504036556,
-        0.04194230477669851
-      ],
-      "global_transform": {
-        "translation": [
-          0.0007247307936173683,
-          -0.24137629504036556,
-          0.04194230477669851
-        ],
-        "rotation": [
-          1,
-          0,
-          0,
-          0,
-          1,
-          0,
-          0,
-          0,
-          1
-        ]
-      },
-      "assembly_context_depth": 2,
-      "mass_kg": 0.0,
-      "volume_m3": 0.0,
-      "density_kg_m3": 0.0,
-      "area_m2": 0.0,
-      "body_count": 0,
-      "bodies": [],
-      "collision_excluded_body_names": [],
-      "collision_body_count": 0,
-      "com_component_local": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "com_global": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "inertia_at_origin": {
-        "ixx": 0.0,
-        "ixy": 0.0,
-        "ixz": 0.0,
-        "iyy": 0.0,
-        "iyz": 0.0,
-        "izz": 0.0
-      },
-      "inertia_at_com": {
-        "ixx": 0.0,
-        "ixy": 0.0,
-        "ixz": 0.0,
-        "iyy": 0.0,
-        "iyz": 0.0,
-        "izz": 0.0
-      },
-      "bbox_size": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "bbox_min": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "bbox_max": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "collision_bbox_size": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "collision_bbox_min": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "collision_bbox_max": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "collision_volume_m3": 0.0,
-      "material_name": "",
-      "appearance_name": "",
-      "appearance_color_rgb": null
-    },
-    "base_link:1+rear_right_wheel_link:1+Tire (3):1": {
-      "full_path": "base_link:1+rear_right_wheel_link:1+Tire (3):1",
-      "component_name": "Tire (3)",
-      "clean_name": "Tire_3",
-      "path_segments": [
-        "base_link",
-        "rear_right_wheel_link",
-        "Tire_3"
-      ],
-      "parent_path": "base_link:1+rear_right_wheel_link:1",
-      "depth": 2,
-      "is_subassembly": false,
-      "child_count": 0,
-      "is_frame_only": false,
-      "is_collision_geometry": false,
-      "collision_override": "",
-      "local_transform": {
-        "translation": [
-          0.007099775154447894,
-          -0.05146297495613002,
-          0.008185092165866586
-        ],
-        "rotation": [
-          1.0,
-          -4.302114220422444e-15,
-          -1.2246467991475867e-16,
-          4.30211422042245e-15,
-          1.0,
-          5.588215196104941e-15,
-          1.2246467991473535e-16,
-          -5.588215196104942e-15,
-          1.0
-        ]
-      },
-      "transform2": {
-        "translation": [
-          -0.007099775154444964,
-          -0.18347661027920817,
-          0.0380479954477064
-        ],
-        "rotation": [
-          -0.9999999999999991,
-          -4.0939474033052685e-14,
-          1.2246467991450574e-16,
-          4.093947403305268e-14,
-          -0.9999999999999991,
-          -5.588215196104942e-15,
-          1.2246467991473535e-16,
-          -5.588215196104942e-15,
-          1.0
-        ]
-      },
-      "global_position": [
-        -0.007099775154444964,
-        -0.18347661027920817,
-        0.0380479954477064
-      ],
-      "global_transform": {
-        "translation": [
-          -0.007099775154444964,
-          -0.18347661027920817,
-          0.0380479954477064
-        ],
-        "rotation": [
-          1,
-          0,
-          0,
-          0,
-          1,
-          0,
-          0,
-          0,
-          1
-        ]
-      },
-      "assembly_context_depth": 2,
-      "mass_kg": 0.6116029513491266,
-      "volume_m3": 7.791120399351931e-05,
-      "density_kg_m3": 7850.0,
-      "area_m2": 0.059882165207017224,
-      "body_count": 1,
-      "bodies": [
-        {
-          "name": "Body1",
-          "exclude_from_collision": false,
-          "mass_kg": 0.6116029513491266,
-          "volume_m3": 7.791120399351931e-05,
-          "density_kg_m3": 7.85,
-          "area_m2": 0.059882165207017224,
-          "com_component_local": [
-            0.012900198626299026,
-            -0.005482503846648536,
-            -0.018047948885668484
-          ],
-          "inertia_at_origin": {
-            "ixx": 0.0007441769747130407,
-            "ixy": 4.3255939140299915e-05,
-            "ixz": 0.00014239527682338393,
-            "iyy": 0.0010335279860521757,
-            "iyz": -6.051679742408979e-05,
-            "izz": 0.0006467384397816693
-          },
-          "bbox_min": [
-            -0.032099775154445204,
-            -0.030476610279207398,
-            -0.06301184350894559
-          ],
-          "bbox_max": [
-            0.0579002248455548,
-            0.019523389720792584,
-            0.026908518730832
-          ],
-          "material_name": "Steel",
-          "inertia_source": "api"
-        }
-      ],
-      "collision_excluded_body_names": [],
-      "collision_body_count": 1,
-      "com_component_local": [
-        0.012900198626299025,
-        -0.005482503846648536,
-        -0.018047948885668484
-      ],
-      "com_global": [
-        0.005800423471854061,
-        -0.1889591141258567,
-        0.020000046562037917
-      ],
-      "inertia_at_origin": {
-        "ixx": 0.0007441769747130407,
-        "ixy": 4.3255939140299915e-05,
-        "ixz": 0.00014239527682338393,
-        "iyy": 0.0010335279860521757,
-        "iyz": -6.051679742408979e-05,
-        "izz": 0.0006467384397816693
-      },
-      "inertia_at_com": {
-        "ixx": 0.0005265770190525668,
-        "ixy": 8.274259924413111e-11,
-        "ixz": 5.777756580192372e-10,
-        "iyy": 0.0007325315178485375,
-        "iyz": 6.033033140851731e-11,
-        "izz": 0.0005265749896183348
-      },
-      "bbox_size": [
-        0.09,
-        0.04999999999999998,
-        0.08992036223977759
-      ],
-      "bbox_min": [
-        -0.032099775154445204,
-        -0.030476610279207398,
-        -0.06301184350894559
-      ],
-      "bbox_max": [
-        0.0579002248455548,
-        0.019523389720792584,
-        0.026908518730832
-      ],
-      "collision_bbox_size": [
-        0.09,
-        0.04999999999999998,
-        0.08992036223977759
-      ],
-      "collision_bbox_min": [
-        -0.032099775154445204,
-        -0.030476610279207398,
-        -0.06301184350894559
-      ],
-      "collision_bbox_max": [
-        0.0579002248455548,
-        0.019523389720792584,
-        0.026908518730832
-      ],
-      "collision_volume_m3": 7.791120399351931e-05,
-      "material_name": "Steel",
-      "appearance_name": "Opaque_160_160_160",
-      "appearance_color_rgb": [
-        0.6274509803921569,
-        0.6274509803921569,
-        0.6274509803921569
-      ]
-    },
-    "base_link:1+rear_right_wheel_link:1": {
-      "full_path": "base_link:1+rear_right_wheel_link:1",
-      "component_name": "rear_right_wheel_link",
-      "clean_name": "rear_right_wheel_link",
-      "path_segments": [
-        "base_link",
-        "rear_right_wheel_link"
-      ],
-      "parent_path": "base_link:1",
-      "depth": 1,
-      "is_subassembly": true,
-      "child_count": 2,
-      "is_frame_only": false,
-      "is_collision_geometry": false,
-      "collision_override": "",
-      "local_transform": {
-        "translation": [
-          5.950795411990836e-16,
-          -0.23493958523533848,
-          0.029862903281839815
-        ],
-        "rotation": [
-          -0.9999999999999991,
-          -4.524158825347512e-14,
-          0.0,
-          4.524158825347512e-14,
-          -0.9999999999999991,
-          0.0,
-          0.0,
-          0.0,
-          1.0
-        ]
-      },
-      "transform2": {
-        "translation": [
-          5.950795411990836e-16,
-          -0.23493958523533848,
-          0.029862903281839815
-        ],
-        "rotation": [
-          -0.9999999999999991,
-          -4.524158825347512e-14,
-          0.0,
-          4.524158825347512e-14,
-          -0.9999999999999991,
-          0.0,
-          0.0,
-          0.0,
-          1.0
-        ]
-      },
-      "global_position": [
-        5.950795411990836e-16,
-        -0.23493958523533848,
-        0.029862903281839815
-      ],
-      "global_transform": {
-        "translation": [
-          5.950795411990836e-16,
-          -0.23493958523533848,
-          0.029862903281839815
-        ],
-        "rotation": [
-          1,
-          0,
-          0,
-          0,
-          1,
-          0,
-          0,
-          0,
-          1
-        ]
-      },
-      "assembly_context_depth": 1,
-      "mass_kg": 0.0,
-      "volume_m3": 0.0,
-      "density_kg_m3": 0.0,
-      "area_m2": 0.0,
-      "body_count": 0,
-      "bodies": [],
-      "collision_excluded_body_names": [],
-      "collision_body_count": 0,
-      "com_component_local": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "com_global": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "inertia_at_origin": {
-        "ixx": 0.0,
-        "ixy": 0.0,
-        "ixz": 0.0,
-        "iyy": 0.0,
-        "iyz": 0.0,
-        "izz": 0.0
-      },
-      "inertia_at_com": {
-        "ixx": 0.0,
-        "ixy": 0.0,
-        "ixz": 0.0,
-        "iyy": 0.0,
-        "iyz": 0.0,
-        "izz": 0.0
-      },
-      "bbox_size": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "bbox_min": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "bbox_max": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "collision_bbox_size": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "collision_bbox_min": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "collision_bbox_max": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "collision_volume_m3": 0.0,
-      "material_name": "",
-      "appearance_name": "",
-      "appearance_color_rgb": null
-    },
-    "base_link:1": {
-      "full_path": "base_link:1",
-      "component_name": "base_link",
-      "clean_name": "base_link",
-      "path_segments": [
-        "base_link"
-      ],
-      "parent_path": null,
-      "depth": 0,
-      "is_subassembly": true,
-      "child_count": 6,
-      "is_frame_only": false,
-      "is_collision_geometry": false,
-      "collision_override": "",
-      "local_transform": {
-        "translation": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "rotation": [
-          1.0,
-          0.0,
-          0.0,
-          0.0,
-          1.0,
-          0.0,
-          0.0,
-          0.0,
-          1.0
-        ]
-      },
-      "transform2": {
-        "translation": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "rotation": [
-          1.0,
-          0.0,
-          0.0,
-          0.0,
-          1.0,
-          0.0,
-          0.0,
-          0.0,
-          1.0
-        ]
-      },
-      "global_position": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "global_transform": {
-        "translation": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "rotation": [
-          1,
-          0,
-          0,
-          0,
-          1,
-          0,
-          0,
-          0,
-          1
-        ]
-      },
-      "assembly_context_depth": 0,
-      "mass_kg": 2.899174732784998,
-      "volume_m3": 0.002034508584410525,
-      "density_kg_m3": 1424.9999999999998,
-      "area_m2": 0.1353141915709882,
-      "body_count": 2,
-      "bodies": [
-        {
-          "name": "Body1",
-          "exclude_from_collision": false,
-          "mass_kg": 2.8990914281628353,
-          "volume_m3": 0.0020344501250265513,
-          "density_kg_m3": 1.4249999999999998,
-          "area_m2": 0.13413532714079385,
-          "com_component_local": [
-            0.04157677398778748,
-            -0.06249449552699688,
-            0.02441810829493298
-          ],
-          "inertia_at_origin": {
-            "ixx": 0.02102443257808245,
-            "ixy": 0.007533669508618294,
-            "ixz": -0.002665673219690633,
-            "iyy": 0.02053335071956596,
-            "iyz": 0.004423557734660762,
-            "izz": 0.03686080965125795
-          },
-          "bbox_min": [
-            -0.075,
-            -0.185,
-            0.0
-          ],
-          "bbox_max": [
-            0.175,
-            0.06,
-            0.12
-          ],
-          "material_name": "Acetal_Resin_Black",
-          "inertia_source": "api"
-        },
-        {
-          "name": "Body2",
-          "exclude_from_collision": false,
-          "mass_kg": 8.330462216269453e-05,
-          "volume_m3": 5.845938397382073e-08,
-          "density_kg_m3": 1.4249999999999998,
-          "area_m2": 0.001178864430194345,
-          "com_component_local": [
-            -0.07553696582604365,
-            -0.06249209240387649,
-            0.10811802471387061
-          ],
-          "inertia_at_origin": {
-            "ixx": 1.302912312247791e-06,
-            "ixy": -3.9323639067239066e-07,
-            "ixz": 6.803411466900008e-07,
-            "iyy": 1.4572469614791742e-06,
-            "iyz": 5.628494782676611e-07,
-            "izz": 8.049874743097382e-07
-          },
-          "bbox_min": [
-            -0.08803696582604363,
-            -0.06254209240387647,
-            0.09642614791910621
-          ],
-          "bbox_max": [
-            -0.06303696582604364,
-            -0.06244209240387647,
-            0.11980990150863499
-          ],
-          "material_name": "Acetal_Resin_Black",
-          "inertia_source": "api"
-        }
-      ],
-      "collision_excluded_body_names": [],
-      "collision_body_count": 2,
-      "com_component_local": [
-        0.0415734088522767,
-        -0.06249449545794576,
-        0.02442051332069203
-      ],
-      "com_global": [
-        0.0415734088522767,
-        -0.06249449545794576,
-        0.02442051332069203
-      ],
-      "inertia_at_origin": {
-        "ixx": 0.021025735490394697,
-        "ixy": 0.007533276272227622,
-        "ixz": -0.0026649928785439426,
-        "iyy": 0.02053480796652744,
-        "iyz": 0.00442412058413903,
-        "izz": 0.03686161463873226
-      },
-      "inertia_at_com": {
-        "ixx": 0.007973872823379753,
-        "ixy": 9.036955794065882e-07,
-        "ixz": 0.00027837682940472404,
-        "iyy": 0.013795068069415689,
-        "iyz": -4.4814675491649386e-07,
-        "izz": 0.02052792429037257
-      },
-      "bbox_size": [
-        0.26303696582604363,
-        0.245,
-        0.12
-      ],
-      "bbox_min": [
-        -0.08803696582604363,
-        -0.185,
-        0.0
-      ],
-      "bbox_max": [
-        0.175,
-        0.06,
-        0.12
-      ],
-      "collision_bbox_size": [
-        0.26303696582604363,
-        0.245,
-        0.12
-      ],
-      "collision_bbox_min": [
-        -0.08803696582604363,
-        -0.185,
-        0.0
-      ],
-      "collision_bbox_max": [
-        0.175,
-        0.06,
-        0.12
-      ],
-      "collision_volume_m3": 0.002034508584410525,
-      "material_name": "Acetal_Resin_Black",
-      "appearance_name": "Plastic_Glossy_Black",
-      "appearance_color_rgb": [
-        0.09803921568627451,
-        0.09803921568627451,
-        0.09803921568627451
-      ]
     }
   },
   "joints": {
     "zed2_camera_joint": {
       "name": "zed2_camera_joint",
       "joint_source": "regular",
-      "defining_component": "base_link",
-      "defining_component_raw": "base_link",
+      "defining_component": "ma_robot",
+      "defining_component_raw": "ma_robot",
       "is_suppressed": false,
-      "occurrence_one_path": "base_link:1+zed2_camera_link:1",
+      "occurrence_one_path": "zed2_camera_link:1",
       "occurrence_two_path": "base_link:1",
       "occurrence_one_clean": "zed2_camera_link",
       "occurrence_two_clean": "base_link",
       "geometry_origin_cm": null,
       "geometry_or_origin_one_cm": [
-        14.5,
+        14.500000000000007,
         -6.2500000000000036,
-        3.5
+        6.000000000000001
       ],
       "geometry_or_origin_two_cm": [
-        14.5,
-        -6.250000000000002,
-        3.5
+        14.499999999999998,
+        -6.250000000000006,
+        6.0
       ],
       "occ_one_transform_cm": [
-        14.5,
+        14.500000000000005,
         -6.250001638168534,
-        -0.7370859765171955
+        1.7629140234828053
       ],
       "occ_one_transform2_cm": [
-        14.5,
+        14.500000000000005,
         -6.250001638168534,
-        -0.7370859765171955
+        1.7629140234828053
       ],
       "occ_one_global_cm": [
-        14.5,
+        14.500000000000005,
         -6.250001638168534,
-        -0.7370859765171955
+        1.7629140234828053
       ],
-      "occ_one_context_depth": 1,
+      "occ_one_context_depth": 0,
       "occ_two_transform_cm": [
         0.0,
         0.0,
-        0.0
+        2.4999999999999996
       ],
       "occ_two_global_cm": [
         0.0,
         0.0,
-        0.0
+        2.4999999999999996
       ],
       "occ_two_context_depth": 0,
       "origin_global_m": [
-        0.145,
+        0.14500000000000007,
         -0.06250000000000004,
-        0.035
+        0.06000000000000001
       ],
-      "origin_source": "geometryOrOriginOne_world",
-      "origin_is_world": true,
+      "origin_source": "geometryOrOriginOne",
+      "origin_is_world": false,
       "motion_type": "rigid",
       "motion_type_enum": 0,
       "axis_vector": [
@@ -3437,67 +3423,67 @@
       "is_passive": false,
       "is_closing": false
     },
-    "rplidar_s2_joint": {
-      "name": "rplidar_s2_joint",
+    "rear_left_wheel_joint": {
+      "name": "rear_left_wheel_joint",
       "joint_source": "regular",
-      "defining_component": "base_link",
-      "defining_component_raw": "base_link",
+      "defining_component": "ma_robot",
+      "defining_component_raw": "ma_robot",
       "is_suppressed": false,
-      "occurrence_one_path": "base_link:1+rplidar_s2_link:1",
+      "occurrence_one_path": "rear_left_wheel_link:1+Tire:1",
       "occurrence_two_path": "base_link:1",
-      "occurrence_one_clean": "rplidar_s2_link",
+      "occurrence_one_clean": "Tire",
       "occurrence_two_clean": "base_link",
       "geometry_origin_cm": null,
       "geometry_or_origin_one_cm": [
-        9.927024810886941,
-        -6.249999999999979,
-        5.0
+        -2.0000000000000018,
+        7.000000000000002,
+        4.499999999999999
       ],
       "geometry_or_origin_two_cm": [
-        4.927024810886957,
-        -6.249999999999998,
-        5.0
+        -1.9999999999999982,
+        6.000000000000001,
+        4.5
       ],
       "occ_one_transform_cm": [
-        -43.374741715859955,
-        -65.75064202586393,
-        4.681486996860171
+        -3.290022484555499,
+        6.247661027920761,
+        6.304799544770637
       ],
       "occ_one_transform2_cm": [
-        -43.374741715859955,
-        -65.75064202586393,
-        4.681486996860171
+        -3.290022484555499,
+        6.247661027920761,
+        6.304799544770637
       ],
       "occ_one_global_cm": [
-        -43.374741715859955,
-        -65.75064202586393,
-        4.681486996860171
+        -3.290022484555499,
+        6.247661027920761,
+        6.304799544770637
       ],
       "occ_one_context_depth": 1,
       "occ_two_transform_cm": [
         0.0,
         0.0,
-        0.0
+        2.4999999999999996
       ],
       "occ_two_global_cm": [
         0.0,
         0.0,
-        0.0
+        2.4999999999999996
       ],
       "occ_two_context_depth": 0,
       "origin_global_m": [
-        0.0992702481088694,
-        -0.062499999999999785,
-        0.05
+        -0.020000000000000018,
+        0.07000000000000002,
+        0.04499999999999999
       ],
-      "origin_source": "geometryOrOriginOne_world",
-      "origin_is_world": true,
-      "motion_type": "rigid",
-      "motion_type_enum": 0,
+      "origin_source": "geometryOrOriginOne",
+      "origin_is_world": false,
+      "motion_type": "revolute",
+      "motion_type_enum": 1,
       "axis_vector": [
-        0.0,
-        0.0,
-        1.0
+        2.7755575615628914e-16,
+        1.0,
+        0.0
       ],
       "has_rotation_limits": false,
       "rotation_min": null,
@@ -3505,69 +3491,69 @@
       "has_slide_limits": false,
       "slide_min_m": null,
       "slide_max_m": null,
-      "raw_name": "rplidar_s2_joint",
+      "raw_name": "rear_left_wheel_joint",
       "is_passive": false,
       "is_closing": false
     },
     "front_right_wheel_joint": {
       "name": "front_right_wheel_joint",
       "joint_source": "regular",
-      "defining_component": "base_link",
-      "defining_component_raw": "base_link",
+      "defining_component": "ma_robot",
+      "defining_component_raw": "ma_robot",
       "is_suppressed": false,
-      "occurrence_one_path": "base_link:1+front_right_wheel_link:1+Tire (1):1",
+      "occurrence_one_path": "front_right_wheel_link:1+Tire (2):1",
       "occurrence_two_path": "base_link:1",
-      "occurrence_one_clean": "Tire_1",
+      "occurrence_one_clean": "Tire_2",
       "occurrence_two_clean": "base_link",
       "geometry_origin_cm": null,
       "geometry_or_origin_one_cm": [
-        12.999999999999995,
-        -18.499999999999986,
-        1.9999999999999993
+        13.000000000000028,
+        -18.9,
+        4.500000000000001
       ],
       "geometry_or_origin_two_cm": [
-        13.0,
-        -18.5,
-        2.0
+        12.999999999999995,
+        -18.500000000000004,
+        4.5
       ],
       "occ_one_transform_cm": [
-        1.9211745253103008,
-        -6.390531126946804,
-        0.8047995447706366
+        -4.979650155556964,
+        -5.744004546184911,
+        6.304799544770638
       ],
       "occ_one_transform2_cm": [
-        14.290022484555516,
-        -18.347661027920918,
-        3.8047995447706366
+        14.290022484555521,
+        -18.74766102792067,
+        6.304799544770638
       ],
       "occ_one_global_cm": [
-        14.290022484555516,
-        -18.347661027920918,
-        3.8047995447706366
+        14.290022484555521,
+        -18.74766102792067,
+        6.304799544770638
       ],
-      "occ_one_context_depth": 2,
+      "occ_one_context_depth": 1,
       "occ_two_transform_cm": [
         0.0,
         0.0,
-        0.0
+        2.4999999999999996
       ],
       "occ_two_global_cm": [
         0.0,
         0.0,
-        0.0
+        2.4999999999999996
       ],
       "occ_two_context_depth": 0,
       "origin_global_m": [
-        0.12999999999999995,
-        -0.18499999999999986,
-        0.019999999999999993
+        0.13000000000000028,
+        -0.18899999999999997,
+        0.04500000000000001
       ],
-      "origin_source": "geometryOrOriginOne_world",
-      "origin_is_world": true,
+      "origin_source": "geometryOrOriginOne",
+      "origin_is_world": false,
       "motion_type": "revolute",
       "motion_type_enum": 1,
       "axis_vector": [
-        0.0,
+        -2.7755575615628914e-16,
         -1.0,
         0.0
       ],
@@ -3584,62 +3570,62 @@
     "rear_right_wheel_joint": {
       "name": "rear_right_wheel_joint",
       "joint_source": "regular",
-      "defining_component": "base_link",
-      "defining_component_raw": "base_link",
+      "defining_component": "ma_robot",
+      "defining_component_raw": "ma_robot",
       "is_suppressed": false,
-      "occurrence_one_path": "base_link:1+rear_right_wheel_link:1+Tire (3):1",
+      "occurrence_one_path": "rear_right_wheel_link:1+Tire (3):1",
       "occurrence_two_path": "base_link:1",
       "occurrence_one_clean": "Tire_3",
       "occurrence_two_clean": "base_link",
       "geometry_origin_cm": null,
       "geometry_or_origin_one_cm": [
-        -2.0000000000000098,
-        -18.700000000000003,
-        2.0000000000000013
+        -2.000000000000007,
+        -18.900000000000006,
+        4.499999999999999
       ],
       "geometry_or_origin_two_cm": [
-        -2.000000000000001,
+        -2.000000000000006,
         -18.5,
-        2.0
+        4.5
       ],
       "occ_one_transform_cm": [
-        0.7099775154447894,
-        -5.146297495613002,
-        0.8185092165866585
+        -1.7621959381938503,
+        6.181637972253782,
+        2.695200455229362
       ],
       "occ_one_transform2_cm": [
-        -0.7099775154444964,
-        -18.347661027920818,
-        3.80479954477064
+        -3.2900224845555046,
+        -18.54766102792076,
+        2.695200455229362
       ],
       "occ_one_global_cm": [
-        -0.7099775154444964,
-        -18.347661027920818,
-        3.80479954477064
+        -3.2900224845555046,
+        -18.54766102792076,
+        2.695200455229362
       ],
-      "occ_one_context_depth": 2,
+      "occ_one_context_depth": 1,
       "occ_two_transform_cm": [
         0.0,
         0.0,
-        0.0
+        2.4999999999999996
       ],
       "occ_two_global_cm": [
         0.0,
         0.0,
-        0.0
+        2.4999999999999996
       ],
       "occ_two_context_depth": 0,
       "origin_global_m": [
-        -0.020000000000000098,
-        -0.18700000000000003,
-        0.020000000000000014
+        -0.02000000000000007,
+        -0.18900000000000006,
+        0.04499999999999999
       ],
-      "origin_source": "geometryOrOriginOne_world",
-      "origin_is_world": true,
+      "origin_source": "geometryOrOriginOne",
+      "origin_is_world": false,
       "motion_type": "revolute",
       "motion_type_enum": 1,
       "axis_vector": [
-        0.0,
+        -2.7755575615628914e-16,
         -1.0,
         0.0
       ],
@@ -3656,62 +3642,62 @@
     "front_left_wheel_joint": {
       "name": "front_left_wheel_joint",
       "joint_source": "regular",
-      "defining_component": "base_link",
-      "defining_component_raw": "base_link",
+      "defining_component": "ma_robot",
+      "defining_component_raw": "ma_robot",
       "is_suppressed": false,
-      "occurrence_one_path": "base_link:1+front_left_wheel_link:1+Tire:1",
+      "occurrence_one_path": "front_left_wheel_link:1+Tire (1):1",
       "occurrence_two_path": "base_link:1",
-      "occurrence_one_clean": "Tire",
+      "occurrence_one_clean": "Tire_1",
       "occurrence_two_clean": "base_link",
       "geometry_origin_cm": null,
       "geometry_or_origin_one_cm": [
-        13.000000000000002,
-        5.999999999999999,
-        2.0
+        13.000000000000007,
+        6.299999999999999,
+        4.5
       ],
       "geometry_or_origin_two_cm": [
-        13.0,
-        6.0,
-        2.0
+        13.000000000000002,
+        5.9999999999999964,
+        4.5
       ],
       "occ_one_transform_cm": [
-        1.1930833147241877,
-        -5.840290053968149,
-        0.6615622762771873
+        2.2900224845555037,
+        -8.184127155365212,
+        -2.5494880024963305
       ],
       "occ_one_transform2_cm": [
-        11.709977515444503,
-        5.847661027920763,
-        3.8047995447706375
+        14.290022484555504,
+        6.147661027920762,
+        2.6952004552293634
       ],
       "occ_one_global_cm": [
-        11.709977515444503,
-        5.847661027920763,
-        3.8047995447706375
+        14.290022484555504,
+        6.147661027920762,
+        2.6952004552293634
       ],
-      "occ_one_context_depth": 2,
+      "occ_one_context_depth": 1,
       "occ_two_transform_cm": [
         0.0,
         0.0,
-        0.0
+        2.4999999999999996
       ],
       "occ_two_global_cm": [
         0.0,
         0.0,
-        0.0
+        2.4999999999999996
       ],
       "occ_two_context_depth": 0,
       "origin_global_m": [
-        0.13,
-        0.05999999999999999,
-        0.02
+        0.13000000000000006,
+        0.06299999999999999,
+        0.045
       ],
-      "origin_source": "geometryOrOriginOne_world",
-      "origin_is_world": true,
+      "origin_source": "geometryOrOriginOne",
+      "origin_is_world": false,
       "motion_type": "revolute",
       "motion_type_enum": 1,
       "axis_vector": [
-        0.0,
+        2.7755575615628914e-16,
         1.0,
         0.0
       ],
@@ -3725,67 +3711,67 @@
       "is_passive": false,
       "is_closing": false
     },
-    "rear_left_wheel_joint": {
-      "name": "rear_left_wheel_joint",
+    "rplidar_s2_joint": {
+      "name": "rplidar_s2_joint",
       "joint_source": "regular",
-      "defining_component": "base_link",
-      "defining_component_raw": "base_link",
+      "defining_component": "ma_robot",
+      "defining_component_raw": "ma_robot",
       "is_suppressed": false,
-      "occurrence_one_path": "base_link:1+rear_left_wheel_link:1+Tire (2):1",
+      "occurrence_one_path": "rplidar_s2_link:1",
       "occurrence_two_path": "base_link:1",
-      "occurrence_one_clean": "Tire_2",
+      "occurrence_one_clean": "rplidar_s2_link",
       "occurrence_two_clean": "base_link",
       "geometry_origin_cm": null,
       "geometry_or_origin_one_cm": [
-        -2.0,
-        5.999999999999999,
-        2.0
+        9.927024810887104,
+        -6.250000000000021,
+        7.500000000000004
       ],
       "geometry_or_origin_two_cm": [
-        -2.0,
-        6.0,
-        2.0
+        4.927024810886955,
+        -6.25,
+        7.5
       ],
       "occ_one_transform_cm": [
-        -3.290022484555499,
-        -5.929605775250247,
-        0.4157577743039722
+        -43.374741715861894,
+        -65.75064202586533,
+        7.181486996860169
       ],
       "occ_one_transform2_cm": [
-        -3.290022484555499,
-        5.847661027920763,
-        3.8047995447706393
+        -43.374741715861894,
+        -65.75064202586533,
+        7.181486996860169
       ],
       "occ_one_global_cm": [
-        -3.290022484555499,
-        5.847661027920763,
-        3.8047995447706393
+        -43.374741715861894,
+        -65.75064202586533,
+        7.181486996860169
       ],
-      "occ_one_context_depth": 2,
+      "occ_one_context_depth": 0,
       "occ_two_transform_cm": [
         0.0,
         0.0,
-        0.0
+        2.4999999999999996
       ],
       "occ_two_global_cm": [
         0.0,
         0.0,
-        0.0
+        2.4999999999999996
       ],
       "occ_two_context_depth": 0,
       "origin_global_m": [
-        -0.02,
-        0.05999999999999999,
-        0.02
+        0.09927024810887104,
+        -0.06250000000000021,
+        0.07500000000000004
       ],
-      "origin_source": "geometryOrOriginOne_world",
-      "origin_is_world": true,
-      "motion_type": "revolute",
-      "motion_type_enum": 1,
+      "origin_source": "geometryOrOriginOne",
+      "origin_is_world": false,
+      "motion_type": "rigid",
+      "motion_type_enum": 0,
       "axis_vector": [
         0.0,
-        1.0,
-        0.0
+        0.0,
+        1.0
       ],
       "has_rotation_limits": false,
       "rotation_min": null,
@@ -3793,17 +3779,17 @@
       "has_slide_limits": false,
       "slide_min_m": null,
       "slide_max_m": null,
-      "raw_name": "rear_left_wheel_joint",
+      "raw_name": "rplidar_s2_joint",
       "is_passive": false,
       "is_closing": false
     }
   },
   "rigid_groups": [],
   "total_occurrences": 15,
-  "total_subassemblies": 5,
-  "total_leaf_components": 10,
+  "total_subassemblies": 4,
+  "total_leaf_components": 11,
   "total_joints": 6,
   "total_regular_joints": 6,
   "total_as_built_joints": 0,
-  "max_nesting_depth": 2
+  "max_nesting_depth": 1
 }

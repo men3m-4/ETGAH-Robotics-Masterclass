@@ -9,7 +9,7 @@
 | Total mass | 5.728 kg |
 | Links | 7 |
 | Joints | 6 (4 movable) |
-| Assemblies | 6 |
+| Assemblies | 5 |
 | Root link | `base_link` |
 
 ## Table of Contents
@@ -27,23 +27,23 @@
 base_link
   └─ zed2_camera_joint [fixed]
     zed2_camera_link
-  └─ rplidar_s2_joint [fixed]
-    rplidar_s2_link
+  └─ rear_left_wheel_joint [continuous]
+    rear_left_wheel_link [BAKE]
   └─ front_right_wheel_joint [continuous]
     front_right_wheel_link [BAKE]
   └─ rear_right_wheel_joint [continuous]
     rear_right_wheel_link [BAKE]
   └─ front_left_wheel_joint [continuous]
     front_left_wheel_link [BAKE]
-  └─ rear_left_wheel_joint [continuous]
-    rear_left_wheel_link [BAKE]
+  └─ rplidar_s2_joint [fixed]
+    rplidar_s2_link
 ```
 
 ## Link Properties
 
 | Link | Mass (kg) | Material | Collision | Bodies |
 |------|-----------|----------|-----------|--------|
-| `base_link` | 2.8992 | Acetal_Resin_Black | box | 2 |
+| `base_link` | 2.8992 | Acetal_Resin_Black | cylinder | 2 |
 | `front_left_wheel_link` | 0.6116 | Steel | box | 1 |
 | `front_right_wheel_link` | 0.6116 | Steel | box | 1 |
 | `rear_left_wheel_link` | 0.6116 | Steel | box | 1 |
@@ -64,11 +64,6 @@ base_link
 
 ## Assembly Breakdown
 
-### base_link
-
-- **Links**: zed2_camera_link, rplidar_s2_link
-- **Total mass**: 0.382 kg
-
 ### front_left_wheel_link
 
 - **Links**: front_left_wheel_link
@@ -81,8 +76,8 @@ base_link
 
 ### ma_robot
 
-- **Links**: base_link
-- **Total mass**: 2.899 kg
+- **Links**: base_link, zed2_camera_link, rplidar_s2_link
+- **Total mass**: 3.281 kg
 
 ### rear_left_wheel_link
 

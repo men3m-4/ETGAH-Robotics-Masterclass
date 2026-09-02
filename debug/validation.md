@@ -8,7 +8,7 @@
 |--------|-------|
 | Links | 7 |
 | Joints | 6 |
-| Assemblies | 6 |
+| Assemblies | 5 |
 | Root | `base_link` |
 | Errors | 0 |
 | Warnings | 0 |
@@ -19,23 +19,23 @@
 base_link [primitive]
   └─ zed2_camera_joint [fixed]
     zed2_camera_link [primitive]
-  └─ rplidar_s2_joint [fixed]
-    rplidar_s2_link [primitive]
+  └─ rear_left_wheel_joint [continuous]
+    rear_left_wheel_link [BAKE] [primitive]
   └─ front_right_wheel_joint [continuous]
     front_right_wheel_link [BAKE] [primitive]
   └─ rear_right_wheel_joint [continuous]
     rear_right_wheel_link [BAKE] [primitive]
   └─ front_left_wheel_joint [continuous]
     front_left_wheel_link [BAKE] [primitive]
-  └─ rear_left_wheel_joint [continuous]
-    rear_left_wheel_link [BAKE] [primitive]
+  └─ rplidar_s2_joint [fixed]
+    rplidar_s2_link [primitive]
 ```
 
 ## Collision Geometry
 
 | Link | Source | Shape/File |
 |------|--------|------------|
-| `base_link` | primitive STL | box |
+| `base_link` | primitive STL | cylinder |
 | `front_left_wheel_link` | primitive STL | box |
 | `front_right_wheel_link` | primitive STL | box |
 | `rear_left_wheel_link` | primitive STL | box |
@@ -49,7 +49,7 @@ Links where joint frame ≠ component origin. Visual/inertial/collision origins 
 
 | Link | Offset (mm) |
 |------|-------------|
-| `front_left_wheel_link` | (-12.9, -18.0, -1.5) |
-| `front_right_wheel_link` | (12.9, 18.0, -1.5) |
-| `rear_left_wheel_link` | (-12.9, -18.0, -1.5) |
-| `rear_right_wheel_link` | (12.9, 18.0, -3.5) |
+| `rear_left_wheel_link` | (20.0, 45.0, -70.0) |
+| `front_left_wheel_link` | (130.0, -45.0, -63.0) |
+| `front_right_wheel_link` | (130.0, -45.0, 189.0) |
+| `rear_right_wheel_link` | (20.0, 45.0, 189.0) |

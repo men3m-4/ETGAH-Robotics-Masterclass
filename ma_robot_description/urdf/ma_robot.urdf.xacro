@@ -2,30 +2,28 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="ma_robot">
 
   <!-- Materials (shared across all assemblies) -->
+  <material name="Acetal_Resin_Black">
+    <color rgba="0.098 0.098 0.098 1.0"/>
+  </material>
   <material name="PA_11_Nylon_HP_11_30_with_EOS_P_396_3D_Printer">
     <color rgba="0.247 0.247 0.247 1.0"/>
   </material>
   <material name="Steel">
-    <color rgba="1.000 1.000 1.000 1.0"/>
-  </material>
-  <material name="Acetal_Resin_Black">
-    <color rgba="0.098 0.098 0.098 1.0"/>
+    <color rgba="0.627 0.627 0.627 1.0"/>
   </material>
 
   <!-- Assembly includes -->
+  <xacro:include filename="$(find ma_robot_description)/urdf/assemblies/rear_left_wheel_link.urdf.xacro"/>
   <xacro:include filename="$(find ma_robot_description)/urdf/assemblies/front_left_wheel_link.urdf.xacro"/>
   <xacro:include filename="$(find ma_robot_description)/urdf/assemblies/front_right_wheel_link.urdf.xacro"/>
-  <xacro:include filename="$(find ma_robot_description)/urdf/assemblies/rear_left_wheel_link.urdf.xacro"/>
   <xacro:include filename="$(find ma_robot_description)/urdf/assemblies/rear_right_wheel_link.urdf.xacro"/>
-  <xacro:include filename="$(find ma_robot_description)/urdf/assemblies/base_link.urdf.xacro"/>
   <xacro:include filename="$(find ma_robot_description)/urdf/assemblies/ma_robot.urdf.xacro"/>
 
   <!-- Instantiate assemblies -->
+  <xacro:rear_left_wheel_link prefix=""/>
   <xacro:front_left_wheel_link prefix=""/>
   <xacro:front_right_wheel_link prefix=""/>
-  <xacro:rear_left_wheel_link prefix=""/>
   <xacro:rear_right_wheel_link prefix=""/>
-  <xacro:base_link prefix=""/>
   <xacro:ma_robot prefix=""/>
 
   <!-- Mount joints (cross-assembly connections) -->
@@ -34,22 +32,18 @@
   <!-- update the include + macro call above, and adjust -->
   <!-- parent/child link names in the mount joint below. -->
 
-  <joint name="zed2_camera_joint" type="fixed">
+  <joint name="rear_left_wheel_joint" type="continuous">
     <parent link="base_link"/>
-    <child link="zed2_camera_link"/>
-    <origin xyz="0.145000 -0.062500 -0.007371" rpy="0.000000 0.000000 -1.570796"/>
-  </joint>
-
-  <joint name="rplidar_s2_joint" type="fixed">
-    <parent link="base_link"/>
-    <child link="rplidar_s2_link"/>
-    <origin xyz="-0.433747 -0.657506 0.046815" rpy="0.000000 0.000000 -1.570796"/>
+    <child link="rear_left_wheel_link"/>
+    <origin xyz="-0.052900 0.132477 0.083048" rpy="-1.570796 0.000000 0.000000"/>
+    <axis xyz="0.000000 0.000000 1.000000"/>
+    <limit effort="100.0" velocity="1.00"/>
   </joint>
 
   <joint name="front_right_wheel_joint" type="continuous">
     <parent link="base_link"/>
     <child link="front_right_wheel_link"/>
-    <origin xyz="0.130000 -0.185000 0.020000" rpy="1.570796 0.000000 0.000000"/>
+    <origin xyz="0.012900 0.001523 0.083048" rpy="1.570796 0.000000 0.000000"/>
     <axis xyz="0.000000 0.000000 1.000000"/>
     <limit effort="100.0" velocity="1.00"/>
   </joint>
@@ -57,7 +51,7 @@
   <joint name="rear_right_wheel_joint" type="continuous">
     <parent link="base_link"/>
     <child link="rear_right_wheel_link"/>
-    <origin xyz="-0.020000 -0.187000 0.020000" rpy="1.570796 0.000000 0.000000"/>
+    <origin xyz="-0.052900 0.003523 -0.043048" rpy="1.570796 0.000000 0.000000"/>
     <axis xyz="0.000000 0.000000 1.000000"/>
     <limit effort="100.0" velocity="1.00"/>
   </joint>
@@ -65,15 +59,7 @@
   <joint name="front_left_wheel_joint" type="continuous">
     <parent link="base_link"/>
     <child link="front_left_wheel_link"/>
-    <origin xyz="0.130000 0.060000 0.020000" rpy="-1.570796 0.000000 0.000000"/>
-    <axis xyz="0.000000 0.000000 1.000000"/>
-    <limit effort="100.0" velocity="1.00"/>
-  </joint>
-
-  <joint name="rear_left_wheel_joint" type="continuous">
-    <parent link="base_link"/>
-    <child link="rear_left_wheel_link"/>
-    <origin xyz="-0.020000 0.060000 0.020000" rpy="-1.570796 0.000000 0.000000"/>
+    <origin xyz="0.012900 0.124477 -0.043048" rpy="-1.570796 0.000000 0.000000"/>
     <axis xyz="0.000000 0.000000 1.000000"/>
     <limit effort="100.0" velocity="1.00"/>
   </joint>
