@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="ma_robot">
+
+  <!-- Materials (shared across all assemblies) -->
+  <material name="PA_11_Nylon_HP_11_30_with_EOS_P_396_3D_Printer">
+    <color rgba="0.247 0.247 0.247 1.0"/>
+  </material>
+  <material name="Steel">
+    <color rgba="1.000 1.000 1.000 1.0"/>
+  </material>
+  <material name="Acetal_Resin_Black">
+    <color rgba="0.098 0.098 0.098 1.0"/>
+  </material>
+
+  <!-- Assembly includes -->
+  <xacro:include filename="$(find ma_robot_description)/urdf/assemblies/front_left_wheel_link.urdf.xacro"/>
+  <xacro:include filename="$(find ma_robot_description)/urdf/assemblies/rear_right_wheel_link.urdf.xacro"/>
+  <xacro:include filename="$(find ma_robot_description)/urdf/assemblies/front_right_wheel_link.urdf.xacro"/>
+  <xacro:include filename="$(find ma_robot_description)/urdf/assemblies/rear_left_wheel_link.urdf.xacro"/>
+  <xacro:include filename="$(find ma_robot_description)/urdf/assemblies/base_link.urdf.xacro"/>
+
+  <!-- Instantiate assemblies -->
+  <xacro:front_left_wheel_link prefix=""/>
+  <xacro:rear_right_wheel_link prefix=""/>
+  <xacro:front_right_wheel_link prefix=""/>
+  <xacro:rear_left_wheel_link prefix=""/>
+  <xacro:base_link prefix=""/>
+
+  <!-- Mount joints (cross-assembly connections) -->
+  <!-- These define how assemblies connect to each other. -->
+  <!-- When swapping a dummy assembly with a real part, -->
+  <!-- update the include + macro call above, and adjust -->
+  <!-- parent/child link names in the mount joint below. -->
+
+  <joint name="Revolute_5" type="continuous">
+    <parent link="base_link"/>
+    <child link="Part2_1"/>
+    <origin xyz="0.260000 0.000000 0.000000" rpy="-1.570796 0.000000 0.000000"/>
+    <axis xyz="0.000000 0.000000 1.000000"/>
+    <limit effort="100.0" velocity="1.00"/>
+  </joint>
+
+  <joint name="Revolute_6" type="continuous">
+    <parent link="base_link"/>
+    <child link="Part2_2"/>
+    <origin xyz="-0.040000 -0.362000 0.040000" rpy="1.570796 0.000000 0.000000"/>
+    <axis xyz="0.000000 0.000000 1.000000"/>
+    <limit effort="100.0" velocity="1.00"/>
+  </joint>
+
+  <joint name="Revolute_8" type="continuous">
+    <parent link="base_link"/>
+    <child link="Part2_1_Mirror"/>
+    <origin xyz="0.260000 -0.362000 0.040000" rpy="1.570796 0.000000 0.000000"/>
+    <axis xyz="0.000000 0.000000 1.000000"/>
+    <limit effort="100.0" velocity="1.00"/>
+  </joint>
+
+  <joint name="Revolute_9" type="continuous">
+    <parent link="base_link"/>
+    <child link="Part2_2_Mirror"/>
+    <origin xyz="-0.040000 0.026000 0.000000" rpy="-1.570796 0.000000 0.000000"/>
+    <axis xyz="0.000000 0.000000 1.000000"/>
+    <limit effort="100.0" velocity="1.00"/>
+  </joint>
+
+  <!-- ROS 2 control: generated generic system -->
+  <ros2_control name="base_link_system" type="system">
+    <hardware>
+      <plugin>mock_components/GenericSystem</plugin>
+      <param name="cmd_topic">sim/base_link_system/cmd</param>
+      <param name="state_topic">sim/base_link_system/state</param>
+    </hardware>
+
+    <joint name="Revolute_5">
+      <command_interface name="position"/>
+      <command_interface name="velocity"/>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+    <joint name="Revolute_6">
+      <command_interface name="position"/>
+      <command_interface name="velocity"/>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+    <joint name="Revolute_8">
+      <command_interface name="position"/>
+      <command_interface name="velocity"/>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+    <joint name="Revolute_9">
+      <command_interface name="position"/>
+      <command_interface name="velocity"/>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+  </ros2_control>
+
+</robot>

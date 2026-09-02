@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="front_right_wheel_link_macro">
+
+  <xacro:macro name="front_right_wheel_link" params="prefix">
+
+    <!-- Links -->
+    <link name="${prefix}Part2_1_Mirror">
+      <inertial>
+        <origin xyz="-0.129964 -0.019966 -0.185729" rpy="0 0 0"/>
+        <mass value="0.967990"/>
+        <inertia ixx="4.354820e-04" ixy="1.765368e-07" ixz="9.904484e-07"
+                 iyy="4.318266e-04" iyz="-1.096024e-06" izz="6.297403e-04"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.130000 -0.020000 -0.168000" rpy="-1.570796 0.000000 0.000000"/>
+        <geometry>
+          <mesh filename="package://ma_robot_description/meshes/front_right_wheel_link/Part2_1_Mirror.dae" scale="1 1 1"/>
+        </geometry>
+        <material name="Steel"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.130000 -0.020000 -0.168000" rpy="-1.570796 0.000000 0.000000"/>
+        <geometry>
+          <mesh filename="package://ma_robot_description/meshes/front_right_wheel_link/Part2_1_Mirror_collision.stl" scale="0.01 0.01 0.01"/>
+        </geometry>
+      </collision>
+    </link>
+
+  </xacro:macro>
+
+</robot>
