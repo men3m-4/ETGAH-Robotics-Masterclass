@@ -4,8 +4,8 @@
     <contributor>
       <authoring_tool>Fusion URDF/XACRO Exporter</authoring_tool>
     </contributor>
-    <created>2026-09-02T15:14:25Z</created>
-    <modified>2026-09-02T15:14:25Z</modified>
+    <created>2026-09-02T18:20:54Z</created>
+    <modified>2026-09-02T18:20:54Z</modified>
     <unit name="meter" meter="1.0"/>
     <up_axis>Z_UP</up_axis>
   </asset>

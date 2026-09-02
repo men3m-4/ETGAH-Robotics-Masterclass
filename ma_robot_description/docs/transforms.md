@@ -1,4 +1,4 @@
-# Transformation Matrices - base_link
+# Transformation Matrices - ma_robot
 
 Homogeneous transformation matrices between consecutive frames.
 Convention: URDF RPY (XYZ extrinsic / ZYX intrinsic).

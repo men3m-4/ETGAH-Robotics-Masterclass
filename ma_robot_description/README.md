@@ -1,6 +1,6 @@
-# base_link — Robot Description
+# ma_robot — Robot Description
 
-![base_link](images/robot.png)
+![ma_robot](images/robot.png)
 
 ## Overview
 
@@ -47,7 +47,7 @@ base_link
 | `Part2_1_Mirror` | 0.9680 | Steel | cylinder | 1 |
 | `Part2_2` | 0.9680 | Steel | box | 1 |
 | `Part2_2_Mirror` | 0.9680 | Steel | cylinder | 1 |
-| `base_link` | 2.8988 | Acetal_Resin_Black | cylinder | 1 |
+| `base_link` | 2.8992 | Acetal_Resin_Black | cylinder | 2 |
 | `rplidar_s2_link` | 0.2038 | Steel | box | 28 |
 | `zed2_camera_link` | 0.1782 | PA_11_Nylon_HP_11_30_with_EOS_P_396_3D_Printer | box | 1 |
 
@@ -64,11 +64,6 @@ base_link
 
 ## Assembly Breakdown
 
-### base_link
-
-- **Links**: zed2_camera_link, rplidar_s2_link, base_link
-- **Total mass**: 3.281 kg
-
 ### front_left_wheel_link
 
 - **Links**: Part2_1
@@ -78,6 +73,11 @@ base_link
 
 - **Links**: Part2_1_Mirror
 - **Total mass**: 0.968 kg
+
+### ma_robot
+
+- **Links**: zed2_camera_link, rplidar_s2_link, base_link
+- **Total mass**: 3.281 kg
 
 ### rear_left_wheel_link
 
@@ -104,10 +104,10 @@ source install/setup.bash
 ros2 launch ma_robot_description display.launch.py
 
 # 4. Validate URDF structure
-check_urdf install/ma_robot_description/share/ma_robot_description/urdf/base_link.urdf
+check_urdf install/ma_robot_description/share/ma_robot_description/urdf/ma_robot.urdf
 
 # 5. Print kinematic tree
-urdf_to_graphviz install/ma_robot_description/share/ma_robot_description/urdf/base_link.urdf
+urdf_to_graphviz install/ma_robot_description/share/ma_robot_description/urdf/ma_robot.urdf
 ```
 
 **Joint control**: The launch file includes `joint_state_publisher_gui` —
@@ -126,8 +126,8 @@ ros2 param get /robot_state_publisher robot_description
 
 | Path | Description |
 |------|-------------|
-| `urdf/base_link.urdf.xacro` | Top-level xacro (entry point) |
-| `urdf/base_link.urdf` | Flat URDF (for validation) |
+| `urdf/ma_robot.urdf.xacro` | Top-level xacro (entry point) |
+| `urdf/ma_robot.urdf` | Flat URDF (for validation) |
 | `urdf/assemblies/` | Per-assembly xacro macros |
 | `meshes/` | Visual (OBJ) and collision (STL) meshes |
 | `launch/display.launch.py` | Launch robot_state_publisher, RViz, and generated controllers |
@@ -142,7 +142,7 @@ Assemblies tagged `!dummy_` are designed to be swapped out. To replace one:
 
 1. Create your replacement as a xacro macro with the same interface
 2. Place it in `urdf/assemblies/`
-3. Update the `<xacro:include>` in `urdf/base_link.urdf.xacro`
+3. Update the `<xacro:include>` in `urdf/ma_robot.urdf.xacro`
 4. Update meshes in `meshes/<your_assembly>/`
 
 The xacro prefix system (`${prefix}`) ensures link names stay unique

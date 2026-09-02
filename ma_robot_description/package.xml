@@ -3,7 +3,7 @@
 <package format="3">
   <name>ma_robot_description</name>
   <version>0.1.0</version>
-  <description>Robot description for base_link, generated from Fusion 360</description>
+  <description>Robot description for ma_robot, generated from Fusion 360</description>
 
   <maintainer email="todo@todo.com">TODO</maintainer>
   <license>TODO</license>

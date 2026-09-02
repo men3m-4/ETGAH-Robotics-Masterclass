@@ -1,5 +1,5 @@
 """
-Launch file for base_link.
+Launch file for ma_robot.
 
 Usage:
     ros2 launch ma_robot_description display.launch.py
@@ -17,7 +17,7 @@ from launch_ros.actions import Node, PushRosNamespace
 def generate_launch_description():
     pkg_dir = get_package_share_directory('ma_robot_description')
 
-    xacro_file = os.path.join(pkg_dir, 'urdf', 'base_link.urdf.xacro')
+    xacro_file = os.path.join(pkg_dir, 'urdf', 'ma_robot.urdf.xacro')
     rviz_file = os.path.join(pkg_dir, 'rviz', 'display.rviz')
     controllers_file = os.path.join(pkg_dir, 'config', 'ros2_controllers.yaml')
 
