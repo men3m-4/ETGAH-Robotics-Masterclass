@@ -21,10 +21,18 @@ def generate_launch_description():
         'ros_gz_sim'
     )
 
+    # Robot Xacro
     xacro_file = os.path.join(
         package_share,
         'urdf',
         'ma_robot.urdf.xacro',
+    )
+
+    # Gazebo world
+    world_file = os.path.join(
+        package_share,
+        'worlds',
+        'ma_robot_world.sdf',
     )
 
     robot_description = ParameterValue(
@@ -46,12 +54,12 @@ def generate_launch_description():
             )
         ),
         launch_arguments={
-            'gz_args': '-r empty.sdf',
+            'gz_args': '-r ' + world_file,
             'on_exit_shutdown': 'true',
         }.items(),
     )
 
-    # Publish the robot URDF and fixed transforms
+    # Publish robot description and transforms
     robot_state_publisher = Node(
         package='robot_state_publisher',
         executable='robot_state_publisher',
@@ -63,7 +71,7 @@ def generate_launch_description():
         }],
     )
 
-    # Spawn the robot inside Gazebo
+    # Spawn robot inside Gazebo
     spawn_robot = Node(
         package='ros_gz_sim',
         executable='create',
@@ -78,17 +86,34 @@ def generate_launch_description():
         ],
     )
 
-    # Bridge Gazebo topics to ROS 2
+    # Bridge Gazebo topics with ROS 2
     bridge = Node(
         package='ros_gz_bridge',
         executable='parameter_bridge',
         name='gazebo_bridge',
         output='screen',
         arguments=[
+            # Gazebo -> ROS 2
             '/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock',
-            '/cmd_vel@geometry_msgs/msg/Twist@gz.msgs.Twist',
             '/odom@nav_msgs/msg/Odometry[gz.msgs.Odometry',
             '/tf@tf2_msgs/msg/TFMessage[gz.msgs.Pose_V',
+
+            # Wheel joint states: Gazebo -> ROS 2
+            '/joint_states@sensor_msgs/msg/JointState[gz.msgs.Model',
+
+            # ROS 2 -> Gazebo
+            '/cmd_vel@geometry_msgs/msg/Twist]gz.msgs.Twist',
+
+            # RPLIDAR S2
+            '/scan@sensor_msgs/msg/LaserScan[gz.msgs.LaserScan',
+
+            # ZED2 RGB-D camera
+            '/camera/image@sensor_msgs/msg/Image[gz.msgs.Image',
+            '/camera/depth_image@sensor_msgs/msg/Image[gz.msgs.Image',
+            '/camera/camera_info@sensor_msgs/msg/CameraInfo'
+            '[gz.msgs.CameraInfo',
+            '/camera/points@sensor_msgs/msg/PointCloud2'
+            '[gz.msgs.PointCloudPacked',
         ],
     )
 

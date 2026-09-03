@@ -1,8 +1,10 @@
 Panels:
   - Class: rviz_common/Displays
     Name: Displays
+
 Visualization Manager:
   Class: ""
+
   Displays:
     - Class: rviz_default_plugins/Grid
       Name: Grid
@@ -13,30 +15,117 @@ Visualization Manager:
         Line Width: 0.03
       Plane: XY
       Plane Cell Count: 20
+
     - Class: rviz_default_plugins/RobotModel
       Name: RobotModel
       Value: true
       Description Source: Topic
       Description Topic:
+        Depth: 5
+        Durability Policy: Transient Local
+        History Policy: Keep Last
+        Reliability Policy: Reliable
         Value: /robot_description
       Visual Enabled: true
       Collision Enabled: false
       Alpha: 1.0
+
     - Class: rviz_default_plugins/TF
       Name: TF
       Value: true
       Show Arrows: true
       Show Axes: true
-      Show Names: true
+      Show Names: false
+      Marker Scale: 0.2
+      Frame Timeout: 15
+
+    - Class: rviz_default_plugins/LaserScan
+      Name: RPLIDAR Scan
+      Value: true
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Best Effort
+        Value: /scan
+      Style: Points
+      Size (Pixels): 3
+      Size (m): 0.01
+      Decay Time: 0
+      Color: 255; 0; 0
+      Selectable: true
+      Transformer:
+        Use Fixed Frame: true
+
+    - Class: rviz_default_plugins/Image
+      Name: ZED2 RGB Image
+      Value: true
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Best Effort
+        Value: /camera/image
+      Normalize Range: true
+      Min Value: 0
+      Max Value: 1
+      Median window: 5
+
+    - Class: rviz_default_plugins/PointCloud2
+      Name: ZED2 Point Cloud
+      Value: true
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Best Effort
+        Value: /camera/points
+      Style: Points
+      Size (Pixels): 2
+      Size (m): 0.01
+      Decay Time: 0
+      Color Transformer: RGB8
+      Position Transformer: XYZ
+      Selectable: true
+      Use Fixed Frame: true
+
+    - Class: rviz_default_plugins/Odometry
+      Name: Robot Odometry
+      Value: true
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /odom
+      Keep: 100
+      Position Tolerance: 0.1
+      Angle Tolerance: 0.1
+      Shape:
+        Value: Axes
+        Axes Length: 0.3
+        Axes Radius: 0.02
+
   Global Options:
     Background Color: 48; 48; 48
-    Fixed Frame: base_link
+    Fixed Frame: odom
     Frame Rate: 30
+
   Name: root
+
   Tools:
     - Class: rviz_default_plugins/MoveCamera
     - Class: rviz_default_plugins/FocusCamera
+    - Class: rviz_default_plugins/Measure
+    - Class: rviz_default_plugins/SetInitialPose
+      Topic:
+        Value: /initialpose
+    - Class: rviz_default_plugins/SetGoal
+      Topic:
+        Value: /goal_pose
+
   Value: true
+
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
@@ -45,4 +134,5 @@ Visualization Manager:
         X: 0
         Y: 0
         Z: 0.3
+      Target Frame: base_link
       Name: Current View
