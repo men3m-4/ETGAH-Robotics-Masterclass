@@ -65,7 +65,7 @@ Visualization Manager:
         Durability Policy: Volatile
         History Policy: Keep Last
         Reliability Policy: Best Effort
-        Value: /camera/image
+        Value: /camera/image_raw
       Normalize Range: true
       Min Value: 0
       Max Value: 1
@@ -98,7 +98,7 @@ Visualization Manager:
         History Policy: Keep Last
         Reliability Policy: Reliable
         Value: /odom
-      Keep: 100
+      Keep: 1
       Position Tolerance: 0.1
       Angle Tolerance: 0.1
       Shape:
@@ -117,9 +117,11 @@ Visualization Manager:
     - Class: rviz_default_plugins/MoveCamera
     - Class: rviz_default_plugins/FocusCamera
     - Class: rviz_default_plugins/Measure
+
     - Class: rviz_default_plugins/SetInitialPose
       Topic:
         Value: /initialpose
+
     - Class: rviz_default_plugins/SetGoal
       Topic:
         Value: /goal_pose

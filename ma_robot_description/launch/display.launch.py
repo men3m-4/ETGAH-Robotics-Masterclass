@@ -1,12 +1,4 @@
-"""
-RViz-only launch file for ma_robot.
 
-The Gazebo simulation must already be running from
-the ETGAH 3D Simulator.
-
-Usage:
-    ros2 launch ma_robot_description display.launch.py
-"""
 
 import os
 

@@ -89,7 +89,7 @@
 
       <!--
         Sensor pose is zero because zed2_camera_link
-        now points forward with base_link +X.
+        points forward with base_link +X.
       -->
       <pose>0 0 0 0 0 0</pose>
 
@@ -158,21 +158,30 @@
       filename="gz-sim-diff-drive-system"
       name="gz::sim::systems::DiffDrive">
 
+      <!-- Left wheels -->
       <left_joint>front_left_wheel_joint</left_joint>
       <left_joint>rear_left_wheel_joint</left_joint>
 
+      <!-- Right wheels -->
       <right_joint>front_right_wheel_joint</right_joint>
       <right_joint>rear_right_wheel_joint</right_joint>
 
+      <!-- Robot dimensions -->
       <wheel_separation>0.246</wheel_separation>
       <wheel_radius>0.045</wheel_radius>
 
+      <!-- Command and odometry topics -->
       <topic>cmd_vel</topic>
       <odom_topic>odom</odom_topic>
       <tf_topic>tf</tf_topic>
 
+      <!--
+        Gazebo publishes odom -> base_footprint.
+        robot_state_publisher publishes
+        base_footprint -> base_link.
+      -->
       <frame_id>odom</frame_id>
-      <child_frame_id>base_link</child_frame_id>
+      <child_frame_id>base_footprint</child_frame_id>
 
       <odom_publish_frequency>50</odom_publish_frequency>
 

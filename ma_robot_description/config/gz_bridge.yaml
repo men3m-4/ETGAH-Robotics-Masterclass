@@ -1,0 +1,96 @@
+# Gazebo Sim <-> ROS 2 bridge configuration
+#
+# Directions:
+#   GZ_TO_ROS  : Gazebo publishes, ROS 2 subscribes
+#   ROS_TO_GZ  : ROS 2 publishes, Gazebo subscribes
+#
+# The RGB image is intentionally not included here.
+# It will be bridged separately using ros_gz_image/image_bridge
+# and published in ROS 2 as /camera/image_raw.
+
+
+# ---------------------------------------------------------
+# Simulation clock: Gazebo -> ROS 2
+# ---------------------------------------------------------
+
+- ros_topic_name: "/clock"
+  gz_topic_name: "/clock"
+  ros_type_name: "rosgraph_msgs/msg/Clock"
+  gz_type_name: "gz.msgs.Clock"
+  direction: GZ_TO_ROS
+
+
+# ---------------------------------------------------------
+# Robot command: ROS 2 -> Gazebo
+# ---------------------------------------------------------
+
+- ros_topic_name: "/cmd_vel"
+  gz_topic_name: "/cmd_vel"
+  ros_type_name: "geometry_msgs/msg/Twist"
+  gz_type_name: "gz.msgs.Twist"
+  direction: ROS_TO_GZ
+
+
+# ---------------------------------------------------------
+# Odometry and transforms: Gazebo -> ROS 2
+# ---------------------------------------------------------
+
+- ros_topic_name: "/odom"
+  gz_topic_name: "/odom"
+  ros_type_name: "nav_msgs/msg/Odometry"
+  gz_type_name: "gz.msgs.Odometry"
+  direction: GZ_TO_ROS
+
+- ros_topic_name: "/tf"
+  gz_topic_name: "/tf"
+  ros_type_name: "tf2_msgs/msg/TFMessage"
+  gz_type_name: "gz.msgs.Pose_V"
+  direction: GZ_TO_ROS
+
+
+# ---------------------------------------------------------
+# Wheel joint states: Gazebo -> ROS 2
+# ---------------------------------------------------------
+
+- ros_topic_name: "/joint_states"
+  gz_topic_name: "/joint_states"
+  ros_type_name: "sensor_msgs/msg/JointState"
+  gz_type_name: "gz.msgs.Model"
+  direction: GZ_TO_ROS
+
+
+# ---------------------------------------------------------
+# RPLIDAR S2: Gazebo -> ROS 2
+# ---------------------------------------------------------
+
+- ros_topic_name: "/scan"
+  gz_topic_name: "/scan"
+  ros_type_name: "sensor_msgs/msg/LaserScan"
+  gz_type_name: "gz.msgs.LaserScan"
+  direction: GZ_TO_ROS
+
+
+# ---------------------------------------------------------
+# ZED2 RGB-D camera: Gazebo -> ROS 2
+# ---------------------------------------------------------
+
+# RGB camera information
+- ros_topic_name: "/camera/camera_info"
+  gz_topic_name: "/camera/camera_info"
+  ros_type_name: "sensor_msgs/msg/CameraInfo"
+  gz_type_name: "gz.msgs.CameraInfo"
+  direction: GZ_TO_ROS
+
+# Depth image
+- ros_topic_name: "/camera/depth_image"
+  gz_topic_name: "/camera/depth_image"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "gz.msgs.Image"
+  direction: GZ_TO_ROS
+
+# RGB-D point cloud
+- ros_topic_name: "/camera/points"
+  gz_topic_name: "/camera/points"
+  ros_type_name: "sensor_msgs/msg/PointCloud2"
+  gz_type_name: "gz.msgs.PointCloudPacked"
+  direction: GZ_TO_ROS
