@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro"
-       name="ma_robot_macro">
+    name="mabot_macro">
 
-  <xacro:macro name="ma_robot" params="prefix">
+  <xacro:macro name="mabot" params="prefix">
     <link name="${prefix}base_footprint"/>
     <!-- Base link -->
     <link name="${prefix}base_link">
@@ -29,7 +29,7 @@
 
         <geometry>
           <mesh
-            filename="package://ma_robot_description/meshes/ma_robot/base_link.dae"
+            filename="package://mabot_description/meshes/ma_robot/base_link.dae"
             scale="1 1 1"/>
         </geometry>
 
@@ -41,7 +41,7 @@
 
         <geometry>
           <mesh
-            filename="package://ma_robot_description/meshes/ma_robot/base_link_collision.stl"
+            filename="package://mabot_description/meshes/ma_robot/base_link_collision.stl"
             scale="0.01 0.01 0.01"/>
         </geometry>
       </collision>
@@ -100,7 +100,7 @@
 
         <geometry>
           <mesh
-            filename="package://ma_robot_description/meshes/ma_robot/zed2_camera_link.dae"
+            filename="package://mabot_description/meshes/ma_robot/zed2_camera_link.dae"
             scale="1 1 1"/>
         </geometry>
 
@@ -116,7 +116,7 @@
 
         <geometry>
           <mesh
-            filename="package://ma_robot_description/meshes/ma_robot/zed2_camera_link_collision.stl"
+            filename="package://mabot_description/meshes/ma_robot/zed2_camera_link_collision.stl"
             scale="0.01 0.01 0.01"/>
         </geometry>
       </collision>
@@ -165,7 +165,7 @@
 
         <geometry>
           <mesh
-            filename="package://ma_robot_description/meshes/ma_robot/rplidar_s2_link.dae"
+            filename="package://mabot_description/meshes/ma_robot/rplidar_s2_link.dae"
             scale="1 1 1"/>
         </geometry>
 

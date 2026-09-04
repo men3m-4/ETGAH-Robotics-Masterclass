@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro"
-       name="rear_left_wheel_link_macro">
+       name="rear_right_wheel_link_macro">
 
-  <xacro:macro name="rear_left_wheel_link" params="prefix">
+  <xacro:macro name="rear_right_wheel_link" params="prefix">
 
-    <link name="${prefix}rear_left_wheel_link">
+    <link name="${prefix}rear_right_wheel_link">
 
       <inertial>
         <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -20,11 +20,11 @@
 
       <visual>
         <origin
-          xyz="-0.012900 -0.018051 0.005477"
+          xyz="0.002378 -0.018051 -0.241816"
           rpy="1.570796 0.000000 0.000000"/>
         <geometry>
           <mesh
-            filename="package://ma_robot_description/meshes/rear_left_wheel_link/rear_left_wheel_link.dae"
+            filename="package://mabot_description/meshes/rear_right_wheel_link/rear_right_wheel_link.dae"
             scale="1 1 1"/>
         </geometry>
         <material name="Steel"/>

@@ -12,7 +12,7 @@ from launch_ros.actions import Node
 def generate_launch_description():
 
     package_share = get_package_share_directory(
-        'ma_robot_description'
+        'mabot_description'
     )
 
     rviz_file = os.path.join(

@@ -1,6 +1,6 @@
-# ma_robot — Robot Description
+# mabot — Robot Description
 
-![ma_robot](images/robot.png)
+![mabot](images/robot.png)
 
 ## Overview
 
@@ -74,7 +74,7 @@ base_link
 - **Links**: front_right_wheel_link
 - **Total mass**: 0.612 kg
 
-### ma_robot
+### mabot
 
 - **Links**: base_link, zed2_camera_link, rplidar_s2_link
 - **Total mass**: 3.281 kg
@@ -93,21 +93,21 @@ base_link
 
 ```bash
 # 1. Copy package to your ROS 2 workspace
-cp -r ma_robot_description ~/ros2_ws/src/
+cp -r mabot_description ~/ros2_ws/src/
 
 # 2. Build
 cd ~/ros2_ws
-colcon build --packages-select ma_robot_description
+colcon build --packages-select mabot_description
 source install/setup.bash
 
 # 3. Visualize in RViz2
-ros2 launch ma_robot_description display.launch.py
+ros2 launch mabot_description display.launch.py
 
 # 4. Validate URDF structure
-check_urdf install/ma_robot_description/share/ma_robot_description/urdf/ma_robot.urdf
+check_urdf install/mabot_description/share/mabot_description/urdf/mabot.urdf
 
 # 5. Print kinematic tree
-urdf_to_graphviz install/ma_robot_description/share/ma_robot_description/urdf/ma_robot.urdf
+urdf_to_graphviz install/mabot_description/share/mabot_description/urdf/mabot.urdf
 ```
 
 **Joint control**: The launch file includes `joint_state_publisher_gui` —
@@ -126,8 +126,8 @@ ros2 param get /robot_state_publisher robot_description
 
 | Path | Description |
 |------|-------------|
-| `urdf/ma_robot.urdf.xacro` | Top-level xacro (entry point) |
-| `urdf/ma_robot.urdf` | Flat URDF (for validation) |
+| `urdf/mabot.urdf.xacro` | Top-level xacro (entry point) |
+| `urdf/mabot.urdf` | Flat URDF (for validation) |
 | `urdf/assemblies/` | Per-assembly xacro macros |
 | `meshes/` | Visual (OBJ) and collision (STL) meshes |
 | `launch/display.launch.py` | Launch robot_state_publisher, RViz, and generated controllers |
@@ -142,14 +142,14 @@ Assemblies tagged `!dummy_` are designed to be swapped out. To replace one:
 
 1. Create your replacement as a xacro macro with the same interface
 2. Place it in `urdf/assemblies/`
-3. Update the `<xacro:include>` in `urdf/ma_robot.urdf.xacro`
+3. Update the `<xacro:include>` in `urdf/mabot.urdf.xacro`
 4. Update meshes in `meshes/<your_assembly>/`
 
 The xacro prefix system (`${prefix}`) ensures link names stay unique
 when multiple instances of the same assembly are used.
 
 
-# Transformation Matrices - ma_robot
+# Transformation Matrices - mabot
 
 Homogeneous transformation matrices between consecutive frames.
 Convention: URDF RPY (XYZ extrinsic / ZYX intrinsic).

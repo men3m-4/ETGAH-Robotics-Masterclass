@@ -22,7 +22,7 @@ from launch_ros.parameter_descriptions import ParameterValue
 def generate_launch_description():
 
     package_share = get_package_share_directory(
-        'ma_robot_description'
+        'mabot_description'
     )
 
     ros_gz_share = get_package_share_directory(
@@ -42,7 +42,7 @@ def generate_launch_description():
     #   the project outside the ETGAH simulator.
     #
     # Standalone usage:
-    # ros2 launch ma_robot_description gazebo.launch.py \
+    # ros2 launch mabot_description gazebo.launch.py \
     #   use_gazebo_gui:=true
     use_gazebo_gui = LaunchConfiguration(
         'use_gazebo_gui'
@@ -65,14 +65,14 @@ def generate_launch_description():
     xacro_file = os.path.join(
         package_share,
         'urdf',
-        'ma_robot.urdf.xacro',
+        'mabot.urdf.xacro',
     )
 
     # Gazebo world
     world_file = os.path.join(
         package_share,
         'worlds',
-        'ma_robot_world.sdf',
+        'mabot_world.sdf',
     )
 
     # ROS 2 <-> Gazebo bridge configuration
@@ -124,7 +124,7 @@ def generate_launch_description():
     #
     # Use this command when running outside ETGAH:
     #
-    # ros2 launch ma_robot_description gazebo.launch.py \
+    # ros2 launch mabot_description gazebo.launch.py \
     #   use_gazebo_gui:=true
     gazebo_gui = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
@@ -165,10 +165,10 @@ def generate_launch_description():
     spawn_robot = Node(
         package='ros_gz_sim',
         executable='create',
-        name='spawn_ma_robot',
+        name='spawn_mabot',
         output='screen',
         arguments=[
-            '-name', 'ma_robot',
+            '-name', 'mabot',
             '-topic', 'robot_description',
             '-x', '0.0',
             '-y', '0.0',

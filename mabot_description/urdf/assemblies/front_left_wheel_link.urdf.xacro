@@ -24,7 +24,7 @@
           rpy="1.570796 0.000000 3.141593"/>
         <geometry>
           <mesh
-            filename="package://ma_robot_description/meshes/front_left_wheel_link/front_left_wheel_link.dae"
+            filename="package://mabot_description/meshes/front_left_wheel_link/front_left_wheel_link.dae"
             scale="1 1 1"/>
         </geometry>
         <material name="Steel"/>

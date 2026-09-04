@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="ma_robot">
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="mabot">
 
   <!-- Materials -->
   <material name="Acetal_Resin_Black">
@@ -16,21 +16,21 @@
   </material>
 
   <!-- Assembly includes -->
-  <xacro:include filename="$(find ma_robot_description)/urdf/assemblies/rear_left_wheel_link.urdf.xacro"/>
-  <xacro:include filename="$(find ma_robot_description)/urdf/assemblies/front_left_wheel_link.urdf.xacro"/>
-  <xacro:include filename="$(find ma_robot_description)/urdf/assemblies/front_right_wheel_link.urdf.xacro"/>
-  <xacro:include filename="$(find ma_robot_description)/urdf/assemblies/rear_right_wheel_link.urdf.xacro"/>
-  <xacro:include filename="$(find ma_robot_description)/urdf/assemblies/ma_robot.urdf.xacro"/>
+  <xacro:include filename="$(find mabot_description)/urdf/assemblies/rear_left_wheel_link.urdf.xacro"/>
+  <xacro:include filename="$(find mabot_description)/urdf/assemblies/front_left_wheel_link.urdf.xacro"/>
+  <xacro:include filename="$(find mabot_description)/urdf/assemblies/front_right_wheel_link.urdf.xacro"/>
+  <xacro:include filename="$(find mabot_description)/urdf/assemblies/rear_right_wheel_link.urdf.xacro"/>
+  <xacro:include filename="$(find mabot_description)/urdf/assemblies/mabot.urdf.xacro"/>
 
   <!-- Gazebo configuration -->
-  <xacro:include filename="$(find ma_robot_description)/urdf/ma_robot.gazebo.xacro"/>
+  <xacro:include filename="$(find mabot_description)/urdf/mabot.gazebo.xacro"/>
 
   <!-- Instantiate assemblies -->
   <xacro:rear_left_wheel_link prefix=""/>
   <xacro:front_left_wheel_link prefix=""/>
   <xacro:front_right_wheel_link prefix=""/>
   <xacro:rear_right_wheel_link prefix=""/>
-  <xacro:ma_robot prefix=""/>
+  <xacro:mabot prefix=""/>
 
   <!-- Wheel mount joints -->
 
@@ -93,12 +93,12 @@
   </joint>
 
   <!-- ROS 2 control -->
-  <ros2_control name="ma_robot_system" type="system">
+  <ros2_control name="mabot_system" type="system">
 
     <hardware>
       <plugin>mock_components/GenericSystem</plugin>
-      <param name="cmd_topic">sim/ma_robot_system/cmd</param>
-      <param name="state_topic">sim/ma_robot_system/state</param>
+      <param name="cmd_topic">sim/mabot_system/cmd</param>
+      <param name="state_topic">sim/mabot_system/state</param>
     </hardware>
 
     <joint name="front_left_wheel_joint">

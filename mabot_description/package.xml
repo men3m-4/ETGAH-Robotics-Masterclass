@@ -6,11 +6,11 @@
 
 <package format="3">
 
-  <name>ma_robot_description</name>
+  <name>mabot_description</name>
   <version>0.1.0</version>
 
   <description>
-    ROS 2 robot description and Gazebo simulation package for ma_robot.
+    ROS 2 robot description and Gazebo simulation package for mabot.
   </description>
 
   <maintainer email="muhammad.abdelmoniem4@gmail.com">
