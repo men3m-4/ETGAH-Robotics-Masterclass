@@ -1,17 +1,34 @@
 <?xml version="1.0"?>
 
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro"
-    name="mabot_macro">
+       name="mabot_macro">
 
   <xacro:macro name="mabot" params="prefix">
+
+    <!-- ================================================== -->
+    <!-- Base footprint                                     -->
+    <!-- ================================================== -->
+
+    <!--
+      Virtual ground-level frame used as the robot's
+      kinematic reference.
+
+      It intentionally has no visual, collision, mass,
+      or inertia properties.
+    -->
     <link name="${prefix}base_footprint"/>
-    <!-- Base link -->
+
+
+    <!-- ================================================== -->
+    <!-- Base link                                          -->
+    <!-- ================================================== -->
+
     <link name="${prefix}base_link">
 
       <inertial>
         <origin
           xyz="0.041574 -0.062494 0.024420"
-          rpy="0 0 0"/>
+          rpy="0.000000 0.000000 0.000000"/>
 
         <mass value="2.899172"/>
 
@@ -25,7 +42,9 @@
       </inertial>
 
       <visual>
-        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <origin
+          xyz="0.000000 0.000000 0.000000"
+          rpy="0.000000 0.000000 0.000000"/>
 
         <geometry>
           <mesh
@@ -37,7 +56,9 @@
       </visual>
 
       <collision>
-        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <origin
+          xyz="0.000000 0.000000 0.000000"
+          rpy="0.000000 0.000000 0.000000"/>
 
         <geometry>
           <mesh
@@ -47,6 +68,8 @@
       </collision>
 
     </link>
+
+
     <!--
       The base_link CAD origin is offset from the kinematic
       center represented by base_footprint.
@@ -67,7 +90,11 @@
 
     </joint>
 
-    <!-- ZED2 camera physical link -->
+
+    <!-- ================================================== -->
+    <!-- ZED2 camera physical link                          -->
+    <!-- ================================================== -->
+
     <link name="${prefix}zed2_camera_link">
 
       <!--
@@ -75,6 +102,9 @@
           +X forward
           +Y left
           +Z upward
+
+        The inertia transform preserves the original
+        physical inertia exported from Fusion 360.
       -->
       <inertial>
         <origin
@@ -92,10 +122,13 @@
           izz="4.390806e-04"/>
       </inertial>
 
-
+      <!--
+        Keep the camera mesh in its original physical
+        mounting orientation.
+      -->
       <visual>
         <origin
-          xyz="0 0 0"
+          xyz="0.000000 0.000000 0.000000"
           rpy="0.000000 0.000000 -1.570796"/>
 
         <geometry>
@@ -108,10 +141,13 @@
           name="PA_11_Nylon_HP_11_30_with_EOS_P_396_3D_Printer"/>
       </visual>
 
-      
+      <!--
+        Keep the collision mesh aligned with the
+        visible camera mesh.
+      -->
       <collision>
         <origin
-          xyz="0 0 0"
+          xyz="0.000000 0.000000 0.000000"
           rpy="0.000000 0.000000 -1.570796"/>
 
         <geometry>
@@ -124,27 +160,42 @@
     </link>
 
 
-    <!--
-      ZED2 optical frame.
+    <!-- ================================================== -->
+    <!-- ZED2 optical frame                                 -->
+    <!-- ================================================== -->
 
-      ROS optical frame convention:
+    <!--
+      ROS optical-frame convention:
         +Z points forward through the camera lens
         +X points to the right in the image
         +Y points downward in the image
 
-      This is a virtual reference frame, therefore it does not
-      require visual, collision, mass, or inertia properties.
+      This is a virtual reference frame and therefore does
+      not require visual, collision, mass or inertia.
     -->
     <link name="${prefix}zed2_camera_optical_link"/>
 
 
-    <!-- RPLIDAR S2 -->
+    <!-- ================================================== -->
+    <!-- RPLIDAR S2                                         -->
+    <!-- ================================================== -->
+
     <link name="${prefix}rplidar_s2_link">
 
+      <!--
+        The LiDAR link frame is aligned with base_link:
+          +X forward
+          +Y left
+          +Z upward
+
+        The inertial pose was transformed from the original
+        Fusion frame so that the physical inertia remains
+        unchanged after correcting the link orientation.
+      -->
       <inertial>
         <origin
-          xyz="-0.000007 -0.000076 -0.009381"
-          rpy="0 0 0"/>
+          xyz="-0.000076 0.000007 -0.009381"
+          rpy="0.000000 0.000000 -1.570796"/>
 
         <mass value="0.203764"/>
 
@@ -157,11 +208,18 @@
           izz="2.370283e-04"/>
       </inertial>
 
-      <!-- Offset removes coordinates baked inside the DAE mesh -->
+      <!--
+        The COLLADA mesh contains coordinates baked relative
+        to the original Fusion 360 assembly.
+
+        This transformed translation and rotation preserve
+        the original visible position while allowing the
+        rplidar_s2_link frame to point forward.
+      -->
       <visual>
         <origin
-          xyz="0.595006 -0.533018 -0.022261"
-          rpy="0 0 0"/>
+          xyz="-0.533018 -0.595006 -0.022261"
+          rpy="0.000000 0.000000 -1.570796"/>
 
         <geometry>
           <mesh
@@ -172,9 +230,17 @@
         <material name="Steel"/>
       </visual>
 
-      <!-- Simplified collision centered on the lidar frame -->
+      <!--
+        Simplified cylindrical collision centered on the
+        physical LiDAR frame.
+
+        A yaw rotation is unnecessary because the cylinder
+        is symmetric around its Z axis.
+      -->
       <collision>
-        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <origin
+          xyz="0.000000 0.000000 0.000000"
+          rpy="0.000000 0.000000 0.000000"/>
 
         <geometry>
           <cylinder
@@ -186,7 +252,14 @@
     </link>
 
 
-    <!-- Camera fixed joint -->
+    <!-- ================================================== -->
+    <!-- Camera joints                                      -->
+    <!-- ================================================== -->
+
+    <!--
+      Camera physical frame aligned with the robot's
+      forward +X direction.
+    -->
     <joint name="${prefix}zed2_camera_joint"
            type="fixed">
 
@@ -217,7 +290,21 @@
     </joint>
 
 
-    <!-- Lidar fixed joint -->
+    <!-- ================================================== -->
+    <!-- LiDAR joint                                        -->
+    <!-- ================================================== -->
+
+    <!--
+      The LiDAR frame is located at the physical sensor
+      center and aligned with the robot:
+
+        +X forward
+        +Y left
+        +Z upward
+
+      This alignment allows LaserScan angle 0 to represent
+      the front of MABot correctly.
+    -->
     <joint name="${prefix}rplidar_s2_joint"
            type="fixed">
 
@@ -226,7 +313,7 @@
 
       <origin
         xyz="0.099271 -0.062500 0.069076"
-        rpy="0.000000 0.000000 -1.570796"/>
+        rpy="0.000000 0.000000 0.000000"/>
 
     </joint>
 
