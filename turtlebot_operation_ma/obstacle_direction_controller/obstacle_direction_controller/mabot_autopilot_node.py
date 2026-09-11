@@ -1,11 +1,16 @@
 #!/usr/bin/env python3
 
 import math
+import signal
+import threading
 import time
+from typing import Optional
 
 import rclpy
 from geometry_msgs.msg import Twist
+from rclpy.clock import Clock, ClockType
 from rclpy.node import Node
+from rclpy.signals import SignalHandlerOptions
 from rclpy.qos import qos_profile_sensor_data
 from sensor_msgs.msg import LaserScan
 
@@ -138,6 +143,12 @@ class MABotAutopilot(Node):
             'maximum_scan_distance'
         )
 
+        for name in ('scan_timeout', 'control_frequency',
+                     'maximum_scan_distance'):
+            value = getattr(self, name)
+            if not math.isfinite(value) or value <= 0.0:
+                raise ValueError(f'{name} must be finite and positive')
+
         # ==================================================
         # ROS interfaces
         # ==================================================
@@ -162,9 +173,12 @@ class MABotAutopilot(Node):
             1.0
         )
 
+        # Keep the scan watchdog running even if simulation time pauses.
+        self.watchdog_clock = Clock(clock_type=ClockType.STEADY_TIME)
         self.control_timer = self.create_timer(
             timer_period,
-            self.control_callback
+            self.control_callback,
+            clock=self.watchdog_clock
         )
 
         # ==================================================
@@ -172,6 +186,8 @@ class MABotAutopilot(Node):
         # ==================================================
 
         self.state = 'waiting'
+        self.stopping = False
+        self.last_scan_error = None
         self.turning_direction = 0
 
         self.latest_distances = None
@@ -218,6 +234,13 @@ class MABotAutopilot(Node):
         so it works with both 360-sample and 720-sample scans.
         """
 
+        if self.stopping:
+            return
+
+        if not self._valid_scan_metadata(msg):
+            self._invalidate_scan('Empty scan or invalid LaserScan metadata')
+            return
+
         front = self._sector_distance(
             msg,
             center_angle=0.0,
@@ -254,7 +277,7 @@ class MABotAutopilot(Node):
             width=math.radians(70.0)
         )
 
-        self.latest_distances = {
+        distances = {
             'front': front,
             'front_left': front_left,
             'front_right': front_right,
@@ -263,7 +286,21 @@ class MABotAutopilot(Node):
             'rear': rear,
         }
 
+        invalid_sectors = [
+            name for name, distance in distances.items()
+            if distance is None
+        ]
+        if invalid_sectors:
+            self._invalidate_scan(
+                'Unknown/invalid scan sectors: ' + ', '.join(invalid_sectors)
+            )
+            return
+
+        self.latest_distances = distances
         self.last_scan_wall_time = time.monotonic()
+        if self.last_scan_error is not None:
+            self.get_logger().info('Valid LiDAR data restored')
+            self.last_scan_error = None
 
         if self.state == 'waiting':
             self._set_state('forward')
@@ -272,65 +309,65 @@ class MABotAutopilot(Node):
     # Sector calculation
     # ======================================================
 
+    @staticmethod
+    def _valid_scan_metadata(msg: LaserScan) -> bool:
+        if len(msg.ranges) < 2:
+            return False
+        values = (
+            msg.angle_min, msg.angle_max, msg.angle_increment,
+            msg.range_min, msg.range_max,
+        )
+        if not all(math.isfinite(value) for value in values):
+            return False
+        if msg.angle_increment == 0.0:
+            return False
+        if not (0.0 <= msg.range_min < msg.range_max):
+            return False
+        expected_end = (
+            msg.angle_min + (len(msg.ranges) - 1) * msg.angle_increment
+        )
+        tolerance = max(1e-4, abs(msg.angle_increment) * 0.1)
+        return abs(expected_end - msg.angle_max) <= tolerance
+
+    def _invalidate_scan(self, reason: str):
+        """Discard previous clear-space data and brake immediately."""
+        self.latest_distances = None
+        self.last_scan_wall_time = None
+        self.reverse_start_wall_time = None
+        self.turning_direction = 0
+        self._set_state('waiting')
+        self.velocity_publisher.publish(Twist())
+        if reason != self.last_scan_error:
+            self.get_logger().warning(reason + '; robot stopped')
+            self.last_scan_error = reason
+
     def _sector_distance(
         self,
         msg: LaserScan,
         center_angle: float,
         width: float
-    ) -> float:
-        """
-        Return the nearest valid range inside an angular sector.
-        """
+    ) -> Optional[float]:
+        """Return clearance, or None when any sector ray is unknown.
 
+        Conservative policy: NaN, +/-Inf and out-of-sensor-range
+        readings are unknown, never evidence of free space. A finite
+        reading beyond the controller's distance cap is still valid.
+        """
         half_width = width / 2.0
         valid_ranges = []
-
-        minimum_valid_range = max(
-            float(msg.range_min),
-            0.05
-        )
-
-        if (
-            math.isfinite(msg.range_max)
-            and msg.range_max > 0.0
-        ):
-            maximum_valid_range = min(
-                float(msg.range_max),
-                self.maximum_scan_distance
-            )
-        else:
-            maximum_valid_range = (
-                self.maximum_scan_distance
-            )
-
         for index, measured_range in enumerate(msg.ranges):
-
-            if not math.isfinite(measured_range):
+            ray_angle = msg.angle_min + index * msg.angle_increment
+            angular_error = self._normalize_angle(ray_angle - center_angle)
+            if abs(angular_error) > half_width:
                 continue
-
-            if not (
-                minimum_valid_range
-                <= measured_range
-                <= maximum_valid_range
+            if (
+                not math.isfinite(measured_range)
+                or measured_range <= 0.0
+                or not (msg.range_min <= measured_range <= msg.range_max)
             ):
-                continue
-
-            ray_angle = (
-                msg.angle_min
-                + index * msg.angle_increment
-            )
-
-            angular_error = self._normalize_angle(
-                ray_angle - center_angle
-            )
-
-            if abs(angular_error) <= half_width:
-                valid_ranges.append(measured_range)
-
-        if not valid_ranges:
-            return self.maximum_scan_distance
-
-        return min(valid_ranges)
+                return None
+            valid_ranges.append(min(measured_range, self.maximum_scan_distance))
+        return min(valid_ranges) if valid_ranges else None
 
     # ======================================================
     # Control loop
@@ -343,6 +380,10 @@ class MABotAutopilot(Node):
 
         command = Twist()
         current_wall_time = time.monotonic()
+
+        if self.stopping:
+            self.velocity_publisher.publish(command)
+            return
 
         # Stop when no scan has been received.
         if (
@@ -359,8 +400,7 @@ class MABotAutopilot(Node):
         )
 
         if scan_age > self.scan_timeout:
-            self._set_state('waiting')
-            self.velocity_publisher.publish(command)
+            self._invalidate_scan('LiDAR stream timed out')
             return
 
         front = self.latest_distances['front']
@@ -746,35 +786,56 @@ class MABotAutopilot(Node):
     # ======================================================
 
     def stop_robot(self):
-        """
-        Publish zero velocity before shutting down.
-        """
+        """Brake while the publisher and ROS context are still alive."""
+        self.stopping = True
+        self.control_timer.cancel()
+        self.latest_distances = None
+        self.reverse_start_wall_time = None
+        self.turning_direction = 0
+        self._set_state('waiting')
 
-        stop_command = Twist()
+        if not self.context.ok():
+            raise RuntimeError('ROS context closed before stop could be published')
 
-        for _ in range(3):
-            self.velocity_publisher.publish(
-                stop_command
-            )
+        for _ in range(5):
+            self.velocity_publisher.publish(Twist())
+            # Give DDS time to transmit; this is not a delivery guarantee.
+            time.sleep(0.05)
+        self.get_logger().info('Zero velocity published before ROS shutdown')
 
 
 def main(args=None):
-    rclpy.init(args=args)
+    # Own SIGINT/SIGTERM so rclpy does not close the context first.
+    stop_requested = threading.Event()
 
-    controller = MABotAutopilot()
+    def request_stop(signum, frame):
+        stop_requested.set()
 
+    previous_handlers = {}
+    controller = None
     try:
-        rclpy.spin(controller)
-
+        for signum in (signal.SIGINT, signal.SIGTERM):
+            previous_handlers[signum] = signal.signal(signum, request_stop)
+        rclpy.init(args=args, signal_handler_options=SignalHandlerOptions.NO)
+        controller = MABotAutopilot()
+        while rclpy.ok() and not stop_requested.is_set():
+            rclpy.spin_once(controller, timeout_sec=0.1)
     except KeyboardInterrupt:
         pass
-
     finally:
-        controller.stop_robot()
-        controller.destroy_node()
-
-        if rclpy.ok():
-            rclpy.shutdown()
+        try:
+            if controller is not None:
+                try:
+                    controller.stop_robot()
+                finally:
+                    controller.destroy_node()
+        finally:
+            try:
+                if rclpy.ok():
+                    rclpy.shutdown()
+            finally:
+                for signum, handler in previous_handlers.items():
+                    signal.signal(signum, handler)
 
 
 if __name__ == '__main__':
