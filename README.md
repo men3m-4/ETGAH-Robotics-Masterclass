@@ -21,7 +21,8 @@ This repository contains the learning tasks and project structure for the ETGAH 
 | 3 | ROS 2 Services | ROS 2 Services → Custom Service Interface → TurtleBot obstacle avoidance with manual override | [`turtlebot_operation_ma/`](./turtlebot_operation_ma/README.md) |
 | 4 | ROS 2 Actions | ROS 2 Actions → Custom Action Interface → Autonomous TurtleBot package delivery mission | [`turtlebot_delivery_ma/`](./turtlebot_delivery_ma/README.md) |
 | 5 | Robot Modeling with URDF & Simulation with TF2 and Gazebo | URDF robot modeling → TF2 transforms → robot visualization and simulation in Gazebo | [`mabot_description/`](./mabot_description/README.md) |
-
+| 6 | SLAM Toolbox — Mapping & Localization | 2D LiDAR SLAM → map creation → occupancy grid & pose graph saving → localization using the saved environment | [`mabot_slam/`](./mabot_slam/README.md) |
+| 7 | AMCL Localization | Nav2 AMCL → saved map localization → initial pose estimation → particle cloud convergence → localization validation | [`mabot_localization/`](./mabot_localization/README.md) |
 ## Environment
 
 Developed and tested using the ETGAH Virtual Workspace.
