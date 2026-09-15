@@ -1,0 +1,32 @@
+bt_navigator:
+  ros__parameters:
+    use_sim_time: true
+
+    global_frame: map
+    robot_base_frame: base_footprint
+    odom_topic: /odom
+
+    transform_tolerance: 0.5
+
+    # Behavior tree timing values in milliseconds.
+    bt_loop_duration: 10
+    default_server_timeout: 20
+    wait_for_service_timeout: 1000
+
+    navigators:
+      - "navigate_to_pose"
+      - "navigate_through_poses"
+
+    navigate_to_pose:
+      plugin: "nav2_bt_navigator::NavigateToPoseNavigator"
+
+    navigate_through_poses:
+      plugin: "nav2_bt_navigator::NavigateThroughPosesNavigator"
+
+    # Use the default Nav2 behavior trees:
+    # navigation with replanning and recovery.
+    # Built-in BT plugins are loaded automatically in Jazzy.
+
+    error_code_names:
+      - "compute_path_error_code"
+      - "follow_path_error_code"

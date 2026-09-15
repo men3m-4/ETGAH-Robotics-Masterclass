@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>mabot_navigation</name>
+  <version>0.0.0</version>
+
+  <description>
+    Nav2 configuration, localization, maps, and launch files
+    for MABot autonomous navigation.
+  </description>
+
+  <maintainer email="men3m-4@users.noreply.github.com">
+    Mohamed Abdelmoniem
+  </maintainer>
+
+  <license>Apache-2.0</license>
+
+  <!-- Build system -->
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <!-- Python launch files -->
+  <exec_depend>ament_index_python</exec_depend>
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+
+  <!-- Map and localization -->
+  <exec_depend>nav2_map_server</exec_depend>
+  <exec_depend>nav2_amcl</exec_depend>
+
+  <!-- Global planning -->
+  <exec_depend>nav2_planner</exec_depend>
+  <exec_depend>nav2_navfn_planner</exec_depend>
+
+  <!-- Path following with DWB -->
+  <exec_depend>nav2_controller</exec_depend>
+  <exec_depend>dwb_core</exec_depend>
+  <exec_depend>dwb_plugins</exec_depend>
+  <exec_depend>dwb_critics</exec_depend>
+
+  <!-- Costmaps -->
+  <exec_depend>nav2_costmap_2d</exec_depend>
+
+  <!-- Behaviors and navigation coordination -->
+  <exec_depend>nav2_behaviors</exec_depend>
+  <exec_depend>nav2_bt_navigator</exec_depend>
+  <exec_depend>nav2_lifecycle_manager</exec_depend>
+
+  <!-- Visualization -->
+  <exec_depend>rviz2</exec_depend>
+  <exec_depend>nav2_rviz_plugins</exec_depend>
+
+  <!-- Tests -->
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
