@@ -8,12 +8,9 @@ This package builds on [mabot_description](../mabot_description) for simulation 
 
 ## Navigation demo
 
-<!-- Place the recorded GIF at repository-root images/mabot_navigation.gif,
-     then uncomment the image below.
-![MABot navigating in Gazebo with Nav2 and RViz](../images/mabot_navigation.gif)
--->
+![MABot navigating in Gazebo with Nav2 and RViz](images/mabot_navigation.gif)
 
-*Demo recording: GIF to be added.*
+*Autonomous navigation in the MABot world using Nav2, AMCL, and LiDAR-based obstacle avoidance.*
 
 ## Features
 
