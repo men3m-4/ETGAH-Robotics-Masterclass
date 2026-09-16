@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://www.etgah.com/en">
-    <img src="https://www.etgah.com/_next/static/media/logo.baf9223e.svg" alt="ETGAH Robotics Masterclass" width="260">
+    <img src="https://www.etgah.com/_next/static/media/logo.baf9223e.svg" alt="ETGAH Robotics Masterclass" width="600">
   </a>
 </p>
 
