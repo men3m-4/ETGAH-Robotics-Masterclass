@@ -14,7 +14,7 @@ This repository contains the learning tasks and project structure for the ETGAH 
 
 ## Tasks
 
-| # | Task | Description | Folder |
+| # | pkg | Description | Folder |
 |---|------|-------------|--------|
 | 1 | Programming for Robotics | Python basics → OOP → distance sensor mini project | [`robot-distance-sensor-ma/`](./robot-distance-sensor-ma/README.md) |
 | 2 | Linux Essentials for Robotics & ROS 2 Fundamentals | Linux → ROS 2 Nodes & Topics → TurtleBot control project | [`turtlebot-controller-ma/`](./turtlebot-controller-ma/README.md) |
@@ -23,6 +23,8 @@ This repository contains the learning tasks and project structure for the ETGAH 
 | 5 | Robot Modeling with URDF & Simulation with TF2 and Gazebo | URDF robot modeling → TF2 transforms → robot visualization and simulation in Gazebo | [`mabot_description/`](./mabot_description/README.md) |
 | 6 | SLAM Toolbox — Mapping & Localization | 2D LiDAR SLAM → map creation → occupancy grid & pose graph saving → localization using the saved environment | [`mabot_slam/`](./mabot_slam/README.md) |
 | 7 | AMCL Localization | Nav2 AMCL → saved map localization → initial pose estimation → particle cloud convergence → localization validation | [`mabot_localization/`](./mabot_localization/README.md) |
+| 8 | Autonomous Navigation with Nav2 | Nav2 bringup → planner, controller & behavior configuration → costmap visualization → manual goal navigation in RViz | [`mabot_navigation/`](./mabot_navigation/README.md) |
+| 9 | Autonomous Warehouse Waypoint Delivery | Named waypoint recording → Home → Loading (30-second wait) → Storage → Shipping → Home → sequential goal execution, failure handling & colored RViz markers | [`mabot_warehouse_waypoints/`](./mabot_warehouse_waypoints/README.md) |
 ## Environment
 
 Developed and tested using the ETGAH Virtual Workspace.
