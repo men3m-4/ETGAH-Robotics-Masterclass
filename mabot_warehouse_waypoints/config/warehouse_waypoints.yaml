@@ -1,0 +1,22 @@
+frame_id: map
+waypoints:
+- name: Home
+  x: 5.7776
+  y: -0.2179
+  yaw: -1.63
+  wait_seconds: 0.0
+- name: Loading
+  x: 5.7805
+  y: -1.4697
+  yaw: -1.597
+  wait_seconds: 30.0
+- name: Storage
+  x: 1.7152
+  y: -1.2704
+  yaw: 2.8764
+  wait_seconds: 0.0
+- name: Shipping
+  x: 0.022
+  y: 0.1107
+  yaw: -0.0407
+  wait_seconds: 0.0

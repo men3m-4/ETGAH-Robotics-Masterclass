@@ -3,8 +3,8 @@
 <package format="3">
   <name>mabot_warehouse_waypoints</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
-  <maintainer email="men3m-4@users.noreply.github.com">root</maintainer>
+  <description>Warehouse waypoint recording and missions for MABot.</description>
+  <maintainer email="men3m-4@users.noreply.github.com">Mohamed Abdelmoniem</maintainer>
   <license>Apache-2.0</license>
 
   <depend>rclpy</depend>
@@ -13,6 +13,8 @@
   <depend>visualization_msgs</depend>
   <depend>action_msgs</depend>
   <depend>tf2_ros</depend>
+
+  <exec_depend>python3-yaml</exec_depend>
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
