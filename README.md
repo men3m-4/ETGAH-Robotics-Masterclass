@@ -28,10 +28,27 @@
   <a href="#masterclass-tasks">Course tasks</a>
 </p>
 
-<p align="center">
+<!-- <p align="center">
   <img src="mabot_description/images/robot.png" alt="The actual MABot model with four treaded wheels, front ZED 2 camera, and RPLIDAR S2" width="900">
   <br>
   <em>MABot's actual robot model: custom chassis, four treaded wheels, front camera, and roof-mounted LiDAR.</em>
+</p> -->
+<h2 align="center">🎬 MABot — Video Demo</h2>
+
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=TT43lpKUms0">
+    <img
+      src="https://img.youtube.com/vi/TT43lpKUms0/hqdefault.jpg"
+      alt="MABot — Autonomous Warehouse Robot"
+      width="900"
+    />
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=TT43lpKUms0">
+    <strong>▶ Watch the Full Video on YouTube</strong>
+  </a>
 </p>
 
 ---
